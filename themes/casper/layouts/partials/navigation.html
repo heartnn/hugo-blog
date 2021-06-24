@@ -1,0 +1,38 @@
+<div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        {{ $currentNode := . }}
+        {{with .Site.Menus.main}}
+        {{ range sort . "Weight" "desc"}}
+            {{.Pre}}
+            <li class="nav-opened{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .)}} nav-current{{end}}" role="presentation">
+            	<a href="{{.URL}}">{{.Name}}</a>
+            </li>
+        {{end}}
+        {{end}}
+
+    <h3 class="nav-link">Topics</h3>
+        {{with .Site.Params.pages}}
+        {{ range sort . }}
+            <li class="nav-opened" role="presentation">
+				<a href="{{ .url }}" title="{{ .title }}">{{ .name }}</a>
+            </li>
+        {{end}}
+        {{end}}
+
+    <h3 class="nav-link">Links</h3>
+        {{with .Site.Params.links}}
+        {{ range sort . }}
+            <li class="nav-opened" role="presentation">
+				<a href="{{ .url }}" title="{{ .title }}" onclick="target='_blank'">{{ .name }}</a>
+            </li>
+        {{end}}
+        {{end}}
+    </ul>
+
+    <a class="subscribe-button icon-feed" href="{{if .IsNode}}{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}{{else}}{{"index.xml" | relURL}}{{end}}">Subscribe</a>
+</div>
+<span class="nav-cover"></span>

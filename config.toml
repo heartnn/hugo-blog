@@ -1,0 +1,97 @@
+baseURL = "https://www.heartnn.com/"
+languageCode = "zh-CN"
+title = "heartnn的自留地"
+subtitle = "生活中的记忆片段~"
+theme = "casper"
+paginate = 6
+copyright = "&copy;2008-2018 heartnn的自留地 &nbsp;&nbsp;&nbsp; <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc-sa/4.0/\">CC&nbsp;BY-NC-SA&nbsp;4.0</a>"
+
+pygmentsCodeFences = true
+pygmentsCodeFencesGuessSyntax = false
+pygmentsStyle = "monokai"
+
+disableHugoGeneratorInject = true
+preserveTaxonomyNames = true
+hasCJKLanguage = true
+summaryLength = 180
+
+[markup.goldmark.renderer]
+unsafe= true
+
+[author]
+  name = "heartnn"
+
+[blackfriday]
+  fractions = false
+  hrefTargetBlank = true
+  extensions = ["hardLineBreak"]
+
+[params]
+  author = "heartnn"
+  authorlocation = "河北, 石家庄"
+  authorwebsite = "https://www.heartnn.com"
+  cover = "https://open.saintic.com/api/bingPic/?picSize=2"
+  description = "生活中的记忆片段~"
+  logo = "images/logo.png"
+  dateFormat = "20060102"
+  hideHUGOSupport = false
+  twitterName = "heartnn"
+  githubName = "heartnn"
+
+[menu]
+  [[menu.main]]
+    name = "首页"
+    weight = 120
+    identifier = "home"
+    url = "/"
+  [[menu.main]]
+    name = "关于我"
+    weight = 110
+    identifier = "aboutme"
+    url = "/aboutme/"
+  [[menu.main]]
+    name = "归档"
+    weight = 108
+    identifier = "archive"
+    url = "/archives/"
+  [[menu.main]]
+    name = "分类"
+    weight = 107
+    identifier = "category"
+    url = "/categories/"
+  [[menu.main]]
+    name = "标签"
+    weight = 106
+    identifier = "tag"
+    url = "/tags/"
+
+[[params.pages]]
+  name = "Hosts"
+  title = "General Hosts"
+  url = "/hosts/"
+[[params.pages]]
+  name = "Twitter"
+  title = "About Twitter"
+  url = "/twitter/"
+[[params.pages]]
+  name = "播放列表"
+  title = "我经常听的歌"
+  url = "/playlist/"
+
+[[params.links]]
+#  name = ""
+#  title = ""
+#  url = "#"
+
+[permalinks]
+  post = "/:year/:month/:day/:filename/"
+
+[sitemap]
+  changefreq = ""
+  Priority = "-1"
+  Filename = "sitemap.xml"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  archive = "archives"
