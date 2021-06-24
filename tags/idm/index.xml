@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>idm on heartnn的自留地</title><link>https://www.heartnn.com/tags/idm/</link><description>Recent content in idm on heartnn的自留地</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>&amp;copy;2008-2018 heartnn的自留地 &amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC&amp;nbsp;BY-NC-SA&amp;nbsp;4.0&lt;/a></copyright><lastBuildDate>Tue, 26 Mar 2019 21:02:18 +0800</lastBuildDate><atom:link href="https://www.heartnn.com/tags/idm/index.xml" rel="self" type="application/rss+xml"/><item><title>另类下载腾讯漫画的方法</title><link>https://www.heartnn.com/2019/03/26/yet-another-way-to-download-qq-comic/</link><pubDate>Tue, 26 Mar 2019 21:02:18 +0800</pubDate><guid>https://www.heartnn.com/2019/03/26/yet-another-way-to-download-qq-comic/</guid><description>&lt;p>首先说明此方法不能下载付费章节，另外此方法不含任何破解成份。&lt;/p>
+&lt;p>需要的工具：&lt;/p>
+&lt;ol>
+&lt;li>Chrome浏览器(大家应该都有)；&lt;/li>
+&lt;li>一款方便顺手的文本编辑器，我用EditPlus；&lt;/li>
+&lt;li>IDM下载器，或者类似工具；&lt;/li>
+&lt;li>一款文件重命名软件，比如&lt;a href="http://www.ffhome.com/works/1406.html">菲菲更名宝贝&lt;/a>；&lt;/li>
+&lt;li>类似XnView的可以对图片批量重命名的软件(非必须，但是更方便)。&lt;/li>
+&lt;/ol>
+&lt;p>正题开始，举例说明，这里以&lt;a href="https://ac.qq.com/Comic/comicInfo/id/518333">《狐妖小红娘》&lt;/a>为例。在网址前加入&lt;code>m.&lt;/code>，这样你会得到对应的手机版网站，点击你所需要的章节，得到一个类似&lt;a href="https://m.ac.qq.com/chapter/index/id/518333/cid/10">https://m.ac.qq.com/chapter/index/id/518333/cid/10&lt;/a>的网址，518333代表这个漫画的编号，10是目前章节的编号。&lt;/p>
+&lt;p>右键点图片，点下面的检查，会打开开发者控制台，灰色代表目前图片所在的源代码位置，往上一些会有一个“漫画图片列表插入位置”，右键点下面的&lt;code>&amp;lt;section class=&amp;quot;comic-pic-list-all&amp;quot;&amp;gt;&lt;/code>，选择&amp;quot;copy&amp;quot;&amp;ndash;&amp;gt;&amp;ldquo;copy element&amp;rdquo;，然后新建一个文本文件，粘贴，这样你就得到了这一章节的漫画图片源代码。&lt;/p></description></item></channel></rss>

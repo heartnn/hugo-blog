@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ntp on heartnn的自留地</title><link>https://www.heartnn.com/tags/ntp/</link><description>Recent content in ntp on heartnn的自留地</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>&amp;copy;2008-2018 heartnn的自留地 &amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC&amp;nbsp;BY-NC-SA&amp;nbsp;4.0&lt;/a></copyright><lastBuildDate>Sat, 05 Jan 2013 21:38:00 +0800</lastBuildDate><atom:link href="https://www.heartnn.com/tags/ntp/index.xml" rel="self" type="application/rss+xml"/><item><title>[Android] 安卓时间校正</title><link>https://www.heartnn.com/2013/01/05/android-time-synchronization/</link><pubDate>Sat, 05 Jan 2013 21:38:00 +0800</pubDate><guid>https://www.heartnn.com/2013/01/05/android-time-synchronization/</guid><description>&lt;p>安卓系统本身包含有网络校时功能，但是由于基站、信号、移动网络等多种因素，校时不是很准确，所以heartnn都是在手机上用ClockSync来进行的，通过NTP服务器进行时间校正。&lt;/p>
+&lt;p>由于国内网络问题，不是所有的NTP服务器都可用，heartnn找来的下面的NTP服务器都来自网络，不保证一直可用，但发帖前都是测试可用的。&lt;/p>
+&lt;ul>
+&lt;li>time.asia.apple.com&lt;/li>
+&lt;li>cn.pool.ntp.org&lt;/li>
+&lt;li>asia.pool.ntp.org&lt;/li>
+&lt;li>kr.pool.ntp.org&lt;/li>
+&lt;li>time.pool.aliyun.com&lt;/li>
+&lt;/ul></description></item></channel></rss>

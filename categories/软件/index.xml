@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>软件 on heartnn的自留地</title><link>https://www.heartnn.com/categories/%E8%BD%AF%E4%BB%B6/</link><description>Recent content in 软件 on heartnn的自留地</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>&amp;copy;2008-2018 heartnn的自留地 &amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC&amp;nbsp;BY-NC-SA&amp;nbsp;4.0&lt;/a></copyright><lastBuildDate>Thu, 12 Dec 2019 14:12:11 +0800</lastBuildDate><atom:link href="https://www.heartnn.com/categories/%E8%BD%AF%E4%BB%B6/index.xml" rel="self" type="application/rss+xml"/><item><title>2019 再次比较几款主流的笔记软件</title><link>https://www.heartnn.com/2019/12/12/compare-some-note-softwares-2019/</link><pubDate>Thu, 12 Dec 2019 14:12:11 +0800</pubDate><guid>https://www.heartnn.com/2019/12/12/compare-some-note-softwares-2019/</guid><description>因为以前有过一篇比较几款主流的笔记软件的文章，这次只说说到了 2019 年末，几种软件的缺点，有的尚在接受范围之内，有的就无法接受了。 1. 印象笔记 还是只有PC端可以创建编辑 Markdown，且 Markdown 不再支持插入 HTML 代码，据说是会造成保存失败，所以就把插入 HTML 代码的功能给屏蔽了。 Markdown 公式渲染速度较差。 增加的都是一些不疼不痒的功能。 2. 有道云笔记 发现新的优点，以前没有注意到的，就是上传</description></item><item><title>MP4封装工具箱发布</title><link>https://www.heartnn.com/2019/04/04/mp4-package-box/</link><pubDate>Thu, 04 Apr 2019 10:36:12 +0800</pubDate><guid>https://www.heartnn.com/2019/04/04/mp4-package-box/</guid><description>&lt;p>之前写过一个&lt;a href="https://www.heartnn.com/2016/11/12/aac-to-m4a/">aac转m4a的工具&lt;/a>，里面用到的程序是mp4box，这次就干脆把常用的功能整合一下，重新搞了一个，用的是ffmpeg了。&lt;/p>
+&lt;p>简单说一下几个批处理文件的功能。&lt;/p>
+&lt;ol>
+&lt;li>aac封装m4a.bat：就是重新写的ffmpeg版本，现在版本迭代很快，兼容性应该没什么问题了。&lt;/li>
+&lt;li>flv转mp4.bat：这个就是网上流传的一键封装为mp4的批处理，加上了blv格式(为哔哩哔哩手机缓存，其实改后缀就是flv)。&lt;/li>
+&lt;li>mp4抽取音频.bat：有些时候只需要听音频的时候用，提取为m4a格式。&lt;/li>
+&lt;li>YouTube音视频合并(mp4+m4a).bat：YouTube现在的1080p以上视频和音频是分开的，这个批处理的作用就是将它们合并为mp4。&lt;/li>
+&lt;/ol>
+&lt;p>以上前3位需要拖放对应文件到批处理上，最后一个双击运行，按提示操作。&lt;/p>
+&lt;p>尤其是YouTube，以前都是用MKVToolNix先合并成mkv，然后再用Total Video Converter选视频和音频编码copy，才变成的mp4，为什么以前没直接搞成批处理。。。&lt;/p></description></item><item><title>FLV合并的批处理办法</title><link>https://www.heartnn.com/2019/02/12/flv-merge/</link><pubDate>Tue, 12 Feb 2019 11:15:11 +0800</pubDate><guid>https://www.heartnn.com/2019/02/12/flv-merge/</guid><description>&lt;p>过年的时候冲了B站大会员，在使用&lt;a href="https://github.com/the1812/Bilibili-Evolved">Bilibili Evolved&lt;/a>下载番剧时发现，有时下载来的是个zip文件，里面是分段的flv，虽然手头有MKVToolNix可以合并，但flv转mkv再转mp4实在是麻烦，又不想下载其它的工具，心想是不是可以使用ffmpeg的命令行搞定，于是有了下面的代码：&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bat" data-lang="bat">(&lt;span style="color:#66d9ef">for&lt;/span> &lt;span style="color:#ae81ff">%%&lt;/span>i &lt;span style="color:#66d9ef">in&lt;/span> (*.flv) &lt;span style="color:#66d9ef">do&lt;/span> @&lt;span style="color:#66d9ef">echo&lt;/span> file &amp;#39;&lt;span style="color:#ae81ff">%%&lt;/span>i&amp;#39;) &amp;gt; list.txt
+ffmpeg.exe -f concat -safe 0 -i list.txt -c copy output.flv
+ffmpeg.exe -i output.flv -vcodec copy -acodec copy output.mp4
+&lt;span style="color:#66d9ef">pause&lt;/span>
+&lt;span style="color:#66d9ef">del&lt;/span> *.flv
+&lt;span style="color:#66d9ef">del&lt;/span> list.txt
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>使用方法：&lt;/p></description></item><item><title>还你一个纯净的WPS 2019</title><link>https://www.heartnn.com/2018/12/05/greenify-wps-2019/</link><pubDate>Wed, 05 Dec 2018 17:44:57 +0800</pubDate><guid>https://www.heartnn.com/2018/12/05/greenify-wps-2019/</guid><description>&lt;p>本方法来自网络并根据新版有所更改。&lt;/p>
+&lt;p>近几天，电脑上的微软Office似乎出了问题，保存的文件直接坏掉了，不想纠结太多，也不想重装系统。恰逢WPS 2019界面看起来不错，所以开始折腾一番。&lt;/p>
+&lt;p>以11.1.0.8002为例，正常安装到默认目录&lt;code>C:\Users\heartnn\AppData\Local\kingsoft\WPS Office&lt;/code>，以下说明以此目录为标准，大家可以根据自己的安装路径调整。&lt;/p>
+&lt;p>1. 去掉广告，在主界面的设置里找到配置和修复工具，点高级&amp;ndash;&amp;gt;其他选项，可以把软件推荐和广告推送都关掉，顺便从升级设置里禁用升级。&lt;/p>
+&lt;p>&lt;img src="https://www.heartnn.com/uploads/2018/12/wps-ad-push.png" alt="">&lt;/p></description></item><item><title>比较几款主流的笔记软件</title><link>https://www.heartnn.com/2018/08/23/compare-some-note-softwares/</link><pubDate>Thu, 23 Aug 2018 10:17:31 +0800</pubDate><guid>https://www.heartnn.com/2018/08/23/compare-some-note-softwares/</guid><description>&lt;p>最近整理笔记，把几个相对主流一些的笔记软件做了比较，也了解的他们的优缺点，在此详细说明一下，对选用可能起到一些帮助。&lt;/p>
+&lt;h3 id="1-evernotehttpsevernotecomintlzh-cn-印象笔记httpswwwyinxiangcom">1. &lt;a href="https://evernote.com/intl/zh-cn/">Evernote&lt;/a> (&lt;a href="https://www.yinxiang.com/">印象笔记&lt;/a>)&lt;/h3>
+&lt;p>需要注意的是国内已经和国外分家了，国内的印象笔记已经开始支持Markdown(至本文发布前只有Mac端支持)。&lt;/p>
+&lt;p>优点：第三方支持很多，用户也很多。&lt;br>
+缺点：免费用户只能同步两个客户端，流量60MB；另外100000条笔记和250个笔记本的限制，即使是付费用户也受不了。&lt;/p>
+&lt;h3 id="2-有道云笔记httpnoteyoudaocom">2. &lt;a href="http://note.youdao.com/">有道云笔记&lt;/a>&lt;/h3>
+&lt;p>把这个放在第二介绍，是因为这次全部试用下来以后，发现还不错，自从支持Markdown以后，似乎加了不少分。&lt;/p>
+&lt;p>优点：对Markdown支持较为完善，Mathjax和Mermaid都没有问题。&lt;br>
+缺点：Markdown插入图片需要会员，而会员又是这几款软件中最贵的。&lt;/p></description></item><item><title>更新USBWebServer</title><link>https://www.heartnn.com/2018/04/04/update-usbwebserver/</link><pubDate>Wed, 04 Apr 2018 20:14:37 +0800</pubDate><guid>https://www.heartnn.com/2018/04/04/update-usbwebserver/</guid><description>&lt;p>这几天寻找好用的wamp套件，要么就是太臃肿，好多功能用不上，要么就是非常老的版本，都不能如意，当发现USBWebServer的时候，感觉用起来还是比较方便的。&lt;/p>
+&lt;p>&lt;img src="https://www.heartnn.com/uploads/2018/04/usbwebserver.jpg" alt="">&lt;/p>
+&lt;p>首先是便携性，双击主程序，然后apache和mysql就都跑起来了，不需要创建任何服务就可以使用。需要关闭的时候直接点右上角的x就可以了。整个目录都可以拷贝带走，本地调试程序非常方便。&lt;/p></description></item><item><title>AutoCAD 2016打印为黑色背景</title><link>https://www.heartnn.com/2018/02/26/autocad-2016-publishtoweb-png-with-black-background/</link><pubDate>Mon, 26 Feb 2018 17:49:00 +0800</pubDate><guid>https://www.heartnn.com/2018/02/26/autocad-2016-publishtoweb-png-with-black-background/</guid><description>&lt;p>AutoCAD打印中的PublishToWeb PNG默认为白色背景，虽然可以用pngout命令可以生成黑色背景的png文件，但是分辨率却相当可观，网上的教程似乎又不太对，所以只好自己来了。&lt;/p>
+&lt;p>首先按Ctrl+P打开打印窗口，然后右上角下拉新建打印样式表，此处命名为“黑色背景”，然后点右边的编辑按钮。&lt;/p>
+&lt;p>&lt;img src="https://www.heartnn.com/uploads/2018/02/autocad-2016-print-with-black-background-1.png" alt="">&lt;/p></description></item><item><title>qaac依赖下载~~再也不用装iTunes了</title><link>https://www.heartnn.com/2017/09/07/qaac-dependency/</link><pubDate>Thu, 07 Sep 2017 19:10:36 +0800</pubDate><guid>https://www.heartnn.com/2017/09/07/qaac-dependency/</guid><description>一直在foobar2000上转换m4a格式，换电脑或者重装系统的话就必须重新安装iTunes，非常麻烦，所以干脆用Dependency Walker来查看qaac.exe的各种依赖，利用iTunes的cab文件包补完了这些dll，终于可以不用安装iTunes了。 下载链接: https://pan.baidu.com/s/1o8ULLZc 密码: kqtc 下载文件包括x86和x64的版本，请注意Windows系统版本。</description></item><item><title>iPod Classic Rockbox主题</title><link>https://www.heartnn.com/2016/12/17/ipod-classic-rockbox-theme/</link><pubDate>Sat, 17 Dec 2016 11:25:50 +0800</pubDate><guid>https://www.heartnn.com/2016/12/17/ipod-classic-rockbox-theme/</guid><description>这两天将手头的iPod Classic刷成了Rockbox，只因为原来的iTunes列表完全乱掉了，有很多重复的歌曲，还有一些没有放到列表里，干脆重来算了。 刷机过程自行Google，这里有个简单的英文版教程，其中stable和beta我都试过了，感觉没什么差别。 刷完之后应该是可以抛弃iTunes了，然后所有歌曲按照文件夹排列，回归传统的整理方式。不过，用习惯了</description></item><item><title>AAC封装M4A简易工具</title><link>https://www.heartnn.com/2016/11/12/aac-to-m4a/</link><pubDate>Sat, 12 Nov 2016 08:01:58 +0800</pubDate><guid>https://www.heartnn.com/2016/11/12/aac-to-m4a/</guid><description>最近手头一大堆的 mp4 视频，从中提取了音频部分，准备放在手机上听，而 mp4 一般提取音频是 aac 格式，这种文件放在 foobar2000 里播放的时候是没有进度条的，所以必须封装为 m4a，m4a 本身其实就是 mp4。 工具最简单的用 mp4box 就可以了，也可以用 ffmpeg，不过这货过于强大，而且兼容性不如 mp4box。 原理参考这里: mp4box.exe -add 1.aac:name=&amp;quot;&amp;quot; -new 1.m4a 顺便做了个批处理工具，直接把要转换的 aac 拖入即可。</description></item><item><title>适用于小鹤双拼的LeoStyleFHD修改版</title><link>https://www.heartnn.com/2016/02/14/leostylefhd-for-flypy/</link><pubDate>Sun, 14 Feb 2016 00:39:34 +0800</pubDate><guid>https://www.heartnn.com/2016/02/14/leostylefhd-for-flypy/</guid><description>首先说明是根据百度Android输入法官方皮肤LeoStyleFHD进行修改，版权归原作者所有。 之前一直用的小鹤官方网盘里的修改版，感觉比较难看，于是自己动手将LeoStyleFHD修改为18键XC共键，且将符号键和中英文切换键换位，自己感觉还是比较好用的，效果图如下： 先下载LeoStyleFHD-xiaohe18xc-v5.bds，一般直接点击，在打开方式</description></item><item><title>360WiFi在Win10下的兼容测试</title><link>https://www.heartnn.com/2015/11/26/test-360wifi-on-windows-10/</link><pubDate>Thu, 26 Nov 2015 06:48:21 +0800</pubDate><guid>https://www.heartnn.com/2015/11/26/test-360wifi-on-windows-10/</guid><description>&lt;p>&lt;img src="https://www.heartnn.com/uploads/2015/11/360wifi3.jpg" alt="">&lt;/p>
+&lt;p>先来说说结论，用的&lt;a href="http://shequ.mall.360.com/forum.php?mod=viewthread&amp;amp;tid=6181175">11月25日最新驱动&lt;/a>，号称是可以支持大部分Win10的，然并卵。。。&lt;/p>
+&lt;p>具体状态表现为可以创建WiFi并正常显示，但使用手机连接时卡在“正在获取IP地址”的步骤。&lt;/p></description></item><item><title>自用中兴屏幕助手美化版</title><link>https://www.heartnn.com/2015/08/31/self-use-mi-pop/</link><pubDate>Mon, 31 Aug 2015 00:45:16 +0800</pubDate><guid>https://www.heartnn.com/2015/08/31/self-use-mi-pop/</guid><description>&lt;p>由于网上的修改版大多都不合我心意，只能自己修改图片了，软件本身已签名，但安装仍需Android核心破解，5.1下甚至用到&lt;a href="http://coolapk.com/apk/com.pyler.xinstaller">XInstaller&lt;/a>来屏蔽安装时的签名验证。&lt;/p>
+&lt;p>&lt;img src="https://www.heartnn.com/uploads/2015/08/mi-pop.png" alt="">&lt;/p></description></item><item><title>关于MP4封装的一些事</title><link>https://www.heartnn.com/2015/07/28/mp4-package/</link><pubDate>Tue, 28 Jul 2015 00:17:33 +0800</pubDate><guid>https://www.heartnn.com/2015/07/28/mp4-package/</guid><description>&lt;p>众所周知，Youtube提供的视频，其中最高规格是1080p，但却只有video only，如果想下载到本地的话，是没有声音的，有声版本最高是720p.h264.aac，这时，便需要提取这个720p的音频部分，再加上1080p的视频部分进行封装。&lt;/p>
+&lt;p>封装的工具大多是ffmpeg或者&lt;a href="http://www.videohelp.com/software/mp4box">mp4box&lt;/a>，其中包含有很多前端，比如My MP4Box GUI或者YAMB。&lt;/p>
+&lt;p>最近，heartnn在potplayer播放某个自己已经封装完的视频后，发现下面的问题：&lt;/p>
+&lt;p>&lt;img src="https://www.heartnn.com/uploads/2015/07/my-mp4box-gui.png" alt="">&lt;/p></description></item><item><title>Android 5.1下SD卡格式化问题</title><link>https://www.heartnn.com/2015/06/19/android-5-1-sdcard-format/</link><pubDate>Fri, 19 Jun 2015 21:52:00 +0800</pubDate><guid>https://www.heartnn.com/2015/06/19/android-5-1-sdcard-format/</guid><description>Android 5.1采用授权方式管理SD卡的写入操作，相对于之前的4.4方便多了，而heartnn也由于折腾，碰上了一点小问题，下面详细说下原因： 前阵子将手机的SD卡格式成了exFat(关于exFat的优点请自行Google)，由于平时用的比较多的是ES文件管理器，用着也没发现什么问题。最近发现用其它的文件管理器时，会发生SD卡授权时只显示内置存储，而且在使用浏览器上传</description></item><item><title>Flac转Apple Lossless的便捷方法</title><link>https://www.heartnn.com/2015/05/19/flac-to-alac/</link><pubDate>Tue, 19 May 2015 03:46:00 +0800</pubDate><guid>https://www.heartnn.com/2015/05/19/flac-to-alac/</guid><description>&lt;p>折腾这个的缘由是最近入了一个改版ipc，由于苹果这货只能支持mp3、aac和自家的无损，遂导入无损音乐时需要进行转换成Apple Lossless。&lt;/p>
+&lt;p>网上的方法大概有两种，一个就是利用cue挂载为虚拟光盘，然后用iTunes直接转换，二是利用编码转换工具进行转码。&lt;/p>
+&lt;p>第一种方法不多说了，几年前就已经广泛利用，其中用到的WinMount更是长时间都没更新过了。&lt;/p></description></item><item><title>Acrylic DNS Proxy简易教程</title><link>https://www.heartnn.com/2015/04/02/acrylic-dns-tutorial/</link><pubDate>Thu, 02 Apr 2015 22:52:00 +0800</pubDate><guid>https://www.heartnn.com/2015/04/02/acrylic-dns-tutorial/</guid><description>&lt;p>最近更新了一份基于Acrylic DNS Proxy的hosts文档，在此做一个简易的说明。&lt;/p>
+&lt;p>首先在&lt;a href="http://mayakron.altervista.org/">官方网站下载&lt;/a>软件(打不开官网的话可以直接到&lt;a href="http://sourceforge.net/projects/acrylic/">sf.net&lt;/a>下载)，安装完成后，在开始菜单后可以找到下面几个快捷方式：&lt;/p>
+&lt;p>&lt;img src="https://www.heartnn.com/uploads/2015/04/acrylic-console.png" alt="">&lt;/p>
+&lt;p>在此仅说明一下重要的配置文件，注意看&lt;code>PrimaryServerAddress&lt;/code>的部分，默认会是&lt;code>8.8.8.8&lt;/code>，然后对应&lt;code>SecondaryServerAddress&lt;/code>是&lt;code>8.8.4.4&lt;/code>，由于我们将来会使用hosts文档去解析一些网站，其实这里设置成国内的DNS就可以了，比如114DNS，至于端口保存53就行。&lt;/p>
+&lt;p>下面&lt;code>HitLogFileName&lt;/code>可以自己设置一下，有时会在log里发现一些新的域名，从而知道某些网站打不开的原因。&lt;/p>
+&lt;p>这里&lt;code>HitLogFileWhat=BHCFRU&lt;/code>对应的是上面的说明，建议可以只关注自己需要的。&lt;/p></description></item><item><title>用Fiddler查找访问错误的域名</title><link>https://www.heartnn.com/2015/01/16/find-site-errors-using-fiddler/</link><pubDate>Fri, 16 Jan 2015 23:55:00 +0800</pubDate><guid>https://www.heartnn.com/2015/01/16/find-site-errors-using-fiddler/</guid><description>&lt;p>有时朋友们总问我，为什么无法访问Google Now，因为自己不用Google Now,相关域名也不知道，所以我也没什么好的办法。&lt;/p>
+&lt;p>Fiddler这个工具很强大，它能告诉我们网页无法访问或者不能完全显示的元凶。&lt;/p>
+&lt;p>首先去它的&lt;a href="http://www.telerik.com/download/fiddler">官方网站下载&lt;/a>，我用的.NET 2的版本，应该都是一样的。&lt;/p>
+&lt;p>安装后打开，此时本地连接的DNS服务器会变成127.0.0.1，所有的流量会通过Fiddler，此时从电脑上访问的记录便会显示在Fiddler里：&lt;/p>
+&lt;p>&lt;img src="https://www.heartnn.com/uploads/2015/01/fiddler.png" alt="">&lt;/p></description></item><item><title>浏览器同步二三事</title><link>https://www.heartnn.com/2014/12/03/browser-sync/</link><pubDate>Wed, 03 Dec 2014 07:15:00 +0800</pubDate><guid>https://www.heartnn.com/2014/12/03/browser-sync/</guid><description>&lt;p>首先，一切“功劳”来源于我们的防火墙，在以前，我本来快乐的使用着Chrome,自从改hosts也不太好用以后，只好开始折腾各种浏览器。&lt;/p>
+&lt;h2 id="使用环境">使用环境&lt;/h2>
+&lt;p>手机和PC是必须考虑的，至于Linux，全都是大神级别的，也不用来看我的文章了。况且目前能做到全平台支持的浏览器也不在多数。&lt;/p>
+&lt;p>至于功能，能完美替代Chrome就算OK了。&lt;/p>
+&lt;h2 id="浏览器对比">浏览器对比&lt;/h2>
+&lt;h3 id="1-国产浏览器">1. 国产浏览器&lt;/h3>
+&lt;p>说到国内浏览器，制作水平参差不齐，而且还有隐私泄露问题，原则上是能不用就不用。&lt;/p>
+&lt;blockquote>
+&lt;p>原生Google账户的不作考虑，比如七星浏览器。另外像猎豹这种没有书签同步功能的也不考虑。&lt;/p>
+&lt;/blockquote>
+&lt;p>最后筛选出360极速浏览器，百度浏览器，UC浏览器，以及修改内核的傲游浏览器。&lt;/p></description></item><item><title>关于修改文件类型图标</title><link>https://www.heartnn.com/2014/11/27/modify-file-type-icon/</link><pubDate>Thu, 27 Nov 2014 07:42:00 +0800</pubDate><guid>https://www.heartnn.com/2014/11/27/modify-file-type-icon/</guid><description>&lt;p>一直以为在Windows 7下修改文件类型不是很方便，以前在用foobar2000注册文件类型时，就不如在Windows XP下方便，今天注册.md后缀时发现图标就是MarkdownPad的默认图标，很是难看，于是乎开始各种搜索，结果发现了&lt;a href="http://www.nirsoft.net/utils/file_types_manager.html">FileTypesMan&lt;/a>这款软件，非常方便，双击文件类型可以改图标，在下面的窗口里还有更多操作，可以方便的删掉不需要的。&lt;/p>
+&lt;p>&lt;img src="https://www.heartnn.com/uploads/2014/11/filetypesman.png" alt="">&lt;/p></description></item><item><title>在Windows下使用ReText</title><link>https://www.heartnn.com/2013/05/10/retext-for-windows/</link><pubDate>Fri, 10 May 2013 23:17:00 +0800</pubDate><guid>https://www.heartnn.com/2013/05/10/retext-for-windows/</guid><description>&lt;p>网上关于&lt;a href="http://sourceforge.net/p/retext/">ReText&lt;/a>的介绍都是MarkDown编辑器，其实是&lt;a href="http://docutils.sourceforge.net/rst.html">reStructuredText&lt;/a>的跨平台编辑器（使用&lt;a href="http://www.python.org/">Python&lt;/a>开发），只是大家可能用MarkDown多一些。&lt;/p>
+&lt;p>其实&lt;a href="http://sourceforge.net/p/retext/wiki/Windows%20Install%20of%20ReText/">ReText官方Wiki&lt;/a>也说怎么在Windows下安装了，只是有些许错误，又碍于英文，在这里heartnn说一下自己的安装过程，可能比官方的简洁一些。&lt;/p>
+&lt;p>首先你的电脑里要安装&lt;a href="http://www.python.org/getit/">Python 3.3&lt;/a>以上的版本，&lt;a href="http://sourceforge.net/p/retext/">ReText&lt;/a>是这样推荐的，不知道低版本会怎样，如果电脑里有Python 2.7的话，建议先卸载掉再安装新版。&lt;/p>
+&lt;p>然后安装&lt;a href="http://www.riverbankcomputing.co.uk/software/pyqt/download">PyQt 4&lt;/a>对应Python 3.3的版本。&lt;/p></description></item><item><title>TiddlyWiki与DokuWiki的简单对比</title><link>https://www.heartnn.com/2011/10/09/compare-tiddlywiki-with-dokuwiki/</link><pubDate>Sun, 09 Oct 2011 23:40:00 +0800</pubDate><guid>https://www.heartnn.com/2011/10/09/compare-tiddlywiki-with-dokuwiki/</guid><description>&lt;p>经过许多天对两款软件的使用，现在对其功能做一个简单对比。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>比较项目&lt;/th>
+&lt;th>TiddlyWiki&lt;/th>
+&lt;th>DokuWiki&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>单独页面&lt;/td>
+&lt;td>在文件后加&amp;quot;#wiki名&amp;quot;&lt;/td>
+&lt;td>有&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>基本字体(B、i等)&lt;/td>
+&lt;td>有&lt;/td>
+&lt;td>有&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>字体颜色大小&lt;/td>
+&lt;td>有&lt;/td>
+&lt;td>需插件&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>强制分段&lt;/td>
+&lt;td>有&lt;/td>
+&lt;td>有，使用双斜杠&amp;quot;&amp;quot;加一个空格&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>链接&lt;/td>
+&lt;td>有&lt;/td>
+&lt;td>有&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>图片&lt;/td>
+&lt;td>有，大小调整需插件&lt;/td>
+&lt;td>有&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>图片上传&lt;/td>
+&lt;td>可以直接复制到相对路径&lt;/td>
+&lt;td>可以多文件同时上传&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>表格&lt;/td>
+&lt;td>有&lt;/td>
+&lt;td>有&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>无格式支持&lt;/td>
+&lt;td>有，使用三个双引号&lt;/td>
+&lt;td>有，使用两个百分号&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>代码高亮&lt;/td>
+&lt;td>需插件&lt;/td>
+&lt;td>有&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>标签&lt;/td>
+&lt;td>有&lt;/td>
+&lt;td>需插件&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>保存模式&lt;/td>
+&lt;td>单文件，可以使用插件调入其它文件中的tiddlies&lt;/td>
+&lt;td>每个wiki条目是一个单独文件&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>插件模式&lt;/td>
+&lt;td>以文章形式调用，需加标签systemConfig，设置后可在线升级&lt;/td>
+&lt;td>专门的插件目录，可以在线升级&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>另外两个wiki软件的语法请参考官方：&lt;/p></description></item><item><title>TiddlyWiki、DokuWiki、PmWiki的简单入门: 汉化</title><link>https://www.heartnn.com/2011/09/18/hanzify-tiddlywiki-dokuwiki-and-pmwikide/</link><pubDate>Sun, 18 Sep 2011 08:52:00 +0800</pubDate><guid>https://www.heartnn.com/2011/09/18/hanzify-tiddlywiki-dokuwiki-and-pmwikide/</guid><description>&lt;p>&lt;a href="https://www.heartnn.com/2011/09/15/compare-tiddlywiki-dokuwiki-and-pmwiki/">之前的文章&lt;/a>对三款Wiki软件进行了简单的对比，接下来是更详细的功能对比。&lt;/p>
+&lt;p>首先大家最关心的应该是中文语言吧，这三款软件都能做到中文化，只是操作起来的简易程度不一样，个人认为最简单的应该是DokuWiki了，直接从&lt;a href="http://www.splitbrain.org/projects/dokuwiki">官方下载页面&lt;/a>下载stable版本就可以了，内含中文语言包，只需要安装配置的时候选简体中文就可以了。&lt;/p>
+&lt;p>关于TiddlyWiki的汉化，网上其实也有很多资源，需要入门的话可以去&lt;a href="https://sites.google.com/site/tiddlywikizh/">TiddlyWiki華語邦&lt;/a>，那里有完全指南，也有汉化的方法。这里简单说一下汉化方法吧，先&lt;a href="http://svn.tiddlywiki.org/Trunk/association/locales/core/zh-Hans/locale.zh-Hans.js">下载汉化文件&lt;/a>，然后在TiddlyWiki里新建一个文档，名字就叫zh-HansTranslationPlugin吧，把刚才汉化文件里的文本复制进去，在tag里填上systemConfig，这个标签是最重要的，有了这个标签，这篇文章才会被系统识别成插件。然后就刷新TiddlyWiki就可以了～～&lt;/p></description></item><item><title>TiddlyWiki、DokuWiki、PmWiki——三款简洁的Wiki软件对比</title><link>https://www.heartnn.com/2011/09/15/compare-tiddlywiki-dokuwiki-and-pmwiki/</link><pubDate>Thu, 15 Sep 2011 02:42:00 +0800</pubDate><guid>https://www.heartnn.com/2011/09/15/compare-tiddlywiki-dokuwiki-and-pmwiki/</guid><description>&lt;p>近些天在研究几款Wiki软件，为了记录一些笔记或者网上摘抄的文章，需要富媒体的，所以抛弃了许多的笔记软件，因为用了网络同步的关系，又不能使文件过大，所以筛选了一段时间后，剩下了三款。&lt;/p>
+&lt;p>三款软件分别为&lt;a href="http://www.tiddlywiki.com/">TiddlyWiki&lt;/a>、&lt;a href="http://dokuwiki.org/">DokuWiki&lt;/a>、&lt;a href="http://www.pmwiki.org/">PmWiki&lt;/a>，其中TiddlyWiki是html+javascript的，最为简洁，而且是单文件，这个网上一搜的话一大把，另外两款都是需要php支持的，但是不需要数据库的支持。&lt;/p>
+&lt;p>本人推荐的顺序是：DokuWiki &amp;gt; TiddlyWiki &amp;gt; PmWiki，值得一提的是，目前这三款软件都是支持中文的，但是插件什么的中文资源却很少。&lt;/p>
+&lt;p>对比三款软件的功能(在不安装任何插件的情况下)，由于本人是利用网盘同步的，所以首先是文件大小的问题，Doku每个wiki条目会生成单独的txt文本，而且每次编辑都会有版本文件生成，虽然被压缩了，但是同步的时候还是会进行的。&lt;/p>
+&lt;p>然后是PmWiki，文件版本会集成在每个wiki文件内，这样不会有版本文件产生，但是当有条目被删除的时候，会生成一个delete文件。&lt;/p></description></item><item><title>TwitWar试用记</title><link>https://www.heartnn.com/2010/12/16/try-twitwar/</link><pubDate>Thu, 16 Dec 2010 22:02:00 +0800</pubDate><guid>https://www.heartnn.com/2010/12/16/try-twitwar/</guid><description>&lt;p>这个QT架构的客户端给我的印象应该是和Twitter有关吧，可是人家根本都不支持的，&lt;code>(￣_￣|||)&lt;/code>&lt;/p>
+&lt;p>&lt;img src="https://www.heartnn.com/uploads/2010/12/twitwar.png" alt="">&lt;/p></description></item><item><title>将Mipony打造成绿色版本</title><link>https://www.heartnn.com/2010/12/14/mipony-portable/</link><pubDate>Tue, 14 Dec 2010 06:00:00 +0800</pubDate><guid>https://www.heartnn.com/2010/12/14/mipony-portable/</guid><description>&lt;p>首先声明的是，本文不只是提供了一个绿色软件，更是提供了一种方法而已。另外本文不是采取打包成单文件的形式，而是利用批处理文件来实现，从而让大家看得更明白。&lt;/p>
+&lt;p>&lt;a href="http://mipony.net/">Mipony&lt;/a>是一个网盘下载软件，可以自动分析多大数十种的网盘链接，从而达到自行下载的目的，省时省力。&lt;/p>
+&lt;p>&lt;img src="https://www.heartnn.com/uploads/2010/12/mipony-support.png" alt="">&lt;/p></description></item><item><title>饭否辅助程序——话痨饭</title><link>https://www.heartnn.com/2010/12/13/try-hualaofan/</link><pubDate>Mon, 13 Dec 2010 02:39:00 +0800</pubDate><guid>https://www.heartnn.com/2010/12/13/try-hualaofan/</guid><description>&lt;p>首先感谢&lt;a href="http://fanfou.com/sery">@Sery&lt;/a>，话痨饭是他的作品。&lt;/p>
+&lt;p>先说下载地址：&lt;a href="http://godsunnday.com/sery">http://godsunnday.com/sery&lt;/a>&lt;/p>
+&lt;p>程序本身界面很简洁，用作者的话来说，简洁才是美，重要的是发信息很方便就是了。&lt;/p>
+&lt;p>&lt;img src="https://www.heartnn.com/uploads/2010/12/hualaofan.png" alt="">&lt;/p></description></item><item><title>饭否Air客户端——爱饭1.3更新版</title><link>https://www.heartnn.com/2010/11/29/ifan-1-3-update/</link><pubDate>Mon, 29 Nov 2010 00:18:00 +0800</pubDate><guid>https://www.heartnn.com/2010/11/29/ifan-1-3-update/</guid><description>&lt;p>饭否的客户端进一步修复中～～&lt;/p>
+&lt;p>首先说明一下，作者的网站貌似打不开了，感谢&lt;a href="http://fanfou.com/mougua">@某瓜&lt;/a>提供给我1.3版本的air包（其实俺本来有的，但是一看上不去就被俺删掉了，要是早有点折腾精神就好了～～）&lt;/p>
+&lt;p>我也不想截图了，饭否的老人应该都知道，新人的话也可以尝试下，这个程序很类似twhirl，不知道作者还会不会更新这个程序了，框架很旧了，连&lt;a href="http://code.google.com/p/mactype/">MacType&lt;/a>（一种GDI++渲染字体程序）都不能兼容，不知道是不是框架的问题，如果你也在用MacType的话，我建议你尝试&lt;a href="https://www.heartnn.com/2010/11/28/fanfox-0-3-update/">Fanfox&lt;/a>，这个是Firefox插件，不会有字体问题。&lt;/p></description></item><item><title>Fanfox 0.3更新版</title><link>https://www.heartnn.com/2010/11/28/fanfox-0-3-update/</link><pubDate>Sun, 28 Nov 2010 09:12:00 +0800</pubDate><guid>https://www.heartnn.com/2010/11/28/fanfox-0-3-update/</guid><description>&lt;p>首先写下作者网站：&lt;a href="http://panweizeng.com/fanfox">http://panweizeng.com/fanfox&lt;/a>&lt;/p>
+&lt;p>本版本是在作者的0.3版本基础上更新的，作为饭否回归几天之内，为大家贡献的几乎是仅有的饭否端，本插件的应用范围是Firefox，版本支持到3.6.*（理论上，不要新的太离谱就可以～），在我的3.6.13pre上使用成功～&lt;/p>
+&lt;p>安装时可能出现错误，直接忽略不计就可以了～ 很怀念啊，那个Fanfox很像当年的Twitterfox，回复转发收藏什么的功能全有，很好用。&lt;/p>
+&lt;p>图就不给了，大家想象Echofon就知道个大概了。&lt;/p></description></item><item><title>有个推特端叫Saezuri</title><link>https://www.heartnn.com/2010/11/21/twitter-client-saezuri/</link><pubDate>Sun, 21 Nov 2010 21:41:00 +0800</pubDate><guid>https://www.heartnn.com/2010/11/21/twitter-client-saezuri/</guid><description>&lt;p>&lt;img src="https://www.heartnn.com/uploads/2010/11/saezuri.png" alt="">&lt;/p></description></item><item><title>老软推荐: Folder2MyPC</title><link>https://www.heartnn.com/2010/10/26/folder2mypc/</link><pubDate>Tue, 26 Oct 2010 08:07:00 +0800</pubDate><guid>https://www.heartnn.com/2010/10/26/folder2mypc/</guid><description>&lt;p>这几日重装&lt;a href="http://k.wps.cn/register/?invite=v65m7m">快盘&lt;/a>的时候，突然发现原来我的电脑下的快盘链接不见了，以前在Win7下删除了快盘的图标，却怎么也恢复不过来了，于是怎么打开都不方便，记得有个什么软件可以把文件夹在我的电脑中显示的，可惜忘了名字，求助于Google，这个软件原来叫Folder2MyPC。&lt;/p>
+&lt;p>软件貌似N久没有更新了，最新的版本是1.9 for vista，在Win7下使用没有问题。&lt;/p>
+&lt;p>&lt;img src="https://www.heartnn.com/uploads/2010/10/folder2mypc.jpg" alt="">&lt;/p></description></item><item><title>通过upx缩小Evernote的体积，达到网络同步的目的</title><link>https://www.heartnn.com/2010/10/22/compress-evernote-by-upx/</link><pubDate>Fri, 22 Oct 2010 05:22:00 +0800</pubDate><guid>https://www.heartnn.com/2010/10/22/compress-evernote-by-upx/</guid><description>&lt;p>最近由于收集的好多资料都包含插图，CintaNotes不能胜任了，于是只能求助于Evernote，其实本来是想使用国产软件的，但是表现都一般(原来用网博士的，可惜经过一阵子疯狂更新后，现在又冷淡了)。&lt;/p>
+&lt;p>闲话少说，虽然Evernote有网络功能，但是没准国家一高兴咱就不能用了呢，所以选择了用网盘来同步，我暂时用的是快盘，速度还不错。&lt;/p>
+&lt;p>软件的个头本身是很大的，删掉spell check的词典和其他语言后，还是有40多MB，这样同步起来可是比较大的，所以想起来了压缩，本想只把数据库做同步，可是用起来不方便，还要下载客户端才能用，达不到便携的目的，看着那一堆exe和dll的体积都很大，于是想起了加壳。&lt;/p>
+&lt;p>至于加壳，其一般的目的是使破解增加难度，保护软件的合法权益，压缩体积其实只是附带的功能～～(我是这么理解de)&lt;/p>
+&lt;p>我用的是upx，在upx.exe的所在目录下建立evernote文件夹，然后把需要压缩的exe和dll文件复制进去，使用下面的命令，可以达到最好的压缩效果。&lt;/p></description></item><item><title>IObit Toolbox 1.1 集成版</title><link>https://www.heartnn.com/2010/09/29/iobit-toolbox-1-1/</link><pubDate>Wed, 29 Sep 2010 00:02:00 +0800</pubDate><guid>https://www.heartnn.com/2010/09/29/iobit-toolbox-1-1/</guid><description>&lt;p>&lt;img src="https://www.heartnn.com/uploads/2010/09/iobittoolbox.jpg" alt="">&lt;/p></description></item><item><title>CintaNotes 1.2 汉化版</title><link>https://www.heartnn.com/2010/09/26/cintanotes-1-2-hanzify/</link><pubDate>Sun, 26 Sep 2010 22:34:00 +0800</pubDate><guid>https://www.heartnn.com/2010/09/26/cintanotes-1-2-hanzify/</guid><description>&lt;p>&lt;img src="https://www.heartnn.com/uploads/2010/09/cintanotes.jpg" alt="">&lt;/p>
+&lt;p>CintaNotes是一款笔记软件，支持tag，支持搜索，类似博客一样的排版，还可以直接用同步软件上传到网上随身携带，相对于Evernote的简单，总之是一款非常好的笔记软件。&lt;/p></description></item><item><title>Iron——可以过滤广告的Chrome</title><link>https://www.heartnn.com/2009/01/09/iron-browser/</link><pubDate>Fri, 09 Jan 2009 03:31:00 +0800</pubDate><guid>https://www.heartnn.com/2009/01/09/iron-browser/</guid><description>&lt;p>&lt;img src="https://www.heartnn.com/uploads/2009/01/iron-logo.png" alt="">&lt;/p>
+&lt;p>首先，Iron过滤广告使用的是ADBlock，一个ini文件就解决了广告难题，现在Google还没有开发出正式的过滤广告插件，用代理的方法我又觉得不太好，所以到处搜罗，找到了这个。 感谢作者为我们提供了这个强大的Chrome版本，如果你想了解她的最新版，请到&lt;a href="http://www.srware.net/en/software_srware_iron_news.php">这里&lt;/a>。&lt;/p>
+&lt;p>经过测试，广告过滤功能还是不错的，其中ini文件在&lt;a href="http://www.srware.net/downloads/adblock.ini">这里下载&lt;/a>，因为广告更新飞快，所以有必要更新这个文件，或者自己手工编辑文件，增加你想要过滤的站点。&lt;/p></description></item><item><title>替换avi音轨简易教程</title><link>https://www.heartnn.com/2009/01/02/replace-sound-track-of-avi-video/</link><pubDate>Fri, 02 Jan 2009 21:25:00 +0800</pubDate><guid>https://www.heartnn.com/2009/01/02/replace-sound-track-of-avi-video/</guid><description>&lt;p>一、下载“&lt;a href="http://www.mysilu.com/forum-318-1.html">终极解码&lt;/a>”或“&lt;a href="http://jm.wmzhe.com/">完美解码&lt;/a>”，安装步骤略。&lt;/p>
+&lt;p>二、下载VirtualDubMod 1.5.10.1(链接: &lt;a href="https://pan.baidu.com/s/1i5iTCxf">https://pan.baidu.com/s/1i5iTCxf&lt;/a> 密码: rcpq)，该软件为绿色软件。&lt;/p>
+&lt;p>&lt;img src="https://www.heartnn.com/uploads/2009/01/about-virtualdub.png" alt="">&lt;/p></description></item><item><title>自己寻找Google Chrome最新版本</title><link>https://www.heartnn.com/2008/12/27/chromium-newest-version/</link><pubDate>Sat, 27 Dec 2008 09:31:00 +0800</pubDate><guid>https://www.heartnn.com/2008/12/27/chromium-newest-version/</guid><description>&lt;p>现在大家应该都用过Google浏览器了吧？真的是很稳定的，界面也不错，虽然是刚刚开发出来，功能还不是很多，但是浏览起来速度还是不错的，内存占用相对IE和Firefox都比较小，最重要的是多进程，呵呵，这个功能IE8才有的。&lt;/p>
+&lt;p>闲话少说，Google Chrome的开发版本叫做Chromium，这个可以说是经常更新的，所以大可不必经常去下载，不过它相对于Chrome来说，&lt;a href="http://acid3.acidtests.org/">Acid Test 3&lt;/a>测试结果是100%，这个结果和Opera10是相同的哦。&lt;/p>
+&lt;p>要想查看Chromium的最新版本，不妨到下面这个地址：&lt;a href="http://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?path=Win/&amp;amp;amp;sort=desc">http://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?path=Win/&amp;amp;amp;sort=desc&lt;/a>（2012-02-29更新地址）&lt;/p>
+&lt;p>其中版本号最大的那个就是最新的了，下载其中的&lt;code>chrome-win32.zip&lt;/code>就可以了。&lt;/p>
+&lt;p>如果你觉得还是麻烦的话，那么在下提供个工具吧 ^_^ 一个是&lt;a href="http://www.donationcoder.com/Forums/">Chromium Nightly Updater&lt;/a>，这个网上说失效了？可是heartnn现在测试还是可以的。另一个是&lt;a href="http://mulder.dummwiedeutsch.de/home/">muldeR&lt;/a>做的&lt;a href="http://mulder.dummwiedeutsch.de/home/?page=projects#chromium">Chromium Updater&lt;/a>，这个可以放到Chromium的文件夹中，用来检测当前是否需要更新。&lt;/p></description></item><item><title>Chrome便携版</title><link>https://www.heartnn.com/2008/12/23/chrome-portable/</link><pubDate>Tue, 23 Dec 2008 09:20:00 +0800</pubDate><guid>https://www.heartnn.com/2008/12/23/chrome-portable/</guid><description>&lt;p>&lt;img src="https://www.heartnn.com/uploads/2008/12/google-chrome.jpg" alt="">&lt;/p>
+&lt;p>首先感谢&lt;a href="http://portableappz.blogspot.com/">PortableAppZ&lt;/a>提供的便携程序，原文是分开的，加上插件一共有3个文件，我只是把它们合并成了一个包，7Z压缩，内置路径，直接解压缩就可以用了。&lt;/p>
+&lt;p>下载地址：&lt;/p>
+&lt;ul>
+&lt;li>&lt;del>Chrome1.0.154.42 &amp;amp; Chromium1.0.155.7376&lt;/del>&lt;/li>
+&lt;li>&lt;del>Chrome 1.0.154.39 &amp;amp; Chromium 1.0.155.7137&lt;/del>&lt;/li>
+&lt;li>&lt;del>Chrome 1.0.154.36 &amp;amp; Chromium 0.5.155.6823&lt;/del>&lt;/li>
+&lt;/ul></description></item><item><title>五步大幅提高 Firefox 页面加载速度</title><link>https://www.heartnn.com/2008/12/03/5-steps-improve-firefox-page-loading-speed/</link><pubDate>Wed, 03 Dec 2008 20:50:00 +0800</pubDate><guid>https://www.heartnn.com/2008/12/03/5-steps-improve-firefox-page-loading-speed/</guid><description>先在地址栏键入 about:config Set network.http.pipelining to true Set network.http.proxy.pipelining to true Set network.http.pipelining.maxrequests to 30 单击右键，选择新建 -&amp;gt; 整数,命名为 nglayout.initialpaint.delay,值为 0 以上部分内容来自 LinuxSir.Org。 下面是我的一些实验： 以上的原理就是利用多个线程下载一个页面，30 这个数字如果你的机器和网络够好的话，可以适当再加大些，不过不要超过 64，如果打开页面很多，这个数字超过 64 以后硬盘会不停的</description></item></channel></rss>
