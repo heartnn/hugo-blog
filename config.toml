@@ -6,9 +6,19 @@ theme = "casper"
 paginate = 6
 copyright = "&copy;2008-2018 heartnn的自留地 &nbsp;&nbsp;&nbsp; <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/\">CC&nbsp;BY-NC-SA&nbsp;4.0</a>"
 
-pygmentsCodeFences = true
-pygmentsCodeFencesGuessSyntax = false
-pygmentsStyle = "monokai"
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineAnchors = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "monokai"
+    tabWidth = 4
 
 disableHugoGeneratorInject = true
 preserveTaxonomyNames = true
