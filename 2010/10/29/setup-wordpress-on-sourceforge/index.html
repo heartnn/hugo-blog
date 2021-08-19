@@ -1,7 +1,112 @@
-<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=twitter:card content="summary"><meta name=twitter:title content="用SourceForge.net建立WordPress"><meta name=twitter:description content><meta name=twitter:site content="@heartnn"><meta property="og:title" content="用SourceForge.net建立WordPress &#183; heartnn的自留地"><meta property="og:site_name" content="heartnn的自留地"><meta property="og:url" content="https://www.heartnn.com/2010/10/29/setup-wordpress-on-sourceforge/"><meta property="og:image" content="https://open.saintic.com/api/bingPic/?picSize=2"><meta property="og:description" content><meta property="og:type" content="article"><meta property="article:published_time" content="2010-10-29T00:09:00+08:00"><meta property="article:tag" content="wordpress"><title>用SourceForge.net建立WordPress &#183; heartnn的自留地</title><meta name=description content="<p><img src=&#34;/uploads/2010/10/about-sourceforge.png&#34; alt=&#34;&#34;></p>
-<p>说来惭愧，6年前就创建了SourceForge(以下简称sf)的账号，但是从来没用过，最近无事，于是登陆来折腾一下～～发现sf空间的确是支持php的，很是欣喜。建立了一个Wordpre"><meta name=HandheldFriendly content="True"><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" href=/images/favicon.ico><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=stylesheet href=/css/screen.min.css><link rel=stylesheet href=/css/nav.min.css><link rel=stylesheet href=//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.css integrity="sha256-oC/Q8nqWSlp1bki3Ht9gRCWaew5n6/HNk10HT4aEX4w=" crossorigin=anonymous><link href=/index.xml rel=alternate type=application/rss+xml title=heartnn的自留地><meta name=generator content="Hugo 0.84.1"><link rel=canonical href=https://www.heartnn.com/2010/10/29/setup-wordpress-on-sourceforge/><script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","publisher":{"@type":"Organization","name":null,"logo":"https://www.heartnn.com/images/logo.png"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"https://www.heartnn.com/images/logo.png","width":250,"height":250},"url":"https://www.heartnn.com","sameAs":[]},"headline":"用SourceForge.net建立WordPress","name":"用SourceForge.net建立WordPress","wordCount":48,"timeRequired":"PT1M","inLanguage":{"@type":"Language","alternateName":"en"},"url":"https://www.heartnn.com/2010/10/29/setup-wordpress-on-sourceforge/","datePublished":"2010-10-29T00:09Z+08:00","dateModified":"2010-10-29T00:09+08:00","keywords":"wordpress","description":"","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.heartnn.com/2010/10/29/setup-wordpress-on-sourceforge/"}}</script></head><body class=nav-closed><div class=nav><h3 class=nav-title>Menu</h3><a href=# class=nav-close><span class=hidden>Close</span></a><ul><li class=nav-opened role=presentation><a href=/>首页</a></li><li class=nav-opened role=presentation><a href=/aboutme/>关于我</a></li><li class=nav-opened role=presentation><a href=/archives/>归档</a></li><li class=nav-opened role=presentation><a href=/categories/>分类</a></li><li class=nav-opened role=presentation><a href=/tags/>标签</a></li><h3 class=nav-link>Topics</h3><li class=nav-opened role=presentation><a href=/hosts/ title="General Hosts">Hosts</a></li><li class=nav-opened role=presentation><a href=/twitter/ title="About Twitter">Twitter</a></li><li class=nav-opened role=presentation><a href=/playlist/ title=我经常听的歌>播放列表</a></li><h3 class=nav-link>Links</h3><li class=nav-opened role=presentation><a href=https://pan.qnas.cc/ title=我的网盘 onclick="target='_blank'">我的网盘</a></li></ul><a class="subscribe-button icon-feed" href=/index.xml>Subscribe</a></div><span class=nav-cover></span><div class=site-wrapper><header class="main-header post-head no-cover"><nav class="main-nav clearfix"><a class=blog-logo href=https://www.heartnn.com/><img src=/images/logo.png alt=Home></a>
-<a class=menu-button href=#><span class=burger>&#9776;</span><span class=word>Menu</span></a></nav></header><main class=content role=main><article class="post post"><header class=post-header><h1 class=post-title>用SourceForge.net建立WordPress</h1><small></small><section class=post-meta><time class=post-date datetime=2010-10-29T00:09:00+08:00>2010-10-29</time>
-<span class="post-tag small"><a href=https://www.heartnn.com/tags/wordpress/>#wordpress</a></span></section></header><section class=post-content><p><img src=/uploads/2010/10/about-sourceforge.png alt></p><p>说来惭愧，6年前就创建了SourceForge(以下简称sf)的账号，但是从来没用过，最近无事，于是登陆来折腾一下～～发现sf空间的确是支持php的，很是欣喜。建立了一个Wordpress也成功了，当然用了点手段，想知道怎么折腾请往下看。(我不确定这样做是不是违反了sf的规定，因为sf本身提供了wordpress的博客，当然是不能自定义的那种了，下面会介绍到。)</p><p>首先是没有账号的先去注册个(这是废话。。。)，登陆后点上面的Create Project。</p><p><img src=/uploads/2010/10/sourceforge-home.png alt></p><p>来到了<a href=https://sourceforge.net/register/>https://sourceforge.net/register/</a>这个页面，点右边的Create Project，填写表单，很容易看懂的，注意的就是Url那里关系到以后的网址，不过也没关系，sf是提供域名绑定的，偷笑吧～～点Complete Registration完成。我是没点那个beta的链接，想尝试的可以试一下。</p><p>完成前面的步骤后点右上角你的用户名，在右边My Projects的框里应该能看到刚才创建的工程名字了。进入后再工程名下面的一排菜单里点Project Admin里的Feature Settings进行设置。</p><p>这里说点题外话，刚才提到sf提供了wordpress，其实就在Available Features里面，自己激活就可以用了，只不过域名要长的多，而且不能装自定义插件什么的。</p><p><img src=/uploads/2010/10/sourceforge-feature-settings.png alt></p><p>看上图，我们需要用到的三个功能，首先看网站管理，这个很简单，进入后必须设定一个密码才能使用，这个密码就是以后上传文件需要用到的。</p><p>关于数据上传，我用的是FlashFXP，链接类型要用SFTP over SSH，地址见下图，用户名的地方写用户名+英文逗号+工程名，其中工程名就是创建工程时url填写的那个，密码是刚才设定的密码。</p><p><img src=/uploads/2010/10/sourceforge-sftp.png alt></p><p>数据库管理比较麻烦，看下面的图就一目了然了。</p><p><img src=/uploads/2010/10/sourceforge-mysql.png alt></p><p>下面的框里分别设定只读用户，读写用户和管理员的密码，记得设定哦。</p><p>最后是绑定域名的方法：<code>yourdomain.com</code>与<code>www.yourdomain.com</code>是不同的，如果你想要<code>yourdomain.com</code>与<code>www.yourdomain.com</code>都能访问到，必须都要绑定。然后解析<code>yourdomain.com</code>的<code>A</code>记录到<code>216.34.181.97</code>，<code>www.yourdomain.com</code>的CNAME记录到<code>vhost.sourceforge.net</code>就行了，最多可以绑定10条记录。</p><p>然后开始wordpress的安装，都上传完以后，打开网址开始安装wordpress，此时必须手动建立一个<code>wp-config.php</code>，偷懒的话可以把<code>wp-config-simple.php</code>改名，然后把数据库的部分做修改（参考上面的图），需要特别注意的是MySQL主机名不是<code>localhost</code>，而是<code>mysql-h</code>(这里根据用户名不同而不同)。下面身份密匙设定的随机数可以参考<a href=https://api.wordpress.org/secret-key/1.1/salt/>https://api.wordpress.org/secret-key/1.1/salt/</a>生成，其他的不用动了。</p><p>最后的注意点就是这个空间不能在wordpress目录生成<code>.htaccess</code>文件，所以我提供了我的<code>.htaccess</code>文件，大家手工上传一下就好了。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-apache data-lang=apache><span style=color:#75715e># BEGIN WordPress</span>
+<!doctype html><html lang=zh-cn>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="用SourceForge.net建立WordPress">
+<meta name=twitter:description content>
+<meta name=twitter:site content="@heartnn">
+<meta property="og:title" content="用SourceForge.net建立WordPress &#183; heartnn的自留地">
+<meta property="og:site_name" content="heartnn的自留地">
+<meta property="og:url" content="https://www.heartnn.com/2010/10/29/setup-wordpress-on-sourceforge/">
+<meta property="og:image" content="https://open.saintic.com/api/bingPic/?picSize=2">
+<meta property="og:description" content>
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2010-10-29T00:09:00+08:00">
+<meta property="article:tag" content="wordpress">
+<title>用SourceForge.net建立WordPress &#183; heartnn的自留地</title>
+<meta name=description content="<p><img src=&#34;/uploads/2010/10/about-sourceforge.png&#34; alt=&#34;&#34;></p>
+<p>说来惭愧，6年前就创建了SourceForge(以下简称sf)的账号，但是从来没用过，最近无事，于是登陆来折腾一下～～发现sf空间的确是支持php的，很是欣喜。建立了一个Wordpre">
+<meta name=HandheldFriendly content="True">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel="shortcut icon" href=/images/favicon.ico>
+<link rel=apple-touch-icon href=/images/apple-touch-icon.png>
+<link rel=stylesheet href=/css/screen.min.css>
+<link rel=stylesheet href=/css/nav.min.css>
+<link rel=stylesheet href=//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.css integrity="sha256-oC/Q8nqWSlp1bki3Ht9gRCWaew5n6/HNk10HT4aEX4w=" crossorigin=anonymous>
+<link href=/index.xml rel=alternate type=application/rss+xml title=heartnn的自留地>
+<meta name=generator content="Hugo 0.87.0">
+<link rel=canonical href=https://www.heartnn.com/2010/10/29/setup-wordpress-on-sourceforge/>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","publisher":{"@type":"Organization","name":null,"logo":"https://www.heartnn.com/images/logo.png"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"https://www.heartnn.com/images/logo.png","width":250,"height":250},"url":"https://www.heartnn.com","sameAs":[]},"headline":"用SourceForge.net建立WordPress","name":"用SourceForge.net建立WordPress","wordCount":48,"timeRequired":"PT1M","inLanguage":{"@type":"Language","alternateName":"en"},"url":"https://www.heartnn.com/2010/10/29/setup-wordpress-on-sourceforge/","datePublished":"2010-10-29T00:09Z+08:00","dateModified":"2010-10-29T00:09+08:00","keywords":"wordpress","description":"","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.heartnn.com/2010/10/29/setup-wordpress-on-sourceforge/"}}</script>
+</head>
+<body class=nav-closed>
+<div class=nav>
+<h3 class=nav-title>Menu</h3>
+<a href=# class=nav-close>
+<span class=hidden>Close</span>
+</a>
+<ul>
+<li class=nav-opened role=presentation>
+<a href=/>首页</a>
+</li>
+<li class=nav-opened role=presentation>
+<a href=/aboutme/>关于我</a>
+</li>
+<li class=nav-opened role=presentation>
+<a href=/archives/>归档</a>
+</li>
+<li class=nav-opened role=presentation>
+<a href=/categories/>分类</a>
+</li>
+<li class=nav-opened role=presentation>
+<a href=/tags/>标签</a>
+</li>
+<h3 class=nav-link>Topics</h3>
+<li class=nav-opened role=presentation>
+<a href=/hosts/ title="General Hosts">Hosts</a>
+</li>
+<li class=nav-opened role=presentation>
+<a href=/twitter/ title="About Twitter">Twitter</a>
+</li>
+<li class=nav-opened role=presentation>
+<a href=/playlist/ title=我经常听的歌>播放列表</a>
+</li>
+<h3 class=nav-link>Links</h3>
+<li class=nav-opened role=presentation>
+<a href=https://pan.qnas.cc/ title=我的网盘 onclick="target='_blank'">我的网盘</a>
+</li>
+</ul>
+<a class="subscribe-button icon-feed" href=/index.xml>Subscribe</a>
+</div>
+<span class=nav-cover></span>
+<div class=site-wrapper>
+<header class="main-header post-head no-cover">
+<nav class="main-nav clearfix">
+<a class=blog-logo href=https://www.heartnn.com/><img src=/images/logo.png alt=Home></a>
+<a class=menu-button href=#><span class=burger>&#9776;</span><span class=word>Menu</span></a>
+</nav>
+</header>
+<main class=content role=main>
+<article class="post post">
+<header class=post-header>
+<h1 class=post-title>用SourceForge.net建立WordPress</h1>
+<small></small>
+<section class=post-meta>
+<time class=post-date datetime=2010-10-29T00:09:00+08:00>
+2010-10-29
+</time>
+<span class="post-tag small"><a href=https://www.heartnn.com/tags/wordpress/>#wordpress</a></span>
+</section>
+</header>
+<section class=post-content>
+<p><img src=/uploads/2010/10/about-sourceforge.png alt></p>
+<p>说来惭愧，6年前就创建了SourceForge(以下简称sf)的账号，但是从来没用过，最近无事，于是登陆来折腾一下～～发现sf空间的确是支持php的，很是欣喜。建立了一个Wordpress也成功了，当然用了点手段，想知道怎么折腾请往下看。(我不确定这样做是不是违反了sf的规定，因为sf本身提供了wordpress的博客，当然是不能自定义的那种了，下面会介绍到。)</p>
+<p>首先是没有账号的先去注册个(这是废话。。。)，登陆后点上面的Create Project。</p>
+<p><img src=/uploads/2010/10/sourceforge-home.png alt></p>
+<p>来到了<a href=https://sourceforge.net/register/>https://sourceforge.net/register/</a>这个页面，点右边的Create Project，填写表单，很容易看懂的，注意的就是Url那里关系到以后的网址，不过也没关系，sf是提供域名绑定的，偷笑吧～～点Complete Registration完成。我是没点那个beta的链接，想尝试的可以试一下。</p>
+<p>完成前面的步骤后点右上角你的用户名，在右边My Projects的框里应该能看到刚才创建的工程名字了。进入后再工程名下面的一排菜单里点Project Admin里的Feature Settings进行设置。</p>
+<p>这里说点题外话，刚才提到sf提供了wordpress，其实就在Available Features里面，自己激活就可以用了，只不过域名要长的多，而且不能装自定义插件什么的。</p>
+<p><img src=/uploads/2010/10/sourceforge-feature-settings.png alt></p>
+<p>看上图，我们需要用到的三个功能，首先看网站管理，这个很简单，进入后必须设定一个密码才能使用，这个密码就是以后上传文件需要用到的。</p>
+<p>关于数据上传，我用的是FlashFXP，链接类型要用SFTP over SSH，地址见下图，用户名的地方写用户名+英文逗号+工程名，其中工程名就是创建工程时url填写的那个，密码是刚才设定的密码。</p>
+<p><img src=/uploads/2010/10/sourceforge-sftp.png alt></p>
+<p>数据库管理比较麻烦，看下面的图就一目了然了。</p>
+<p><img src=/uploads/2010/10/sourceforge-mysql.png alt></p>
+<p>下面的框里分别设定只读用户，读写用户和管理员的密码，记得设定哦。</p>
+<p>最后是绑定域名的方法：<code>yourdomain.com</code>与<code>www.yourdomain.com</code>是不同的，如果你想要<code>yourdomain.com</code>与<code>www.yourdomain.com</code>都能访问到，必须都要绑定。然后解析<code>yourdomain.com</code>的<code>A</code>记录到<code>216.34.181.97</code>，<code>www.yourdomain.com</code>的CNAME记录到<code>vhost.sourceforge.net</code>就行了，最多可以绑定10条记录。</p>
+<p>然后开始wordpress的安装，都上传完以后，打开网址开始安装wordpress，此时必须手动建立一个<code>wp-config.php</code>，偷懒的话可以把<code>wp-config-simple.php</code>改名，然后把数据库的部分做修改（参考上面的图），需要特别注意的是MySQL主机名不是<code>localhost</code>，而是<code>mysql-h</code>(这里根据用户名不同而不同)。下面身份密匙设定的随机数可以参考<a href=https://api.wordpress.org/secret-key/1.1/salt/>https://api.wordpress.org/secret-key/1.1/salt/</a>生成，其他的不用动了。</p>
+<p>最后的注意点就是这个空间不能在wordpress目录生成<code>.htaccess</code>文件，所以我提供了我的<code>.htaccess</code>文件，大家手工上传一下就好了。</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-apache data-lang=apache><span style=color:#75715e># BEGIN WordPress</span>
 <span style=color:#f92672>&lt;IfModule</span> <span style=color:#e6db74>mod_rewrite.c</span><span style=color:#f92672>&gt;</span>
     RewriteEngine <span style=color:#66d9ef>On</span>
     RewriteBase /
@@ -11,8 +116,63 @@
     RewriteRule . <span style=color:#e6db74>/index.php</span> [L]
 <span style=color:#f92672>&lt;/IfModule&gt;</span>
 <span style=color:#75715e># END WordPress</span>
-</code></pre></div></section><footer class=post-footer><figure class=author-image><a class=img href=https://www.heartnn.com/ style=background-image:url(/images/logo.png)><span class=hidden>heartnn's Picture</span></a></figure><section class=author><h4><a href=https://www.heartnn.com/>heartnn</a></h4><p>Read <a href=https://www.heartnn.com/>more posts</a> by this author.</p><div class=author-meta><span class="author-location icon-location">河北, 石家庄</span>
-<span class="author-link icon-link"><a href=https://www.heartnn.com>https://www.heartnn.com</a></span></div></section><section class=share><h4>Share this post</h4><a class=icon-twitter style=font-size:1.4em href="https://twitter.com/share?text=%e7%94%a8SourceForge.net%e5%bb%ba%e7%ab%8bWordPress&nbsp;-&nbsp;heartnn%e7%9a%84%e8%87%aa%e7%95%99%e5%9c%b0&url=https%3a%2f%2fwww.heartnn.com%2f2010%2f10%2f29%2fsetup-wordpress-on-sourceforge%2f" onclick="return window.open(this.href,'twitter-share','width=550,height=235'),!1"><span class=hidden>Twitter</span></a>
-<a class=icon-facebook style=font-size:1.4em href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.heartnn.com%2f2010%2f10%2f29%2fsetup-wordpress-on-sourceforge%2f" onclick="return window.open(this.href,'facebook-share','width=580,height=296'),!1"><span class=hidden>Facebook</span></a>
-<a class=icon-pinterest style=font-size:1.4em href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.heartnn.com%2f2010%2f10%2f29%2fsetup-wordpress-on-sourceforge%2f&description=%e7%94%a8SourceForge.net%e5%bb%ba%e7%ab%8bWordPress" onclick="return window.open(this.href,'pinterest-share','width=580,height=296'),!1"><span class=hidden>Pinterest</span></a>
-<a class=icon-google-plus style=font-size:1.4em href="https://plus.google.com/share?url=https%3a%2f%2fwww.heartnn.com%2f2010%2f10%2f29%2fsetup-wordpress-on-sourceforge%2f" onclick="return window.open(this.href,'google-plus-share','width=490,height=530'),!1"><span class=hidden>Google+</span></a></section><div id=vcomments></div></footer></article></main><aside class=read-next><a class=read-next-story style=no-cover href=/2010/10/29/wordpress-gzip-output/><section class=post><h2>关于Wordpress的gzip输出</h2></section></a><a class="read-next-story prev" style=no-cover href=/2010/10/27/diabloimage/><section class=post><h2>GAE相册程序推荐: diabloimage</h2></section></a></aside><footer class="site-footer clearfix"><section class=copyright>&copy;2008-2018 heartnn的自留地 &nbsp;&nbsp;&nbsp; <a rel=license href=https://creativecommons.org/licenses/by-nc-sa/4.0/>CC&nbsp;BY-NC-SA&nbsp;4.0</a></section><section class=poweredby>Proudly generated by <a class=icon-hugo href=https://gohugo.io>HUGO</a>, with <a class=icon-theme href=https://github.com/vjeantet/hugo-theme-casper>Casper</a> theme</section></footer></div><script src=https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin=anonymous></script><script src=//cdn.jsdelivr.net/gh/TryGhost/Casper@2.6.2/assets/js/jquery.fitvids.js integrity="sha256-bj/JlIND2F1ZRARRwS8t4d22whMq5QMxT2rGs/hyGKg=" crossorigin=anonymous></script><script src=//cdn.jsdelivr.net/gh/leancloud/javascript-sdk@3.0.4/dist/av-min.js integrity="sha256-2vlmqmaGb3IeprbhwEGB5KVTmXxClaA3zwloXdTaXPQ=" crossorigin=anonymous></script><script src=//cdn.jsdelivr.net/gh/DesertsP/Valine/dist/Valine.min.js></script><script>new Valine({av:AV,el:'#vcomments',emoticon_url:'https://www.heartnn.com/smiles',emoticon_list:["呵呵.png","哈哈.png","吐舌.png","啊.png","酷.png","怒.png","开心.png","汗.png","泪.png","黑线.png","鄙视.png","不高兴.png","真棒.png","钱.png","疑问.png","阴脸.png","吐.png","咦.png","委屈.png","花心.png","呼~.png","笑眼.png","冷.png","太开心.png","滑稽.png","勉强.png","狂汗.png","乖.png","睡觉.png","惊哭.png","升起.png","惊讶.png","喷.png"],app_id:'WmHH4997UnyEsd9H1aACe6rP-gzGzoHsz',app_key:'44mTerRFfQEcXcJ8kvvkeTp0',placeholder:'在此评论～'})</script><script src=/js/index.js></script><script src=//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.js integrity="sha256-iFCrYEMjebIvuiqOp61+L3FN2MH8rfqmzGQ0bN5YTWg=" crossorigin=anonymous></script><script src=/js/fancybox.js></script></body></html>
+</code></pre></div>
+</section>
+<footer class=post-footer>
+<figure class=author-image>
+<a class=img href=https://www.heartnn.com/ style=background-image:url(/images/logo.png)><span class=hidden>heartnn's Picture</span></a>
+</figure>
+<section class=author>
+<h4><a href=https://www.heartnn.com/>heartnn</a></h4>
+<p>Read <a href=https://www.heartnn.com/>more posts</a> by this author.</p>
+<div class=author-meta>
+<span class="author-location icon-location">河北, 石家庄</span>
+<span class="author-link icon-link"><a href=https://www.heartnn.com>https://www.heartnn.com</a></span>
+</div>
+</section>
+<section class=share>
+<h4>Share this post</h4>
+<a class=icon-twitter style=font-size:1.4em href="https://twitter.com/share?text=%e7%94%a8SourceForge.net%e5%bb%ba%e7%ab%8bWordPress&nbsp;-&nbsp;heartnn%e7%9a%84%e8%87%aa%e7%95%99%e5%9c%b0&url=https%3a%2f%2fwww.heartnn.com%2f2010%2f10%2f29%2fsetup-wordpress-on-sourceforge%2f" onclick="return window.open(this.href,'twitter-share','width=550,height=235'),!1">
+<span class=hidden>Twitter</span>
+</a>
+<a class=icon-facebook style=font-size:1.4em href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.heartnn.com%2f2010%2f10%2f29%2fsetup-wordpress-on-sourceforge%2f" onclick="return window.open(this.href,'facebook-share','width=580,height=296'),!1">
+<span class=hidden>Facebook</span>
+</a>
+<a class=icon-pinterest style=font-size:1.4em href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.heartnn.com%2f2010%2f10%2f29%2fsetup-wordpress-on-sourceforge%2f&description=%e7%94%a8SourceForge.net%e5%bb%ba%e7%ab%8bWordPress" onclick="return window.open(this.href,'pinterest-share','width=580,height=296'),!1">
+<span class=hidden>Pinterest</span>
+</a>
+<a class=icon-google-plus style=font-size:1.4em href="https://plus.google.com/share?url=https%3a%2f%2fwww.heartnn.com%2f2010%2f10%2f29%2fsetup-wordpress-on-sourceforge%2f" onclick="return window.open(this.href,'google-plus-share','width=490,height=530'),!1">
+<span class=hidden>Google+</span>
+</a>
+</section>
+<div id=vcomments></div>
+</footer>
+</article>
+</main>
+<aside class=read-next>
+<a class=read-next-story style=no-cover href=/2010/10/29/wordpress-gzip-output/>
+<section class=post>
+<h2>关于Wordpress的gzip输出</h2>
+</section>
+</a>
+<a class="read-next-story prev" style=no-cover href=/2010/10/27/diabloimage/>
+<section class=post>
+<h2>GAE相册程序推荐: diabloimage</h2>
+</section>
+</a>
+</aside>
+<footer class="site-footer clearfix">
+<section class=copyright>&copy;2008-2018 heartnn的自留地 &nbsp;&nbsp;&nbsp; <a rel=license href=https://creativecommons.org/licenses/by-nc-sa/4.0/>CC&nbsp;BY-NC-SA&nbsp;4.0</a></section>
+<section class=poweredby>Proudly generated by <a class=icon-hugo href=https://gohugo.io>HUGO</a>, with <a class=icon-theme href=https://github.com/vjeantet/hugo-theme-casper>Casper</a> theme</section>
+</footer>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin=anonymous></script>
+<script src=//cdn.jsdelivr.net/gh/TryGhost/Casper@2.6.2/assets/js/jquery.fitvids.js integrity="sha256-bj/JlIND2F1ZRARRwS8t4d22whMq5QMxT2rGs/hyGKg=" crossorigin=anonymous></script>
+<script src=//cdn.jsdelivr.net/gh/leancloud/javascript-sdk@3.0.4/dist/av-min.js integrity="sha256-2vlmqmaGb3IeprbhwEGB5KVTmXxClaA3zwloXdTaXPQ=" crossorigin=anonymous></script>
+<script src=//cdn.jsdelivr.net/gh/DesertsP/Valine/dist/Valine.min.js></script>
+<script>new Valine({av:AV,el:'#vcomments',emoticon_url:'https://www.heartnn.com/smiles',emoticon_list:["呵呵.png","哈哈.png","吐舌.png","啊.png","酷.png","怒.png","开心.png","汗.png","泪.png","黑线.png","鄙视.png","不高兴.png","真棒.png","钱.png","疑问.png","阴脸.png","吐.png","咦.png","委屈.png","花心.png","呼~.png","笑眼.png","冷.png","太开心.png","滑稽.png","勉强.png","狂汗.png","乖.png","睡觉.png","惊哭.png","升起.png","惊讶.png","喷.png"],app_id:'WmHH4997UnyEsd9H1aACe6rP-gzGzoHsz',app_key:'44mTerRFfQEcXcJ8kvvkeTp0',placeholder:'在此评论～'})</script>
+<script src=/js/index.js></script>
+<script src=//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.js integrity="sha256-iFCrYEMjebIvuiqOp61+L3FN2MH8rfqmzGQ0bN5YTWg=" crossorigin=anonymous></script>
+<script src=/js/fancybox.js></script>
+</body>
+</html>

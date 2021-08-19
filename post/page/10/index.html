@@ -1,45 +1,248 @@
-<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=twitter:card content="summary"><meta name=twitter:image content="https://open.saintic.com/api/bingPic/?picSize=2"><meta name=twitter:title content="Posts"><meta name=twitter:description content="生活中的记忆片段~"><meta name=twitter:site content="@heartnn"><meta property="og:title" content="Posts &#183; heartnn的自留地"><meta property="og:site_name" content="heartnn的自留地"><meta property="og:url" content="https://www.heartnn.com/post/"><meta property="og:image" content="https://open.saintic.com/api/bingPic/?picSize=2"><meta property="og:type" content="website"><meta property="og:description" content="生活中的记忆片段~"><title>Posts &#183; heartnn的自留地</title><meta name=description content="生活中的记忆片段~"><meta name=HandheldFriendly content="True"><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" href=/images/favicon.ico><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=stylesheet href=/css/screen.min.css><link rel=stylesheet href=/css/nav.min.css><link rel=stylesheet href=//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.css integrity="sha256-oC/Q8nqWSlp1bki3Ht9gRCWaew5n6/HNk10HT4aEX4w=" crossorigin=anonymous><link href=/index.xml rel=alternate type=application/rss+xml title=heartnn的自留地><link href=/post/index.xml rel=alternate type=application/rss+xml title="Posts &#183; heartnn的自留地"><meta name=generator content="Hugo 0.84.1"><link rel=canonical href=https://www.heartnn.com/post/><script type=application/ld+json>{"@context":"https://schema.org","@type":"Website","publisher":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"https://www.heartnn.com/images/logo.png","width":250,"height":250},"url":"https://www.heartnn.com","sameAs":[]},"url":"https://www.heartnn.com/","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.heartnn.com/"},"description":"生活中的记忆片段~"}</script></head><body class=nav-closed><div class=nav><h3 class=nav-title>Menu</h3><a href=# class=nav-close><span class=hidden>Close</span></a><ul><li class=nav-opened role=presentation><a href=/>首页</a></li><li class=nav-opened role=presentation><a href=/aboutme/>关于我</a></li><li class=nav-opened role=presentation><a href=/archives/>归档</a></li><li class=nav-opened role=presentation><a href=/categories/>分类</a></li><li class=nav-opened role=presentation><a href=/tags/>标签</a></li><h3 class=nav-link>Topics</h3><li class=nav-opened role=presentation><a href=/hosts/ title="General Hosts">Hosts</a></li><li class=nav-opened role=presentation><a href=/twitter/ title="About Twitter">Twitter</a></li><li class=nav-opened role=presentation><a href=/playlist/ title=我经常听的歌>播放列表</a></li><h3 class=nav-link>Links</h3><li class=nav-opened role=presentation><a href=https://pan.qnas.cc/ title=我的网盘 onclick="target='_blank'">我的网盘</a></li></ul><a class="subscribe-button icon-feed" href=/post/index.xml>Subscribe</a></div><span class=nav-cover></span><div class=site-wrapper><header class="main-header tag-head" style="background-image:url(https://open.saintic.com/api/bingPic/?picSize=2)"><nav class="main-nav overlay clearfix"><a class=blog-logo href=https://www.heartnn.com/><img src=/images/logo.png alt=Home></a>
-<a class=menu-button href=#><span class=burger>&#9776;</span><span class=word>Menu</span></a></nav><div class=vertical><div class="main-header-content inner"><h1 class=page-title>Posts</h1><h2 class=page-description></h2></div></div></header><main class=content role=main><div class="extra-pagination inner"><nav class=pagination role=navigation><a class=newer-posts href=/post/page/9/>&larr; Newer Posts</a>
-<span class=page-number>Page 10 of 37</span>
-<a class=older-posts href=/post/page/11/>Older Posts &rarr;</a></nav></div><article class="post post"><header class=post-header><h2 class=post-title><a href=/2017/03/05/using-shadowsocks-for-git-proxy/>使用Shadowsocks为git代理</a></h2></header><section class=post-excerpt><p><p>一直在用官方的git程序更新位于Openshift的博客，今天更新时发现22端口非常缓慢，眼看博客代码提交不上去，所以只得挂上SS，但SS却不能为git做代理，于是才有了本文下面的内容。</p><h4 id=一网上搜出了git为项目设置代理的方法>一、网上搜出了git为项目设置代理的方法：</h4><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git config --local http.proxy <span style=color:#e6db74>&#39;socks5://127.0.0.1:1080&#39;</span>
+<!doctype html><html lang=zh-cn>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=twitter:card content="summary">
+<meta name=twitter:image content="https://open.saintic.com/api/bingPic/?picSize=2">
+<meta name=twitter:title content="Posts">
+<meta name=twitter:description content="生活中的记忆片段~">
+<meta name=twitter:site content="@heartnn">
+<meta property="og:title" content="Posts &#183; heartnn的自留地">
+<meta property="og:site_name" content="heartnn的自留地">
+<meta property="og:url" content="https://www.heartnn.com/post/">
+<meta property="og:image" content="https://open.saintic.com/api/bingPic/?picSize=2">
+<meta property="og:type" content="website">
+<meta property="og:description" content="生活中的记忆片段~">
+<title>Posts &#183; heartnn的自留地</title>
+<meta name=description content="生活中的记忆片段~">
+<meta name=HandheldFriendly content="True">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel="shortcut icon" href=/images/favicon.ico>
+<link rel=apple-touch-icon href=/images/apple-touch-icon.png>
+<link rel=stylesheet href=/css/screen.min.css>
+<link rel=stylesheet href=/css/nav.min.css>
+<link rel=stylesheet href=//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.css integrity="sha256-oC/Q8nqWSlp1bki3Ht9gRCWaew5n6/HNk10HT4aEX4w=" crossorigin=anonymous>
+<link href=/index.xml rel=alternate type=application/rss+xml title=heartnn的自留地>
+<link href=/post/index.xml rel=alternate type=application/rss+xml title="Posts &#183; heartnn的自留地">
+<meta name=generator content="Hugo 0.87.0">
+<link rel=canonical href=https://www.heartnn.com/post/>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Website","publisher":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"https://www.heartnn.com/images/logo.png","width":250,"height":250},"url":"https://www.heartnn.com","sameAs":[]},"url":"https://www.heartnn.com/","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.heartnn.com/"},"description":"生活中的记忆片段~"}</script>
+</head>
+<body class=nav-closed>
+<div class=nav>
+<h3 class=nav-title>Menu</h3>
+<a href=# class=nav-close>
+<span class=hidden>Close</span>
+</a>
+<ul>
+<li class=nav-opened role=presentation>
+<a href=/>首页</a>
+</li>
+<li class=nav-opened role=presentation>
+<a href=/aboutme/>关于我</a>
+</li>
+<li class=nav-opened role=presentation>
+<a href=/archives/>归档</a>
+</li>
+<li class=nav-opened role=presentation>
+<a href=/categories/>分类</a>
+</li>
+<li class=nav-opened role=presentation>
+<a href=/tags/>标签</a>
+</li>
+<h3 class=nav-link>Topics</h3>
+<li class=nav-opened role=presentation>
+<a href=/hosts/ title="General Hosts">Hosts</a>
+</li>
+<li class=nav-opened role=presentation>
+<a href=/twitter/ title="About Twitter">Twitter</a>
+</li>
+<li class=nav-opened role=presentation>
+<a href=/playlist/ title=我经常听的歌>播放列表</a>
+</li>
+<h3 class=nav-link>Links</h3>
+<li class=nav-opened role=presentation>
+<a href=https://pan.qnas.cc/ title=我的网盘 onclick="target='_blank'">我的网盘</a>
+</li>
+</ul>
+<a class="subscribe-button icon-feed" href=/post/index.xml>Subscribe</a>
+</div>
+<span class=nav-cover></span>
+<div class=site-wrapper>
+<header class="main-header tag-head" style="background-image:url(https://open.saintic.com/api/bingPic/?picSize=2)">
+<nav class="main-nav overlay clearfix">
+<a class=blog-logo href=https://www.heartnn.com/><img src=/images/logo.png alt=Home></a>
+<a class=menu-button href=#><span class=burger>&#9776;</span><span class=word>Menu</span></a>
+</nav>
+<div class=vertical>
+<div class="main-header-content inner">
+<h1 class=page-title>Posts</h1>
+<h2 class=page-description>
+</h2>
+</div>
+</div>
+</header>
+<main class=content role=main>
+<div class="extra-pagination inner">
+<nav class=pagination role=navigation>
+<a class=newer-posts href=/post/page/9/>&larr; Newer Posts</a>
+<span class=page-number>Page 10 of 38</span>
+<a class=older-posts href=/post/page/11/>Older Posts &rarr;</a>
+</nav>
+</div>
+<article class="post post">
+<header class=post-header>
+<h2 class=post-title><a href=/2017/03/24/duoshuo-to-disqus/>多说关闭，转向Disqus</a></h2>
+</header>
+<section class=post-excerpt>
+<p><p>这两天打开博客一看，发现了多说即将关闭的通告，实在郁闷，又必须迁移评论了，于是乎开始尝试各种社会化评论，顺便把结果记录在这里。</p>
+<p>首先是畅言，先不说别的，就备案这一条，我就通不过啊。。。有备案的朋友可以去试试，原来尝试过导入，结果非常蛋疼，现在未知。</p>
+<p>其次说说友言，之前多说用uuid来识别，友言没有提供这个功能，只有一个简单的代码，看起来应该是按照url来识别的。</p>
+<p>网易云跟帖，有知乎上的网友说不错，可惜我导入多说完全失败，清空也很麻烦，还不让删除，给客服留言，两天没反映，冲这个服务也不敢用啊。。。</p>
+<p>最后确定还是Disqus，目前最大的麻烦就是被墙掉了，改hosts还是可以用的。</p> <a class=read-more href=/2017/03/24/duoshuo-to-disqus/>&#187;</a></p>
+</section>
+<footer class=post-meta>
+<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
+heartnn
+on
+<a href=https://www.heartnn.com/tags/duoshuo/>#duoshuo</a>
+,
+<a href=https://www.heartnn.com/tags/disqus/>#disqus</a>
+,
+<a href=https://www.heartnn.com/tags/hosts/>#hosts</a>
+<time class=post-date datetime=2017-03-24T12:24:00+08:00>
+2017-03-24
+</time>
+</footer>
+</article>
+<article class="post post">
+<header class=post-header>
+<h2 class=post-title><a href=/2017/03/05/using-shadowsocks-for-git-proxy/>使用Shadowsocks为git代理</a></h2>
+</header>
+<section class=post-excerpt>
+<p><p>一直在用官方的git程序更新位于Openshift的博客，今天更新时发现22端口非常缓慢，眼看博客代码提交不上去，所以只得挂上SS，但SS却不能为git做代理，于是才有了本文下面的内容。</p>
+<h4 id=一网上搜出了git为项目设置代理的方法>一、网上搜出了git为项目设置代理的方法：</h4>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git config --local http.proxy <span style=color:#e6db74>&#39;socks5://127.0.0.1:1080&#39;</span>
 git config --local https.proxy <span style=color:#e6db74>&#39;socks5://127.0.0.1:1080&#39;</span>
-</code></pre></div><p>此方法在我的电脑里并不适用，不过多讨论。</p><a class=read-more href=/2017/03/05/using-shadowsocks-for-git-proxy/>&#187;</a></p></section><footer class=post-meta><img class="author-thumb nopin" src=/images/logo.png alt="Author image">
+</code></pre></div><p>此方法在我的电脑里并不适用，不过多讨论。</p> <a class=read-more href=/2017/03/05/using-shadowsocks-for-git-proxy/>&#187;</a></p>
+</section>
+<footer class=post-meta>
+<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
 heartnn
 on
 <a href=https://www.heartnn.com/tags/git/>#git</a>
 ,
 <a href=https://www.heartnn.com/tags/shadowsocks/>#shadowsocks</a>
-<time class=post-date datetime=2017-03-05T14:17:30+08:00>2017-03-05</time></footer></article><article class="post post"><header class=post-header><h2 class=post-title><a href=/2016/12/24/hexo-blog-on-android/>在Android手机搭建Hexo博客环境</a></h2></header><section class=post-excerpt><p><p><img src=/uploads/2016/12/hexo-logo.png alt></p><h3 id=方案对比>方案对比</h3><h4 id=termux>Termux</h4><p><a href="https://play.google.com/store/apps/details?id=com.termux">Termux</a>是比较简单的Linux终端，提供简单的开发环境，用来Hexo发布很方便，缺点是终端不支持中文，作者也没有提供多语言。</p><h4 id=linux-deploy>Linux Deploy</h4><p><a href="https://play.google.com/store/apps/details?id=ru.meefik.linuxdeploy">Linux Deploy</a>可以部署多种Linux发行版，比如Debian和Ubuntu等，可用ssh和图形访问，和PC上没有太多区别。缺点是占用空间可能会较大。</p><a class=read-more href=/2016/12/24/hexo-blog-on-android/>&#187;</a></p></section><footer class=post-meta><img class="author-thumb nopin" src=/images/logo.png alt="Author image">
+<time class=post-date datetime=2017-03-05T14:17:30+08:00>
+2017-03-05
+</time>
+</footer>
+</article>
+<article class="post post">
+<header class=post-header>
+<h2 class=post-title><a href=/2016/12/24/hexo-blog-on-android/>在Android手机搭建Hexo博客环境</a></h2>
+</header>
+<section class=post-excerpt>
+<p><p><img src=/uploads/2016/12/hexo-logo.png alt></p>
+<h3 id=方案对比>方案对比</h3>
+<h4 id=termux>Termux</h4>
+<p><a href="https://play.google.com/store/apps/details?id=com.termux">Termux</a>是比较简单的Linux终端，提供简单的开发环境，用来Hexo发布很方便，缺点是终端不支持中文，作者也没有提供多语言。</p>
+<h4 id=linux-deploy>Linux Deploy</h4>
+<p><a href="https://play.google.com/store/apps/details?id=ru.meefik.linuxdeploy">Linux Deploy</a>可以部署多种Linux发行版，比如Debian和Ubuntu等，可用ssh和图形访问，和PC上没有太多区别。缺点是占用空间可能会较大。</p> <a class=read-more href=/2016/12/24/hexo-blog-on-android/>&#187;</a></p>
+</section>
+<footer class=post-meta>
+<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
 heartnn
 on
 <a href=https://www.heartnn.com/tags/android/>#android</a>
 ,
 <a href=https://www.heartnn.com/tags/hexo/>#hexo</a>
-<time class=post-date datetime=2016-12-24T11:36:44+08:00>2016-12-24</time></footer></article><article class="post post"><header class=post-header><h2 class=post-title><a href=/2016/12/17/ipod-classic-rockbox-theme/>iPod Classic Rockbox主题</a></h2></header><section class=post-excerpt><p>这两天将手头的iPod Classic刷成了Rockbox，只因为原来的iTunes列表完全乱掉了，有很多重复的歌曲，还有一些没有放到列表里，干脆重来算了。
+<time class=post-date datetime=2016-12-24T11:36:44+08:00>
+2016-12-24
+</time>
+</footer>
+</article>
+<article class="post post">
+<header class=post-header>
+<h2 class=post-title><a href=/2016/12/17/ipod-classic-rockbox-theme/>iPod Classic Rockbox主题</a></h2>
+</header>
+<section class=post-excerpt>
+<p>这两天将手头的iPod Classic刷成了Rockbox，只因为原来的iTunes列表完全乱掉了，有很多重复的歌曲，还有一些没有放到列表里，干脆重来算了。
 刷机过程自行Google，这里有个简单的英文版教程，其中stable和beta我都试过了，感觉没什么差别。
 刷完之后应该是可以抛弃iTunes了，然后所有歌曲按照文件夹排列，回归传统的整理方式。不过，用习惯了iTunes的播放列表以后，暂时还不习惯。
 说整体，默认主题很丑，官网上的主题又多少有一些bug，所以自己模仿修改了iClassic-Square，用的Rockbox中文社区里的文泉驿微米黑字体(不用自己转换了)，加上自己修改了一些配置。
 相关截图看这里。
-下载链接：https://pan.baidu.com/s/1AzCZw-lc4ynsAd622iysVg 提取码：ioza <a class=read-more href=/2016/12/17/ipod-classic-rockbox-theme/>&#187;</a></p></section><footer class=post-meta><img class="author-thumb nopin" src=/images/logo.png alt="Author image">
+下载链接：https://pan.baidu.com/s/1AzCZw-lc4ynsAd622iysVg 提取码：ioza <a class=read-more href=/2016/12/17/ipod-classic-rockbox-theme/>&#187;</a></p>
+</section>
+<footer class=post-meta>
+<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
 heartnn
 on
 <a href=https://www.heartnn.com/tags/ipod/>#ipod</a>
 ,
 <a href=https://www.heartnn.com/tags/rockbox/>#rockbox</a>
-<time class=post-date datetime=2016-12-17T11:25:50+08:00>2016-12-17</time></footer></article><article class="post post"><header class=post-header><h2 class=post-title><a href=/2016/12/05/recommend-micro-film-the-black-hole/>人性的贪婪 (短片推荐: 黑洞)</a></h2></header><section class=post-excerpt><p><blockquote><p>空空荡荡的写字楼内，几乎所有的人都已下班，享受属于自己的快乐夜晚，只有身心俱疲的小职员查理（Napoleon Ryan 饰）还在站在复印机前，辛辛苦苦地影印材料。在这种几近崩溃的疲劳时刻，也许咖啡是唯一能令他稍感振奋的东西。突然，一件奇怪的事情毫无征兆地发生了。一张A4纸出来，上面没有任何所需的资料，只印了一个实心黑球。查理不以为意，将这张废纸放到一边，当他放置咖啡杯时，杯子竟然掉进了A4纸的黑洞里。这奇怪的黑洞引起了查理的注意，他尝试将纸挂在自动贩卖机上，结果成功地伸进黑洞拿到了里面的饮料。<br>这时，一个邪恶的念头闪过脑海…… (via <a href=https://movie.douban.com/subject/4016948/>豆瓣</a>)</p></blockquote><a class=read-more href=/2016/12/05/recommend-micro-film-the-black-hole/>&#187;</a></p></section><footer class=post-meta><img class="author-thumb nopin" src=/images/logo.png alt="Author image">
+<time class=post-date datetime=2016-12-17T11:25:50+08:00>
+2016-12-17
+</time>
+</footer>
+</article>
+<article class="post post">
+<header class=post-header>
+<h2 class=post-title><a href=/2016/12/05/recommend-micro-film-the-black-hole/>人性的贪婪 (短片推荐: 黑洞)</a></h2>
+</header>
+<section class=post-excerpt>
+<p><blockquote>
+<p>空空荡荡的写字楼内，几乎所有的人都已下班，享受属于自己的快乐夜晚，只有身心俱疲的小职员查理（Napoleon Ryan 饰）还在站在复印机前，辛辛苦苦地影印材料。在这种几近崩溃的疲劳时刻，也许咖啡是唯一能令他稍感振奋的东西。突然，一件奇怪的事情毫无征兆地发生了。一张A4纸出来，上面没有任何所需的资料，只印了一个实心黑球。查理不以为意，将这张废纸放到一边，当他放置咖啡杯时，杯子竟然掉进了A4纸的黑洞里。这奇怪的黑洞引起了查理的注意，他尝试将纸挂在自动贩卖机上，结果成功地伸进黑洞拿到了里面的饮料。<br>
+这时，一个邪恶的念头闪过脑海…… (via <a href=https://movie.douban.com/subject/4016948/>豆瓣</a>)</p>
+</blockquote> <a class=read-more href=/2016/12/05/recommend-micro-film-the-black-hole/>&#187;</a></p>
+</section>
+<footer class=post-meta>
+<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
 heartnn
 on
 <a href=https://www.heartnn.com/tags/microfilm/>#microfilm</a>
-<time class=post-date datetime=2016-12-05T09:44:28+08:00>2016-12-05</time></footer></article><article class="post post"><header class=post-header><h2 class=post-title><a href=/2016/11/27/update-to-ghost-0-11-3/>Ghost变得越来越成熟了，已跟随更新到0.11.3</a></h2></header><section class=post-excerpt><p>因为新版Ghost已经不支持node 0.10，建在Docker上的ghost可以切换版本最新到6.9，在Openshift上可以利用@icflorescu/openshift-cartridge-nodejs另外建一个自动更新版本的node。
+<time class=post-date datetime=2016-12-05T09:44:28+08:00>
+2016-12-05
+</time>
+</footer>
+</article>
+<article class="post post">
+<header class=post-header>
+<h2 class=post-title><a href=/2016/11/27/update-to-ghost-0-11-3/>Ghost变得越来越成熟了，已跟随更新到0.11.3</a></h2>
+</header>
+<section class=post-excerpt>
+<p>因为新版Ghost已经不支持node 0.10，建在Docker上的ghost可以切换版本最新到6.9，在Openshift上可以利用@icflorescu/openshift-cartridge-nodejs另外建一个自动更新版本的node。
 这里比较注意的是需要通过.openshift/NODE_VERSION_URL和.openshift/NPM_VERSION_URL来自定义版本，最好是使用node自带的npm版本(更新到最新的npm貌似不行。)
-https://semver.io/node/resolve/6.9.1 https://semver.io/npm/resolve/3.10.8 剩下的直接把本地安装好的Ghost通过git上传到根目录即可，可以抛弃原来的quickstart了。 <a class=read-more href=/2016/11/27/update-to-ghost-0-11-3/>&#187;</a></p></section><footer class=post-meta><img class="author-thumb nopin" src=/images/logo.png alt="Author image">
+https://semver.io/node/resolve/6.9.1 https://semver.io/npm/resolve/3.10.8 剩下的直接把本地安装好的Ghost通过git上传到根目录即可，可以抛弃原来的quickstart了。 <a class=read-more href=/2016/11/27/update-to-ghost-0-11-3/>&#187;</a></p>
+</section>
+<footer class=post-meta>
+<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
 heartnn
 on
 <a href=https://www.heartnn.com/tags/ghost/>#ghost</a>
-<time class=post-date datetime=2016-11-27T14:00:29+08:00>2016-11-27</time></footer></article><article class="post post"><header class=post-header><h2 class=post-title><a href=/2016/11/16/game-recommend-rusty-lake-roots/>游戏推荐: 锈色湖畔·根源</a></h2></header><section class=post-excerpt><p><p><img src=/uploads/2016/11/rusty-lake-roots.jpg alt></p><p>这次开发者带来的是关于锈色湖畔的一个完整故事，相对于上一个逃离方块系列来说，这次虽然也有些碎片化，不过故事情节更容易理解，而且通关后还有隐藏关卡，设计的非常巧妙。</p><p>说实话，我还没有完全理解剧情，只能说个大概了，整个树代表着一代一代带人物出现，每一个人物又和塔罗牌相对应，看清人物的塔罗牌，才能对人物的行动指示有所理解。</p><a class=read-more href=/2016/11/16/game-recommend-rusty-lake-roots/>&#187;</a></p></section><footer class=post-meta><img class="author-thumb nopin" src=/images/logo.png alt="Author image">
-heartnn
-on
-<a href=https://www.heartnn.com/tags/rusty-lake/>#rusty lake</a>
-<time class=post-date datetime=2016-11-16T19:39:18+08:00>2016-11-16</time></footer></article><nav class=pagination role=navigation><a class=newer-posts href=/post/page/9/>&larr; Newer Posts</a>
-<span class=page-number>Page 10 of 37</span>
-<a class=older-posts href=/post/page/11/>Older Posts &rarr;</a></nav></main><footer class="site-footer clearfix"><section class=copyright>&copy;2008-2018 heartnn的自留地 &nbsp;&nbsp;&nbsp; <a rel=license href=https://creativecommons.org/licenses/by-nc-sa/4.0/>CC&nbsp;BY-NC-SA&nbsp;4.0</a></section><section class=poweredby>Proudly generated by <a class=icon-hugo href=https://gohugo.io>HUGO</a>, with <a class=icon-theme href=https://github.com/vjeantet/hugo-theme-casper>Casper</a> theme</section></footer></div><script src=https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin=anonymous></script><script src=//cdn.jsdelivr.net/gh/TryGhost/Casper@2.6.2/assets/js/jquery.fitvids.js integrity="sha256-bj/JlIND2F1ZRARRwS8t4d22whMq5QMxT2rGs/hyGKg=" crossorigin=anonymous></script><script src=//cdn.jsdelivr.net/gh/leancloud/javascript-sdk@3.0.4/dist/av-min.js integrity="sha256-2vlmqmaGb3IeprbhwEGB5KVTmXxClaA3zwloXdTaXPQ=" crossorigin=anonymous></script><script src=//cdn.jsdelivr.net/gh/DesertsP/Valine/dist/Valine.min.js></script><script>new Valine({av:AV,el:'#vcomments',emoticon_url:'https://www.heartnn.com/smiles',emoticon_list:["呵呵.png","哈哈.png","吐舌.png","啊.png","酷.png","怒.png","开心.png","汗.png","泪.png","黑线.png","鄙视.png","不高兴.png","真棒.png","钱.png","疑问.png","阴脸.png","吐.png","咦.png","委屈.png","花心.png","呼~.png","笑眼.png","冷.png","太开心.png","滑稽.png","勉强.png","狂汗.png","乖.png","睡觉.png","惊哭.png","升起.png","惊讶.png","喷.png"],app_id:'WmHH4997UnyEsd9H1aACe6rP-gzGzoHsz',app_key:'44mTerRFfQEcXcJ8kvvkeTp0',placeholder:'在此评论～'})</script><script src=/js/index.js></script><script src=//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.js integrity="sha256-iFCrYEMjebIvuiqOp61+L3FN2MH8rfqmzGQ0bN5YTWg=" crossorigin=anonymous></script><script src=/js/fancybox.js></script></body></html>
+<time class=post-date datetime=2016-11-27T14:00:29+08:00>
+2016-11-27
+</time>
+</footer>
+</article>
+<nav class=pagination role=navigation>
+<a class=newer-posts href=/post/page/9/>&larr; Newer Posts</a>
+<span class=page-number>Page 10 of 38</span>
+<a class=older-posts href=/post/page/11/>Older Posts &rarr;</a>
+</nav>
+</main>
+<footer class="site-footer clearfix">
+<section class=copyright>&copy;2008-2018 heartnn的自留地 &nbsp;&nbsp;&nbsp; <a rel=license href=https://creativecommons.org/licenses/by-nc-sa/4.0/>CC&nbsp;BY-NC-SA&nbsp;4.0</a></section>
+<section class=poweredby>Proudly generated by <a class=icon-hugo href=https://gohugo.io>HUGO</a>, with <a class=icon-theme href=https://github.com/vjeantet/hugo-theme-casper>Casper</a> theme</section>
+</footer>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin=anonymous></script>
+<script src=//cdn.jsdelivr.net/gh/TryGhost/Casper@2.6.2/assets/js/jquery.fitvids.js integrity="sha256-bj/JlIND2F1ZRARRwS8t4d22whMq5QMxT2rGs/hyGKg=" crossorigin=anonymous></script>
+<script src=//cdn.jsdelivr.net/gh/leancloud/javascript-sdk@3.0.4/dist/av-min.js integrity="sha256-2vlmqmaGb3IeprbhwEGB5KVTmXxClaA3zwloXdTaXPQ=" crossorigin=anonymous></script>
+<script src=//cdn.jsdelivr.net/gh/DesertsP/Valine/dist/Valine.min.js></script>
+<script>new Valine({av:AV,el:'#vcomments',emoticon_url:'https://www.heartnn.com/smiles',emoticon_list:["呵呵.png","哈哈.png","吐舌.png","啊.png","酷.png","怒.png","开心.png","汗.png","泪.png","黑线.png","鄙视.png","不高兴.png","真棒.png","钱.png","疑问.png","阴脸.png","吐.png","咦.png","委屈.png","花心.png","呼~.png","笑眼.png","冷.png","太开心.png","滑稽.png","勉强.png","狂汗.png","乖.png","睡觉.png","惊哭.png","升起.png","惊讶.png","喷.png"],app_id:'WmHH4997UnyEsd9H1aACe6rP-gzGzoHsz',app_key:'44mTerRFfQEcXcJ8kvvkeTp0',placeholder:'在此评论～'})</script>
+<script src=/js/index.js></script>
+<script src=//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.js integrity="sha256-iFCrYEMjebIvuiqOp61+L3FN2MH8rfqmzGQ0bN5YTWg=" crossorigin=anonymous></script>
+<script src=/js/fancybox.js></script>
+</body>
+</html>

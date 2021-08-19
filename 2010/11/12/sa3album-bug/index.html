@@ -1,11 +1,104 @@
-<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=twitter:card content="summary"><meta name=twitter:title content="万恶的GAE图床"><meta name=twitter:description content><meta name=twitter:site content="@heartnn"><meta property="og:title" content="万恶的GAE图床 &#183; heartnn的自留地"><meta property="og:site_name" content="heartnn的自留地"><meta property="og:url" content="https://www.heartnn.com/2010/11/12/sa3album-bug/"><meta property="og:image" content="https://open.saintic.com/api/bingPic/?picSize=2"><meta property="og:description" content><meta property="og:type" content="article"><meta property="article:published_time" content="2010-11-12T09:07:00+08:00"><meta property="article:tag" content="wordpress"><title>万恶的GAE图床 &#183; heartnn的自留地</title><meta name=description content="<p>一直用的<a href=&#34;http://sa3.org/program/gae-album/&#34;>Sa3album</a>，是从<a href=&#34;/2010/10/27/diabloimage/&#34;>大菠萝相册</a>进化而来的，主要是增加了多相册的功能，生成的图片地址也很短了，但是有一个问题，没有扩展名的后缀，导致"><meta name=HandheldFriendly content="True"><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" href=/images/favicon.ico><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=stylesheet href=/css/screen.min.css><link rel=stylesheet href=/css/nav.min.css><link rel=stylesheet href=//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.css integrity="sha256-oC/Q8nqWSlp1bki3Ht9gRCWaew5n6/HNk10HT4aEX4w=" crossorigin=anonymous><link href=/index.xml rel=alternate type=application/rss+xml title=heartnn的自留地><meta name=generator content="Hugo 0.84.1"><link rel=canonical href=https://www.heartnn.com/2010/11/12/sa3album-bug/><script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","publisher":{"@type":"Organization","name":null,"logo":"https://www.heartnn.com/images/logo.png"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"https://www.heartnn.com/images/logo.png","width":250,"height":250},"url":"https://www.heartnn.com","sameAs":[]},"headline":"万恶的GAE图床","name":"万恶的GAE图床","wordCount":92,"timeRequired":"PT1M","inLanguage":{"@type":"Language","alternateName":"en"},"url":"https://www.heartnn.com/2010/11/12/sa3album-bug/","datePublished":"2010-11-12T09:07Z+08:00","dateModified":"2010-11-12T09:07+08:00","keywords":"wordpress","description":"","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.heartnn.com/2010/11/12/sa3album-bug/"}}</script></head><body class=nav-closed><div class=nav><h3 class=nav-title>Menu</h3><a href=# class=nav-close><span class=hidden>Close</span></a><ul><li class=nav-opened role=presentation><a href=/>首页</a></li><li class=nav-opened role=presentation><a href=/aboutme/>关于我</a></li><li class=nav-opened role=presentation><a href=/archives/>归档</a></li><li class=nav-opened role=presentation><a href=/categories/>分类</a></li><li class=nav-opened role=presentation><a href=/tags/>标签</a></li><h3 class=nav-link>Topics</h3><li class=nav-opened role=presentation><a href=/hosts/ title="General Hosts">Hosts</a></li><li class=nav-opened role=presentation><a href=/twitter/ title="About Twitter">Twitter</a></li><li class=nav-opened role=presentation><a href=/playlist/ title=我经常听的歌>播放列表</a></li><h3 class=nav-link>Links</h3><li class=nav-opened role=presentation><a href=https://pan.qnas.cc/ title=我的网盘 onclick="target='_blank'">我的网盘</a></li></ul><a class="subscribe-button icon-feed" href=/index.xml>Subscribe</a></div><span class=nav-cover></span><div class=site-wrapper><header class="main-header post-head no-cover"><nav class="main-nav clearfix"><a class=blog-logo href=https://www.heartnn.com/><img src=/images/logo.png alt=Home></a>
-<a class=menu-button href=#><span class=burger>&#9776;</span><span class=word>Menu</span></a></nav></header><main class=content role=main><article class="post post"><header class=post-header><h1 class=post-title>万恶的GAE图床</h1><small></small><section class=post-meta><time class=post-date datetime=2010-11-12T09:07:00+08:00>2010-11-12</time>
-<span class="post-tag small"><a href=https://www.heartnn.com/tags/wordpress/>#wordpress</a></span></section></header><section class=post-content><p>一直用的<a href=http://sa3.org/program/gae-album/>Sa3album</a>，是从<a href=/2010/10/27/diabloimage/>大菠萝相册</a>进化而来的，主要是增加了多相册的功能，生成的图片地址也很短了，但是有一个问题，没有扩展名的后缀，导致绝大多数的lightbox都无法使用，Python代码又完全不会改，各种郁闷。</p><p>但是要仅仅如此郁闷也就算了，这两天折腾wordpress themes，换了theme以后发现原来对图片控制的width=&ldquo;570"是死板的，现在不适合了，于是更郁闷了。</p><p>于是乎开始搜索能自动调整大小的插件，可是那些插件大多是针对本地上传图片所用的，对外链调用的完全不起作用，于是一度想放弃现在的相册，但是又不太舍得，最后不在google搜索插件了，找到了一段css代码：</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css><span style=color:#f92672>img</span>{
+<!doctype html><html lang=zh-cn>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="万恶的GAE图床">
+<meta name=twitter:description content>
+<meta name=twitter:site content="@heartnn">
+<meta property="og:title" content="万恶的GAE图床 &#183; heartnn的自留地">
+<meta property="og:site_name" content="heartnn的自留地">
+<meta property="og:url" content="https://www.heartnn.com/2010/11/12/sa3album-bug/">
+<meta property="og:image" content="https://open.saintic.com/api/bingPic/?picSize=2">
+<meta property="og:description" content>
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2010-11-12T09:07:00+08:00">
+<meta property="article:tag" content="wordpress">
+<title>万恶的GAE图床 &#183; heartnn的自留地</title>
+<meta name=description content="<p>一直用的<a href=&#34;http://sa3.org/program/gae-album/&#34;>Sa3album</a>，是从<a href=&#34;/2010/10/27/diabloimage/&#34;>大菠萝相册</a>进化而来的，主要是增加了多相册的功能，生成的图片地址也很短了，但是有一个问题，没有扩展名的后缀，导致">
+<meta name=HandheldFriendly content="True">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel="shortcut icon" href=/images/favicon.ico>
+<link rel=apple-touch-icon href=/images/apple-touch-icon.png>
+<link rel=stylesheet href=/css/screen.min.css>
+<link rel=stylesheet href=/css/nav.min.css>
+<link rel=stylesheet href=//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.css integrity="sha256-oC/Q8nqWSlp1bki3Ht9gRCWaew5n6/HNk10HT4aEX4w=" crossorigin=anonymous>
+<link href=/index.xml rel=alternate type=application/rss+xml title=heartnn的自留地>
+<meta name=generator content="Hugo 0.87.0">
+<link rel=canonical href=https://www.heartnn.com/2010/11/12/sa3album-bug/>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","publisher":{"@type":"Organization","name":null,"logo":"https://www.heartnn.com/images/logo.png"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"https://www.heartnn.com/images/logo.png","width":250,"height":250},"url":"https://www.heartnn.com","sameAs":[]},"headline":"万恶的GAE图床","name":"万恶的GAE图床","wordCount":92,"timeRequired":"PT1M","inLanguage":{"@type":"Language","alternateName":"en"},"url":"https://www.heartnn.com/2010/11/12/sa3album-bug/","datePublished":"2010-11-12T09:07Z+08:00","dateModified":"2010-11-12T09:07+08:00","keywords":"wordpress","description":"","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.heartnn.com/2010/11/12/sa3album-bug/"}}</script>
+</head>
+<body class=nav-closed>
+<div class=nav>
+<h3 class=nav-title>Menu</h3>
+<a href=# class=nav-close>
+<span class=hidden>Close</span>
+</a>
+<ul>
+<li class=nav-opened role=presentation>
+<a href=/>首页</a>
+</li>
+<li class=nav-opened role=presentation>
+<a href=/aboutme/>关于我</a>
+</li>
+<li class=nav-opened role=presentation>
+<a href=/archives/>归档</a>
+</li>
+<li class=nav-opened role=presentation>
+<a href=/categories/>分类</a>
+</li>
+<li class=nav-opened role=presentation>
+<a href=/tags/>标签</a>
+</li>
+<h3 class=nav-link>Topics</h3>
+<li class=nav-opened role=presentation>
+<a href=/hosts/ title="General Hosts">Hosts</a>
+</li>
+<li class=nav-opened role=presentation>
+<a href=/twitter/ title="About Twitter">Twitter</a>
+</li>
+<li class=nav-opened role=presentation>
+<a href=/playlist/ title=我经常听的歌>播放列表</a>
+</li>
+<h3 class=nav-link>Links</h3>
+<li class=nav-opened role=presentation>
+<a href=https://pan.qnas.cc/ title=我的网盘 onclick="target='_blank'">我的网盘</a>
+</li>
+</ul>
+<a class="subscribe-button icon-feed" href=/index.xml>Subscribe</a>
+</div>
+<span class=nav-cover></span>
+<div class=site-wrapper>
+<header class="main-header post-head no-cover">
+<nav class="main-nav clearfix">
+<a class=blog-logo href=https://www.heartnn.com/><img src=/images/logo.png alt=Home></a>
+<a class=menu-button href=#><span class=burger>&#9776;</span><span class=word>Menu</span></a>
+</nav>
+</header>
+<main class=content role=main>
+<article class="post post">
+<header class=post-header>
+<h1 class=post-title>万恶的GAE图床</h1>
+<small></small>
+<section class=post-meta>
+<time class=post-date datetime=2010-11-12T09:07:00+08:00>
+2010-11-12
+</time>
+<span class="post-tag small"><a href=https://www.heartnn.com/tags/wordpress/>#wordpress</a></span>
+</section>
+</header>
+<section class=post-content>
+<p>一直用的<a href=http://sa3.org/program/gae-album/>Sa3album</a>，是从<a href=/2010/10/27/diabloimage/>大菠萝相册</a>进化而来的，主要是增加了多相册的功能，生成的图片地址也很短了，但是有一个问题，没有扩展名的后缀，导致绝大多数的lightbox都无法使用，Python代码又完全不会改，各种郁闷。</p>
+<p>但是要仅仅如此郁闷也就算了，这两天折腾wordpress themes，换了theme以后发现原来对图片控制的width=&ldquo;570"是死板的，现在不适合了，于是更郁闷了。</p>
+<p>于是乎开始搜索能自动调整大小的插件，可是那些插件大多是针对本地上传图片所用的，对外链调用的完全不起作用，于是一度想放弃现在的相册，但是又不太舍得，最后不在google搜索插件了，找到了一段css代码：</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css><span style=color:#f92672>img</span>{
     <span style=color:#66d9ef>max-width</span>:<span style=color:#ae81ff>95</span><span style=color:#66d9ef>%</span>;
     <span style=color:#66d9ef>width</span>: <span style=color:#a6e22e>expression</span>(this<span style=color:#960050;background-color:#1e0010>.</span>width <span style=color:#960050;background-color:#1e0010>&gt;</span> <span style=color:#ae81ff>570</span> <span style=color:#960050;background-color:#1e0010>?</span> <span style=color:#e6db74>&#34;570px&#34;</span> <span style=color:#960050;background-color:#1e0010>:</span> true);
     <span style=color:#66d9ef>height</span>:<span style=color:#66d9ef>auto</span>;
 }
-</code></pre></div><p>当然，其中img的定义要在正文的定义之中，具体每个theme的css定义都不太相同。其中那个选择题是做给IE6用的，max-width也是可以调节的，heartnn现在用的是90%，这也具体问题具体分析吧。另外网上还有一个jQuery代码，如果只为实现这么简单的问题来说，有点大材小用了，不过要配合lightbox是个不错的选择了。</p><p>类似的插件倒是有一个，实现的方法也很死板：</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=color:#f92672>&lt;?</span><span style=color:#a6e22e>php</span>
+</code></pre></div><p>当然，其中img的定义要在正文的定义之中，具体每个theme的css定义都不太相同。其中那个选择题是做给IE6用的，max-width也是可以调节的，heartnn现在用的是90%，这也具体问题具体分析吧。另外网上还有一个jQuery代码，如果只为实现这么简单的问题来说，有点大材小用了，不过要配合lightbox是个不错的选择了。</p>
+<p>类似的插件倒是有一个，实现的方法也很死板：</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=color:#f92672>&lt;?</span><span style=color:#a6e22e>php</span>
 <span style=color:#75715e>/*
 </span><span style=color:#75715e>Plugin Name: Fix Image/Flash Width
 </span><span style=color:#75715e>Plugin URI: http://dev.ixiezi.com
@@ -22,21 +115,84 @@
     <span style=color:#66d9ef>echo</span> <span style=color:#e6db74>&#39;&lt;style type=&#34;text/css&#34; media=&#34;screen&#34;&gt;img,embed,object{max-width:99%;}&lt;/style&gt;&#39;</span>;
 }
 <span style=color:#75715e>?&gt;</span><span style=color:#960050;background-color:#1e0010>
-</span></code></pre></div><p>现在自动调节算是猥琐的实现了，另一个问题出现了，小图片怎么变大呢，虽然是不会撑开模板了，但是图片总得让人家看清楚吧，于是又在网上折腾。。。终于被我找到一个<a href=http://wordpress.org/extend/plugins/zoom-highslide/>Zoom-Highslide</a>，我用的是<a href=http://sa3.org/program/gae-album/>Sa3album</a>，当然这个插件是不能直接用的了，小小的分析了一下，修改了zoom-highslide.php中的一点点代码，竟然可以用了。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=color:#a6e22e>define</span>(<span style=color:#e6db74>&#34;IMAGE_FILETYPE&#34;</span>, <span style=color:#e6db74>&#34;(bmp|gif|jpeg|jpg|png)&#34;</span>, <span style=color:#66d9ef>true</span>);
-</code></pre></div><p>其中，把那些扩展名全都删掉了吧，成了这个样子：</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=color:#a6e22e>define</span>(<span style=color:#e6db74>&#34;IMAGE_FILETYPE&#34;</span>, <span style=color:#e6db74>&#34;()&#34;</span>, <span style=color:#66d9ef>true</span>);
-</code></pre></div><p>大功告成，顺便提供<a href=/uploads/2010/11/zoomcur.7z>两套放大镜的图标</a>，用来替换原版highslide那个难看的放大镜(来自<a href=http://tiant.me>http://tiant.me</a>)。</p><p><img src=/uploads/2010/11/zoomcur.png alt></p><p>2010-11-15 补记: 其实highslide是不需要prototype库的，不知道作者为什么要载入它。可以去掉zoom-highslide.php中下面的代码来取消prototype的加载。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>zoom_highslide_javascript</span>() {
+</span></code></pre></div><p>现在自动调节算是猥琐的实现了，另一个问题出现了，小图片怎么变大呢，虽然是不会撑开模板了，但是图片总得让人家看清楚吧，于是又在网上折腾。。。终于被我找到一个<a href=http://wordpress.org/extend/plugins/zoom-highslide/>Zoom-Highslide</a>，我用的是<a href=http://sa3.org/program/gae-album/>Sa3album</a>，当然这个插件是不能直接用的了，小小的分析了一下，修改了zoom-highslide.php中的一点点代码，竟然可以用了。</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=color:#a6e22e>define</span>(<span style=color:#e6db74>&#34;IMAGE_FILETYPE&#34;</span>, <span style=color:#e6db74>&#34;(bmp|gif|jpeg|jpg|png)&#34;</span>, <span style=color:#66d9ef>true</span>);
+</code></pre></div><p>其中，把那些扩展名全都删掉了吧，成了这个样子：</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=color:#a6e22e>define</span>(<span style=color:#e6db74>&#34;IMAGE_FILETYPE&#34;</span>, <span style=color:#e6db74>&#34;()&#34;</span>, <span style=color:#66d9ef>true</span>);
+</code></pre></div><p>大功告成，顺便提供<a href=/uploads/2010/11/zoomcur.7z>两套放大镜的图标</a>，用来替换原版highslide那个难看的放大镜(来自<a href=http://tiant.me>http://tiant.me</a>)。</p>
+<p><img src=/uploads/2010/11/zoomcur.png alt></p>
+<p>2010-11-15 补记: 其实highslide是不需要prototype库的，不知道作者为什么要载入它。可以去掉zoom-highslide.php中下面的代码来取消prototype的加载。</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>zoom_highslide_javascript</span>() {
     <span style=color:#66d9ef>if</span> ( <span style=color:#f92672>!</span><span style=color:#a6e22e>function_exists</span>(<span style=color:#e6db74>&#39;wp_enqueue_script&#39;</span>) <span style=color:#f92672>||</span> <span style=color:#a6e22e>is_admin</span>() ) <span style=color:#66d9ef>return</span>;
     <span style=color:#a6e22e>wp_enqueue_script</span>(<span style=color:#e6db74>&#39;prototype&#39;</span>);
     <span style=color:#a6e22e>wp_enqueue_script</span>(<span style=color:#e6db74>&#39;scriptaculous-effects&#39;</span>);
 }
-</code></pre></div><p>2010-11-18 补记: <a href=http://sa3.org/program/gae-album/>sa3album</a>的作者ben发布了新的0.2版本，可以进行切换主题了，而且作者在评论中给出了<a href=http://sa3.org/program/sa3album-copy/>外链地址的修改方法</a>，这下连Zoom Highslide都不用修改了，顺便把修改方法搬到这里来，很简单，只要修改一处代码就好了。</p><p>打开models.py，找到</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#a6e22e>@property</span>
+</code></pre></div><p>2010-11-18 补记: <a href=http://sa3.org/program/gae-album/>sa3album</a>的作者ben发布了新的0.2版本，可以进行切换主题了，而且作者在评论中给出了<a href=http://sa3.org/program/sa3album-copy/>外链地址的修改方法</a>，这下连Zoom Highslide都不用修改了，顺便把修改方法搬到这里来，很简单，只要修改一处代码就好了。</p>
+<p>打开models.py，找到</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#a6e22e>@property</span>
 <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>copyurl</span>(self):
 <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#34;http://</span><span style=color:#e6db74>%s</span><span style=color:#e6db74>/f/</span><span style=color:#e6db74>%s</span><span style=color:#e6db74>/&#34;</span> <span style=color:#f92672>%</span>(os<span style=color:#f92672>.</span>environ[<span style=color:#e6db74>&#39;HTTP_HOST&#39;</span>],self<span style=color:#f92672>.</span>key()<span style=color:#f92672>.</span>name())
-</code></pre></div><p>修改为</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#a6e22e>@property</span>
+</code></pre></div><p>修改为</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#a6e22e>@property</span>
 <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>copyurl</span>(self):
 <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#34;http://</span><span style=color:#e6db74>%s</span><span style=color:#e6db74>/f/</span><span style=color:#e6db74>%s</span><span style=color:#e6db74>/#</span><span style=color:#e6db74>%s</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span>(os<span style=color:#f92672>.</span>environ[<span style=color:#e6db74>&#39;HTTP_HOST&#39;</span>],self<span style=color:#f92672>.</span>key()<span style=color:#f92672>.</span>name(),self<span style=color:#f92672>.</span>name)
-</code></pre></div><p>这样，外链地址的结果就是在原来的基础上加了“#文件名”的状态，再调用的时候就不怕没有扩展名了～～</p></section><footer class=post-footer><figure class=author-image><a class=img href=https://www.heartnn.com/ style=background-image:url(/images/logo.png)><span class=hidden>heartnn's Picture</span></a></figure><section class=author><h4><a href=https://www.heartnn.com/>heartnn</a></h4><p>Read <a href=https://www.heartnn.com/>more posts</a> by this author.</p><div class=author-meta><span class="author-location icon-location">河北, 石家庄</span>
-<span class="author-link icon-link"><a href=https://www.heartnn.com>https://www.heartnn.com</a></span></div></section><section class=share><h4>Share this post</h4><a class=icon-twitter style=font-size:1.4em href="https://twitter.com/share?text=%e4%b8%87%e6%81%b6%e7%9a%84GAE%e5%9b%be%e5%ba%8a&nbsp;-&nbsp;heartnn%e7%9a%84%e8%87%aa%e7%95%99%e5%9c%b0&url=https%3a%2f%2fwww.heartnn.com%2f2010%2f11%2f12%2fsa3album-bug%2f" onclick="return window.open(this.href,'twitter-share','width=550,height=235'),!1"><span class=hidden>Twitter</span></a>
-<a class=icon-facebook style=font-size:1.4em href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.heartnn.com%2f2010%2f11%2f12%2fsa3album-bug%2f" onclick="return window.open(this.href,'facebook-share','width=580,height=296'),!1"><span class=hidden>Facebook</span></a>
-<a class=icon-pinterest style=font-size:1.4em href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.heartnn.com%2f2010%2f11%2f12%2fsa3album-bug%2f&description=%e4%b8%87%e6%81%b6%e7%9a%84GAE%e5%9b%be%e5%ba%8a" onclick="return window.open(this.href,'pinterest-share','width=580,height=296'),!1"><span class=hidden>Pinterest</span></a>
-<a class=icon-google-plus style=font-size:1.4em href="https://plus.google.com/share?url=https%3a%2f%2fwww.heartnn.com%2f2010%2f11%2f12%2fsa3album-bug%2f" onclick="return window.open(this.href,'google-plus-share','width=490,height=530'),!1"><span class=hidden>Google+</span></a></section><div id=vcomments></div></footer></article></main><aside class=read-next><a class=read-next-story style=no-cover href=/2010/11/14/using-fedora-14/><section class=post><h2>Fedora 14初级折腾</h2></section></a><a class="read-next-story prev" style=no-cover href=/2010/11/08/direct-link-netdisk/><section class=post><h2>将云端同步软件回归成外链网盘使用</h2></section></a></aside><footer class="site-footer clearfix"><section class=copyright>&copy;2008-2018 heartnn的自留地 &nbsp;&nbsp;&nbsp; <a rel=license href=https://creativecommons.org/licenses/by-nc-sa/4.0/>CC&nbsp;BY-NC-SA&nbsp;4.0</a></section><section class=poweredby>Proudly generated by <a class=icon-hugo href=https://gohugo.io>HUGO</a>, with <a class=icon-theme href=https://github.com/vjeantet/hugo-theme-casper>Casper</a> theme</section></footer></div><script src=https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin=anonymous></script><script src=//cdn.jsdelivr.net/gh/TryGhost/Casper@2.6.2/assets/js/jquery.fitvids.js integrity="sha256-bj/JlIND2F1ZRARRwS8t4d22whMq5QMxT2rGs/hyGKg=" crossorigin=anonymous></script><script src=//cdn.jsdelivr.net/gh/leancloud/javascript-sdk@3.0.4/dist/av-min.js integrity="sha256-2vlmqmaGb3IeprbhwEGB5KVTmXxClaA3zwloXdTaXPQ=" crossorigin=anonymous></script><script src=//cdn.jsdelivr.net/gh/DesertsP/Valine/dist/Valine.min.js></script><script>new Valine({av:AV,el:'#vcomments',emoticon_url:'https://www.heartnn.com/smiles',emoticon_list:["呵呵.png","哈哈.png","吐舌.png","啊.png","酷.png","怒.png","开心.png","汗.png","泪.png","黑线.png","鄙视.png","不高兴.png","真棒.png","钱.png","疑问.png","阴脸.png","吐.png","咦.png","委屈.png","花心.png","呼~.png","笑眼.png","冷.png","太开心.png","滑稽.png","勉强.png","狂汗.png","乖.png","睡觉.png","惊哭.png","升起.png","惊讶.png","喷.png"],app_id:'WmHH4997UnyEsd9H1aACe6rP-gzGzoHsz',app_key:'44mTerRFfQEcXcJ8kvvkeTp0',placeholder:'在此评论～'})</script><script src=/js/index.js></script><script src=//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.js integrity="sha256-iFCrYEMjebIvuiqOp61+L3FN2MH8rfqmzGQ0bN5YTWg=" crossorigin=anonymous></script><script src=/js/fancybox.js></script></body></html>
+</code></pre></div><p>这样，外链地址的结果就是在原来的基础上加了“#文件名”的状态，再调用的时候就不怕没有扩展名了～～</p>
+</section>
+<footer class=post-footer>
+<figure class=author-image>
+<a class=img href=https://www.heartnn.com/ style=background-image:url(/images/logo.png)><span class=hidden>heartnn's Picture</span></a>
+</figure>
+<section class=author>
+<h4><a href=https://www.heartnn.com/>heartnn</a></h4>
+<p>Read <a href=https://www.heartnn.com/>more posts</a> by this author.</p>
+<div class=author-meta>
+<span class="author-location icon-location">河北, 石家庄</span>
+<span class="author-link icon-link"><a href=https://www.heartnn.com>https://www.heartnn.com</a></span>
+</div>
+</section>
+<section class=share>
+<h4>Share this post</h4>
+<a class=icon-twitter style=font-size:1.4em href="https://twitter.com/share?text=%e4%b8%87%e6%81%b6%e7%9a%84GAE%e5%9b%be%e5%ba%8a&nbsp;-&nbsp;heartnn%e7%9a%84%e8%87%aa%e7%95%99%e5%9c%b0&url=https%3a%2f%2fwww.heartnn.com%2f2010%2f11%2f12%2fsa3album-bug%2f" onclick="return window.open(this.href,'twitter-share','width=550,height=235'),!1">
+<span class=hidden>Twitter</span>
+</a>
+<a class=icon-facebook style=font-size:1.4em href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.heartnn.com%2f2010%2f11%2f12%2fsa3album-bug%2f" onclick="return window.open(this.href,'facebook-share','width=580,height=296'),!1">
+<span class=hidden>Facebook</span>
+</a>
+<a class=icon-pinterest style=font-size:1.4em href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.heartnn.com%2f2010%2f11%2f12%2fsa3album-bug%2f&description=%e4%b8%87%e6%81%b6%e7%9a%84GAE%e5%9b%be%e5%ba%8a" onclick="return window.open(this.href,'pinterest-share','width=580,height=296'),!1">
+<span class=hidden>Pinterest</span>
+</a>
+<a class=icon-google-plus style=font-size:1.4em href="https://plus.google.com/share?url=https%3a%2f%2fwww.heartnn.com%2f2010%2f11%2f12%2fsa3album-bug%2f" onclick="return window.open(this.href,'google-plus-share','width=490,height=530'),!1">
+<span class=hidden>Google+</span>
+</a>
+</section>
+<div id=vcomments></div>
+</footer>
+</article>
+</main>
+<aside class=read-next>
+<a class=read-next-story style=no-cover href=/2010/11/14/using-fedora-14/>
+<section class=post>
+<h2>Fedora 14初级折腾</h2>
+</section>
+</a>
+<a class="read-next-story prev" style=no-cover href=/2010/11/08/direct-link-netdisk/>
+<section class=post>
+<h2>将云端同步软件回归成外链网盘使用</h2>
+</section>
+</a>
+</aside>
+<footer class="site-footer clearfix">
+<section class=copyright>&copy;2008-2018 heartnn的自留地 &nbsp;&nbsp;&nbsp; <a rel=license href=https://creativecommons.org/licenses/by-nc-sa/4.0/>CC&nbsp;BY-NC-SA&nbsp;4.0</a></section>
+<section class=poweredby>Proudly generated by <a class=icon-hugo href=https://gohugo.io>HUGO</a>, with <a class=icon-theme href=https://github.com/vjeantet/hugo-theme-casper>Casper</a> theme</section>
+</footer>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin=anonymous></script>
+<script src=//cdn.jsdelivr.net/gh/TryGhost/Casper@2.6.2/assets/js/jquery.fitvids.js integrity="sha256-bj/JlIND2F1ZRARRwS8t4d22whMq5QMxT2rGs/hyGKg=" crossorigin=anonymous></script>
+<script src=//cdn.jsdelivr.net/gh/leancloud/javascript-sdk@3.0.4/dist/av-min.js integrity="sha256-2vlmqmaGb3IeprbhwEGB5KVTmXxClaA3zwloXdTaXPQ=" crossorigin=anonymous></script>
+<script src=//cdn.jsdelivr.net/gh/DesertsP/Valine/dist/Valine.min.js></script>
+<script>new Valine({av:AV,el:'#vcomments',emoticon_url:'https://www.heartnn.com/smiles',emoticon_list:["呵呵.png","哈哈.png","吐舌.png","啊.png","酷.png","怒.png","开心.png","汗.png","泪.png","黑线.png","鄙视.png","不高兴.png","真棒.png","钱.png","疑问.png","阴脸.png","吐.png","咦.png","委屈.png","花心.png","呼~.png","笑眼.png","冷.png","太开心.png","滑稽.png","勉强.png","狂汗.png","乖.png","睡觉.png","惊哭.png","升起.png","惊讶.png","喷.png"],app_id:'WmHH4997UnyEsd9H1aACe6rP-gzGzoHsz',app_key:'44mTerRFfQEcXcJ8kvvkeTp0',placeholder:'在此评论～'})</script>
+<script src=/js/index.js></script>
+<script src=//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.js integrity="sha256-iFCrYEMjebIvuiqOp61+L3FN2MH8rfqmzGQ0bN5YTWg=" crossorigin=anonymous></script>
+<script src=/js/fancybox.js></script>
+</body>
+</html>
