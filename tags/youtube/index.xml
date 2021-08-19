@@ -3,7 +3,8 @@
 &lt;ol>
 &lt;li>下载最新版本的&lt;a href="https://github.com/ytdl-org/youtube-dl/releases">youtube-dl.exe&lt;/a>；&lt;/li>
 &lt;li>下载&lt;a href="https://www.ffmpeg.org/download.html#build-windows">ffmpeg&lt;/a>，版本需大于3.4.2，否则无法合并webm；&lt;/li>
-&lt;li>下载最新的&lt;a href="https://github.com/aria2/aria2/releases">aria2c.exe&lt;/a>，这样youtube-dl可以调用它实现多线程下载。&lt;/li>
-&lt;li>上面三个文件放到脚本目录下的libs目录里。&lt;/li>
+&lt;li>下载最新的&lt;a href="https://github.com/aria2/aria2/releases">aria2c.exe&lt;/a>，这样youtube-dl可以调用它实现多线程下载；&lt;/li>
+&lt;li>上面三个文件放到脚本目录下的libs目录里；&lt;/li>
+&lt;li>自行修改脚本中&lt;code>--proxy&lt;/code>字段；&lt;/li>
 &lt;li>下载得到的视频文件在脚本目录里。&lt;/li>
 &lt;/ol></description></item></channel></rss>

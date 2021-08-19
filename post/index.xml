@@ -3,8 +3,9 @@
 &lt;ol>
 &lt;li>下载最新版本的&lt;a href="https://github.com/ytdl-org/youtube-dl/releases">youtube-dl.exe&lt;/a>；&lt;/li>
 &lt;li>下载&lt;a href="https://www.ffmpeg.org/download.html#build-windows">ffmpeg&lt;/a>，版本需大于3.4.2，否则无法合并webm；&lt;/li>
-&lt;li>下载最新的&lt;a href="https://github.com/aria2/aria2/releases">aria2c.exe&lt;/a>，这样youtube-dl可以调用它实现多线程下载。&lt;/li>
-&lt;li>上面三个文件放到脚本目录下的libs目录里。&lt;/li>
+&lt;li>下载最新的&lt;a href="https://github.com/aria2/aria2/releases">aria2c.exe&lt;/a>，这样youtube-dl可以调用它实现多线程下载；&lt;/li>
+&lt;li>上面三个文件放到脚本目录下的libs目录里；&lt;/li>
+&lt;li>自行修改脚本中&lt;code>--proxy&lt;/code>字段；&lt;/li>
 &lt;li>下载得到的视频文件在脚本目录里。&lt;/li>
 &lt;/ol></description></item><item><title>黑群晖在路由器重启后自动获取最新的IPv6并更新DDNS</title><link>https://www.heartnn.com/2021/03/24/synology-ipv6-ddns-autoupdate/</link><pubDate>Wed, 24 Mar 2021 09:59:12 +0800</pubDate><guid>https://www.heartnn.com/2021/03/24/synology-ipv6-ddns-autoupdate/</guid><description>&lt;p>首先说明，白群晖也可以这么折腾，但没必要。&lt;/p>
 &lt;p>下面的问题以及解决方法都是基于&lt;code>ip addr&lt;/code>的方法更新记录的，如果是访问第三方网站获取本机IP的话，应该不存在这些问题。&lt;/p>
