@@ -30,7 +30,7 @@
 <link href=/index.xml rel=alternate type=application/rss+xml title=heartnn的自留地>
 <meta name=generator content="Hugo 0.87.0">
 <link rel=canonical href=https://www.heartnn.com/2021/08/19/youtube-dl-interactive/>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","publisher":{"@type":"Organization","name":null,"logo":"https://www.heartnn.com/images/logo.png"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"https://www.heartnn.com/images/logo.png","width":250,"height":250},"url":"https://www.heartnn.com","sameAs":[]},"headline":"简单的youtube-dl交互下载","name":"简单的youtube-dl交互下载","wordCount":89,"timeRequired":"PT1M","inLanguage":{"@type":"Language","alternateName":"en"},"url":"https://www.heartnn.com/2021/08/19/youtube-dl-interactive/","datePublished":"2021-08-19T09:12Z+08:00","dateModified":"2021-08-19T09:12+08:00","keywords":"youtube, windows","description":"","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.heartnn.com/2021/08/19/youtube-dl-interactive/"}}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","publisher":{"@type":"Organization","name":null,"logo":"https://www.heartnn.com/images/logo.png"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"https://www.heartnn.com/images/logo.png","width":250,"height":250},"url":"https://www.heartnn.com","sameAs":[]},"headline":"简单的youtube-dl交互下载","name":"简单的youtube-dl交互下载","wordCount":19,"timeRequired":"PT1M","inLanguage":{"@type":"Language","alternateName":"en"},"url":"https://www.heartnn.com/2021/08/19/youtube-dl-interactive/","datePublished":"2021-08-19T09:12Z+08:00","dateModified":"2021-08-19T09:12+08:00","keywords":"youtube, windows","description":"","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.heartnn.com/2021/08/19/youtube-dl-interactive/"}}</script>
 </head>
 <body class=nav-closed>
 <div class=nav>
@@ -103,26 +103,7 @@
 <li>自行修改脚本中<code>--proxy</code>字段；</li>
 <li>下载得到的视频文件在脚本目录里。</li>
 </ol>
-<h3 id=批处理脚本>批处理脚本</h3>
-<pre><code>@echo off
-
-title YouTube下载
-:start
-cls
-echo.
-set /p url=请输入视频地址，按下回车确认：
-libs\youtube-dl.exe --proxy http://127.0.0.1:1081 -F &quot;%url%&quot;
-echo -------------------------------------------------
-echo avc1=1 webm=2 av01=3 best=4 或'视频代码'+'音频代码'
-echo -------------------------------------------------
-set /p fn=请输入下载格式，按下回车确认：
-if &quot;%fn%&quot;==&quot;1&quot; (set codex=&quot;bestvideo[vcodec^^=avc1]+bestaudio[acodec^^=mp4a]&quot;) else if &quot;%fn%&quot;==&quot;2&quot; (set codex=&quot;bestvideo[vcodec^^=vp9]+bestaudio[acodec^^=opus]&quot;) else if &quot;%fn%&quot;==&quot;3&quot; (set codex=&quot;bestvideo[vcodec^^=av01]+bestaudio[acodec^^=mp4a]&quot;) else if &quot;%fn%&quot;==&quot;4&quot; (set codex=&quot;bestvideo+bestaudio&quot;) else (set codex=&quot;%fn%&quot;)
-libs\youtube-dl.exe --proxy http://127.0.0.1:1081 -f &quot;%codex%&quot; &quot;%url%&quot; -o &quot;%%(title)s [%%(id)s].%%(ext)s&quot; --external-downloader aria2c.exe --external-downloader-args &quot;--split=16 --max-connection-per-server=16 --min-split-size=1M --file-allocation=none&quot;
-echo.
-echo 下载结束！
-pause
-goto start
-</code></pre><h3 id=关于脚本的一些简单说明>关于脚本的一些简单说明</h3>
+<h3 id=关于脚本的一些简单说明>关于脚本的一些简单说明</h3>
 <p>1、关于视频编码</p>
 <ul>
 <li>avc1：也就是h264的格式，一般现在经常使用的格式，许多up主也是以这种格式上传的</li>
@@ -132,6 +113,11 @@ goto start
 </ul>
 <p>2、关于音频编码</p>
 <p>在利于封装的原则下，avc1和av01首选m4a，最后生成的是mp4文件，webm对应opus音频。需要注意的是Youtube在处理m4a音频时，16kHz以上有“剃头”现象。</p>
+<h3 id=脚本下载及更新记录>脚本下载及更新记录</h3>
+<p><a href=/uploads/2021/08/youtube-dl-interactive.rar>下载链接</a></p>
+<ul>
+<li>20210820：更新判断视频FPS，优先下载60fps的视频进行混流。</li>
+</ul>
 </section>
 <footer class=post-footer>
 <figure class=author-image>
