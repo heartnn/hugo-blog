@@ -16,29 +16,6 @@ tags: [youtube,windows]
 5. 自行修改脚本中`--proxy`字段；
 6. 下载得到的视频文件在脚本目录里。<!--more-->
 
-### 批处理脚本
-
-```
-@echo off
-
-title YouTube下载
-:start
-cls
-echo.
-set /p url=请输入视频地址，按下回车确认：
-libs\youtube-dl.exe --proxy http://127.0.0.1:1081 -F "%url%"
-echo -------------------------------------------------
-echo avc1=1 webm=2 av01=3 best=4 或'视频代码'+'音频代码'
-echo -------------------------------------------------
-set /p fn=请输入下载格式，按下回车确认：
-if "%fn%"=="1" (set codex="bestvideo[vcodec^^=avc1]+bestaudio[acodec^^=mp4a]") else if "%fn%"=="2" (set codex="bestvideo[vcodec^^=vp9]+bestaudio[acodec^^=opus]") else if "%fn%"=="3" (set codex="bestvideo[vcodec^^=av01]+bestaudio[acodec^^=mp4a]") else if "%fn%"=="4" (set codex="bestvideo+bestaudio") else (set codex="%fn%")
-libs\youtube-dl.exe --proxy http://127.0.0.1:1081 -f "%codex%" "%url%" -o "%%(title)s [%%(id)s].%%(ext)s" --external-downloader aria2c.exe --external-downloader-args "--split=16 --max-connection-per-server=16 --min-split-size=1M --file-allocation=none"
-echo.
-echo 下载结束！
-pause
-goto start
-```
-
 ### 关于脚本的一些简单说明
 
 1、关于视频编码
@@ -51,3 +28,9 @@ goto start
 2、关于音频编码
 
 在利于封装的原则下，avc1和av01首选m4a，最后生成的是mp4文件，webm对应opus音频。需要注意的是Youtube在处理m4a音频时，16kHz以上有“剃头”现象。
+
+### 脚本下载及更新记录
+
+[下载链接](/uploads/2021/08/youtube-dl-interactive.rar)
+
+- 20210820：更新判断视频FPS，优先下载60fps的视频进行混流。
