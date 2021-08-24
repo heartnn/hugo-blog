@@ -92,6 +92,27 @@
 </div>
 <article class="post post">
 <header class=post-header>
+<h2 class=post-title><a href=/2015/06/30/hosts-along-the-way/>关于hosts，一路走来</a></h2>
+</header>
+<section class=post-excerpt>
+<p><p>最早，hosts只有一条127.0.0.1 localhost,要不是本地调试服务器，我甚至不知道这是干什么用的。</p>
+<p>然后，一些破解软件开始在里面写入0.0.0.0的若干消息，用来屏蔽验证服务器，我才知道了hosts的“另类”用途。</p>
+<p>当我在玩Blogger时，blogspot的二级域名被屏蔽了，绑定域名用的<code>ghs.google.com</code>也屏蔽了，网上说可以将IP地址加到hosts里访问，这时，我发现了hosts的伟大。</p>
+<p>可是，当时服务器设备应该是非常贵的吧，像Twitter这样的网站，几乎没有几个IP可以使用，无奈发推的时候只能借助api用客户端发，或者在国外用php搭建dabr这样类似的服务。这次，知道了hosts不是万能的。</p>
+<p>再后来，越来越多的接触了DNS，懂得了什么是DNS污染，也懂得了DNS会缓存IP地址，更懂得了使用8.8.8.8等等来防止污染。我这时才明白，将来DNS可能从是最重要的吧。</p> <a class=read-more href=/2015/06/30/hosts-along-the-way/>&#187;</a></p>
+</section>
+<footer class=post-meta>
+<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
+heartnn
+on
+<a href=https://www.heartnn.com/tags/hosts/>#hosts</a>
+<time class=post-date datetime=2015-06-30T07:17:00+08:00>
+2015-06-30
+</time>
+</footer>
+</article>
+<article class="post post">
+<header class=post-header>
 <h2 class=post-title><a href=/2015/06/22/mv-hongdaekwang-good-luck/>홍대광(洪大光) - 잘됐으면 좋겠다(Good Luck)</a></h2>
 </header>
 <section class=post-excerpt>
@@ -192,29 +213,6 @@ on
 <a href=https://www.heartnn.com/tags/foobar2000/>#foobar2000</a>
 <time class=post-date datetime=2015-05-19T03:46:00+08:00>
 2015-05-19
-</time>
-</footer>
-</article>
-<article class="post post">
-<header class=post-header>
-<h2 class=post-title><a href=/2015/04/26/dnsmasq-on-android/>在Android手机中搭建Dnsmasq</a></h2>
-</header>
-<section class=post-excerpt>
-<p><p>网上很久以前就有了在Android下搭建Dnsmasq的方法，不过至少都是两三年前的了，其中也不乏一些编译的方法，需要下载Android源代码，在Linux环境下进行，使得很多人望而却步。</p>
-<p>然而heartnn在逛XDA的时候发现<a href="http://forum.xda-developers.com/showthread.php?t=1658598">某大神发布的已经编译好的版本</a>，虽然也不是很新的(我甚至不知道版本)，但必须尝试一下。</p>
-<p>需求：Android任意版本(我是在5.1下测试成功的)，手机需root，内核最好支持init.d，如果不支持的话请使用终端或RE管理器启动97dns。</p>
-<p>副作用：替换系统自带Dnsmasq后可能会引起手机自建热点不正常。</p>
-<p>需要说明的是，我并没有按照压缩包里的批处理安装，而是自己手动安装的，因为这样的话可以知道文件的去处，方便卸载。</p> <a class=read-more href=/2015/04/26/dnsmasq-on-android/>&#187;</a></p>
-</section>
-<footer class=post-meta>
-<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
-heartnn
-on
-<a href=https://www.heartnn.com/tags/android/>#android</a>
-,
-<a href=https://www.heartnn.com/tags/dnsmasq/>#dnsmasq</a>
-<time class=post-date datetime=2015-04-26T03:53:00+08:00>
-2015-04-26
 </time>
 </footer>
 </article>

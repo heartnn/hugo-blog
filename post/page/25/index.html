@@ -92,6 +92,27 @@
 </div>
 <article class="post post">
 <header class=post-header>
+<h2 class=post-title><a href=/2011/09/18/hanzify-tiddlywiki-dokuwiki-and-pmwikide/>TiddlyWiki、DokuWiki、PmWiki的简单入门: 汉化</a></h2>
+</header>
+<section class=post-excerpt>
+<p><p><a href=/2011/09/15/compare-tiddlywiki-dokuwiki-and-pmwiki/>之前的文章</a>对三款Wiki软件进行了简单的对比，接下来是更详细的功能对比。</p>
+<p>首先大家最关心的应该是中文语言吧，这三款软件都能做到中文化，只是操作起来的简易程度不一样，个人认为最简单的应该是DokuWiki了，直接从<a href=http://www.splitbrain.org/projects/dokuwiki>官方下载页面</a>下载stable版本就可以了，内含中文语言包，只需要安装配置的时候选简体中文就可以了。</p>
+<p>关于TiddlyWiki的汉化，网上其实也有很多资源，需要入门的话可以去<a href=https://sites.google.com/site/tiddlywikizh/>TiddlyWiki華語邦</a>，那里有完全指南，也有汉化的方法。这里简单说一下汉化方法吧，先<a href=http://svn.tiddlywiki.org/Trunk/association/locales/core/zh-Hans/locale.zh-Hans.js>下载汉化文件</a>，然后在TiddlyWiki里新建一个文档，名字就叫zh-HansTranslationPlugin吧，把刚才汉化文件里的文本复制进去，在tag里填上systemConfig，这个标签是最重要的，有了这个标签，这篇文章才会被系统识别成插件。然后就刷新TiddlyWiki就可以了～～</p> <a class=read-more href=/2011/09/18/hanzify-tiddlywiki-dokuwiki-and-pmwikide/>&#187;</a></p>
+</section>
+<footer class=post-meta>
+<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
+heartnn
+on
+<a href=https://www.heartnn.com/tags/php/>#php</a>
+,
+<a href=https://www.heartnn.com/tags/wiki/>#wiki</a>
+<time class=post-date datetime=2011-09-18T08:52:00+08:00>
+2011-09-18
+</time>
+</footer>
+</article>
+<article class="post post">
+<header class=post-header>
 <h2 class=post-title><a href=/2011/09/15/compare-tiddlywiki-dokuwiki-and-pmwiki/>TiddlyWiki、DokuWiki、PmWiki——三款简洁的Wiki软件对比</a></h2>
 </header>
 <section class=post-excerpt>
@@ -184,29 +205,6 @@ on
 <a href=https://www.heartnn.com/tags/%E0%B8%AD%E0%B8%A2%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%B1%E0%B8%81-%E0%B8%81%E0%B9%87%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B9%80%E0%B8%A5%E0%B8%A2/>#อยากรัก ก็รักเลย</a>
 <time class=post-date datetime=2011-07-14T11:25:00+08:00>
 2011-07-14
-</time>
-</footer>
-</article>
-<article class="post post">
-<header class=post-header>
-<h2 class=post-title><a href=/2011/07/06/update-to-wordpress-3-2/>博客升级到Wordpress 3.2</a></h2>
-</header>
-<section class=post-excerpt>
-<p>确切的说是昨天升级的，基本上没有什么兼容性问题，不过Twenty Eleven主题的问题还算不少。&lt;!&ndash;more>
-首先是原来的AI Loader(就是JQuery Lazy Load)不能用了，用YS images lazyload來代替了，並且Twenty Eleven默认没有引用JQuery，所以需要在header.php中添加。
-找到
-&lt;!--[if lt IE 9]> &lt;script src="&lt;?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript">&lt;/script> &lt;![endif]--> 在上面添加
-&lt;?php wp_enqueue_script( 'jquery' ); ?>Wordpress 3.2的后台要紧凑了一些，不过heartnn用的Admin Drop Down Menu，所以没感觉有太大变化。(Ozh' Admin Drop Down Menu更新很及时了，刚装上新版Wordpress就马上提示插件更新了～)
-PageNavi的问题比较麻烦，原来的主题是自带的页面导航，比较方便，现在Twenty Eleven和以前的Twenty Ten一样麻烦，我是修改的functions.php。
-/** * Display navigation to next/previous pages when applicable */ function twentyeleven_content_nav( $nav_id ) { global $wp_query; if(function_exists('wp_pagenavi')) { wp_pagenavi();} else if ( $wp_query->max_num_pages > 1 ) : ?>&lt;nav id="&lt;?php echo $nav_id; ? <a class=read-more href=/2011/07/06/update-to-wordpress-3-2/>&#187;</a></p>
-</section>
-<footer class=post-meta>
-<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
-heartnn
-on
-<a href=https://www.heartnn.com/tags/wordpress/>#wordpress</a>
-<time class=post-date datetime=2011-07-06T22:12:00+08:00>
-2011-07-06
 </time>
 </footer>
 </article>

@@ -92,6 +92,25 @@
 </div>
 <article class="post post">
 <header class=post-header>
+<h2 class=post-title><a href=/2016/11/27/update-to-ghost-0-11-3/>Ghost变得越来越成熟了，已跟随更新到0.11.3</a></h2>
+</header>
+<section class=post-excerpt>
+<p>因为新版Ghost已经不支持node 0.10，建在Docker上的ghost可以切换版本最新到6.9，在Openshift上可以利用@icflorescu/openshift-cartridge-nodejs另外建一个自动更新版本的node。
+这里比较注意的是需要通过.openshift/NODE_VERSION_URL和.openshift/NPM_VERSION_URL来自定义版本，最好是使用node自带的npm版本(更新到最新的npm貌似不行。)
+https://semver.io/node/resolve/6.9.1 https://semver.io/npm/resolve/3.10.8 剩下的直接把本地安装好的Ghost通过git上传到根目录即可，可以抛弃原来的quickstart了。 <a class=read-more href=/2016/11/27/update-to-ghost-0-11-3/>&#187;</a></p>
+</section>
+<footer class=post-meta>
+<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
+heartnn
+on
+<a href=https://www.heartnn.com/tags/ghost/>#ghost</a>
+<time class=post-date datetime=2016-11-27T14:00:29+08:00>
+2016-11-27
+</time>
+</footer>
+</article>
+<article class="post post">
+<header class=post-header>
 <h2 class=post-title><a href=/2016/11/16/game-recommend-rusty-lake-roots/>游戏推荐: 锈色湖畔·根源</a></h2>
 </header>
 <section class=post-excerpt>
@@ -185,25 +204,6 @@ on
 heartnn
 <time class=post-date datetime=2016-07-25T21:31:00+08:00>
 2016-07-25
-</time>
-</footer>
-</article>
-<article class="post post">
-<header class=post-header>
-<h2 class=post-title><a href=/2016/05/29/update-to-ghost-0-8-0/>更新到Ghost 0.8.0</a></h2>
-</header>
-<section class=post-excerpt>
-<p>最近家中装修，博客也一直荒废着，今天心血来潮打开Ghost的github，发现又更新了版本，虽然还是没有什么大的改变，但还是跟随着官方更新了，顺便更新了qn-store。
-Ghost 0.8.0后台开始引入Apps了，这是否意味着插件系统即将到来。另外Labs里多了一个订阅功能，可以订阅到feedly。
-唯一需要注意的是config.js需要更新一下了，另外默认模版也有更新，heartnn也正在调整中。 <a class=read-more href=/2016/05/29/update-to-ghost-0-8-0/>&#187;</a></p>
-</section>
-<footer class=post-meta>
-<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
-heartnn
-on
-<a href=https://www.heartnn.com/tags/ghost/>#ghost</a>
-<time class=post-date datetime=2016-05-29T12:18:22+08:00>
-2016-05-29
 </time>
 </footer>
 </article>

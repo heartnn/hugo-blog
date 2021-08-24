@@ -92,6 +92,31 @@
 </div>
 <article class="post post">
 <header class=post-header>
+<h2 class=post-title><a href=/2016/01/05/from-duoshuo-to-disqus/>评论系统从多说迁移到Disqus</a></h2>
+</header>
+<section class=post-excerpt>
+<p>最近花了点时间解决了一些个人博客的遗留问题，主要是博客评论和图床的一些问题。
+启用多说还要追溯到Hexo的时候，那时切换到了静态博客，就只能使用社会化评论系统了。然后被很多博客忽悠着用了多说，事实上那时的多说还是很好用的，但目前似乎是无人负责的状态。
+由于之前从Hexo到Ghost的时候，由于文章slug改变过，所以干脆导入了一个新的多说域名，但事实证明了这是非常错误的，因为多说把所有评论的parent全搞丢了，而且经过导入导出，用户头像也没有了。。。
+导入Disqus的过程其实很享受，因为有高人将轮子贴到了github上，中间用到了lxml，建议不要自己编译(因为我装上了VC for Python27也没有编译成功)，而是直接在网上找非官方的扩展。
+图片和附件干脆还是放到qiniu上了，原来用Hexo的时候，是不能避免git的，所以图片也都用git一起发布了。但Ghost是可以在线上传图片的，所以为了文章编辑方便，还是启用了Ghost的qiniu插件。 <a class=read-more href=/2016/01/05/from-duoshuo-to-disqus/>&#187;</a></p>
+</section>
+<footer class=post-meta>
+<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
+heartnn
+on
+<a href=https://www.heartnn.com/tags/python/>#python</a>
+,
+<a href=https://www.heartnn.com/tags/disqus/>#disqus</a>
+,
+<a href=https://www.heartnn.com/tags/duoshuo/>#duoshuo</a>
+<time class=post-date datetime=2016-01-05T09:20:24+08:00>
+2016-01-05
+</time>
+</footer>
+</article>
+<article class="post post">
+<header class=post-header>
 <h2 class=post-title><a href=/2015/12/20/dnsmasq-on-android-part-2/>在Android手机中搭建Dnsmasq后续</a></h2>
 </header>
 <section class=post-excerpt>
@@ -194,24 +219,6 @@ on
 <a href=https://www.heartnn.com/tags/ghost/>#ghost</a>
 <time class=post-date datetime=2015-10-08T22:31:35+08:00>
 2015-10-08
-</time>
-</footer>
-</article>
-<article class="post post">
-<header class=post-header>
-<h2 class=post-title><a href=/2015/09/08/music-acoustic-collabo-ddoreureu/>Acoustic Collabo - 또르르</a></h2>
-</header>
-<section class=post-excerpt>
-<p><p><img src=/uploads/2015/09/acoustic-collabo-ddoreureu-20150526.jpg alt></p>
-<p>这是Acoustic Collabo在今年5月26日发布的歌曲，最近都没什么这类风格的歌曲了，这首真是越听越好听了，干脆做成铃声了。</p> <a class=read-more href=/2015/09/08/music-acoustic-collabo-ddoreureu/>&#187;</a></p>
-</section>
-<footer class=post-meta>
-<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
-heartnn
-on
-<a href=https://www.heartnn.com/tags/acoustic-collabo/>#acoustic collabo</a>
-<time class=post-date datetime=2015-09-08T09:30:21+08:00>
-2015-09-08
 </time>
 </footer>
 </article>
