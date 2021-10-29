@@ -26,7 +26,7 @@
 <link rel=stylesheet href=/css/nav.min.css>
 <link rel=stylesheet href=//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.css integrity="sha256-oC/Q8nqWSlp1bki3Ht9gRCWaew5n6/HNk10HT4aEX4w=" crossorigin=anonymous>
 <link href=/index.xml rel=alternate type=application/rss+xml title=heartnn的自留地>
-<meta name=generator content="Hugo 0.87.0">
+<meta name=generator content="Hugo 0.88.1">
 <link rel=canonical href=https://www.heartnn.com/2015/10/08/update-ghost-to-0-7-1/>
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","publisher":{"@type":"Organization","name":null,"logo":"https://www.heartnn.com/images/logo.png"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"https://www.heartnn.com/images/logo.png","width":250,"height":250},"url":"https://www.heartnn.com","sameAs":[]},"headline":"升级Ghost到0.7.1","name":"升级Ghost到0.7.1","wordCount":19,"timeRequired":"PT1M","inLanguage":{"@type":"Language","alternateName":"en"},"url":"https://www.heartnn.com/2015/10/08/update-ghost-to-0-7-1/","datePublished":"2015-10-08T22:31Z+08:00","dateModified":"2015-10-08T22:31+08:00","image":{"@type":"ImageObject","url":"https://www.heartnn.com//uploads/2015/10/ghost.png","width":3e3,"height":1445},"keywords":"ghost","description":"","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.heartnn.com/2015/10/08/update-ghost-to-0-7-1/"}}</script>
 </head>
@@ -93,9 +93,9 @@
 <p><a href=https://github.com/TryGhost/Ghost/releases>Ghost</a>的升级并不像Wordpress那么方便，但也不会像网上说的那么复杂，最近成功从0.6.3的中文版升级到了0.7.1原版，简单记录下心得。</p>
 <p>本人使用的是非正常的升级方法，本地也没有安装nodejs和npm什么的，利用了<a href=http://www.ghostchina.com/download/>ghostchina的完整包</a>，将node_modules复制，省掉了<code>npm install --production</code>的步骤(ghostchina上也有介绍)。</p>
 <p>然后对比旧版的config.js修改新版的，并对新旧模板比较修改，对于官方版，需要对default.hbs中的Google字体进行修改。将</p>
-<pre><code class=language-htmlbars data-lang=htmlbars>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400&quot; /&gt;
+<pre tabindex=0><code class=language-htmlbars data-lang=htmlbars>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400&quot; /&gt;
 </code></pre><p>修改为</p>
-<pre><code class=language-htmlbars data-lang=htmlbars>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;{{asset &quot;css/fonts.css&quot;}}&quot; /&gt;
+<pre tabindex=0><code class=language-htmlbars data-lang=htmlbars>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;{{asset &quot;css/fonts.css&quot;}}&quot; /&gt;
 </code></pre><p>下载<a href="https://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">原版的Google字体</a>，重命名为<code>fonts.css</code>，放到<code>assets/css</code>中，下载其中所有的woff2字体，放到<code>assets/fonts</code>中，并将<code>fonts.css</code>中所有字体链接地址改为<code>../fonts/字体名称</code>。</p>
 <p>最后可以重启nodejs看看效果了，如果是从ghostchina的中文版升级到原版，可能需要先进入后台修改默认模板(这里如果不能生效的话可能需要修改数据库)，或者重命名模板，并修改模板中的<code>package.json</code>。</p>
 </section>

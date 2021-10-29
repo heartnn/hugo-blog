@@ -25,7 +25,7 @@
 <link rel=stylesheet href=/css/nav.min.css>
 <link rel=stylesheet href=//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.css integrity="sha256-oC/Q8nqWSlp1bki3Ht9gRCWaew5n6/HNk10HT4aEX4w=" crossorigin=anonymous>
 <link href=/index.xml rel=alternate type=application/rss+xml title=heartnn的自留地>
-<meta name=generator content="Hugo 0.87.0">
+<meta name=generator content="Hugo 0.88.1">
 <link rel=canonical href=https://www.heartnn.com/2011/07/06/update-to-wordpress-3-2/>
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","publisher":{"@type":"Organization","name":null,"logo":"https://www.heartnn.com/images/logo.png"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"https://www.heartnn.com/images/logo.png","width":250,"height":250},"url":"https://www.heartnn.com","sameAs":[]},"headline":"博客升级到Wordpress 3.2","name":"博客升级到Wordpress 3.2","wordCount":111,"timeRequired":"PT1M","inLanguage":{"@type":"Language","alternateName":"en"},"url":"https://www.heartnn.com/2011/07/06/update-to-wordpress-3-2/","datePublished":"2011-07-06T22:12Z+08:00","dateModified":"2011-07-06T22:12+08:00","keywords":"wordpress","description":"","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.heartnn.com/2011/07/06/update-to-wordpress-3-2/"}}</script>
 </head>
@@ -93,7 +93,7 @@
 <p>确切的说是昨天升级的，基本上没有什么兼容性问题，不过Twenty Eleven主题的问题还算不少。&lt;!&ndash;more></p>
 <p>首先是原来的AI Loader(就是JQuery Lazy Load)不能用了，用YS images lazyload來代替了，並且Twenty Eleven默认没有引用JQuery，所以需要在header.php中添加。</p>
 <p>找到</p>
-<pre><code class=language-htmlbars data-lang=htmlbars>&lt;!--[if lt IE 9]&gt;
+<pre tabindex=0><code class=language-htmlbars data-lang=htmlbars>&lt;!--[if lt IE 9]&gt;
     &lt;script src=&quot;&lt;?php echo get_template_directory_uri(); ?&gt;/js/html5.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
 &lt;![endif]--&gt;
 </code></pre><p>在上面添加</p>

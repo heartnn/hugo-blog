@@ -25,7 +25,7 @@
 <link rel=stylesheet href=/css/nav.min.css>
 <link rel=stylesheet href=//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.css integrity="sha256-oC/Q8nqWSlp1bki3Ht9gRCWaew5n6/HNk10HT4aEX4w=" crossorigin=anonymous>
 <link href=/index.xml rel=alternate type=application/rss+xml title=heartnn的自留地>
-<meta name=generator content="Hugo 0.87.0">
+<meta name=generator content="Hugo 0.88.1">
 <link rel=canonical href=https://www.heartnn.com/2015/07/28/mp4-package/>
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","publisher":{"@type":"Organization","name":null,"logo":"https://www.heartnn.com/images/logo.png"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"https://www.heartnn.com/images/logo.png","width":250,"height":250},"url":"https://www.heartnn.com","sameAs":[]},"headline":"关于MP4封装的一些事","name":"关于MP4封装的一些事","wordCount":41,"timeRequired":"PT1M","inLanguage":{"@type":"Language","alternateName":"en"},"url":"https://www.heartnn.com/2015/07/28/mp4-package/","datePublished":"2015-07-28T00:17Z+08:00","dateModified":"2016-04-01T07:16+08:00","keywords":"mp4box","description":"","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.heartnn.com/2015/07/28/mp4-package/"}}</script>
 </head>
@@ -96,11 +96,11 @@
 <p>这个文件标明了用My MP4Box GUI生成。。。这对于强迫症怎么受的了。而且下面的Video和Audio部分title分别是封装前的文件名，对比下载的Youtube视频，根本没有这些信息的，这些在我看来只能算推广广告。</p>
 <p>于是直接下载mp4box，用命令行来进行封装，以下假设需要封装的视频(1.h264)和音频(2.aac)文件和mp4box.exe位于同一目录下，封装后的文件名为file.mp4。</p>
 <p>由于我们要去掉title，所以命令行要这样写：</p>
-<pre><code class=language-dos data-lang=dos>mp4box -add 1.h264:fps=23.976:name=&quot;&quot; -add 2.aac:name=&quot;&quot; -new file.mp4
+<pre tabindex=0><code class=language-dos data-lang=dos>mp4box -add 1.h264:fps=23.976:name=&quot;&quot; -add 2.aac:name=&quot;&quot; -new file.mp4
 </code></pre><p>这里需要注意的是视频部分一定要指定fps，否则会按25.000处理，到时候音画不同步了可别怪我没提醒。</p>
 <p>完成后可以利用<code>mp4box -info file.mp4</code>查看文件信息，而且放到potplayer里也不会看到那些没用的信息了。</p>
 <p>另外如果需要解开封装的话，似乎必须一个一个track来解开(这部分我看完帮助没怎么明白，难道不能一次都解出来吗)。</p>
-<pre><code class=language-dos data-lang=dos>mp4box -raw 1 file.mp4
+<pre tabindex=0><code class=language-dos data-lang=dos>mp4box -raw 1 file.mp4
 mp4box -raw 2 file.mp4
 </code></pre><p>以上都是基础用法，更多复杂的命令，heartnn暂时也用不到，如果有需要可以用<code>mp4box -h</code>来查看。</p>
 <p>最后附上heartnn从安装包中提取的mp4box (下载链接: <a href=https://pan.baidu.com/s/1eRFTe9c>https://pan.baidu.com/s/1eRFTe9c</a> 密码: nr6d)</p>

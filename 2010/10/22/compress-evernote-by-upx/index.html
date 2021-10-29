@@ -26,7 +26,7 @@
 <link rel=stylesheet href=/css/nav.min.css>
 <link rel=stylesheet href=//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.css integrity="sha256-oC/Q8nqWSlp1bki3Ht9gRCWaew5n6/HNk10HT4aEX4w=" crossorigin=anonymous>
 <link href=/index.xml rel=alternate type=application/rss+xml title=heartnn的自留地>
-<meta name=generator content="Hugo 0.87.0">
+<meta name=generator content="Hugo 0.88.1">
 <link rel=canonical href=https://www.heartnn.com/2010/10/22/compress-evernote-by-upx/>
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","publisher":{"@type":"Organization","name":null,"logo":"https://www.heartnn.com/images/logo.png"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"https://www.heartnn.com/images/logo.png","width":250,"height":250},"url":"https://www.heartnn.com","sameAs":[]},"headline":"通过upx缩小Evernote的体积，达到网络同步的目的","name":"通过upx缩小Evernote的体积，达到网络同步的目的","wordCount":18,"timeRequired":"PT1M","inLanguage":{"@type":"Language","alternateName":"en"},"url":"https://www.heartnn.com/2010/10/22/compress-evernote-by-upx/","datePublished":"2010-10-22T05:22Z+08:00","dateModified":"2010-10-22T05:22+08:00","keywords":"note, upx","description":"","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.heartnn.com/2010/10/22/compress-evernote-by-upx/"}}</script>
 </head>
@@ -96,7 +96,7 @@
 <p>软件的个头本身是很大的，删掉spell check的词典和其他语言后，还是有40多MB，这样同步起来可是比较大的，所以想起来了压缩，本想只把数据库做同步，可是用起来不方便，还要下载客户端才能用，达不到便携的目的，看着那一堆exe和dll的体积都很大，于是想起了加壳。</p>
 <p>至于加壳，其一般的目的是使破解增加难度，保护软件的合法权益，压缩体积其实只是附带的功能～～(我是这么理解de)</p>
 <p>我用的是upx，在upx.exe的所在目录下建立evernote文件夹，然后把需要压缩的exe和dll文件复制进去，使用下面的命令，可以达到最好的压缩效果。</p>
-<pre><code class=language-dos data-lang=dos>upx --best evernote\*
+<pre tabindex=0><code class=language-dos data-lang=dos>upx --best evernote\*
 </code></pre><p>看一下图就知道效果了～～</p>
 <p><img src=/uploads/2010/10/evernote-upx.png alt></p>
 <p>这下，Evernote 4.0.0.2666体积变成原来的1/3了，十几兆大小，同步起来应该算很方便了，抛砖引玉，喜欢云同步的朋友可以这样处理一下自己的软件，同步的时候才会更快捷。</p>

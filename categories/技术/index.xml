@@ -27,7 +27,7 @@
 &lt;p>&lt;img src="https://www.heartnn.com/uploads/2018/11/github-pages.png" alt="">&lt;/p></description></item><item><title>七牛关闭测试域名后的文件批量下载</title><link>https://www.heartnn.com/2018/10/09/batch-download-qiniu-files/</link><pubDate>Tue, 09 Oct 2018 08:05:34 +0800</pubDate><guid>https://www.heartnn.com/2018/10/09/batch-download-qiniu-files/</guid><description>&lt;p>最近七牛关闭了所有域名的测试域名，没有备案域名的话，会造成bucket里的文件无法下载，反正我是没有备案域名，索性干脆全部导出来。&lt;/p>
 &lt;p>由于没有了默认域名，所以无法直接下载，不过由于新建的bucket提供30天测试域名，文件导出还是有办法的。&lt;/p>
 &lt;p>预备工作：首先下载七牛提供的&lt;a href="https://github.com/qiniu/qshell">qshell&lt;/a>，下载完毕后提取对应操作系统的可执行文件，比如windows系统重命名为qshell.exe。&lt;/p>
-&lt;pre>&lt;code>qshell account AccessKey SecretKey
+&lt;pre tabindex="0">&lt;code>qshell account AccessKey SecretKey
 &lt;/code>&lt;/pre>&lt;p>其中AccessKey和SecretKey去七牛后台可以找到，执行完毕后会在用户目录下生成&lt;code>.qiniu&lt;/code>文件夹，里面的&lt;code>account.json&lt;/code>记录了刚才的信息。&lt;/p>
 &lt;p>由于我保存文件的bucket的测试域名已经过期，这里在七牛控制台里新建一个名为temp的bucket用来作为中转，此处请保持新建的bucket和原有的在同一个区域(zone)。&lt;/p></description></item><item><title>Windows 10 Samba连接问题</title><link>https://www.heartnn.com/2018/08/09/windows-10-samba-connection/</link><pubDate>Thu, 09 Aug 2018 15:13:20 +0800</pubDate><guid>https://www.heartnn.com/2018/08/09/windows-10-samba-connection/</guid><description>&lt;p>最近重装完系统，发现连接路由器的Samba服务出现问题，自以为华硕RT-AC68U采用的是Samba 2.0，而且路由器设置里也打开了相应的选项，但似乎Windows 10无法识别。&lt;/p>
 &lt;p>结论是只能启用SMB 1.0了，首先打开控制面板&amp;ndash;&amp;gt;程序和功能&amp;ndash;&amp;gt;启用或关闭Windows功能，勾选&lt;code>SMB 1.0/CIFS文件共享支持&lt;/code>。&lt;/p>

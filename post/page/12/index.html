@@ -24,7 +24,7 @@
 <link rel=stylesheet href=//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.css integrity="sha256-oC/Q8nqWSlp1bki3Ht9gRCWaew5n6/HNk10HT4aEX4w=" crossorigin=anonymous>
 <link href=/index.xml rel=alternate type=application/rss+xml title=heartnn的自留地>
 <link href=/post/index.xml rel=alternate type=application/rss+xml title="Posts &#183; heartnn的自留地">
-<meta name=generator content="Hugo 0.87.0">
+<meta name=generator content="Hugo 0.88.1">
 <link rel=canonical href=https://www.heartnn.com/post/>
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"Website","publisher":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"https://www.heartnn.com/images/logo.png","width":250,"height":250},"url":"https://www.heartnn.com","sameAs":[]},"url":"https://www.heartnn.com/","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.heartnn.com/"},"description":"生活中的记忆片段~"}</script>
 </head>
@@ -92,6 +92,24 @@
 </div>
 <article class="post post">
 <header class=post-header>
+<h2 class=post-title><a href=/2016/07/25/cut-off-the-water-supply/>记录停水的一周</a></h2>
+</header>
+<section class=post-excerpt>
+<p>住在石家庄真的是什么神奇的事都能碰到。先是倾盆大雨下了几天，紧接着就开启三伏模式，还伴随着停水。
+虽然说居委会也在供水，但还是有点杯水车薪，好在大院里有井，虽然喝着不太好喝，但是洗碗和洗衣服还是可以的。
+闲起来可以折腾手里的V10，其实有点买后悔了，这手机感觉哪里都不错，就是LG的发热控制的不好，所以玩游戏就会不断的降频，造成lag，屏幕非常不错，比起SONY那个万年tft不知道要好多少，但发热的时候还是挺烫的。
+手机系统升级到6.0，由于美版机有Anti-Rollback，所以升级前考虑了很长时间，好在升级后耗电也可以，不像网友们说的各种尿崩。感觉Android还是可以在省电上做做文章。 <a class=read-more href=/2016/07/25/cut-off-the-water-supply/>&#187;</a></p>
+</section>
+<footer class=post-meta>
+<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
+heartnn
+<time class=post-date datetime=2016-07-25T21:31:00+08:00>
+2016-07-25
+</time>
+</footer>
+</article>
+<article class="post post">
+<header class=post-header>
 <h2 class=post-title><a href=/2016/05/29/update-to-ghost-0-8-0/>更新到Ghost 0.8.0</a></h2>
 </header>
 <section class=post-excerpt>
@@ -156,7 +174,7 @@ on
 </header>
 <section class=post-excerpt>
 <p><p>最近<a href=https://github.com/TryGhost/Ghost/releases>Ghost更新</a>的有些频繁，0.7.7仅仅一天就被更新，每次<code>npm instsall --production</code>都要漫长的时间。最好的办法就是换源：</p>
-<pre><code class=language-dos data-lang=dos>npm config set registry https://registry.npm.taobao.org
+<pre tabindex=0><code class=language-dos data-lang=dos>npm config set registry https://registry.npm.taobao.org
 </code></pre><p>有一点疑惑，就是本地<code>npm install --production</code>时，会卡在<code>preinstall</code>这里，也就是<code>npm install semver</code>之后<code>startup-check.js</code>过不去，跳过也不影响用，heartnn安装的node版本是0.10.35，和Openshift是一样的。</p> <a class=read-more href=/2016/02/20/follow-ghost-official-update/>&#187;</a></p>
 </section>
 <footer class=post-meta>
@@ -188,27 +206,6 @@ on
 <a href=https://www.heartnn.com/tags/input/>#input</a>
 <time class=post-date datetime=2016-02-14T00:39:34+08:00>
 2016-02-14
-</time>
-</footer>
-</article>
-<article class="post post">
-<header class=post-header>
-<h2 class=post-title><a href=/2016/01/10/videos-lossless-convert/>各类视频格式的无损转换</a></h2>
-</header>
-<section class=post-excerpt>
-<p><p>之前记录了<a href=/2015/07/28/mp4-package/>关于Mp4box的一些用法</a>，但是mp4格式支持封装的音频和视频格式相对有限，另外还有外挂字幕等等，所以mp4并不是最好的选择。对于高清电影来说，网络上更多的是mkv。</p>
-<p>mkv的工具主要是用<a href=http://www.fosshub.com/MKVToolNix.html>MKVToolNix</a>和<a href=http://sourceforge.net/projects/gmkvextractgui/>gMKVExtractGUI</a>(用来分离轨道)，都是GUI界面，像mp4之类的可以直接拖放到软件中进行处理，非常方便(mov格式也开始转向mpeg4，所以较新的mov格式也是可以直接编辑的)。</p>
-<p>其它mkvtoolnix不支持的格式，可以利用<a href=http://ffmpeg.zeranoe.com/builds/>ffmpeg</a>先转换为mkv，然后再交给mkvtoolnix处理：</p> <a class=read-more href=/2016/01/10/videos-lossless-convert/>&#187;</a></p>
-</section>
-<footer class=post-meta>
-<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
-heartnn
-on
-<a href=https://www.heartnn.com/tags/mkv/>#mkv</a>
-,
-<a href=https://www.heartnn.com/tags/ffmpeg/>#ffmpeg</a>
-<time class=post-date datetime=2016-01-10T01:15:57+08:00>
-2016-01-10
 </time>
 </footer>
 </article>

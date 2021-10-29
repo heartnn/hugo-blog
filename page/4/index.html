@@ -23,7 +23,7 @@
 <link rel=stylesheet href=/css/nav.min.css>
 <link rel=stylesheet href=//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.css integrity="sha256-oC/Q8nqWSlp1bki3Ht9gRCWaew5n6/HNk10HT4aEX4w=" crossorigin=anonymous>
 <link href=/index.xml rel=alternate type=application/rss+xml title=heartnn的自留地>
-<meta name=generator content="Hugo 0.87.0">
+<meta name=generator content="Hugo 0.88.1">
 <link rel=canonical href=https://www.heartnn.com/>
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"Website","publisher":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"https://www.heartnn.com/images/logo.png","width":250,"height":250},"url":"https://www.heartnn.com","sameAs":[]},"url":"https://www.heartnn.com/","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.heartnn.com/"},"description":"生活中的记忆片段~"}</script>
 </head>
@@ -85,10 +85,29 @@
 <div class="extra-pagination inner">
 <nav class=pagination role=navigation>
 <a class=newer-posts href=/page/3/>&larr; Newer Posts</a>
-<span class=page-number>Page 4 of 38</span>
+<span class=page-number>Page 4 of 39</span>
 <a class=older-posts href=/page/5/>Older Posts &rarr;</a>
 </nav>
 </div>
+<article class="post post">
+<header class=post-header>
+<h2 class=post-title><a href=/2018/11/17/resolve-err-too-many-redirects-on-cloudflare/>解决Cloudflare产生的“ERR_TOO_MANY_REDIRECTS”错误</a></h2>
+</header>
+<section class=post-excerpt>
+<p><p>昨天打开自己的博客，发现了“ERR_TOO_MANY_REDIRECTS”，估计是最近把DNS改到Cloudflare产生的后果，于是开始排查错误。原来是Cloudflare登录后对应域名的Crypto问题，由于我的域名下有子域名处于http状态，前几天将SSL加密部分从Full SSL改为了Flexible SSL，由此造成的“ERR_TOO_MANY_REDIRECTS”。</p>
+<p>问题找到了，由于我的博客托管在Github，首先去掉Github Pages设置里的Enforce HTTPS选项，因为这里http会被强制跳转到https，而Cloudflare的Flexible SSL选项需要阅读原始服务器的http数据，然后进行加密，再传送过来，如果原始服务器返回https的话，Cloudflare会丢弃https数据，然后再继续请求，这就是造成问题的元凶。</p>
+<p><img src=/uploads/2018/11/github-pages.png alt></p> <a class=read-more href=/2018/11/17/resolve-err-too-many-redirects-on-cloudflare/>&#187;</a></p>
+</section>
+<footer class=post-meta>
+<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
+heartnn
+on
+<a href=https://www.heartnn.com/tags/dns/>#dns</a>
+<time class=post-date datetime=2018-11-17T10:33:23+08:00>
+2018-11-17
+</time>
+</footer>
+</article>
 <article class="post post">
 <header class=post-header>
 <h2 class=post-title><a href=/2018/10/09/batch-download-qiniu-files/>七牛关闭测试域名后的文件批量下载</a></h2>
@@ -97,7 +116,7 @@
 <p><p>最近七牛关闭了所有域名的测试域名，没有备案域名的话，会造成bucket里的文件无法下载，反正我是没有备案域名，索性干脆全部导出来。</p>
 <p>由于没有了默认域名，所以无法直接下载，不过由于新建的bucket提供30天测试域名，文件导出还是有办法的。</p>
 <p>预备工作：首先下载七牛提供的<a href=https://github.com/qiniu/qshell>qshell</a>，下载完毕后提取对应操作系统的可执行文件，比如windows系统重命名为qshell.exe。</p>
-<pre><code>qshell account AccessKey SecretKey
+<pre tabindex=0><code>qshell account AccessKey SecretKey
 </code></pre><p>其中AccessKey和SecretKey去七牛后台可以找到，执行完毕后会在用户目录下生成<code>.qiniu</code>文件夹，里面的<code>account.json</code>记录了刚才的信息。</p>
 <p>由于我保存文件的bucket的测试域名已经过期，这里在七牛控制台里新建一个名为temp的bucket用来作为中转，此处请保持新建的bucket和原有的在同一个区域(zone)。</p> <a class=read-more href=/2018/10/09/batch-download-qiniu-files/>&#187;</a></p>
 </section>
@@ -201,27 +220,9 @@ on
 </time>
 </footer>
 </article>
-<article class="post post">
-<header class=post-header>
-<h2 class=post-title><a href=/2018/07/22/is-this-a-zombie-review/>这货也算是僵尸？</a></h2>
-</header>
-<section class=post-excerpt>
-<p><p>虽然介绍说是后宫番，但是第一感觉是有悬疑剧情的，but看完后才知道是搞笑番啊。主角是僵尸，还是魔装少女，还是变态(OVA里还是透明人，还是透视人)。由于主角的特殊体质，所以无论被后宫怎样蹂躏，也不会死掉。</p>
-<p><img src=/uploads/2018/07/is-this-a-zombie.jpg alt></p> <a class=read-more href=/2018/07/22/is-this-a-zombie-review/>&#187;</a></p>
-</section>
-<footer class=post-meta>
-<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
-heartnn
-on
-<a href=https://www.heartnn.com/tags/%E3%81%93%E3%82%8C%E3%81%AF%E3%82%BE%E3%83%B3%E3%83%93%E3%81%A7%E3%81%99%E3%81%8B/>#これはゾンビですか？</a>
-<time class=post-date datetime=2018-07-22T21:22:34+08:00>
-2018-07-22
-</time>
-</footer>
-</article>
 <nav class=pagination role=navigation>
 <a class=newer-posts href=/page/3/>&larr; Newer Posts</a>
-<span class=page-number>Page 4 of 38</span>
+<span class=page-number>Page 4 of 39</span>
 <a class=older-posts href=/page/5/>Older Posts &rarr;</a>
 </nav>
 </main>

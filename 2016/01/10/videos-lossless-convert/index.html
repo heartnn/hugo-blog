@@ -26,7 +26,7 @@
 <link rel=stylesheet href=/css/nav.min.css>
 <link rel=stylesheet href=//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.css integrity="sha256-oC/Q8nqWSlp1bki3Ht9gRCWaew5n6/HNk10HT4aEX4w=" crossorigin=anonymous>
 <link href=/index.xml rel=alternate type=application/rss+xml title=heartnn的自留地>
-<meta name=generator content="Hugo 0.87.0">
+<meta name=generator content="Hugo 0.88.1">
 <link rel=canonical href=https://www.heartnn.com/2016/01/10/videos-lossless-convert/>
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","publisher":{"@type":"Organization","name":null,"logo":"https://www.heartnn.com/images/logo.png"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"https://www.heartnn.com/images/logo.png","width":250,"height":250},"url":"https://www.heartnn.com","sameAs":[]},"headline":"各类视频格式的无损转换","name":"各类视频格式的无损转换","wordCount":27,"timeRequired":"PT1M","inLanguage":{"@type":"Language","alternateName":"en"},"url":"https://www.heartnn.com/2016/01/10/videos-lossless-convert/","datePublished":"2016-01-10T01:15Z+08:00","dateModified":"2016-01-10T01:15+08:00","keywords":"mkv, ffmpeg","description":"","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.heartnn.com/2016/01/10/videos-lossless-convert/"}}</script>
 </head>
@@ -94,7 +94,7 @@
 <p>之前记录了<a href=/2015/07/28/mp4-package/>关于Mp4box的一些用法</a>，但是mp4格式支持封装的音频和视频格式相对有限，另外还有外挂字幕等等，所以mp4并不是最好的选择。对于高清电影来说，网络上更多的是mkv。</p>
 <p>mkv的工具主要是用<a href=http://www.fosshub.com/MKVToolNix.html>MKVToolNix</a>和<a href=http://sourceforge.net/projects/gmkvextractgui/>gMKVExtractGUI</a>(用来分离轨道)，都是GUI界面，像mp4之类的可以直接拖放到软件中进行处理，非常方便(mov格式也开始转向mpeg4，所以较新的mov格式也是可以直接编辑的)。</p>
 <p>其它mkvtoolnix不支持的格式，可以利用<a href=http://ffmpeg.zeranoe.com/builds/>ffmpeg</a>先转换为mkv，然后再交给mkvtoolnix处理：</p>
-<pre><code class=language-dos data-lang=dos>ffmpeg -i input.wmv -map 0 -codec copy output.mkv
+<pre tabindex=0><code class=language-dos data-lang=dos>ffmpeg -i input.wmv -map 0 -codec copy output.mkv
 </code></pre><ul>
 <li>-codec copy : 复制tracks至输出文件</li>
 <li>-map 0 : 强制选取输入文件#0内所有的tracks</li>

@@ -25,7 +25,7 @@
 <link rel=stylesheet href=/css/nav.min.css>
 <link rel=stylesheet href=//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.css integrity="sha256-oC/Q8nqWSlp1bki3Ht9gRCWaew5n6/HNk10HT4aEX4w=" crossorigin=anonymous>
 <link href=/index.xml rel=alternate type=application/rss+xml title=heartnn的自留地>
-<meta name=generator content="Hugo 0.87.0">
+<meta name=generator content="Hugo 0.88.1">
 <link rel=canonical href=https://www.heartnn.com/2013/05/10/retext-for-windows/>
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","publisher":{"@type":"Organization","name":null,"logo":"https://www.heartnn.com/images/logo.png"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"https://www.heartnn.com/images/logo.png","width":250,"height":250},"url":"https://www.heartnn.com","sameAs":[]},"headline":"在Windows下使用ReText","name":"在Windows下使用ReText","wordCount":88,"timeRequired":"PT1M","inLanguage":{"@type":"Language","alternateName":"en"},"url":"https://www.heartnn.com/2013/05/10/retext-for-windows/","datePublished":"2013-05-10T23:17Z+08:00","dateModified":"2013-05-10T23:17+08:00","keywords":"windows, python","description":"","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.heartnn.com/2013/05/10/retext-for-windows/"}}</script>
 </head>
@@ -102,7 +102,7 @@
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-plain data-lang=plain>C:\Python33;C:\Python33\Lib\site-packages\PyQt4\bin;
 </code></pre></div><p>然后下载运行<a href=http://python-distribute.org/distribute_setup.py>distribute_setup.py</a>，会安装distribute package，这样在下面可以应用easy-install命令。</p>
 <p>然后打开cmd窗口，<code>cd \Python33\Scripts</code>，然后安装相关组件：</p>
-<pre><code class=language-dos data-lang=dos>easy_install Pygments
+<pre tabindex=0><code class=language-dos data-lang=dos>easy_install Pygments
 easy_install ElementTree
 easy_install Markdown
 easy_install Markups
@@ -110,7 +110,7 @@ easy_install Markups
 <p>最后下载<a href=http://sourceforge.net/p/retext/files/latest/>ReText</a>和相关的<a href=http://sourceforge.net/projects/retext/files/Icons/>图标包</a>，解压缩后把图标包放在ReText目录的icons目录下，然后双击retext.py，大功告成。</p>
 <p><img src=/uploads/2013/05/retext.png alt></p>
 <p>如果需要便携版的话，官方也提供了一个批处理文件，比如可以把刚才部署好的环境<code>C:\Python33</code>放到<code>U:\Python33</code>，连同ReText一起copy到U盘里，然后新建一个下面的批处理文件即可。</p>
-<pre><code class=language-dos data-lang=dos>REM ReText Startup batch file
+<pre tabindex=0><code class=language-dos data-lang=dos>REM ReText Startup batch file
 REM -------------------------
 REM determine drive letter of batchfile
 for /f &quot;delims=\&quot; %%d in ('cd') do set curdrv=%%d

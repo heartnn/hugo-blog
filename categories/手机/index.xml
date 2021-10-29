@@ -3,7 +3,7 @@
 &lt;p>需求：Android任意版本(我是在5.1下测试成功的)，手机需root，内核最好支持init.d，如果不支持的话请使用终端或RE管理器启动97dns。&lt;/p>
 &lt;p>副作用：替换系统自带Dnsmasq后可能会引起手机自建热点不正常。&lt;/p>
 &lt;p>需要说明的是，我并没有按照压缩包里的批处理安装，而是自己手动安装的，因为这样的话可以知道文件的去处，方便卸载。&lt;/p></description></item><item><title>解决Android 5.1的叹号问题</title><link>https://www.heartnn.com/2015/03/30/resolve-android-5-1-connectivity-check/</link><pubDate>Mon, 30 Mar 2015 00:53:00 +0800</pubDate><guid>https://www.heartnn.com/2015/03/30/resolve-android-5-1-connectivity-check/</guid><description>&lt;p>众所周知，Android 5.0以后引入了网络图标的那个叹号，在国内真的是很郁闷，因为普通方式根本无法连接&lt;a href="http://clients3.google.com/generate_204">http://clients3.google.com/generate_204&lt;/a>，所以都借助于&lt;a href="http://www.noisyfox.cn/45.html">小狐狸的工具&lt;/a>，或者更暴力的：&lt;/p>
-&lt;pre>&lt;code class="language-dos" data-lang="dos">adb shell &amp;quot;settings put global captive_portal_detection_enabled 0&amp;quot;
+&lt;pre tabindex="0">&lt;code class="language-dos" data-lang="dos">adb shell &amp;quot;settings put global captive_portal_detection_enabled 0&amp;quot;
 &lt;/code>&lt;/pre>&lt;p>再或者给&lt;code>clients3.google.com&lt;/code>添加一条hosts。&lt;/p>
 &lt;p>升级到5.1后，叹号又回来了，我没有试上面那些方式，而是依然使用hosts解决，这次Google更改了验证服务器，我鄙视他。。。&lt;/p></description></item><item><title>AdAway的一些使用技巧</title><link>https://www.heartnn.com/2015/01/29/update-adaway-using-local-server/</link><pubDate>Thu, 29 Jan 2015 23:31:00 +0800</pubDate><guid>https://www.heartnn.com/2015/01/29/update-adaway-using-local-server/</guid><description>&lt;p>&lt;img src="https://www.heartnn.com/uploads/2015/01/adaway.png" alt="">&lt;/p>
 &lt;p>AdAway有点像电脑上的adblock，可以通过订阅源来下载更新。heartnn在手机上也经常用AdAway来合并几个源，并且还可以加上自己的黑名单和白名单，非常方便。&lt;/p>

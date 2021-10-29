@@ -23,7 +23,7 @@
 <link rel=stylesheet href=/css/nav.min.css>
 <link rel=stylesheet href=//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.css integrity="sha256-oC/Q8nqWSlp1bki3Ht9gRCWaew5n6/HNk10HT4aEX4w=" crossorigin=anonymous>
 <link href=/index.xml rel=alternate type=application/rss+xml title=heartnn的自留地>
-<meta name=generator content="Hugo 0.87.0">
+<meta name=generator content="Hugo 0.88.1">
 <link rel=canonical href=https://www.heartnn.com/>
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"Website","publisher":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"https://www.heartnn.com/images/logo.png","width":250,"height":250},"url":"https://www.heartnn.com","sameAs":[]},"url":"https://www.heartnn.com/","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.heartnn.com/"},"description":"生活中的记忆片段~"}</script>
 </head>
@@ -85,10 +85,32 @@
 <div class="extra-pagination inner">
 <nav class=pagination role=navigation>
 <a class=newer-posts href=/page/32/>&larr; Newer Posts</a>
-<span class=page-number>Page 33 of 38</span>
+<span class=page-number>Page 33 of 39</span>
 <a class=older-posts href=/page/34/>Older Posts &rarr;</a>
 </nav>
 </div>
+<article class="post post">
+<header class=post-header>
+<h2 class=post-title><a href=/2010/10/29/wordpress-gzip-output/>关于Wordpress的gzip输出</a></h2>
+</header>
+<section class=post-excerpt>
+<p><p>gzip输出的目的是可以有效地减少文件大小，以利于更快速的传输。</p>
+<p>观看本文之前，请先到<a href=http://www.whatsmyip.org/http_compression/>这里</a>检查你的网站是否已经启用gzip，如果已经启用，请忽略本文。</p>
+<p>wordpress从2.5版本开始，不再提供gzip输出选项，而改代码又相对复杂，于是寻找一个可用的插件是必要的。</p>
+<p>我用的是<a href=http://wordpress.org/extend/plugins/wpcompressor/>wpCompressor</a>，目前的最新版本是0.3，插件很小，是单文件的。</p>
+<p>使用中有个小问题，就是这个插件开启时，影响了xmlrpc，也就是说我的ScribeFire不起作用了。。。</p>
+<p>于是乎改插件吧（本人不会做插件，但改改还是会的，<code>o(*≧▽≦)ツ）</code>，在gzip输出地时候排除了<code>xmlrpc.php</code>文件。反正这个文件也不会访问到的。 改好的代码在下面：</p> <a class=read-more href=/2010/10/29/wordpress-gzip-output/>&#187;</a></p>
+</section>
+<footer class=post-meta>
+<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
+heartnn
+on
+<a href=https://www.heartnn.com/tags/wordpress/>#wordpress</a>
+<time class=post-date datetime=2010-10-29T01:51:00+08:00>
+2010-10-29
+</time>
+</footer>
+</article>
 <article class="post post">
 <header class=post-header>
 <h2 class=post-title><a href=/2010/10/29/setup-wordpress-on-sourceforge/>用SourceForge.net建立WordPress</a></h2>
@@ -188,28 +210,9 @@ on
 </time>
 </footer>
 </article>
-<article class="post post">
-<header class=post-header>
-<h2 class=post-title><a href=/2010/10/25/majiefu/>马介甫是只好狐狸</a></h2>
-</header>
-<section class=post-excerpt>
-<p><p><img src=/uploads/2010/10/majiefu.jpg alt></p>
-<p>最近重听了王玥波的马介甫，王老板演绎的真是出神入化，虽说本篇聊斋以马介甫为题，但是通篇都写的是杨万石的故事，从怕到不怕到再怕到再不怕而又怕到又不怕……故事十分的曲折。</p>
-<p>通篇的一个神话人物就是马介甫了，马介甫可以算是个好狐狸，几次三番的帮助杨万石，甚至耽误了自己的修行，可惜再怎么帮助杨万石，都不能改变其惧内之本性。</p> <a class=read-more href=/2010/10/25/majiefu/>&#187;</a></p>
-</section>
-<footer class=post-meta>
-<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
-heartnn
-on
-<a href=https://www.heartnn.com/tags/%E8%AF%84%E4%B9%A6/>#评书</a>
-<time class=post-date datetime=2010-10-25T03:23:00+08:00>
-2010-10-25
-</time>
-</footer>
-</article>
 <nav class=pagination role=navigation>
 <a class=newer-posts href=/page/32/>&larr; Newer Posts</a>
-<span class=page-number>Page 33 of 38</span>
+<span class=page-number>Page 33 of 39</span>
 <a class=older-posts href=/page/34/>Older Posts &rarr;</a>
 </nav>
 </main>

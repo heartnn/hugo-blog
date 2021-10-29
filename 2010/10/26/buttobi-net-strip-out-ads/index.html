@@ -24,7 +24,7 @@
 <link rel=stylesheet href=/css/nav.min.css>
 <link rel=stylesheet href=//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.css integrity="sha256-oC/Q8nqWSlp1bki3Ht9gRCWaew5n6/HNk10HT4aEX4w=" crossorigin=anonymous>
 <link href=/index.xml rel=alternate type=application/rss+xml title=heartnn的自留地>
-<meta name=generator content="Hugo 0.87.0">
+<meta name=generator content="Hugo 0.88.1">
 <link rel=canonical href=https://www.heartnn.com/2010/10/26/buttobi-net-strip-out-ads/>
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","publisher":{"@type":"Organization","name":null,"logo":"https://www.heartnn.com/images/logo.png"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"https://www.heartnn.com/images/logo.png","width":250,"height":250},"url":"https://www.heartnn.com","sameAs":[]},"headline":"buttobi.net去广告攻略","name":"buttobi.net去广告攻略","wordCount":16,"timeRequired":"PT1M","inLanguage":{"@type":"Language","alternateName":"en"},"url":"https://www.heartnn.com/2010/10/26/buttobi-net-strip-out-ads/","datePublished":"2010-10-26T23:42Z+08:00","dateModified":"2010-10-26T23:42+08:00","keywords":"html","description":"","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.heartnn.com/2010/10/26/buttobi-net-strip-out-ads/"}}</script>
 </head>
@@ -95,7 +95,7 @@
 <p>由于wordpress的header中含有部分php代码，开始怀疑插入位置和php标记有关，一开始证明好像是这样的，因为php标记中正好是meta和style的部分。(事实证明我一开始的设想是错误的，那个广告代码插入的位置正好是在style之前)</p>
 <p>现在感觉越来越郁闷了，于是在<code>&lt;/title></code>两边加上了<code>&lt;style></code>和<code>&lt;/style></code>，结果广告代码去标题栏了，更证明了我上面括号里说的，我也是从现在才真正知道了广告的插入位置。</p>
 <p>剩下的过程就稍微简单点了，直接出结果吧，我用的是<code>&lt;noscript></code>，是因为怕<code>&lt;style></code>出现混乱。把下面的代码部分加入到<code>&lt;/title></code>后面就好了。</p>
-<pre><code class=language-htmlbars data-lang=htmlbars>&lt;title&gt;&lt;noscript&gt;&lt;/title&gt;&lt;/noscript&gt;&lt;noscript&gt;&lt;/noscript&gt;
+<pre tabindex=0><code class=language-htmlbars data-lang=htmlbars>&lt;title&gt;&lt;noscript&gt;&lt;/title&gt;&lt;/noscript&gt;&lt;noscript&gt;&lt;/noscript&gt;
 </code></pre><p>写双重<code>&lt;noscript></code>的目的是防止广告中以后出现类似script的代码。</p>
 <p>另有个ohost.de去廣告的方法很有意思：</p>
 <p>把含有<code>&lt;/body></code>的全部改成<code>&lt;xml>&lt;/body>&lt;/xml></code>并且在<code>&lt;/html></code>后加上<code>&lt;comment></code>，不知道<code>&lt;comment></code>标签起了什么作用。</p>

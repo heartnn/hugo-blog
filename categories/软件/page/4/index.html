@@ -24,7 +24,7 @@
 <link rel=stylesheet href=//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.css integrity="sha256-oC/Q8nqWSlp1bki3Ht9gRCWaew5n6/HNk10HT4aEX4w=" crossorigin=anonymous>
 <link href=/index.xml rel=alternate type=application/rss+xml title=heartnn的自留地>
 <link href=/categories/%E8%BD%AF%E4%BB%B6/index.xml rel=alternate type=application/rss+xml title="软件 &#183; heartnn的自留地">
-<meta name=generator content="Hugo 0.87.0">
+<meta name=generator content="Hugo 0.88.1">
 <link rel=canonical href=https://www.heartnn.com/categories/%E8%BD%AF%E4%BB%B6/>
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"Website","publisher":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"https://www.heartnn.com/images/logo.png","width":250,"height":250},"url":"https://www.heartnn.com","sameAs":[]},"url":"https://www.heartnn.com/","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.heartnn.com/"},"description":"生活中的记忆片段~"}</script>
 </head>
@@ -90,6 +90,30 @@
 <a class=older-posts href=/categories/%E8%BD%AF%E4%BB%B6/page/5/>Older Posts &rarr;</a>
 </nav>
 </div>
+<article class="post post">
+<header class=post-header>
+<h2 class=post-title><a href=/2015/04/02/acrylic-dns-tutorial/>Acrylic DNS Proxy简易教程</a></h2>
+</header>
+<section class=post-excerpt>
+<p><p>最近更新了一份基于Acrylic DNS Proxy的hosts文档，在此做一个简易的说明。</p>
+<p>首先在<a href=http://mayakron.altervista.org/>官方网站下载</a>软件(打不开官网的话可以直接到<a href=http://sourceforge.net/projects/acrylic/>sf.net</a>下载)，安装完成后，在开始菜单后可以找到下面几个快捷方式：</p>
+<p><img src=/uploads/2015/04/acrylic-console.png alt></p>
+<p>在此仅说明一下重要的配置文件，注意看<code>PrimaryServerAddress</code>的部分，默认会是<code>8.8.8.8</code>，然后对应<code>SecondaryServerAddress</code>是<code>8.8.4.4</code>，由于我们将来会使用hosts文档去解析一些网站，其实这里设置成国内的DNS就可以了，比如114DNS，至于端口保存53就行。</p>
+<p>下面<code>HitLogFileName</code>可以自己设置一下，有时会在log里发现一些新的域名，从而知道某些网站打不开的原因。</p>
+<p>这里<code>HitLogFileWhat=BHCFRU</code>对应的是上面的说明，建议可以只关注自己需要的。</p> <a class=read-more href=/2015/04/02/acrylic-dns-tutorial/>&#187;</a></p>
+</section>
+<footer class=post-meta>
+<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
+heartnn
+on
+<a href=https://www.heartnn.com/tags/proxy/>#proxy</a>
+,
+<a href=https://www.heartnn.com/tags/dns/>#dns</a>
+<time class=post-date datetime=2015-04-02T22:52:00+08:00>
+2015-04-02
+</time>
+</footer>
+</article>
 <article class="post post">
 <header class=post-header>
 <h2 class=post-title><a href=/2015/01/16/find-site-errors-using-fiddler/>用Fiddler查找访问错误的域名</a></h2>
@@ -271,27 +295,6 @@ on
 <a href=https://www.heartnn.com/tags/wiki/>#wiki</a>
 <time class=post-date datetime=2011-10-09T23:40:00+08:00>
 2011-10-09
-</time>
-</footer>
-</article>
-<article class="post post">
-<header class=post-header>
-<h2 class=post-title><a href=/2011/09/18/hanzify-tiddlywiki-dokuwiki-and-pmwikide/>TiddlyWiki、DokuWiki、PmWiki的简单入门: 汉化</a></h2>
-</header>
-<section class=post-excerpt>
-<p><p><a href=/2011/09/15/compare-tiddlywiki-dokuwiki-and-pmwiki/>之前的文章</a>对三款Wiki软件进行了简单的对比，接下来是更详细的功能对比。</p>
-<p>首先大家最关心的应该是中文语言吧，这三款软件都能做到中文化，只是操作起来的简易程度不一样，个人认为最简单的应该是DokuWiki了，直接从<a href=http://www.splitbrain.org/projects/dokuwiki>官方下载页面</a>下载stable版本就可以了，内含中文语言包，只需要安装配置的时候选简体中文就可以了。</p>
-<p>关于TiddlyWiki的汉化，网上其实也有很多资源，需要入门的话可以去<a href=https://sites.google.com/site/tiddlywikizh/>TiddlyWiki華語邦</a>，那里有完全指南，也有汉化的方法。这里简单说一下汉化方法吧，先<a href=http://svn.tiddlywiki.org/Trunk/association/locales/core/zh-Hans/locale.zh-Hans.js>下载汉化文件</a>，然后在TiddlyWiki里新建一个文档，名字就叫zh-HansTranslationPlugin吧，把刚才汉化文件里的文本复制进去，在tag里填上systemConfig，这个标签是最重要的，有了这个标签，这篇文章才会被系统识别成插件。然后就刷新TiddlyWiki就可以了～～</p> <a class=read-more href=/2011/09/18/hanzify-tiddlywiki-dokuwiki-and-pmwikide/>&#187;</a></p>
-</section>
-<footer class=post-meta>
-<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
-heartnn
-on
-<a href=https://www.heartnn.com/tags/php/>#php</a>
-,
-<a href=https://www.heartnn.com/tags/wiki/>#wiki</a>
-<time class=post-date datetime=2011-09-18T08:52:00+08:00>
-2011-09-18
 </time>
 </footer>
 </article>

@@ -27,7 +27,7 @@
 <link rel=stylesheet href=/css/nav.min.css>
 <link rel=stylesheet href=//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.css integrity="sha256-oC/Q8nqWSlp1bki3Ht9gRCWaew5n6/HNk10HT4aEX4w=" crossorigin=anonymous>
 <link href=/index.xml rel=alternate type=application/rss+xml title=heartnn的自留地>
-<meta name=generator content="Hugo 0.87.0">
+<meta name=generator content="Hugo 0.88.1">
 <link rel=canonical href=https://www.heartnn.com/2015/12/17/fix-ghost-timezone/>
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","publisher":{"@type":"Organization","name":null,"logo":"https://www.heartnn.com/images/logo.png"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"https://www.heartnn.com/images/logo.png","width":250,"height":250},"url":"https://www.heartnn.com","sameAs":[]},"headline":"Ghost博客修正时区的方法","name":"Ghost博客修正时区的方法","wordCount":65,"timeRequired":"PT1M","inLanguage":{"@type":"Language","alternateName":"en"},"url":"https://www.heartnn.com/2015/12/17/fix-ghost-timezone/","datePublished":"2015-12-17T09:39Z+08:00","dateModified":"2015-12-17T09:39+08:00","keywords":"ghost, moment.js","description":"","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.heartnn.com/2015/12/17/fix-ghost-timezone/"}}</script>
 </head>
@@ -95,7 +95,7 @@
 <p>最近翻看以前的文章时，偶尔发现有的文章显示时间不正确，编辑器里显示的时间是正常的，才知道Ghost里只是显示UTC时间。</p>
 <p>我不知道调整服务器的时区的方法是否可行，因为Ghost在Github上似乎也没有给出绝对的答案，所以解决的办法只能是对应浏览者的本地时区。</p>
 <p>Ghost官方基本给出了<a href=http://dev.ghost.org/local-dates-themes/>解决办法</a>，利用Moment.js，只需要稍微修改即可。</p>
-<pre><code class=language-htmlbars data-lang=htmlbars>&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js&quot;&gt;&lt;/script&gt;  
+<pre tabindex=0><code class=language-htmlbars data-lang=htmlbars>&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js&quot;&gt;&lt;/script&gt;  
 &lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/locale/zh-cn.js&quot;&gt;&lt;/script&gt;  
 &lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.4.1/moment-timezone-with-data-2010-2020.min.js&quot;&gt;&lt;/script&gt;
 
@@ -115,7 +115,7 @@
   });
 &lt;/script&gt;
 </code></pre><p>假设你用的是Ghost默认模板，将上面一段插入到<code>default.hbs</code>中jQuery后面。并将模版中涉及到时间的部分修改为：</p>
-<pre><code class=language-htmlbars data-lang=htmlbars>&lt;time class=&quot;post-date&quot; datetime=&quot;{{date format=&quot;YYYY-MM-DDTHH:mm:ss.SS\Z&quot;}}&quot;&gt;&lt;/time&gt;
+<pre tabindex=0><code class=language-htmlbars data-lang=htmlbars>&lt;time class=&quot;post-date&quot; datetime=&quot;{{date format=&quot;YYYY-MM-DDTHH:mm:ss.SS\Z&quot;}}&quot;&gt;&lt;/time&gt;
 </code></pre><p>关于上面<code>format('LLL')</code>，下面是对应zh-cn的详细解释：</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#a6e22e>moment</span>().<span style=color:#a6e22e>format</span>(<span style=color:#e6db74>&#39;L&#39;</span>);    <span style=color:#75715e>// 2015-12-17
 </span><span style=color:#75715e></span><span style=color:#a6e22e>moment</span>().<span style=color:#a6e22e>format</span>(<span style=color:#e6db74>&#39;l&#39;</span>);    <span style=color:#75715e>// 2015-12-17
