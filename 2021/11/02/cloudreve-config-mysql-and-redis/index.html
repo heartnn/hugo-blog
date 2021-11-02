@@ -17,7 +17,7 @@
 <meta property="article:tag" content="mysql">
 <meta property="article:tag" content="redis">
 <title>Cloudreve迁移到MySQL &#183; heartnn的自留地</title>
-<meta name=description content="<h2 id=&#34;环境--起因&#34;>环境 &amp;amp; 起因</h2>
+<meta name=description content="<h3 id=&#34;环境--起因&#34;>环境 &amp;amp; 起因</h3>
 <ul>
 <li>系统：Debian 10</li>
 <li>硬件：1 vCPU 512MB</li>
@@ -98,14 +98,14 @@
 </section>
 </header>
 <section class=post-content>
-<h2 id=环境--起因>环境 & 起因</h2>
+<h3 id=环境--起因>环境 & 起因</h3>
 <ul>
 <li>系统：Debian 10</li>
 <li>硬件：1 vCPU 512MB</li>
 <li>Cloudreve软件版本：3.3.2 with SQLite</li>
 </ul>
 <p>随着文件数的增加，SQLite速度和稳定性都差一些，而且数据库文件越来越大，虽然网盘就我一个人在用，崩了可以重新装，但还是秉着一劳永逸的原则，开始了迁移工作。</p>
-<h2 id=安装mysql-57并创建数据库>安装MySQL 5.7并创建数据库</h2>
+<h3 id=安装mysql-57并创建数据库>安装MySQL 5.7并创建数据库</h3>
 <p>至于为什么不用MariaDB，还是内存占用的问题。</p>
 <p>首先安装源，中间缺什么依赖组件可以自行安装：</p>
 <pre tabindex=0><code>apt-get install curl gnupg
@@ -125,7 +125,7 @@ mysql_secure_installation
 
 mysql &gt; CREATE DATABASE IF NOT EXISTS cloudreve DEFAULT CHARSET utf8 COLLATE utf8_general_ci;
 </code></pre><p>这样就创建了一个名为cloudreve的数据库。</p>
-<h2 id=优化mysql数据库>优化MySQL数据库</h2>
+<h3 id=优化mysql数据库>优化MySQL数据库</h3>
 <p>将下面文本替换到<code>/etc/mysql/mysql.conf.d/mysqld.cnf</code>的适当位置：</p>
 <pre tabindex=0><code>[mysqld]
 pid-file	= /var/run/mysqld/mysqld.pid
@@ -145,7 +145,7 @@ query_cache_limit          = 512K
 query_cache_size           = 8M
 sort_buffer_size           = 1M
 innodb_buffer_pool_size    = 2M
-</code></pre><h2 id=转换数据库>转换数据库</h2>
+</code></pre><h3 id=转换数据库>转换数据库</h3>
 <pre tabindex=0><code>apt-get install python3-pip
 pip3 install sqlite3-to-mysql
 </code></pre><p>CD到<code>cloudreve.db</code>的所在目录，执行：</p>
@@ -161,7 +161,7 @@ Port = 3306
 User = root
 Password = &lt;数据库密码&gt;
 Name = cloudreve
-</code></pre><h2 id=配置redis缓存>配置Redis缓存</h2>
+</code></pre><h3 id=配置redis缓存>配置Redis缓存</h3>
 <p>先安装Redis并设置自启动：</p>
 <pre tabindex=0><code>apt-get install redis-server
 systemctl enable redis-server.service
