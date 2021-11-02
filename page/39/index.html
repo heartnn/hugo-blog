@@ -90,6 +90,28 @@
 </div>
 <article class="post post">
 <header class=post-header>
+<h2 class=post-title><a href=/2008/11/21/fail-using-lightbox-on-blogger/>终于明白了Blogger里不能使用Lightbox的原因了</a></h2>
+</header>
+<section class=post-excerpt>
+<p><p>其实原因很简单，并不是代码的事，也不是Blogger不支持，而是外链相册的问题。</p>
+<p>刚刚试了一下Flickr，刚开始发现也不行，只出来Lightbox的效果而没有图像，于是把<code>a href</code>后面改成大图，<code>img src</code>后面改成小图，然后刷新竟然成功了。原来如此，只要指向的是图像就可以了吧，所以Flickr是不能用了，因为它要求必须链接回原来的页面，所以放弃这个相册。</p>
+<p>赶快回到Blogger上传的Picasa来，发现两个位置都是图像啊，哪里出问题了呢？</p>
+<p>把大图点开，也没什么别的啊，等一下，原来IE的标签上有个Picasa图标，如果只是个图像的话，没这么高级吧，赶快查看源文件，哈哈，漏出来了吧，明明就是个html，引用了一个图像，这个图像就是我们要的，粘贴到<code>a href</code>后面，刷新页面，奇怪的事又发生了，点小图以后出来一个下载框，不会吧，这下没办法了。</p> <a class=read-more href=/2008/11/21/fail-using-lightbox-on-blogger/>&#187;</a></p>
+</section>
+<footer class=post-meta>
+<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
+heartnn
+on
+<a href=https://www.heartnn.com/tags/blog/>#blog</a>
+,
+<a href=https://www.heartnn.com/tags/javascript/>#javascript</a>
+<time class=post-date datetime=2008-11-21T17:27:00+08:00>
+2008-11-21
+</time>
+</footer>
+</article>
+<article class="post post">
+<header class=post-header>
 <h2 class=post-title><a href=/2008/11/19/changing-template/>更改模板的痛苦</a></h2>
 </header>
 <section class=post-excerpt>

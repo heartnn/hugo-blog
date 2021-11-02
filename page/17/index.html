@@ -91,6 +91,28 @@
 </div>
 <article class="post post">
 <header class=post-header>
+<h2 class=post-title><a href=/2015/03/30/resolve-android-5-1-connectivity-check/>解决Android 5.1的叹号问题</a></h2>
+</header>
+<section class=post-excerpt>
+<p><p>众所周知，Android 5.0以后引入了网络图标的那个叹号，在国内真的是很郁闷，因为普通方式根本无法连接<a href=http://clients3.google.com/generate_204>http://clients3.google.com/generate_204</a>，所以都借助于<a href=http://www.noisyfox.cn/45.html>小狐狸的工具</a>，或者更暴力的：</p>
+<pre tabindex=0><code class=language-dos data-lang=dos>adb shell &quot;settings put global captive_portal_detection_enabled 0&quot;
+</code></pre><p>再或者给<code>clients3.google.com</code>添加一条hosts。</p>
+<p>升级到5.1后，叹号又回来了，我没有试上面那些方式，而是依然使用hosts解决，这次Google更改了验证服务器，我鄙视他。。。</p> <a class=read-more href=/2015/03/30/resolve-android-5-1-connectivity-check/>&#187;</a></p>
+</section>
+<footer class=post-meta>
+<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
+heartnn
+on
+<a href=https://www.heartnn.com/tags/android/>#android</a>
+,
+<a href=https://www.heartnn.com/tags/hosts/>#hosts</a>
+<time class=post-date datetime=2015-03-30T00:53:00+08:00>
+2015-03-30
+</time>
+</footer>
+</article>
+<article class="post post">
+<header class=post-header>
 <h2 class=post-title><a href=/2015/03/29/kuaipan-on-fedora/>在Fedora中使用金山快盘</a></h2>
 </header>
 <section class=post-excerpt>
@@ -196,29 +218,6 @@ on
 <a href=https://www.heartnn.com/tags/android/>#android</a>
 <time class=post-date datetime=2015-01-29T23:31:00+08:00>
 2015-01-29
-</time>
-</footer>
-</article>
-<article class="post post">
-<header class=post-header>
-<h2 class=post-title><a href=/2015/01/16/find-site-errors-using-fiddler/>用Fiddler查找访问错误的域名</a></h2>
-</header>
-<section class=post-excerpt>
-<p><p>有时朋友们总问我，为什么无法访问Google Now，因为自己不用Google Now,相关域名也不知道，所以我也没什么好的办法。</p>
-<p>Fiddler这个工具很强大，它能告诉我们网页无法访问或者不能完全显示的元凶。</p>
-<p>首先去它的<a href=http://www.telerik.com/download/fiddler>官方网站下载</a>，我用的.NET 2的版本，应该都是一样的。</p>
-<p>安装后打开，此时本地连接的DNS服务器会变成127.0.0.1，所有的流量会通过Fiddler，此时从电脑上访问的记录便会显示在Fiddler里：</p>
-<p><img src=/uploads/2015/01/fiddler.png alt></p> <a class=read-more href=/2015/01/16/find-site-errors-using-fiddler/>&#187;</a></p>
-</section>
-<footer class=post-meta>
-<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
-heartnn
-on
-<a href=https://www.heartnn.com/tags/proxy/>#proxy</a>
-,
-<a href=https://www.heartnn.com/tags/fiddler/>#fiddler</a>
-<time class=post-date datetime=2015-01-16T23:55:00+08:00>
-2015-01-16
 </time>
 </footer>
 </article>

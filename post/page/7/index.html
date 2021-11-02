@@ -92,6 +92,28 @@
 </div>
 <article class="post post">
 <header class=post-header>
+<h2 class=post-title><a href=/2018/04/03/install-and-config-zerotier-for-syncthing/>使用Zerotier为Syncthing打洞</a></h2>
+</header>
+<section class=post-excerpt>
+<p><p>最近<a href=https://syncthing.net>Syncthing</a>越来越慢，有时竟无法连接，翻看官网的<a href=https://github.com/syncthing/syncthing>github</a>，发现是去掉了kcp，老外竟然说kcp不如tcp快，这真是不符合我国的网络啊。。。</p>
+<p>起初换了<a href=http://verysync.com/>微力同步</a>，本以为中继服务器在国内，应该好一点吧，谁知道依然是那个样子，毕竟是Syncthing改的，改成Resilio Sync的样子已经不错了，不适合我这种nat到nat的网络，而且没有版本控制，绝对的适合文件分享，而不是文件同步用。</p>
+<p>换回Syncthing的过程又折腾了一次，正赶上VPS抽风，frp也不给力了，好在发现了<a href=https://www.zerotier.com/>Zerotier</a>这款神器，正好解了燃眉之急。</p>
+<p>Zerotier属于虚拟局域网，可以把不同网络状态下的多个设备组织在一起，正好为我所用。正常注册Zerotier的free账户，然后登陆后，可以在Networks下Create一个新的局域网，会得到一个Newwork ID，设备会依靠这个ID来识别属于哪个局域网，最后是把每一台需要连接的设备都安装Zerotier客户端。</p> <a class=read-more href=/2018/04/03/install-and-config-zerotier-for-syncthing/>&#187;</a></p>
+</section>
+<footer class=post-meta>
+<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
+heartnn
+on
+<a href=https://www.heartnn.com/tags/zerotier/>#zerotier</a>
+,
+<a href=https://www.heartnn.com/tags/syncthing/>#syncthing</a>
+<time class=post-date datetime=2018-04-03T19:55:11+08:00>
+2018-04-03
+</time>
+</footer>
+</article>
+<article class="post post">
+<header class=post-header>
 <h2 class=post-title><a href=/2018/03/23/deploy-frp-on-vps/>在vps上搭建frp</a></h2>
 </header>
 <section class=post-excerpt>
@@ -187,26 +209,6 @@ on
 <a href=https://www.heartnn.com/tags/%E6%81%8B%E3%81%A8%E5%98%98/>#恋と嘘</a>
 <time class=post-date datetime=2018-01-02T02:16:37+08:00>
 2018-01-02
-</time>
-</footer>
-</article>
-<article class="post post">
-<header class=post-header>
-<h2 class=post-title><a href=/2018/01/01/and-you-thought-there-is-never-a-girl-online-review/>回想起玩网游的年代</a></h2>
-</header>
-<section class=post-excerpt>
-<p>《线上游戏的老婆不可能是女生？》，又一个超长的轻小说名字，本来是当作后宫番看的，但结果没有后宫啊，不过一点也没有失望的感觉。题材有点特别，如果观众是深入玩过网游的，那么会有共鸣的；如果没有的话，当作恋爱喜剧看就可以了，基本上每一集都能笑出声来。
-几个人见面的场景真是太有意思了，还有猫姬出场。另外几个人自暴黑历史也是够搞笑了。
-这种题材的番目前还看过KonoSuba,看来都是有生之年系列了。
-剧情中master氪金很厉害啊，我的肝真的受不了啊。这样想想，还是当年卖游戏点卡厚道一些，现在的游戏全都是内购，不花钱就没法玩了呢。 <a class=read-more href=/2018/01/01/and-you-thought-there-is-never-a-girl-online-review/>&#187;</a></p>
-</section>
-<footer class=post-meta>
-<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
-heartnn
-on
-<a href=https://www.heartnn.com/tags/%E3%83%8D%E3%83%88%E3%82%B2%E3%81%AE%E5%AB%81%E3%81%AF%E5%A5%B3%E3%81%AE%E5%AD%90%E3%81%98%E3%82%83%E3%81%AA%E3%81%84%E3%81%A8%E6%80%9D%E3%81%A3%E3%81%9F/>#ネトゲの嫁は女の子じゃないと思った？</a>
-<time class=post-date datetime=2018-01-01T01:28:12+08:00>
-2018-01-01
 </time>
 </footer>
 </article>

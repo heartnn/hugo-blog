@@ -91,6 +91,24 @@
 </div>
 <article class="post post">
 <header class=post-header>
+<h2 class=post-title><a href=/2010/12/16/try-twitwar/>TwitWar试用记</a></h2>
+</header>
+<section class=post-excerpt>
+<p><p>这个QT架构的客户端给我的印象应该是和Twitter有关吧，可是人家根本都不支持的，<code>(￣_￣|||)</code></p>
+<p><img src=/uploads/2010/12/twitwar.png alt></p> <a class=read-more href=/2010/12/16/try-twitwar/>&#187;</a></p>
+</section>
+<footer class=post-meta>
+<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
+heartnn
+on
+<a href=https://www.heartnn.com/tags/fanfou/>#fanfou</a>
+<time class=post-date datetime=2010-12-16T22:02:00+08:00>
+2010-12-16
+</time>
+</footer>
+</article>
+<article class="post post">
+<header class=post-header>
 <h2 class=post-title><a href=/2010/12/14/mipony-portable/>将Mipony打造成绿色版本</a></h2>
 </header>
 <section class=post-excerpt>
@@ -186,26 +204,6 @@ on
 <a href=https://www.heartnn.com/tags/blog/>#blog</a>
 <time class=post-date datetime=2010-12-09T22:57:00+08:00>
 2010-12-09
-</time>
-</footer>
-</article>
-<article class="post post">
-<header class=post-header>
-<h2 class=post-title><a href=/2010/12/06/115pan-and-config-theworld/>从 115 网盘到 TheWorld 的用户配置</a></h2>
-</header>
-<section class=post-excerpt>
-<p>本来是不相关的事情，最近联系到了一起。起源就是一段 115 网盘外链的 php 代码，说是外链，实际上算是盗链的了，所以 heartnn 也没敢用，只是在这里贴出来吧。
-&lt;?php /* * (C) Copyright 2009-2010 115.com All Rights Reserved * * 115 网盘外链 php 版 * 空间需要支持 allow_url_fopen * 外链形式：http://115.pp.ru/115.php/提取码/xxx * 2010.11.14 亲测有效 * 作者：haowenq * 博客地址：http://rr.org.ru * */ $uri = $_SERVER["REQUEST_URI"]; preg_match("/115.php\/(.+)\//",$uri,$code); //自己修改 $code = $code[1]; $opts = array( 'http'=>array('method'=>"GET",'header'=>"User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.3)\r\n") ); //伪造 User-Agent $context = stream_context_create($opts); $url = "https://uapi.115.com/?ct=upload_api&ac=get_pick_code_info&pickcode=".$code."&version=1164"; //获得原始下载地址 $data = file_get_contents($url,false,$context); $data = str_replace("\\","",$data); preg_match_all("/\"Url\":\"(. <a class=read-more href=/2010/12/06/115pan-and-config-theworld/>&#187;</a></p>
-</section>
-<footer class=post-meta>
-<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
-heartnn
-on
-<a href=https://www.heartnn.com/tags/browser/>#browser</a>
-,
-<a href=https://www.heartnn.com/tags/php/>#php</a>
-<time class=post-date datetime=2010-12-06T06:22:00+08:00>
-2010-12-06
 </time>
 </footer>
 </article>

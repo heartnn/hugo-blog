@@ -91,6 +91,32 @@
 </div>
 <article class="post post">
 <header class=post-header>
+<h2 class=post-title><a href=/2019/04/04/mp4-package-box/>MP4封装工具箱发布</a></h2>
+</header>
+<section class=post-excerpt>
+<p><p>之前写过一个<a href=/2016/11/12/aac-to-m4a/>aac转m4a的工具</a>，里面用到的程序是mp4box，这次就干脆把常用的功能整合一下，重新搞了一个，用的是ffmpeg了。</p>
+<p>简单说一下几个批处理文件的功能。</p>
+<ol>
+<li>aac封装m4a.bat：就是重新写的ffmpeg版本，现在版本迭代很快，兼容性应该没什么问题了。</li>
+<li>flv转mp4.bat：这个就是网上流传的一键封装为mp4的批处理，加上了blv格式(为哔哩哔哩手机缓存，其实改后缀就是flv)。</li>
+<li>mp4抽取音频.bat：有些时候只需要听音频的时候用，提取为m4a格式。</li>
+<li>YouTube音视频合并(mp4+m4a).bat：YouTube现在的1080p以上视频和音频是分开的，这个批处理的作用就是将它们合并为mp4。</li>
+</ol>
+<p>以上前3位需要拖放对应文件到批处理上，最后一个双击运行，按提示操作。</p>
+<p>尤其是YouTube，以前都是用MKVToolNix先合并成mkv，然后再用Total Video Converter选视频和音频编码copy，才变成的mp4，为什么以前没直接搞成批处理。。。</p> <a class=read-more href=/2019/04/04/mp4-package-box/>&#187;</a></p>
+</section>
+<footer class=post-meta>
+<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
+heartnn
+on
+<a href=https://www.heartnn.com/tags/ffmpeg/>#ffmpeg</a>
+<time class=post-date datetime=2019-04-04T10:36:12+08:00>
+2019-04-04
+</time>
+</footer>
+</article>
+<article class="post post">
+<header class=post-header>
 <h2 class=post-title><a href=/2019/04/02/samsung-tf-evo-plus-128g-speedtest/>三星TF卡EVO Plus版本测速</a></h2>
 </header>
 <section class=post-excerpt>
@@ -204,32 +230,6 @@ on
 <a href=https://www.heartnn.com/tags/wps/>#wps</a>
 <time class=post-date datetime=2018-12-05T17:44:57+08:00>
 2018-12-05
-</time>
-</footer>
-</article>
-<article class="post post">
-<header class=post-header>
-<h2 class=post-title><a href=/2018/11/21/something-to-do-after-install-manjaro-in-virtualbox/>Virtualbox中安装Manjaro Linux后需要做的一些事</a></h2>
-</header>
-<section class=post-excerpt>
-<p><p>最近爱上了<a href=https://manjaro.org/>Manjaro</a>这个Linux发行版，尤其是更新到18.0以后，界面看着更舒服了，基于ArchLinux，，自带AUR，用起来非常方便。默认提供了Xfce、KDE、GNOME几种桌面，不过社区版集成了几乎所有主流的桌面。</p>
-<h2 id=一-guest-additions问题>一 Guest Additions问题</h2>
-<p>我安装的Xfce 64bit版本，安装完毕启动Virtualbox后，首先就是共享剪贴板和共享文件夹不能用，查<a href="https://wiki.manjaro.org/index.php?title=Virtualbox#Guest_Additions">wiki</a>上明白的写着已经集成Guest Additions，但是却完全不能用。经过Google搜索后在Manjaro论坛上有了答案：</p>
-<h3 id=1-安装缺少的组件>1 安装缺少的组件</h3>
-<p>在“添加/删除软件”中搜索<code>virtualbox-guest-utils</code>，或命令行运行：</p>
-<pre><code>sudo pacman -S virtualbox-guest-utils
-</code></pre>
-<p>这里搜索<code>virtualbox</code>可以看到当前内核对应的guest-modules已经安装了，但是工具包默认没有装。内核模块应该是提供了驱动之类的，共享文件夹什么的只能靠工具包了。</p> <a class=read-more href=/2018/11/21/something-to-do-after-install-manjaro-in-virtualbox/>&#187;</a></p>
-</section>
-<footer class=post-meta>
-<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
-heartnn
-on
-<a href=https://www.heartnn.com/tags/linux/>#linux</a>
-,
-<a href=https://www.heartnn.com/tags/virtualbox/>#virtualbox</a>
-<time class=post-date datetime=2018-11-21T07:43:27+08:00>
-2018-11-21
 </time>
 </footer>
 </article>

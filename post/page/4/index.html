@@ -92,6 +92,32 @@
 </div>
 <article class="post post">
 <header class=post-header>
+<h2 class=post-title><a href=/2018/11/21/something-to-do-after-install-manjaro-in-virtualbox/>Virtualbox中安装Manjaro Linux后需要做的一些事</a></h2>
+</header>
+<section class=post-excerpt>
+<p><p>最近爱上了<a href=https://manjaro.org/>Manjaro</a>这个Linux发行版，尤其是更新到18.0以后，界面看着更舒服了，基于ArchLinux，，自带AUR，用起来非常方便。默认提供了Xfce、KDE、GNOME几种桌面，不过社区版集成了几乎所有主流的桌面。</p>
+<h2 id=一-guest-additions问题>一 Guest Additions问题</h2>
+<p>我安装的Xfce 64bit版本，安装完毕启动Virtualbox后，首先就是共享剪贴板和共享文件夹不能用，查<a href="https://wiki.manjaro.org/index.php?title=Virtualbox#Guest_Additions">wiki</a>上明白的写着已经集成Guest Additions，但是却完全不能用。经过Google搜索后在Manjaro论坛上有了答案：</p>
+<h3 id=1-安装缺少的组件>1 安装缺少的组件</h3>
+<p>在“添加/删除软件”中搜索<code>virtualbox-guest-utils</code>，或命令行运行：</p>
+<pre><code>sudo pacman -S virtualbox-guest-utils
+</code></pre>
+<p>这里搜索<code>virtualbox</code>可以看到当前内核对应的guest-modules已经安装了，但是工具包默认没有装。内核模块应该是提供了驱动之类的，共享文件夹什么的只能靠工具包了。</p> <a class=read-more href=/2018/11/21/something-to-do-after-install-manjaro-in-virtualbox/>&#187;</a></p>
+</section>
+<footer class=post-meta>
+<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
+heartnn
+on
+<a href=https://www.heartnn.com/tags/linux/>#linux</a>
+,
+<a href=https://www.heartnn.com/tags/virtualbox/>#virtualbox</a>
+<time class=post-date datetime=2018-11-21T07:43:27+08:00>
+2018-11-21
+</time>
+</footer>
+</article>
+<article class="post post">
+<header class=post-header>
 <h2 class=post-title><a href=/2018/11/17/resolve-err-too-many-redirects-on-cloudflare/>解决Cloudflare产生的“ERR_TOO_MANY_REDIRECTS”错误</a></h2>
 </header>
 <section class=post-excerpt>
@@ -197,27 +223,6 @@ on
 <a href=https://www.heartnn.com/tags/note/>#note</a>
 <time class=post-date datetime=2018-08-23T10:17:31+08:00>
 2018-08-23
-</time>
-</footer>
-</article>
-<article class="post post">
-<header class=post-header>
-<h2 class=post-title><a href=/2018/08/09/windows-10-samba-connection/>Windows 10 Samba连接问题</a></h2>
-</header>
-<section class=post-excerpt>
-<p><p>最近重装完系统，发现连接路由器的Samba服务出现问题，自以为华硕RT-AC68U采用的是Samba 2.0，而且路由器设置里也打开了相应的选项，但似乎Windows 10无法识别。</p>
-<p>结论是只能启用SMB 1.0了，首先打开控制面板&ndash;>程序和功能&ndash;>启用或关闭Windows功能，勾选<code>SMB 1.0/CIFS文件共享支持</code>。</p>
-<p><img src=/uploads/2018/08/windows-components.png alt></p> <a class=read-more href=/2018/08/09/windows-10-samba-connection/>&#187;</a></p>
-</section>
-<footer class=post-meta>
-<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
-heartnn
-on
-<a href=https://www.heartnn.com/tags/windows/>#windows</a>
-,
-<a href=https://www.heartnn.com/tags/samba/>#samba</a>
-<time class=post-date datetime=2018-08-09T15:13:20+08:00>
-2018-08-09
 </time>
 </footer>
 </article>

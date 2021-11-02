@@ -91,6 +91,29 @@
 </div>
 <article class="post post">
 <header class=post-header>
+<h2 class=post-title><a href=/2015/06/11/install-ghost-on-openshift/>Openshift安装Ghost的注意事项</a></h2>
+</header>
+<section class=post-excerpt>
+<p><p>首先是Openshift的二级域名，一定要ping一下对应的IP，如果是通的，那么意味着绑定域名后是可以正常访问的，如果不通的话，则域名必须绑定到Cloudflare这样类似可以提供CDN的域名解析，或者用Cloudflare提供的SSL访问。</p>
+<p>Openshift提供了<a href=https://github.com/openshift-quickstart/openshift-ghost-quickstart>快速部署</a>，建议使用，如果一定要自己搭建，需要Google补充许多知识，费力费时，得不偿失。Openshift快速部署目前提供的是0.5.10的版本，和目前的最新版没有太大的区别。</p>
+<p>建议使用git方式部署Ghost，方便以后修改模板等。ssh上传速度可能不快，而且以后代码迁移也不如git方便。不过如果图片附件等不使用第三方存储时建议采用此方法。</p> <a class=read-more href=/2015/06/11/install-ghost-on-openshift/>&#187;</a></p>
+</section>
+<footer class=post-meta>
+<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
+heartnn
+on
+<a href=https://www.heartnn.com/tags/openshift/>#openshift</a>
+,
+<a href=https://www.heartnn.com/tags/ghost/>#ghost</a>
+,
+<a href=https://www.heartnn.com/tags/cloudflare/>#cloudflare</a>
+<time class=post-date datetime=2015-06-11T22:12:28+08:00>
+2015-06-11
+</time>
+</footer>
+</article>
+<article class="post post">
+<header class=post-header>
 <h2 class=post-title><a href=/2015/06/03/transfer-to-ghost/>成功转移到Ghost</a></h2>
 </header>
 <section class=post-excerpt>
@@ -200,28 +223,6 @@ on
 <a href=https://www.heartnn.com/tags/dns/>#dns</a>
 <time class=post-date datetime=2015-04-02T22:52:00+08:00>
 2015-04-02
-</time>
-</footer>
-</article>
-<article class="post post">
-<header class=post-header>
-<h2 class=post-title><a href=/2015/03/30/resolve-android-5-1-connectivity-check/>解决Android 5.1的叹号问题</a></h2>
-</header>
-<section class=post-excerpt>
-<p><p>众所周知，Android 5.0以后引入了网络图标的那个叹号，在国内真的是很郁闷，因为普通方式根本无法连接<a href=http://clients3.google.com/generate_204>http://clients3.google.com/generate_204</a>，所以都借助于<a href=http://www.noisyfox.cn/45.html>小狐狸的工具</a>，或者更暴力的：</p>
-<pre tabindex=0><code class=language-dos data-lang=dos>adb shell &quot;settings put global captive_portal_detection_enabled 0&quot;
-</code></pre><p>再或者给<code>clients3.google.com</code>添加一条hosts。</p>
-<p>升级到5.1后，叹号又回来了，我没有试上面那些方式，而是依然使用hosts解决，这次Google更改了验证服务器，我鄙视他。。。</p> <a class=read-more href=/2015/03/30/resolve-android-5-1-connectivity-check/>&#187;</a></p>
-</section>
-<footer class=post-meta>
-<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
-heartnn
-on
-<a href=https://www.heartnn.com/tags/android/>#android</a>
-,
-<a href=https://www.heartnn.com/tags/hosts/>#hosts</a>
-<time class=post-date datetime=2015-03-30T00:53:00+08:00>
-2015-03-30
 </time>
 </footer>
 </article>

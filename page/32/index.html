@@ -91,6 +91,25 @@
 </div>
 <article class="post post">
 <header class=post-header>
+<h2 class=post-title><a href=/2010/11/12/sa3album-bug/>万恶的GAE图床</a></h2>
+</header>
+<section class=post-excerpt>
+<p><p>一直用的<a href=http://sa3.org/program/gae-album/>Sa3album</a>，是从<a href=/2010/10/27/diabloimage/>大菠萝相册</a>进化而来的，主要是增加了多相册的功能，生成的图片地址也很短了，但是有一个问题，没有扩展名的后缀，导致绝大多数的lightbox都无法使用，Python代码又完全不会改，各种郁闷。</p>
+<p>但是要仅仅如此郁闷也就算了，这两天折腾wordpress themes，换了theme以后发现原来对图片控制的width=&ldquo;570"是死板的，现在不适合了，于是更郁闷了。</p>
+<p>于是乎开始搜索能自动调整大小的插件，可是那些插件大多是针对本地上传图片所用的，对外链调用的完全不起作用，于是一度想放弃现在的相册，但是又不太舍得，最后不在google搜索插件了，找到了一段css代码：</p> <a class=read-more href=/2010/11/12/sa3album-bug/>&#187;</a></p>
+</section>
+<footer class=post-meta>
+<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
+heartnn
+on
+<a href=https://www.heartnn.com/tags/wordpress/>#wordpress</a>
+<time class=post-date datetime=2010-11-12T09:07:00+08:00>
+2010-11-12
+</time>
+</footer>
+</article>
+<article class="post post">
+<header class=post-header>
 <h2 class=post-title><a href=/2010/11/08/direct-link-netdisk/>将云端同步软件回归成外链网盘使用</a></h2>
 </header>
 <section class=post-excerpt>
@@ -180,25 +199,6 @@ heartnn
 on
 <a href=https://www.heartnn.com/tags/%E9%9A%8F%E7%AC%94/>#随笔</a>
 <time class=post-date datetime=2010-11-02T07:30:00+08:00>
-2010-11-02
-</time>
-</footer>
-</article>
-<article class="post post">
-<header class=post-header>
-<h2 class=post-title><a href=/2010/11/02/something-about-install-wordpress-on-sourceforge/>关于Sourceforge上安装WordPress的二三事</a></h2>
-</header>
-<section class=post-excerpt>
-<p><p>前面写过<a href=/2010/10/29/setup-wordpress-on-sourceforge/>如何在Sourceforge上安装wordpress</a>，但是经过后来的调试，不像我想象的那么简单，因为这个空间的写入问题，所以很多插件都不能使用，下面说说感受。</p>
-<p>首先是cache类插件不用想了，由于wp-content目录不可写（可是我明明设置成777了的），所以cache是无法生成的，启动<a href=http://wordpress.org/extend/plugins/wp-super-cache/>WP Super Cache</a>的后果就是无法进入后台管理。。。空间速度其实还是不错的，尤其是从国外访问，所以没有cache就没有了吧。(这里我想了又想，很可能是服务器的缘故，不单纯是文件夹权限问题。)</p>
-<p>写入wp-config.php的插件也不行，比如<a href=http://wordpress.org/extend/plugins/ps-wp-multi-domain/>PS WP Multi Domain</a>，不过可以自己编辑一下。类似的，写入.htaccess的也必须手动编辑。</p> <a class=read-more href=/2010/11/02/something-about-install-wordpress-on-sourceforge/>&#187;</a></p>
-</section>
-<footer class=post-meta>
-<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
-heartnn
-on
-<a href=https://www.heartnn.com/tags/wordpress/>#wordpress</a>
-<time class=post-date datetime=2010-11-02T01:35:00+08:00>
 2010-11-02
 </time>
 </footer>
