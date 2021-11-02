@@ -15,4 +15,4 @@ tags: [mp4box]
 mp4box.exe -add 1.aac:name="" -new 1.m4a
 ```
 
-顺便做了个[批处理工具](https://www.lanzous.com/i83vmqf)，直接把要转换的 aac 拖入即可。
+顺便做了个[批处理工具](/uploads/2016/11/aac-to-m4a.7z)，直接把要转换的 aac 拖入即可。

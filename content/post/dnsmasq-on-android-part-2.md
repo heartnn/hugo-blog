@@ -10,7 +10,7 @@ tags: [android,dnsmasq]
 
 ### 准备工作
 
-下载dnsmasq.zip备用。(链接: https://pan.baidu.com/s/1hrG4GQw 密码: k8kg)
+下载[dnsmasq.zip](/uploads/2015/12/dnsmasq.zip)备用。
 
 ### 测试系统是否支持init.d
 

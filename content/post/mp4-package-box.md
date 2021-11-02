@@ -18,4 +18,4 @@ tags: [ffmpeg]
 
 尤其是YouTube，以前都是用MKVToolNix先合并成mkv，然后再用Total Video Converter选视频和音频编码copy，才变成的mp4，为什么以前没直接搞成批处理。。。<!--more-->
 
-最后是下载地址：<https://www.lanzous.com/i3o3u2h#bh6d>
+最后是[下载链接](/uploads/2019/04/mp4-package-box-v1.0.7z)。

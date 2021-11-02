@@ -17,4 +17,4 @@ tags: [blackberry]
 
 另外说明一下转换后的键位，QP分别为左右软键，UNHKJ导航，数字键区域完美，A=*，G=#。
 
-下载链接: https://pan.baidu.com/s/1kUAuqiz 密码: 1cg6
+下载链接请点[这里](/uploads/2011/10/javamagic-e71.7z)。

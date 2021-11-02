@@ -13,6 +13,6 @@ tags: [android]
 
 网上有一个类似的版本，但是颜色实在是太淡了，有时会找不到在哪里，于是我重新画了这个加深的版本，放心，不用的时候放在一边还是很浅的。
 
-最后提供[软件](https://pan.baidu.com/s/1D6N-M9rCUN-5NolQuU8kVA)(提取码: jx3e)和[相关源文件](/uploads/2015/08/mi-pop-source.png)下载(需用Fireworks编辑)。
+最后提供[软件](/uploads/2015/08/mi-pop-lollipop.apk)和[相关源文件](/uploads/2015/08/mi-pop-source.png)下载(需用Fireworks编辑)。
 
 需要隐藏导航栏的话，可以打开`/system/build.prop`，找到`qemu.hw.mainkeys=0`，把0改成1。如果上述方法不行，可以考虑使用[重力工具箱](http://coolapk.com/search?q=重力工具箱)。

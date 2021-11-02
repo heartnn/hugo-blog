@@ -12,6 +12,6 @@ tags: [android,wifi]
 
 软件的配置很丰富，虽然不配置也可以使用，而且支持匿名直接访问(当然也可以设置用户名和密码)，个人感觉更简单一些。
 
-下载链接: https://pan.baidu.com/s/1pLgGlEN 密码: j56w，详细介绍请看[Google Play源地址](https://play.google.com/store/apps/details?id=org.easelife.ftp)。
+下载请点[这里](/uploads/2011/12/wifi-ftp-v3.4-noad.apk)，详细介绍请看[Google Play源地址](https://play.google.com/store/apps/details?id=org.easelife.ftp)。
 
 2012-02-05: 该软件在一直更新，目前最新的版本增加了文件管理功能，其实在我看来是可有可无的，现在作者很厚道，增加了多次使用后就不显示广告的功能。

@@ -11,4 +11,4 @@ tags: [icon]
 
 关于直接修改注册表的方法，由于太过复杂，不宜于懒人操作，主要是`HKEY_CLASSES_ROOT`里面东西太多，又不敢乱来，需要的话可以参考[这里](http://ihacklog.com/post/setup-win7-custom-file-extension-icons.html)。
 
-附汉化版下载链接: https://pan.baidu.com/s/1bo3jsg3 密码: 4hk7
+附汉化版下载[链接](/uploads/2014/11/filetypesman-v1.68chs.7z)。

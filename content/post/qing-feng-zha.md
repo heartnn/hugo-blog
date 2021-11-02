@@ -21,4 +21,4 @@ tags: [评书]
 
 > 览是书者，莫不啧啧而称羡之。予因是书脍炙人口，可以振靡俗、挽颓风，惜向无刻本，非所以垂久远，今不惜工价，付诸剞劂，庶使穷乡僻壤，海澨山陬，无不可购而得之。非无裨于世道人心之用也。
 
-最后附一个TXT下载(链接: https://pan.baidu.com/s/1jIDtZIe 密码: srxr)，是我从<http://ctext.org/zhs>复制来的。
+最后附一个[TXT下载](qing-feng-zha.7z)，是我从<http://ctext.org/zhs>复制来的。

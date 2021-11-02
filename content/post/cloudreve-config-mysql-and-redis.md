@@ -27,7 +27,7 @@ dpkg -i mysql-apt-config.deb
 
 安装完毕后会弹出版本选择的界面，选5.7就可以了：
 
-![](uploads/2021/11/mysql-apt.png)
+![](/uploads/2021/11/mysql-apt.png)
 
 然后安装即可：
 

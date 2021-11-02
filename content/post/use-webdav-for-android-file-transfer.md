@@ -15,7 +15,7 @@ tags: [android,webdav]
 
 ![](/uploads/2013/01/wifi-settings.png)
 
-先给出下载链接: https://pan.baidu.com/s/1kV7mUjH 密码: ywjp
+先给出[下载链接](/uploads/2013/01/webdav-server-v1.7-chs-adfree.apk)。
 
 如果你会使用WebDAV的话，请看到此为止，如果不行，那么请继续看如何使用Windows连接一个WebDAV服务器。
 

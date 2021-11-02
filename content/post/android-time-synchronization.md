@@ -14,6 +14,6 @@ tags: [android,ntp]
 - cn.pool.ntp.org
 - asia.pool.ntp.org
 - kr.pool.ntp.org
-- time.pool.aliyun.com<!--more-->
+- time.pool.aliyun.com
 
-附aClockSync中文版链接: https://pan.baidu.com/s/1dFIo101 密码: 2vtf
+附：ClockSync中文版[下载链接](/uploads/2013/01/clocksync-v1.2.5-chs-by-tianshi.apk)。

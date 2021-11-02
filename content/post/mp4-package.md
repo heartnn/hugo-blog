@@ -37,7 +37,7 @@ mp4box -raw 2 file.mp4
 
 以上都是基础用法，更多复杂的命令，heartnn暂时也用不到，如果有需要可以用`mp4box -h`来查看。
 
-最后附上heartnn从安装包中提取的mp4box (下载链接: https://pan.baidu.com/s/1eRFTe9c 密码: nr6d)
+最后附上heartnn从安装包中提取的[mp4box](/uploads/2015/07/mp4box-0.5.2-dev-rev537-gb163c01-master-win32.7z)。
 
 ### 参考文章
 

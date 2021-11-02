@@ -17,4 +17,4 @@ tags: [ipod,rockbox]
 
 相关截图看[这里](http://themes.rockbox.org/index.php?themeid=1311&target=ipod6g)。
 
-下载链接：<https://pan.baidu.com/s/1AzCZw-lc4ynsAd622iysVg> 提取码：ioza
+下载链接请点[这里](/uploads/2016/12/iclassic-square.7z)。

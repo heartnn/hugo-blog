@@ -7,7 +7,7 @@ tags: [avi]
 
 一、下载“[终极解码](http://www.mysilu.com/forum-318-1.html)”或“[完美解码](http://jm.wmzhe.com/)”，安装步骤略。
 
-二、下载VirtualDubMod 1.5.10.1(链接: https://pan.baidu.com/s/1i5iTCxf 密码: rcpq)，该软件为绿色软件。
+二、下载[VirtualDubMod 1.5.10.1](/uploads/2009/01/virtualdubmod-v1.5.10.1.7z)，该软件为绿色软件。
 
 ![](/uploads/2009/01/about-virtualdub.png)<!--more-->
 

@@ -19,6 +19,6 @@ tags: [python]
 
 另发现0.07的版本配合bk.py总是出错，于是check svn得到了r11的版本，配合自己修改的bk.py终于可以备份了～～压缩包内备份说明的第一步就不用做了，记得上传的时候更改appid啊。
 
-下载链接: https://pan.baidu.com/s/1dEX6RBj 密码: hn58
+下载链接请点[这里](/uploads/2010/10/diabloimage-r11.rar)。
 
 2010-11-17: 另作者已经释出新版[Sa3album](http://sa3.org/program/gae-album/)，是一个完全不一样的新程序了。

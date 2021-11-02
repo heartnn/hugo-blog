@@ -11,11 +11,7 @@ tags: [apache,php,mysql]
 
 首先是便携性，双击主程序，然后apache和mysql就都跑起来了，不需要创建任何服务就可以使用。需要关闭的时候直接点右上角的x就可以了。整个目录都可以拷贝带走，本地调试程序非常方便。<!--more-->
 
-原来的最新版本为8.6，但是年久失修，官方已经倒闭了。。。所以heartnn花了点时间更新到了最新的版本，并提供下载：
-
-- 百度云: 链接: https://pan.baidu.com/s/1cTqgK9E6a1iXp3vurMPtYA#xqft
-- 腾讯微云: 链接：https://share.weiyun.com/5wcABqz#xh5m74
-- 蓝奏云: https://www.lanzous.com/i0sdhwf#3km6
+原来的最新版本为8.6，但是年久失修，官方已经倒闭了。。。所以heartnn花了点时间更新到了最新的版本，并提供[下载](/uploads/2018/04/usbwebserver-v8.6-20180406.7z)。
 
 20180406版本配置：
 

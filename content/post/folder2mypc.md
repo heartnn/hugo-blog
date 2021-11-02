@@ -15,6 +15,6 @@ tags: [windows]
 
 软件官网：<http://eng.softq.org/>（貌似不能直接打开）
 
-下载链接: https://pan.baidu.com/s/1mhJL5w8 密码: ee81
+下载链接请点[这里](/uploads/2010/10/folder2mypc-v1.9.7z)。
 
-2011-09-18：更新一个类似功能的软件，名字叫My Computer Manager(链接: https://pan.baidu.com/s/1dEJZOsx 密码: bf8a)，更小巧而且是单文件的，来自[小众软件](http://www.appinn.com/my-computer-manager/)。
+2011-09-18：更新一个类似功能的软件，名字叫[My Computer Manager](/uploads/2010/10/my-computer-manager.7z)，更小巧而且是单文件的，来自[小众软件](http://www.appinn.com/my-computer-manager/)。

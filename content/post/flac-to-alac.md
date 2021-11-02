@@ -17,7 +17,7 @@ tags: [flac,alac,foobar2000]
 
 大神最新汉化的foobar2000里带有可转换alac的命令行，只需要从上面下载qaac编码器，丢到相应的目录里，就能全自动转换，非常方便，而且tag可以完美的转过来，解开wav与原来的flac解开的wav对比后，MD5也是相同的。
 
-自己打包了一个版本，加上了一个mp3错误校验，需要的朋友可以自行下载，链接: https://heartnn.lanzous.com/izBnvih67gj
+自己打包了一个版本，加上了一个mp3错误校验，需要的朋友可以自行[下载](/uploads/2015/05/foobar2000-v1.6.0.7z)。
 
 ---
 

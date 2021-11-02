@@ -11,4 +11,4 @@ heartnn的这个版本是基于N多网那个的汉化修正版，版本号是2.5
 
 ![](/uploads/2012/02/nesoid.png)
 
-下载链接: https://pan.baidu.com/s/1pLp3FjP 密码: kf5b
+下载链接请点[这里](/uploads/2012/02/nesoid-v2.5.0-chs-by-heartnn.apk)。

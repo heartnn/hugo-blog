@@ -11,13 +11,13 @@ tags: [router]
 
 1\. cfe，最好是自己以前备份过的，实在没有可以自己生成一个，我的就是没有备份过，所以只能自己生成了。
 
-首先下载我提供的[CFE模板](/uploads/2019/03/cfe-1.0.2.0-all-am.7z)，然后参照[截图](/uploads/2019/03/cfeedit.png)用[CFEEdit](https://www.lanzous.com/i3iuogb#4k3p)修改里面的MAC地址和WPS密码。
+首先下载我提供的[CFE模板](/uploads/2019/03/cfe-1.0.2.0-all-am.7z)，然后参照[截图](/uploads/2019/03/cfeedit.png)用[CFEEdit](/uploads/2019/03/cfeedit.7z)修改里面的MAC地址和WPS密码。
 
 本机的MAC地址可以登录<http://cellspot.router/>,然后点WLAN可以查看到，LAN和2.4G的MAC地址似乎是一样的。WPS密码可以参照路由器背面。
 
 然后打开网站<https://cfeditor.pipeline.sh/>，把修改好的CFE上传到Original CFE，Source CFE选1.0.2.0 US AiMesh，Country那里可以选择ALL，然后下载Target CFE即可得到自己的CFE，**重命名为new_cfe.bin待用**。
 
-2\. 准备一个FAT32的U盘，将盘符改名为USB，下载[mtd-write.7z](/uploads/2019/03/mtd-write.7z)和[FW_RT_AC68U_30043763626.zip](https://www.lanzous.com/i3iupta#fb9u)，将new_cfe.bin、mtd-write和FW_RT_AC68U_30043763626.trx三个文件打包为files12345.zip放入U盘中并插到路由器上。<!--more-->
+2\. 准备一个FAT32的U盘，将盘符改名为USB，下载[mtd-write.7z](/uploads/2019/03/mtd-write.7z)和[FW_RT_AC68U_30043763626.zip](/uploads/2019/03/fw_rt_ac68u_30043763626.zip)，将new_cfe.bin、mtd-write和FW_RT_AC68U_30043763626.trx三个文件打包为files12345.zip放入U盘中并插到路由器上。<!--more-->
 
 ### 开始刷写
 
@@ -74,4 +74,4 @@ nvram unset fw_check && nvram commit && reboot
 2. <http://koolshare.cn/thread-136906-1-1.html>
 3. <https://tmac1900.weebly.com/>
 
-附自己搭建的u.txt：<https://dev.tencent.com/u/heartnn/p/tmac1900/git>
+附自己搭建的u.txt：<https://heartnn.coding.net/p/tmac1900/d/tmac1900/git>
