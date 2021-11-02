@@ -8,7 +8,7 @@
 先下载LeoStyleFHD-xiaohe18xc-v5.bds，一般直接点击，在打开方式里选百度输入法就行了，如果是使用定制版百度输入法(比如华为等)，可能打开方式里没有对应的输入法，这时将bds文件复制到对应目录后，再建立一个txt文本，比如这里就建立LeoStyleFHD-xiaohe18xc-v5.txt，文档内容为LeoStyleFHD-xiaohe18xc-v5即可。
 2017-11-28: 填坑更新v5，修复横屏字符重叠问题。</description></item><item><title>在Android手机中搭建Dnsmasq后续</title><link>https://www.heartnn.com/2015/12/20/dnsmasq-on-android-part-2/</link><pubDate>Sun, 20 Dec 2015 01:21:15 +0800</pubDate><guid>https://www.heartnn.com/2015/12/20/dnsmasq-on-android-part-2/</guid><description>&lt;p>&lt;a href="https://www.heartnn.com/2015/04/26/dnsmasq-on-android/">之前&lt;/a>写了一篇关于如何在Android手机中搭建Dnsmasq的文章，使用起来比较繁琐，现在做一个详细的整理。&lt;/p>
 &lt;h3 id="准备工作">准备工作&lt;/h3>
-&lt;p>下载dnsmasq.zip备用。(链接: &lt;a href="https://pan.baidu.com/s/1hrG4GQw">https://pan.baidu.com/s/1hrG4GQw&lt;/a> 密码: k8kg)&lt;/p>
+&lt;p>下载&lt;a href="https://www.heartnn.com/uploads/2015/12/dnsmasq.zip">dnsmasq.zip&lt;/a>备用。&lt;/p>
 &lt;h3 id="测试系统是否支持initd">测试系统是否支持init.d&lt;/h3>
 &lt;p>将下面的代码保存为&lt;code>00test&lt;/code>，放置于&lt;code>/system/etc/init.d&lt;/code>目录。&lt;/p></description></item><item><title>自用中兴屏幕助手美化版</title><link>https://www.heartnn.com/2015/08/31/self-use-mi-pop/</link><pubDate>Mon, 31 Aug 2015 00:45:16 +0800</pubDate><guid>https://www.heartnn.com/2015/08/31/self-use-mi-pop/</guid><description>&lt;p>由于网上的修改版大多都不合我心意，只能自己修改图片了，软件本身已签名，但安装仍需Android核心破解，5.1下甚至用到&lt;a href="http://coolapk.com/apk/com.pyler.xinstaller">XInstaller&lt;/a>来屏蔽安装时的签名验证。&lt;/p>
 &lt;p>&lt;img src="https://www.heartnn.com/uploads/2015/08/mi-pop.png" alt="">&lt;/p></description></item><item><title>Android 5.1下SD卡格式化问题</title><link>https://www.heartnn.com/2015/06/19/android-5-1-sdcard-format/</link><pubDate>Fri, 19 Jun 2015 21:52:00 +0800</pubDate><guid>https://www.heartnn.com/2015/06/19/android-5-1-sdcard-format/</guid><description>Android 5.1采用授权方式管理SD卡的写入操作，相对于之前的4.4方便多了，而heartnn也由于折腾，碰上了一点小问题，下面详细说下原因：
@@ -40,24 +40,18 @@
 用的是paypal付款，RMB14.77，和网站上写的14.88不太一样，因为是换算成美元结算的，据说前一阵子刚刚$0.99，但是没赶上，这个价格也算是不错了。
 顺便绑定了一下paypal，觉得以后可能会用上吧。</description></item><item><title>Android无线传输的另一种解决办法——WebDAV</title><link>https://www.heartnn.com/2013/01/12/use-webdav-for-android-file-transfer/</link><pubDate>Sat, 12 Jan 2013 01:46:00 +0800</pubDate><guid>https://www.heartnn.com/2013/01/12/use-webdav-for-android-file-transfer/</guid><description>&lt;p>本来一直使用强大的Samba Filesharing，但是在JB系统下却不好用，只能寻找别的办法，在Google Play里翻来翻去，翻出了WebDav server，试用了一下，非常不错，于是乎去广告+汉化+美化版诞生。&lt;/p>
 &lt;p>先上一个主界面的图：&lt;/p>
-&lt;p>&lt;img src="https://www.heartnn.com/uploads/2013/01/webdav-server.png" alt="">&lt;/p></description></item><item><title>[Android] 安卓时间校正</title><link>https://www.heartnn.com/2013/01/05/android-time-synchronization/</link><pubDate>Sat, 05 Jan 2013 21:38:00 +0800</pubDate><guid>https://www.heartnn.com/2013/01/05/android-time-synchronization/</guid><description>&lt;p>安卓系统本身包含有网络校时功能，但是由于基站、信号、移动网络等多种因素，校时不是很准确，所以heartnn都是在手机上用ClockSync来进行的，通过NTP服务器进行时间校正。&lt;/p>
-&lt;p>由于国内网络问题，不是所有的NTP服务器都可用，heartnn找来的下面的NTP服务器都来自网络，不保证一直可用，但发帖前都是测试可用的。&lt;/p>
-&lt;ul>
-&lt;li>time.asia.apple.com&lt;/li>
-&lt;li>cn.pool.ntp.org&lt;/li>
-&lt;li>asia.pool.ntp.org&lt;/li>
-&lt;li>kr.pool.ntp.org&lt;/li>
-&lt;li>time.pool.aliyun.com&lt;/li>
-&lt;/ul></description></item><item><title>终于收到了梦寐以求的PC坞站</title><link>https://www.heartnn.com/2012/04/17/bought-motorola-laptop/</link><pubDate>Tue, 17 Apr 2012 03:57:00 +0800</pubDate><guid>https://www.heartnn.com/2012/04/17/bought-motorola-laptop/</guid><description>&lt;p>周六的时候下的订单，今天中午才算收到，算了一下圆通还是有些慢的，不过店家东西还算不错。&lt;/p>
+&lt;p>&lt;img src="https://www.heartnn.com/uploads/2013/01/webdav-server.png" alt="">&lt;/p></description></item><item><title>[Android] 安卓时间校正</title><link>https://www.heartnn.com/2013/01/05/android-time-synchronization/</link><pubDate>Sat, 05 Jan 2013 21:38:00 +0800</pubDate><guid>https://www.heartnn.com/2013/01/05/android-time-synchronization/</guid><description>安卓系统本身包含有网络校时功能，但是由于基站、信号、移动网络等多种因素，校时不是很准确，所以heartnn都是在手机上用ClockSync来进行的，通过NTP服务器进行时间校正。
+由于国内网络问题，不是所有的NTP服务器都可用，heartnn找来的下面的NTP服务器都来自网络，不保证一直可用，但发帖前都是测试可用的。
+time.asia.apple.com cn.pool.ntp.org asia.pool.ntp.org kr.pool.ntp.org time.pool.aliyun.com 附：ClockSync中文版下载链接。</description></item><item><title>终于收到了梦寐以求的PC坞站</title><link>https://www.heartnn.com/2012/04/17/bought-motorola-laptop/</link><pubDate>Tue, 17 Apr 2012 03:57:00 +0800</pubDate><guid>https://www.heartnn.com/2012/04/17/bought-motorola-laptop/</guid><description>&lt;p>周六的时候下的订单，今天中午才算收到，算了一下圆通还是有些慢的，不过店家东西还算不错。&lt;/p>
 &lt;p>先给个盒子特写，已经被我拆开了，才想起拍照来，哈哈~~&lt;/p>
 &lt;p>&lt;img src="https://www.heartnn.com/uploads/2012/04/laptop01.jpg" alt="">&lt;/p></description></item><item><title>[Android] NES模拟器: Nesoid汉化修正版</title><link>https://www.heartnn.com/2012/02/24/android-nesoid-hanzify/</link><pubDate>Fri, 24 Feb 2012 06:12:00 +0800</pubDate><guid>https://www.heartnn.com/2012/02/24/android-nesoid-hanzify/</guid><description>这个模拟器的汉化版其实一直就有，可能是N多网汉化的，不知道汉化作者是故意的还是没接触过红白机，竟然把软件名字汉化为“超任模拟器”，真的是不可思议。另外很久了，网上也没有什么修正的版本。
 heartnn的这个版本是基于N多网那个的汉化修正版，版本号是2.5.0，除了软件名称的修正，还对几处不恰当的翻译做了修改，基本算是完美的版本了。
-下载链接: https://pan.baidu.com/s/1pLp3FjP 密码: kf5b</description></item><item><title>[Android] 推荐一款速度很快的无线数据管理器</title><link>https://www.heartnn.com/2012/02/02/android-wifi-file-explorer-pro/</link><pubDate>Thu, 02 Feb 2012 21:23:00 +0800</pubDate><guid>https://www.heartnn.com/2012/02/02/android-wifi-file-explorer-pro/</guid><description>&lt;p>&lt;img src="https://www.heartnn.com/uploads/2012/02/wifi-file-explorer-pro.png" alt="">&lt;/p>
+下载链接请点这里。</description></item><item><title>[Android] 推荐一款速度很快的无线数据管理器</title><link>https://www.heartnn.com/2012/02/02/android-wifi-file-explorer-pro/</link><pubDate>Thu, 02 Feb 2012 21:23:00 +0800</pubDate><guid>https://www.heartnn.com/2012/02/02/android-wifi-file-explorer-pro/</guid><description>&lt;p>&lt;img src="https://www.heartnn.com/uploads/2012/02/wifi-file-explorer-pro.png" alt="">&lt;/p>
 &lt;p>先说名字，就是WiFi File Explorer PRO，heartnn在经过多个测试后，发现这款软件的速度最快，比那些ftp的软件都快多了。由于是http管理方式，所以不支持文件夹的上传，这也算是唯一的缺陷。&lt;/p>
 &lt;p>&lt;img src="https://www.heartnn.com/uploads/2012/02/wifi-file-explorer-pro-main.png" alt="">&lt;/p></description></item><item><title>[Android] Wifi数据线3.4去广告版</title><link>https://www.heartnn.com/2011/12/02/android-wifi-ftp-3-4-noad/</link><pubDate>Fri, 02 Dec 2011 03:44:00 +0800</pubDate><guid>https://www.heartnn.com/2011/12/02/android-wifi-ftp-3-4-noad/</guid><description>这阵子也算对Android系统进行了更深入的了解，对apk程序的编译和反编译都有所学习。
 破解这个软件的初衷是看着广告别扭，软件本身很好用，可以利用wifi把Android手机变成一个ftp服务器，所以可以进行无线文件传输，前提是电脑和手机必须在同一个局域网下才可以。
 软件的配置很丰富，虽然不配置也可以使用，而且支持匿名直接访问(当然也可以设置用户名和密码)，个人感觉更简单一些。
-下载链接: https://pan.baidu.com/s/1pLgGlEN 密码: j56w，详细介绍请看Google Play源地址。
+下载请点这里，详细介绍请看Google Play源地址。
 2012-02-05: 该软件在一直更新，目前最新的版本增加了文件管理功能，其实在我看来是可有可无的，现在作者很厚道，增加了多次使用后就不显示广告的功能。</description></item><item><title>入手Atrix一周感受</title><link>https://www.heartnn.com/2011/11/07/bought-motorola-atrix/</link><pubDate>Mon, 07 Nov 2011 07:00:00 +0800</pubDate><guid>https://www.heartnn.com/2011/11/07/bought-motorola-atrix/</guid><description>&lt;p>折腾了一周的Atrix，也很疲惫了，不说那些大面上的话，因为网上有好多的文章，要么就是撒花的，要么是拍板砖的，总之需要这款机机介绍的话请自行百度。&lt;/p>
 &lt;p>先说说购买经历，当初差点就放弃了，因为成色还不错，最后犹豫了半天，上午9点多去的，中午给解了BL锁，然后果断购买。拿回来就是法底了，而且是unlocked，偷笑～～&lt;/p>
 &lt;p>到家以后自己刷了ramfix，恢复800MB可运行内存(说是1G的，系统启动占用了一些)，自己刷的Recovery，如果有机油也想刷的话，建议先学习再动手。&lt;/p>

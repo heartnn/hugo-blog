@@ -27,24 +27,18 @@
 于是拿酒精什么的擦擦，总是不行，只能怀疑是里面的弹簧坏掉了，heartnn一直是耳机重度使用者，所以坏掉也理所应当，于是从淘宝上买了耳机插口，和听筒连在一起的，也没几块钱，不包邮，所以又买了Galaxy Note的中框，这下可以连摔了两次破旧不堪的边框一起换掉了。
 话说拆机过程真是简单，一共九个十字螺丝，就是边框有点紧，用指甲用力划过(还好指甲够长)，里面打开以后还有两个白色螺丝和一个挡片，全拆掉以后，耳机插孔连同听筒一起拿下来了，现在的手机真的很方便，更加集成化，所有的东西用排线连接。拆机视频网上很多，我也是按照那个来的。</description></item><item><title>Android无线传输的另一种解决办法——WebDAV</title><link>https://www.heartnn.com/2013/01/12/use-webdav-for-android-file-transfer/</link><pubDate>Sat, 12 Jan 2013 01:46:00 +0800</pubDate><guid>https://www.heartnn.com/2013/01/12/use-webdav-for-android-file-transfer/</guid><description>&lt;p>本来一直使用强大的Samba Filesharing，但是在JB系统下却不好用，只能寻找别的办法，在Google Play里翻来翻去，翻出了WebDav server，试用了一下，非常不错，于是乎去广告+汉化+美化版诞生。&lt;/p>
 &lt;p>先上一个主界面的图：&lt;/p>
-&lt;p>&lt;img src="https://www.heartnn.com/uploads/2013/01/webdav-server.png" alt="">&lt;/p></description></item><item><title>[Android] 安卓时间校正</title><link>https://www.heartnn.com/2013/01/05/android-time-synchronization/</link><pubDate>Sat, 05 Jan 2013 21:38:00 +0800</pubDate><guid>https://www.heartnn.com/2013/01/05/android-time-synchronization/</guid><description>&lt;p>安卓系统本身包含有网络校时功能，但是由于基站、信号、移动网络等多种因素，校时不是很准确，所以heartnn都是在手机上用ClockSync来进行的，通过NTP服务器进行时间校正。&lt;/p>
-&lt;p>由于国内网络问题，不是所有的NTP服务器都可用，heartnn找来的下面的NTP服务器都来自网络，不保证一直可用，但发帖前都是测试可用的。&lt;/p>
-&lt;ul>
-&lt;li>time.asia.apple.com&lt;/li>
-&lt;li>cn.pool.ntp.org&lt;/li>
-&lt;li>asia.pool.ntp.org&lt;/li>
-&lt;li>kr.pool.ntp.org&lt;/li>
-&lt;li>time.pool.aliyun.com&lt;/li>
-&lt;/ul></description></item><item><title>终于收到了梦寐以求的PC坞站</title><link>https://www.heartnn.com/2012/04/17/bought-motorola-laptop/</link><pubDate>Tue, 17 Apr 2012 03:57:00 +0800</pubDate><guid>https://www.heartnn.com/2012/04/17/bought-motorola-laptop/</guid><description>&lt;p>周六的时候下的订单，今天中午才算收到，算了一下圆通还是有些慢的，不过店家东西还算不错。&lt;/p>
+&lt;p>&lt;img src="https://www.heartnn.com/uploads/2013/01/webdav-server.png" alt="">&lt;/p></description></item><item><title>[Android] 安卓时间校正</title><link>https://www.heartnn.com/2013/01/05/android-time-synchronization/</link><pubDate>Sat, 05 Jan 2013 21:38:00 +0800</pubDate><guid>https://www.heartnn.com/2013/01/05/android-time-synchronization/</guid><description>安卓系统本身包含有网络校时功能，但是由于基站、信号、移动网络等多种因素，校时不是很准确，所以heartnn都是在手机上用ClockSync来进行的，通过NTP服务器进行时间校正。
+由于国内网络问题，不是所有的NTP服务器都可用，heartnn找来的下面的NTP服务器都来自网络，不保证一直可用，但发帖前都是测试可用的。
+time.asia.apple.com cn.pool.ntp.org asia.pool.ntp.org kr.pool.ntp.org time.pool.aliyun.com 附：ClockSync中文版下载链接。</description></item><item><title>终于收到了梦寐以求的PC坞站</title><link>https://www.heartnn.com/2012/04/17/bought-motorola-laptop/</link><pubDate>Tue, 17 Apr 2012 03:57:00 +0800</pubDate><guid>https://www.heartnn.com/2012/04/17/bought-motorola-laptop/</guid><description>&lt;p>周六的时候下的订单，今天中午才算收到，算了一下圆通还是有些慢的，不过店家东西还算不错。&lt;/p>
 &lt;p>先给个盒子特写，已经被我拆开了，才想起拍照来，哈哈~~&lt;/p>
 &lt;p>&lt;img src="https://www.heartnn.com/uploads/2012/04/laptop01.jpg" alt="">&lt;/p></description></item><item><title>[Android] NES模拟器: Nesoid汉化修正版</title><link>https://www.heartnn.com/2012/02/24/android-nesoid-hanzify/</link><pubDate>Fri, 24 Feb 2012 06:12:00 +0800</pubDate><guid>https://www.heartnn.com/2012/02/24/android-nesoid-hanzify/</guid><description>这个模拟器的汉化版其实一直就有，可能是N多网汉化的，不知道汉化作者是故意的还是没接触过红白机，竟然把软件名字汉化为“超任模拟器”，真的是不可思议。另外很久了，网上也没有什么修正的版本。
 heartnn的这个版本是基于N多网那个的汉化修正版，版本号是2.5.0，除了软件名称的修正，还对几处不恰当的翻译做了修改，基本算是完美的版本了。
-下载链接: https://pan.baidu.com/s/1pLp3FjP 密码: kf5b</description></item><item><title>[Android] 推荐一款速度很快的无线数据管理器</title><link>https://www.heartnn.com/2012/02/02/android-wifi-file-explorer-pro/</link><pubDate>Thu, 02 Feb 2012 21:23:00 +0800</pubDate><guid>https://www.heartnn.com/2012/02/02/android-wifi-file-explorer-pro/</guid><description>&lt;p>&lt;img src="https://www.heartnn.com/uploads/2012/02/wifi-file-explorer-pro.png" alt="">&lt;/p>
+下载链接请点这里。</description></item><item><title>[Android] 推荐一款速度很快的无线数据管理器</title><link>https://www.heartnn.com/2012/02/02/android-wifi-file-explorer-pro/</link><pubDate>Thu, 02 Feb 2012 21:23:00 +0800</pubDate><guid>https://www.heartnn.com/2012/02/02/android-wifi-file-explorer-pro/</guid><description>&lt;p>&lt;img src="https://www.heartnn.com/uploads/2012/02/wifi-file-explorer-pro.png" alt="">&lt;/p>
 &lt;p>先说名字，就是WiFi File Explorer PRO，heartnn在经过多个测试后，发现这款软件的速度最快，比那些ftp的软件都快多了。由于是http管理方式，所以不支持文件夹的上传，这也算是唯一的缺陷。&lt;/p>
 &lt;p>&lt;img src="https://www.heartnn.com/uploads/2012/02/wifi-file-explorer-pro-main.png" alt="">&lt;/p></description></item><item><title>[Android] Wifi数据线3.4去广告版</title><link>https://www.heartnn.com/2011/12/02/android-wifi-ftp-3-4-noad/</link><pubDate>Fri, 02 Dec 2011 03:44:00 +0800</pubDate><guid>https://www.heartnn.com/2011/12/02/android-wifi-ftp-3-4-noad/</guid><description>这阵子也算对Android系统进行了更深入的了解，对apk程序的编译和反编译都有所学习。
 破解这个软件的初衷是看着广告别扭，软件本身很好用，可以利用wifi把Android手机变成一个ftp服务器，所以可以进行无线文件传输，前提是电脑和手机必须在同一个局域网下才可以。
 软件的配置很丰富，虽然不配置也可以使用，而且支持匿名直接访问(当然也可以设置用户名和密码)，个人感觉更简单一些。
-下载链接: https://pan.baidu.com/s/1pLgGlEN 密码: j56w，详细介绍请看Google Play源地址。
+下载请点这里，详细介绍请看Google Play源地址。
 2012-02-05: 该软件在一直更新，目前最新的版本增加了文件管理功能，其实在我看来是可有可无的，现在作者很厚道，增加了多次使用后就不显示广告的功能。</description></item><item><title>入手Atrix一周感受</title><link>https://www.heartnn.com/2011/11/07/bought-motorola-atrix/</link><pubDate>Mon, 07 Nov 2011 07:00:00 +0800</pubDate><guid>https://www.heartnn.com/2011/11/07/bought-motorola-atrix/</guid><description>&lt;p>折腾了一周的Atrix，也很疲惫了，不说那些大面上的话，因为网上有好多的文章，要么就是撒花的，要么是拍板砖的，总之需要这款机机介绍的话请自行百度。&lt;/p>
 &lt;p>先说说购买经历，当初差点就放弃了，因为成色还不错，最后犹豫了半天，上午9点多去的，中午给解了BL锁，然后果断购买。拿回来就是法底了，而且是unlocked，偷笑～～&lt;/p>
 &lt;p>到家以后自己刷了ramfix，恢复800MB可运行内存(说是1G的，系统启动占用了一些)，自己刷的Recovery，如果有机油也想刷的话，建议先学习再动手。&lt;/p>
@@ -56,5 +50,5 @@ heartnn的这个版本是基于N多网那个的汉化修正版，版本号是2.5
 &lt;li>已经转换失败的程序无需再试。&lt;/li>
 &lt;li>如果要做其他修改请在其他软件先做好，然后使用本工具进行键位转换。&lt;/li>
 &lt;/ol></description></item><item><title>关于Blackberry桌面管理器</title><link>https://www.heartnn.com/2010/11/23/about-blackberry-desktop-manager/</link><pubDate>Tue, 23 Nov 2010 07:39:00 +0800</pubDate><guid>https://www.heartnn.com/2010/11/23/about-blackberry-desktop-manager/</guid><description>&lt;p>本人的8700近来很是郁闷，由于这几个月来一直用的Windows 7，而原来的4.21.b013的经典版本无法在Win7下使用了（具体问题是媒体管理器打不开。。。），索性更新到了5.0.b82的版本。&lt;/p>
-&lt;p>5.0.b82的版本唯一的缺点是每次连接手机后都会检测更新，而且时间很长，导致heartnn一段时间都不喜欢用alx格式来更新BB软件了，一直用CodLoader(链接: &lt;a href="https://pan.baidu.com/s/1bpD86tx">https://pan.baidu.com/s/1bpD86tx&lt;/a> 密码: scwk)(作者是谁忘记了～～)来更新软件了，其实倒也没什么不方便，但是备份数据库或者往手机上传文件的时候还是要用桌面管理器的吧，于是十分郁闷。。。（之间也使用过6.0的版本，可惜没有媒体管理器的。。。）&lt;/p>
+&lt;p>5.0.b82的版本唯一的缺点是每次连接手机后都会检测更新，而且时间很长，导致heartnn一段时间都不喜欢用alx格式来更新BB软件了，一直用&lt;a href="https://www.heartnn.com/uploads/2010/11/codloader.7z">CodLoader&lt;/a>(作者是谁忘记了～～)来更新软件了，其实倒也没什么不方便，但是备份数据库或者往手机上传文件的时候还是要用桌面管理器的吧，于是十分郁闷。。。（之间也使用过6.0的版本，可惜没有媒体管理器的。。。）&lt;/p>
 &lt;p>在网上搜来搜去，貌似找到的方法都不管用，网上说到的是删除&lt;code>C:\Users\[你的用户名或All Users\]\AppData\Roaming\Research In Motion\BlackBerry\Loader History&lt;/code>下的文件，让桌面管理器重新生成，但是还是去不掉每次连接的过程。&lt;/p></description></item></channel></rss>

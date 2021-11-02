@@ -173,10 +173,10 @@ on
 <p><p>之前由于入手了树莓派，就给原来的<a href=/2017/11/23/start-merlin-from-zero-with-syncthing-installed/>华硕RT-AC68U</a>改成了官方固件，这两天手贱升了一下级，于是路由器被打回了原型，固件变成了3.0.0.4.376_3199(T-Mobile定制版，功能较少)，从网上查了一下，似乎刷旧版固件然后取得ssh的方式不能用了，虽然用起来区别不大，但总觉得不甘心，于是折腾模式开启。</p>
 <h3 id=准备工作>准备工作</h3>
 <p>1. cfe，最好是自己以前备份过的，实在没有可以自己生成一个，我的就是没有备份过，所以只能自己生成了。</p>
-<p>首先下载我提供的<a href=/uploads/2019/03/cfe-1.0.2.0-all-am.7z>CFE模板</a>，然后参照<a href=/uploads/2019/03/cfeedit.png>截图</a>用<a href=https://www.lanzous.com/i3iuogb#4k3p>CFEEdit</a>修改里面的MAC地址和WPS密码。</p>
+<p>首先下载我提供的<a href=/uploads/2019/03/cfe-1.0.2.0-all-am.7z>CFE模板</a>，然后参照<a href=/uploads/2019/03/cfeedit.png>截图</a>用<a href=/uploads/2019/03/cfeedit.7z>CFEEdit</a>修改里面的MAC地址和WPS密码。</p>
 <p>本机的MAC地址可以登录<a href=http://cellspot.router/>http://cellspot.router/</a>,然后点WLAN可以查看到，LAN和2.4G的MAC地址似乎是一样的。WPS密码可以参照路由器背面。</p>
 <p>然后打开网站<a href=https://cfeditor.pipeline.sh/>https://cfeditor.pipeline.sh/</a>，把修改好的CFE上传到Original CFE，Source CFE选1.0.2.0 US AiMesh，Country那里可以选择ALL，然后下载Target CFE即可得到自己的CFE，<strong>重命名为new_cfe.bin待用</strong>。</p>
-<p>2. 准备一个FAT32的U盘，将盘符改名为USB，下载<a href=/uploads/2019/03/mtd-write.7z>mtd-write.7z</a>和<a href=https://www.lanzous.com/i3iupta#fb9u>FW_RT_AC68U_30043763626.zip</a>，将new_cfe.bin、mtd-write和FW_RT_AC68U_30043763626.trx三个文件打包为files12345.zip放入U盘中并插到路由器上。</p> <a class=read-more href=/2019/03/23/rollback-tmac1900-to-ac68u/>&#187;</a></p>
+<p>2. 准备一个FAT32的U盘，将盘符改名为USB，下载<a href=/uploads/2019/03/mtd-write.7z>mtd-write.7z</a>和<a href=/uploads/2019/03/fw_rt_ac68u_30043763626.zip>FW_RT_AC68U_30043763626.zip</a>，将new_cfe.bin、mtd-write和FW_RT_AC68U_30043763626.trx三个文件打包为files12345.zip放入U盘中并插到路由器上。</p> <a class=read-more href=/2019/03/23/rollback-tmac1900-to-ac68u/>&#187;</a></p>
 </section>
 <footer class=post-meta>
 <img class="author-thumb nopin" src=/images/logo.png alt="Author image">
