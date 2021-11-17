@@ -94,15 +94,18 @@
 <h2 class=post-title><a href=/2021/11/17/synology-file-station-sort-by-pinyin/>解决群晖File Station中文拼音排序问题</a></h2>
 </header>
 <section class=post-excerpt>
-<p>方法来自：https://blog.icedream.xyz/2020/01/01/破解群晖file-station中文未按拼音排序问题/
-以下基于DS3617xs DSM 6.23-25426 Update 3 (x64)
-涉及修改文件为/usr/lib/libsynocore.so.6。
-ucol_open涉及到以下代码位置：
-LOAD:000000000001650F lea rsi, [rsp+28h+var_1C] LOAD:0000000000016514 lea rdi, aPStartAddress+12h ; "" LOAD:000000000001651B call _ucol_open 具体修改操作：
-具体操作：
-将48 8D 3D 8E A8 00 00替换成48 8D 3D 7B AF 00 00。 查找字符串string_join.c，并替换成string_joinzh。
-结论：这样修改完成后，在File Station中按拼音排序时，中文目录会排列到所有英文目录前。
-提供一个改好的文件，用SSH登录管理员权限替换即可，替换时请注意版本。 <a class=read-more href=/2021/11/17/synology-file-station-sort-by-pinyin/>&#187;</a></p>
+<p><p>方法来自：<a href=https://blog.icedream.xyz/2020/01/01/%E7%A0%B4%E8%A7%A3%E7%BE%A4%E6%99%96file-station%E4%B8%AD%E6%96%87%E6%9C%AA%E6%8C%89%E6%8B%BC%E9%9F%B3%E6%8E%92%E5%BA%8F%E9%97%AE%E9%A2%98/>https://blog.icedream.xyz/2020/01/01/破解群晖file-station中文未按拼音排序问题/</a></p>
+<p>以下基于DS3617xs DSM 6.23-25426 Update 3 (x64)</p>
+<p>涉及修改文件为<code>/usr/lib/libsynocore.so.6</code>。</p>
+<p><code>ucol_open</code>涉及到以下代码位置：</p>
+<pre tabindex=0><code>LOAD:000000000001650F                 lea     rsi, [rsp+28h+var_1C]
+LOAD:0000000000016514                 lea     rdi, aPStartAddress+12h ; &quot;&quot;
+LOAD:000000000001651B                 call    _ucol_open
+</code></pre><p>具体修改操作：</p>
+<p>具体操作：</p>
+<p>将<code>48 8D 3D 8E A8 00 00</code>替换成<code>48 8D 3D 7B AF 00 00</code>。
+查找字符串<code>string_join.c</code>，并替换成<code>string_joinzh</code>。</p>
+<p>结论：这样修改完成后，在File Station中按拼音排序时，中文目录会排列到所有英文目录前。</p> <a class=read-more href=/2021/11/17/synology-file-station-sort-by-pinyin/>&#187;</a></p>
 </section>
 <footer class=post-meta>
 <img class="author-thumb nopin" src=/images/logo.png alt="Author image">
