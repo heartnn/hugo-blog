@@ -26,7 +26,7 @@
 <link href=/index.xml rel=alternate type=application/rss+xml title=heartnn的自留地>
 <meta name=generator content="Hugo 0.89.3">
 <link rel=canonical href=https://www.heartnn.com/2021/11/17/synology-file-station-sort-by-pinyin/>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","publisher":{"@type":"Organization","name":null,"logo":"https://www.heartnn.com/images/logo.png"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"https://www.heartnn.com/images/logo.png","width":250,"height":250},"url":"https://www.heartnn.com","sameAs":[]},"headline":"解决群晖File Station中文拼音排序问题","name":"解决群晖File Station中文拼音排序问题","wordCount":41,"timeRequired":"PT1M","inLanguage":{"@type":"Language","alternateName":"en"},"url":"https://www.heartnn.com/2021/11/17/synology-file-station-sort-by-pinyin/","datePublished":"2021-11-17T12:18Z+08:00","dateModified":"2021-11-17T12:18+08:00","keywords":"synology","description":"","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.heartnn.com/2021/11/17/synology-file-station-sort-by-pinyin/"}}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","publisher":{"@type":"Organization","name":null,"logo":"https://www.heartnn.com/images/logo.png"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"https://www.heartnn.com/images/logo.png","width":250,"height":250},"url":"https://www.heartnn.com","sameAs":[]},"headline":"解决群晖File Station中文拼音排序问题","name":"解决群晖File Station中文拼音排序问题","wordCount":40,"timeRequired":"PT1M","inLanguage":{"@type":"Language","alternateName":"en"},"url":"https://www.heartnn.com/2021/11/17/synology-file-station-sort-by-pinyin/","datePublished":"2021-11-17T12:18Z+08:00","dateModified":"2021-11-17T12:18+08:00","keywords":"synology","description":"","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.heartnn.com/2021/11/17/synology-file-station-sort-by-pinyin/"}}</script>
 </head>
 <body class=nav-closed>
 <div class=nav>
@@ -96,7 +96,6 @@
 LOAD:0000000000016514                 lea     rdi, aPStartAddress+12h ; &quot;&quot;
 LOAD:000000000001651B                 call    _ucol_open
 </code></pre><p>具体修改操作：</p>
-<p>具体操作：</p>
 <ol>
 <li>将<code>48 8D 3D 8E A8 00 00</code>替换成<code>48 8D 3D 7B AF 00 00</code>。</li>
 <li>查找字符串<code>string_join.c</code>，并替换成<code>string_joinzh</code>。</li>

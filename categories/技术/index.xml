@@ -6,7 +6,6 @@
 LOAD:0000000000016514 lea rdi, aPStartAddress+12h ; &amp;quot;&amp;quot;
 LOAD:000000000001651B call _ucol_open
 &lt;/code>&lt;/pre>&lt;p>具体修改操作：&lt;/p>
-&lt;p>具体操作：&lt;/p>
 &lt;ol>
 &lt;li>将&lt;code>48 8D 3D 8E A8 00 00&lt;/code>替换成&lt;code>48 8D 3D 7B AF 00 00&lt;/code>。&lt;/li>
 &lt;li>查找字符串&lt;code>string_join.c&lt;/code>，并替换成&lt;code>string_joinzh&lt;/code>。&lt;/li>
