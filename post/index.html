@@ -103,8 +103,10 @@ LOAD:0000000000016514                 lea     rdi, aPStartAddress+12h ; &quot;&q
 LOAD:000000000001651B                 call    _ucol_open
 </code></pre><p>具体修改操作：</p>
 <p>具体操作：</p>
-<p>将<code>48 8D 3D 8E A8 00 00</code>替换成<code>48 8D 3D 7B AF 00 00</code>。
-查找字符串<code>string_join.c</code>，并替换成<code>string_joinzh</code>。</p>
+<ol>
+<li>将<code>48 8D 3D 8E A8 00 00</code>替换成<code>48 8D 3D 7B AF 00 00</code>。</li>
+<li>查找字符串<code>string_join.c</code>，并替换成<code>string_joinzh</code>。</li>
+</ol>
 <p>结论：这样修改完成后，在File Station中按拼音排序时，中文目录会排列到所有英文目录前。</p> <a class=read-more href=/2021/11/17/synology-file-station-sort-by-pinyin/>&#187;</a></p>
 </section>
 <footer class=post-meta>
