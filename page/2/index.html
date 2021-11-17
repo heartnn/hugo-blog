@@ -23,7 +23,7 @@
 <link rel=stylesheet href=/css/nav.min.css>
 <link rel=stylesheet href=//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.css integrity="sha256-oC/Q8nqWSlp1bki3Ht9gRCWaew5n6/HNk10HT4aEX4w=" crossorigin=anonymous>
 <link href=/index.xml rel=alternate type=application/rss+xml title=heartnn的自留地>
-<meta name=generator content="Hugo 0.88.1">
+<meta name=generator content="Hugo 0.89.3">
 <link rel=canonical href=https://www.heartnn.com/>
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"Website","publisher":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"https://www.heartnn.com/images/logo.png","width":250,"height":250},"url":"https://www.heartnn.com","sameAs":[]},"url":"https://www.heartnn.com/","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.heartnn.com/"},"description":"生活中的记忆片段~"}</script>
 </head>
@@ -89,6 +89,28 @@
 <a class=older-posts href=/page/3/>Older Posts &rarr;</a>
 </nav>
 </div>
+<article class="post post">
+<header class=post-header>
+<h2 class=post-title><a href=/2020/12/21/network-topology/>目前家中的网络拓扑</a></h2>
+</header>
+<section class=post-excerpt>
+<p><p>这次主要记载了一下家中目前使用的网络模式。</p>
+<p>首先用 4415U 的软路由替换掉 R2S，因为 R2S 的双网口还是不太够用，软路由直接作为主路由拨号使用。</p>
+<p>光猫改成桥接，只负责 IPTV 拨号。</p>
+<p>客厅的两个位置(电脑及电视)全都是只穿了一根网线，没有办法只好买了两个 SG105 Pro 组成 vlan。</p>
+<p>客厅放置 TP-LINK WDR8661 易展版作为主要 AP，两个较远的卧室分别放置 TL-WDR8670 和 TL-WDR1850 (不是一次购买的，可以以后过渡到 WiFi6)。</p>
+<p>这样客厅穿线较少的问题得到了解决，而且 SG105 Pro 还有剩余端口，还可以继续拓展比如 Switch 加装有线网卡等等。</p> <a class=read-more href=/2020/12/21/network-topology/>&#187;</a></p>
+</section>
+<footer class=post-meta>
+<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
+heartnn
+on
+<a href=https://www.heartnn.com/tags/network/>#network</a>
+<time class=post-date datetime=2020-12-21T10:09:00+08:00>
+2020-12-21
+</time>
+</footer>
+</article>
 <article class="post post">
 <header class=post-header>
 <h2 class=post-title><a href=/2019/12/18/switch-error-code-2813-1771/>关于 Switch 美区购买错误代码 2813-1771</a></h2>
@@ -194,28 +216,6 @@ on
 <a href=https://www.heartnn.com/tags/ai%E6%A2%A6%E5%A2%83%E6%A1%A3%E6%A1%88/>#ai梦境档案</a>
 <time class=post-date datetime=2019-10-17T10:31:47+08:00>
 2019-10-17
-</time>
-</footer>
-</article>
-<article class="post post">
-<header class=post-header>
-<h2 class=post-title><a href=/2019/06/25/auto-generate-retroarch-playlists-for-psvita/>自动生成PSV RetroArch游戏列表</a></h2>
-</header>
-<section class=post-excerpt>
-<p>本版本为psvita破解吧原有版本的增强版，可自动生成FC、SFC、MD、PCE、GBC、GBA、PS1列表，且按照名称排序，并在生成后借助iconv自动转换为UTF-8编码。
-将下面代码和iconv.exe一起放在ux0:/Roms下即可，生成的列表在ux0:/data/retroarch/playlists下。
-iconv的Windows版本下载地址：https://github.com/mlocati/gettext-iconv-windows/releases，需下载static 64位版本并解压缩。
-@echo off setlocal EnableDelayedExpansion set NAME1=GBA set CORE1=vba_next_libretro.self set NAME2=FC set CORE2=fceumm_libretro.self set NAME3=GBC set CORE3=gambatte_libretro.self set NAME4=MD set CORE4=genesis_plus_gx_libretro.self set NAME5=PCE set CORE5=mednafen_pce_fast_libretro.self set NAME6=SFC set CORE6=snes9x2005_libretro.self set NAME7=PS1 set CORE7=pcsx_rearmed_libretro.self set dvr=%~d0 set pth1=%cd:~7% set pth=%pth1:Roms% set lstpth=data\retroarch\playlists for /l %%i in (1,1,7) do ( set nam=!NAME%%i! set cor=!CORE%%i! dir /on /b !nam!>%temp%\tmp.txt type nul>!dvr!\!lstpth!\!nam!.lpl for /f "delims=" %%g in (%temp%\tmp.txt) do ( set n=%%g set gn=! <a class=read-more href=/2019/06/25/auto-generate-retroarch-playlists-for-psvita/>&#187;</a></p>
-</section>
-<footer class=post-meta>
-<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
-heartnn
-on
-<a href=https://www.heartnn.com/tags/retroarch/>#retroarch</a>
-,
-<a href=https://www.heartnn.com/tags/psv/>#psv</a>
-<time class=post-date datetime=2019-06-25T19:02:18+08:00>
-2019-06-25
 </time>
 </footer>
 </article>

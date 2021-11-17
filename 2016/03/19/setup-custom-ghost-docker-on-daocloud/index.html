@@ -27,7 +27,7 @@
 <link rel=stylesheet href=/css/nav.min.css>
 <link rel=stylesheet href=//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.css integrity="sha256-oC/Q8nqWSlp1bki3Ht9gRCWaew5n6/HNk10HT4aEX4w=" crossorigin=anonymous>
 <link href=/index.xml rel=alternate type=application/rss+xml title=heartnn的自留地>
-<meta name=generator content="Hugo 0.88.1">
+<meta name=generator content="Hugo 0.89.3">
 <link rel=canonical href=https://www.heartnn.com/2016/03/19/setup-custom-ghost-docker-on-daocloud/>
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","publisher":{"@type":"Organization","name":null,"logo":"https://www.heartnn.com/images/logo.png"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"https://www.heartnn.com/images/logo.png","width":250,"height":250},"url":"https://www.heartnn.com","sameAs":[]},"headline":"在Daocloud安装自定义的Ghost Docker","name":"在Daocloud安装自定义的Ghost Docker","wordCount":159,"timeRequired":"PT1M","inLanguage":{"@type":"Language","alternateName":"en"},"url":"https://www.heartnn.com/2016/03/19/setup-custom-ghost-docker-on-daocloud/","datePublished":"2016-03-19T10:12Z+08:00","dateModified":"2016-03-19T10:12+08:00","keywords":"ghost, docker","description":"","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.heartnn.com/2016/03/19/setup-custom-ghost-docker-on-daocloud/"}}</script>
 </head>
@@ -103,9 +103,9 @@
 	    <span style=color:#960050;background-color:#1e0010>options:</span> <span style=color:#960050;background-color:#1e0010>{</span>
 		<span style=color:#960050;background-color:#1e0010>service:</span> <span style=color:#960050;background-color:#1e0010>&#39;Mailgun&#39;,</span>
 		<span style=color:#960050;background-color:#1e0010>auth:</span> <span style=color:#960050;background-color:#1e0010>{</span>
-		    <span style=color:#960050;background-color:#1e0010>user:</span> <span style=color:#960050;background-color:#1e0010>&#39;&#39;,</span> <span style=color:#960050;background-color:#1e0010>//</span> <span style=color:#960050;background-color:#1e0010>mailgun</span> <span style=color:#960050;background-color:#1e0010>username</span>
-		    <span style=color:#960050;background-color:#1e0010>pass:</span> <span style=color:#960050;background-color:#1e0010>&#39;&#39;</span>  <span style=color:#960050;background-color:#1e0010>//</span> <span style=color:#960050;background-color:#1e0010>mailgun</span> <span style=color:#960050;background-color:#1e0010>password</span>
-		}
+		    <span style=color:#960050;background-color:#1e0010>user:</span> <span style=color:#960050;background-color:#1e0010>&#39;&#39;,</span> <span style=color:#75715e>// mailgun username
+</span><span style=color:#75715e></span>		    <span style=color:#960050;background-color:#1e0010>pass:</span> <span style=color:#960050;background-color:#1e0010>&#39;&#39;</span>  <span style=color:#75715e>// mailgun password
+</span><span style=color:#75715e></span>		}
 	    <span style=color:#960050;background-color:#1e0010>}</span>
 	<span style=color:#960050;background-color:#1e0010>},</span>
 	<span style=color:#960050;background-color:#1e0010>database:</span> {
@@ -126,11 +126,11 @@
 			<span style=color:#960050;background-color:#1e0010>secretKey:</span> <span style=color:#960050;background-color:#1e0010>&#39;xxxxxxxxxx&#39;,</span>
 			<span style=color:#960050;background-color:#1e0010>bucket:</span> <span style=color:#960050;background-color:#1e0010>&#39;&#39;,</span>
 			<span style=color:#960050;background-color:#1e0010>domain:</span> <span style=color:#960050;background-color:#1e0010>&#39;&#39;,</span>
-			<span style=color:#960050;background-color:#1e0010>//</span> <span style=color:#960050;background-color:#1e0010>timeout:</span> <span style=color:#960050;background-color:#1e0010>&#39;3600000&#39;,</span> <span style=color:#960050;background-color:#1e0010>//</span> <span style=color:#960050;background-color:#1e0010>default</span> <span style=color:#960050;background-color:#1e0010>rpc</span> <span style=color:#960050;background-color:#1e0010>timeout:</span> <span style=color:#960050;background-color:#1e0010>one</span> <span style=color:#960050;background-color:#1e0010>hour,</span> <span style=color:#960050;background-color:#1e0010>optional</span>
-			<span style=color:#960050;background-color:#1e0010>//</span> <span style=color:#960050;background-color:#1e0010>if</span> <span style=color:#960050;background-color:#1e0010>your</span> <span style=color:#960050;background-color:#1e0010>app</span> <span style=color:#960050;background-color:#1e0010>outside</span> <span style=color:#960050;background-color:#1e0010>of</span> <span style=color:#960050;background-color:#1e0010>China,</span> <span style=color:#960050;background-color:#1e0010>please</span> <span style=color:#960050;background-color:#1e0010>set</span> <span style=color:#960050;background-color:#1e0010>`uploadURL`</span> <span style=color:#960050;background-color:#1e0010>to</span> <span style=color:#960050;background-color:#1e0010>`http://up.qiniug.com/`</span>
-			<span style=color:#960050;background-color:#1e0010>uploadURL:</span> <span style=color:#960050;background-color:#1e0010>&#39;http://up.qiniug.com/&#39;,</span>
-			<span style=color:#960050;background-color:#1e0010>filePath:</span> <span style=color:#960050;background-color:#1e0010>&#39;YYYY/MM/&#39;</span> <span style=color:#960050;background-color:#1e0010>//</span> <span style=color:#960050;background-color:#1e0010>default</span> <span style=color:#960050;background-color:#1e0010>`YYYY/MM/`,</span> <span style=color:#960050;background-color:#1e0010>will</span> <span style=color:#960050;background-color:#1e0010>be</span> <span style=color:#960050;background-color:#1e0010>formated</span> <span style=color:#960050;background-color:#1e0010>by</span> <span style=color:#960050;background-color:#1e0010>moment.js,</span> <span style=color:#960050;background-color:#1e0010>using</span> <span style=color:#960050;background-color:#1e0010>`[]`</span> <span style=color:#960050;background-color:#1e0010>to</span> <span style=color:#960050;background-color:#1e0010>escape</span>
-		}
+			<span style=color:#75715e>// timeout: &#39;3600000&#39;, // default rpc timeout: one hour, optional
+</span><span style=color:#75715e></span>			<span style=color:#75715e>// if your app outside of China, please set `uploadURL` to `http://up.qiniug.com/`
+</span><span style=color:#75715e></span>			<span style=color:#960050;background-color:#1e0010>uploadURL:</span> <span style=color:#960050;background-color:#1e0010>&#39;http:</span><span style=color:#75715e>//up.qiniug.com/&#39;,
+</span><span style=color:#75715e></span>			<span style=color:#960050;background-color:#1e0010>filePath:</span> <span style=color:#960050;background-color:#1e0010>&#39;YYYY/MM/&#39;</span> <span style=color:#75715e>// default `YYYY/MM/`, will be formated by moment.js, using `[]` to escape
+</span><span style=color:#75715e></span>		}
 	<span style=color:#960050;background-color:#1e0010>},</span>
 	<span style=color:#960050;background-color:#1e0010>server:</span> {
 	    <span style=color:#960050;background-color:#1e0010>host:</span> <span style=color:#960050;background-color:#1e0010>&#39;127.0.0.1&#39;,</span>

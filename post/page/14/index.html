@@ -24,7 +24,7 @@
 <link rel=stylesheet href=//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.css integrity="sha256-oC/Q8nqWSlp1bki3Ht9gRCWaew5n6/HNk10HT4aEX4w=" crossorigin=anonymous>
 <link href=/index.xml rel=alternate type=application/rss+xml title=heartnn的自留地>
 <link href=/post/index.xml rel=alternate type=application/rss+xml title="Posts &#183; heartnn的自留地">
-<meta name=generator content="Hugo 0.88.1">
+<meta name=generator content="Hugo 0.89.3">
 <link rel=canonical href=https://www.heartnn.com/post/>
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"Website","publisher":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"https://www.heartnn.com/images/logo.png","width":250,"height":250},"url":"https://www.heartnn.com","sameAs":[]},"url":"https://www.heartnn.com/","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.heartnn.com/"},"description":"生活中的记忆片段~"}</script>
 </head>
@@ -90,6 +90,30 @@
 <a class=older-posts href=/post/page/15/>Older Posts &rarr;</a>
 </nav>
 </div>
+<article class="post post">
+<header class=post-header>
+<h2 class=post-title><a href=/2015/12/08/ghost-301-redirect/>关于Ghost下的301跳转</a></h2>
+</header>
+<section class=post-excerpt>
+<p><p>借着升级0.7.2，一起解决了non-www向www的域名跳转问题，本来是个很简单的问题，就因为Openshift的特殊性，变的复杂起来。</p>
+<p>如果Google这个问题的话，会有<a href=http://codenimbus.com/2014/01/15/redirecting-www-domain-to-non-www-on-ghost/>www向non-www跳转的解决办法</a>，并且似乎需要修改<code>core/server/routes/frontend.js</code>，而且容易引起重定向循环。</p>
+<p>如果用nginx反向代理的话应该会很简答，用Apache的话也可以用<code>.htaccess</code>解决，但是Openshift里的Nodejs自带的Apache似乎没有mod_rewrite。</p>
+<p>所以结论是在Openshift新建一个php 5.4，利用一下.htaccess。</p> <a class=read-more href=/2015/12/08/ghost-301-redirect/>&#187;</a></p>
+</section>
+<footer class=post-meta>
+<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
+heartnn
+on
+<a href=https://www.heartnn.com/tags/openshift/>#openshift</a>
+,
+<a href=https://www.heartnn.com/tags/ghost/>#ghost</a>
+,
+<a href=https://www.heartnn.com/tags/301/>#301</a>
+<time class=post-date datetime=2015-12-08T02:51:05+08:00>
+2015-12-08
+</time>
+</footer>
+</article>
 <article class="post post">
 <header class=post-header>
 <h2 class=post-title><a href=/2015/11/26/test-360wifi-on-windows-10/>360WiFi在Win10下的兼容测试</a></h2>
@@ -182,24 +206,6 @@ on
 <a href=https://www.heartnn.com/tags/webp/>#webp</a>
 <time class=post-date datetime=2015-08-13T23:42:00+08:00>
 2015-08-13
-</time>
-</footer>
-</article>
-<article class="post post">
-<header class=post-header>
-<h2 class=post-title><a href=/2015/08/05/think-about-kanbox/>由酷盘引发的思考</a></h2>
-</header>
-<section class=post-excerpt>
-<p><p>这两天<a href=https://kanbox.com/>酷盘</a>宣布要关闭服务了，之前被马云收购，本以为会有什么大动作，谁知道就这么默默无闻的消失了，亏我前阵子还把手机刷成flyme，然后赚了40TB，现在都是浮云了。。。</p>
-<p><img src=/uploads/2015/08/kanbox.png alt></p> <a class=read-more href=/2015/08/05/think-about-kanbox/>&#187;</a></p>
-</section>
-<footer class=post-meta>
-<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
-heartnn
-on
-<a href=https://www.heartnn.com/tags/storage/>#storage</a>
-<time class=post-date datetime=2015-08-05T08:40:49+08:00>
-2015-08-05
 </time>
 </footer>
 </article>

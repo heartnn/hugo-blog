@@ -24,7 +24,7 @@
 <link rel=stylesheet href=//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.css integrity="sha256-oC/Q8nqWSlp1bki3Ht9gRCWaew5n6/HNk10HT4aEX4w=" crossorigin=anonymous>
 <link href=/index.xml rel=alternate type=application/rss+xml title=heartnn的自留地>
 <link href=/categories/%E6%8A%80%E6%9C%AF/index.xml rel=alternate type=application/rss+xml title="技术 &#183; heartnn的自留地">
-<meta name=generator content="Hugo 0.88.1">
+<meta name=generator content="Hugo 0.89.3">
 <link rel=canonical href=https://www.heartnn.com/categories/%E6%8A%80%E6%9C%AF/>
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"Website","publisher":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"https://www.heartnn.com/images/logo.png","width":250,"height":250},"url":"https://www.heartnn.com","sameAs":[]},"url":"https://www.heartnn.com/","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.heartnn.com/"},"description":"生活中的记忆片段~"}</script>
 </head>
@@ -90,6 +90,28 @@
 <a class=older-posts href=/categories/%E6%8A%80%E6%9C%AF/page/3/>Older Posts &rarr;</a>
 </nav>
 </div>
+<article class="post post">
+<header class=post-header>
+<h2 class=post-title><a href=/2018/10/09/batch-download-qiniu-files/>七牛关闭测试域名后的文件批量下载</a></h2>
+</header>
+<section class=post-excerpt>
+<p><p>最近七牛关闭了所有域名的测试域名，没有备案域名的话，会造成bucket里的文件无法下载，反正我是没有备案域名，索性干脆全部导出来。</p>
+<p>由于没有了默认域名，所以无法直接下载，不过由于新建的bucket提供30天测试域名，文件导出还是有办法的。</p>
+<p>预备工作：首先下载七牛提供的<a href=https://github.com/qiniu/qshell>qshell</a>，下载完毕后提取对应操作系统的可执行文件，比如windows系统重命名为qshell.exe。</p>
+<pre tabindex=0><code>qshell account AccessKey SecretKey
+</code></pre><p>其中AccessKey和SecretKey去七牛后台可以找到，执行完毕后会在用户目录下生成<code>.qiniu</code>文件夹，里面的<code>account.json</code>记录了刚才的信息。</p>
+<p>由于我保存文件的bucket的测试域名已经过期，这里在七牛控制台里新建一个名为temp的bucket用来作为中转，此处请保持新建的bucket和原有的在同一个区域(zone)。</p> <a class=read-more href=/2018/10/09/batch-download-qiniu-files/>&#187;</a></p>
+</section>
+<footer class=post-meta>
+<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
+heartnn
+on
+<a href=https://www.heartnn.com/tags/qiniu/>#qiniu</a>
+<time class=post-date datetime=2018-10-09T08:05:34+08:00>
+2018-10-09
+</time>
+</footer>
+</article>
 <article class="post post">
 <header class=post-header>
 <h2 class=post-title><a href=/2018/08/09/windows-10-samba-connection/>Windows 10 Samba连接问题</a></h2>
@@ -198,25 +220,6 @@ on
 <a href=https://www.heartnn.com/tags/docker/>#docker</a>
 <time class=post-date datetime=2016-03-19T10:12:35+08:00>
 2016-03-19
-</time>
-</footer>
-</article>
-<article class="post post">
-<header class=post-header>
-<h2 class=post-title><a href=/2016/03/17/daocloud-continuous-integration-for-hexo/>使用Daocloud持续构建Hexo</a></h2>
-</header>
-<section class=post-excerpt>
-<p><p>本文是针对<a href=https://www.luodaoyi.com/zatan/9.html>《利用Coding和Daocloud打造全自动发布的hexo博客》</a>的一些解释及补充，感谢原作者。</p>
-<p>此方法的优点就是本地只需要git，无需nodejs环境。将源文件部署于Coding，通过Daocloud持续构建，然后发布到Github。</p>
-<p>在Coding仓库根目录创建<code>daocloud.yml</code>，文件内容如下：</p> <a class=read-more href=/2016/03/17/daocloud-continuous-integration-for-hexo/>&#187;</a></p>
-</section>
-<footer class=post-meta>
-<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
-heartnn
-on
-<a href=https://www.heartnn.com/tags/hexo/>#hexo</a>
-<time class=post-date datetime=2016-03-17T23:57:44+08:00>
-2016-03-17
 </time>
 </footer>
 </article>

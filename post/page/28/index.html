@@ -24,7 +24,7 @@
 <link rel=stylesheet href=//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.css integrity="sha256-oC/Q8nqWSlp1bki3Ht9gRCWaew5n6/HNk10HT4aEX4w=" crossorigin=anonymous>
 <link href=/index.xml rel=alternate type=application/rss+xml title=heartnn的自留地>
 <link href=/post/index.xml rel=alternate type=application/rss+xml title="Posts &#183; heartnn的自留地">
-<meta name=generator content="Hugo 0.88.1">
+<meta name=generator content="Hugo 0.89.3">
 <link rel=canonical href=https://www.heartnn.com/post/>
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"Website","publisher":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"https://www.heartnn.com/images/logo.png","width":250,"height":250},"url":"https://www.heartnn.com","sameAs":[]},"url":"https://www.heartnn.com/","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.heartnn.com/"},"description":"生活中的记忆片段~"}</script>
 </head>
@@ -90,6 +90,30 @@
 <a class=older-posts href=/post/page/29/>Older Posts &rarr;</a>
 </nav>
 </div>
+<article class="post post">
+<header class=post-header>
+<h2 class=post-title><a href=/2011/01/06/google-bookmark-apps/>细说Google Bookmark应用</a></h2>
+</header>
+<section class=post-excerpt>
+<p><p><img src=/uploads/2011/01/google-bookmarks.png alt></p>
+<p>首先是Google书签的Bookmarklet：</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#a6e22e>javascript</span><span style=color:#f92672>:</span>(<span style=color:#66d9ef>function</span>(){<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>a</span><span style=color:#f92672>=</span>window,<span style=color:#a6e22e>b</span><span style=color:#f92672>=</span>document,<span style=color:#a6e22e>c</span><span style=color:#f92672>=</span>encodeURIComponent,<span style=color:#a6e22e>d</span><span style=color:#f92672>=</span><span style=color:#a6e22e>a</span>.<span style=color:#a6e22e>open</span>(<span style=color:#e6db74>&#39;https://www.google.com/bookmarks/mark?op=edit&amp;amp;output=popup&amp;amp;bkmk=&#39;</span><span style=color:#f92672>+</span><span style=color:#a6e22e>c</span>(<span style=color:#a6e22e>b</span>.<span style=color:#a6e22e>location</span>)<span style=color:#f92672>+</span><span style=color:#e6db74>&#39;&amp;amp;title=&#39;</span><span style=color:#f92672>+</span><span style=color:#a6e22e>c</span>(<span style=color:#a6e22e>b</span>.<span style=color:#a6e22e>title</span>),<span style=color:#e6db74>&#39;bkmk_popup&#39;</span>,<span style=color:#e6db74>&#39;left=&#39;</span><span style=color:#f92672>+</span>((<span style=color:#a6e22e>a</span>.<span style=color:#a6e22e>screenX</span><span style=color:#f92672>||</span><span style=color:#a6e22e>a</span>.<span style=color:#a6e22e>screenLeft</span>)<span style=color:#f92672>+</span><span style=color:#ae81ff>10</span>)<span style=color:#f92672>+</span><span style=color:#e6db74>&#39;,top=&#39;</span><span style=color:#f92672>+</span>((<span style=color:#a6e22e>a</span>.<span style=color:#a6e22e>screenY</span><span style=color:#f92672>||</span><span style=color:#a6e22e>a</span>.<span style=color:#a6e22e>screenTop</span>)<span style=color:#f92672>+</span><span style=color:#ae81ff>10</span>)<span style=color:#f92672>+</span><span style=color:#e6db74>&#39;,height=420px,width=550px,resizable=1,alwaysRaised=1&#39;</span>);<span style=color:#a6e22e>a</span>.<span style=color:#a6e22e>setTimeout</span>(<span style=color:#66d9ef>function</span>(){<span style=color:#a6e22e>d</span>.<span style=color:#a6e22e>focus</span>()},<span style=color:#ae81ff>300</span>)})();
+</code></pre></div> <a class=read-more href=/2011/01/06/google-bookmark-apps/>&#187;</a></p>
+</section>
+<footer class=post-meta>
+<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
+heartnn
+on
+<a href=https://www.heartnn.com/tags/bookmark/>#bookmark</a>
+,
+<a href=https://www.heartnn.com/tags/google/>#google</a>
+,
+<a href=https://www.heartnn.com/tags/delicious/>#delicious</a>
+<time class=post-date datetime=2011-01-06T21:18:00+08:00>
+2011-01-06
+</time>
+</footer>
+</article>
 <article class="post post">
 <header class=post-header>
 <h2 class=post-title><a href=/2011/01/05/let-the-bullets-fly-review/>别光子弹，什么都飞一下吧</a></h2>
@@ -184,25 +208,6 @@ on
 <a href=https://www.heartnn.com/tags/fanfou/>#fanfou</a>
 <time class=post-date datetime=2010-12-16T22:02:00+08:00>
 2010-12-16
-</time>
-</footer>
-</article>
-<article class="post post">
-<header class=post-header>
-<h2 class=post-title><a href=/2010/12/14/mipony-portable/>将Mipony打造成绿色版本</a></h2>
-</header>
-<section class=post-excerpt>
-<p><p>首先声明的是，本文不只是提供了一个绿色软件，更是提供了一种方法而已。另外本文不是采取打包成单文件的形式，而是利用批处理文件来实现，从而让大家看得更明白。</p>
-<p><a href=http://mipony.net/>Mipony</a>是一个网盘下载软件，可以自动分析多大数十种的网盘链接，从而达到自行下载的目的，省时省力。</p>
-<p><img src=/uploads/2010/12/mipony-support.png alt></p> <a class=read-more href=/2010/12/14/mipony-portable/>&#187;</a></p>
-</section>
-<footer class=post-meta>
-<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
-heartnn
-on
-<a href=https://www.heartnn.com/tags/bat/>#bat</a>
-<time class=post-date datetime=2010-12-14T06:00:00+08:00>
-2010-12-14
 </time>
 </footer>
 </article>

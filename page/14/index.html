@@ -23,7 +23,7 @@
 <link rel=stylesheet href=/css/nav.min.css>
 <link rel=stylesheet href=//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.css integrity="sha256-oC/Q8nqWSlp1bki3Ht9gRCWaew5n6/HNk10HT4aEX4w=" crossorigin=anonymous>
 <link href=/index.xml rel=alternate type=application/rss+xml title=heartnn的自留地>
-<meta name=generator content="Hugo 0.88.1">
+<meta name=generator content="Hugo 0.89.3">
 <link rel=canonical href=https://www.heartnn.com/>
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"Website","publisher":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"https://www.heartnn.com/images/logo.png","width":250,"height":250},"url":"https://www.heartnn.com","sameAs":[]},"url":"https://www.heartnn.com/","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.heartnn.com/"},"description":"生活中的记忆片段~"}</script>
 </head>
@@ -89,6 +89,27 @@
 <a class=older-posts href=/page/15/>Older Posts &rarr;</a>
 </nav>
 </div>
+<article class="post post">
+<header class=post-header>
+<h2 class=post-title><a href=/2015/12/17/fix-ghost-timezone/>Ghost博客修正时区的方法</a></h2>
+</header>
+<section class=post-excerpt>
+<p><p>最近翻看以前的文章时，偶尔发现有的文章显示时间不正确，编辑器里显示的时间是正常的，才知道Ghost里只是显示UTC时间。</p>
+<p>我不知道调整服务器的时区的方法是否可行，因为Ghost在Github上似乎也没有给出绝对的答案，所以解决的办法只能是对应浏览者的本地时区。</p>
+<p>Ghost官方基本给出了<a href=http://dev.ghost.org/local-dates-themes/>解决办法</a>，利用Moment.js，只需要稍微修改即可。</p> <a class=read-more href=/2015/12/17/fix-ghost-timezone/>&#187;</a></p>
+</section>
+<footer class=post-meta>
+<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
+heartnn
+on
+<a href=https://www.heartnn.com/tags/ghost/>#ghost</a>
+,
+<a href=https://www.heartnn.com/tags/moment.js/>#moment.js</a>
+<time class=post-date datetime=2015-12-17T09:39:22+08:00>
+2015-12-17
+</time>
+</footer>
+</article>
 <article class="post post">
 <header class=post-header>
 <h2 class=post-title><a href=/2015/12/08/ghost-301-redirect/>关于Ghost下的301跳转</a></h2>
@@ -185,26 +206,6 @@ on
 <a href=https://www.heartnn.com/tags/android/>#android</a>
 <time class=post-date datetime=2015-08-31T00:45:16+08:00>
 2015-08-31
-</time>
-</footer>
-</article>
-<article class="post post">
-<header class=post-header>
-<h2 class=post-title><a href=/2015/08/13/webp-and-blog-cover/>WebP与博客封面</a></h2>
-</header>
-<section class=post-excerpt>
-<p><p><a href=https://developers.google.com/speed/webp/>WebP</a>是一种同时提供了有损压缩与无损压缩的图片文件格式，派生自视频编码格式VP8，是由Google在购买On2 Technologies后发展出来，以BSD授权条款发布。<em>via <a href=https://zh.wikipedia.org/wiki/WebP>维基百科</a></em></p>
-<p>超高的压缩比使得WebP可以在保持品质的同时，减少图片的大小。WebP可以在Google网站上下载专用的<a href=https://developers.google.com/speed/webp/docs/precompiled>命令行程序</a>，也可以利用网络上许多集成了WebP的应用，比如Image Resizer等等。</p> <a class=read-more href=/2015/08/13/webp-and-blog-cover/>&#187;</a></p>
-</section>
-<footer class=post-meta>
-<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
-heartnn
-on
-<a href=https://www.heartnn.com/tags/blog/>#blog</a>
-,
-<a href=https://www.heartnn.com/tags/webp/>#webp</a>
-<time class=post-date datetime=2015-08-13T23:42:00+08:00>
-2015-08-13
 </time>
 </footer>
 </article>
