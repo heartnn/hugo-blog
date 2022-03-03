@@ -8,12 +8,12 @@
 &lt;/ol>
 &lt;p>以上前3位需要拖放对应文件到批处理上，最后一个双击运行，按提示操作。&lt;/p>
 &lt;p>尤其是YouTube，以前都是用MKVToolNix先合并成mkv，然后再用Total Video Converter选视频和音频编码copy，才变成的mp4，为什么以前没直接搞成批处理。。。&lt;/p></description></item><item><title>FLV合并的批处理办法</title><link>https://www.heartnn.com/2019/02/12/flv-merge/</link><pubDate>Tue, 12 Feb 2019 11:15:11 +0800</pubDate><guid>https://www.heartnn.com/2019/02/12/flv-merge/</guid><description>&lt;p>过年的时候冲了B站大会员，在使用&lt;a href="https://github.com/the1812/Bilibili-Evolved">Bilibili Evolved&lt;/a>下载番剧时发现，有时下载来的是个zip文件，里面是分段的flv，虽然手头有MKVToolNix可以合并，但flv转mkv再转mp4实在是麻烦，又不想下载其它的工具，心想是不是可以使用ffmpeg的命令行搞定，于是有了下面的代码：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bat" data-lang="bat">(&lt;span style="color:#66d9ef">for&lt;/span> &lt;span style="color:#ae81ff">%%&lt;/span>i &lt;span style="color:#66d9ef">in&lt;/span> (*.flv) &lt;span style="color:#66d9ef">do&lt;/span> @&lt;span style="color:#66d9ef">echo&lt;/span> file &amp;#39;&lt;span style="color:#ae81ff">%%&lt;/span>i&amp;#39;) &amp;gt; list.txt
-ffmpeg.exe -f concat -safe 0 -i list.txt -c copy output.flv
-ffmpeg.exe -i output.flv -vcodec copy -acodec copy output.mp4
-&lt;span style="color:#66d9ef">pause&lt;/span>
-&lt;span style="color:#66d9ef">del&lt;/span> *.flv
-&lt;span style="color:#66d9ef">del&lt;/span> list.txt
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>使用方法：&lt;/p></description></item><item><title>各类视频格式的无损转换</title><link>https://www.heartnn.com/2016/01/10/videos-lossless-convert/</link><pubDate>Sun, 10 Jan 2016 01:15:57 +0800</pubDate><guid>https://www.heartnn.com/2016/01/10/videos-lossless-convert/</guid><description>&lt;p>之前记录了&lt;a href="https://www.heartnn.com/2015/07/28/mp4-package/">关于Mp4box的一些用法&lt;/a>，但是mp4格式支持封装的音频和视频格式相对有限，另外还有外挂字幕等等，所以mp4并不是最好的选择。对于高清电影来说，网络上更多的是mkv。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bat" data-lang="bat">&lt;span style="display:flex;">&lt;span>(&lt;span style="color:#66d9ef">for&lt;/span> &lt;span style="color:#ae81ff">%%&lt;/span>i &lt;span style="color:#66d9ef">in&lt;/span> (*.flv) &lt;span style="color:#66d9ef">do&lt;/span> @&lt;span style="color:#66d9ef">echo&lt;/span> file &amp;#39;&lt;span style="color:#ae81ff">%%&lt;/span>i&amp;#39;) &amp;gt; list.txt
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ffmpeg.exe -f concat -safe 0 -i list.txt -c copy output.flv
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ffmpeg.exe -i output.flv -vcodec copy -acodec copy output.mp4
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">pause&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">del&lt;/span> *.flv
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">del&lt;/span> list.txt
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>使用方法：&lt;/p></description></item><item><title>各类视频格式的无损转换</title><link>https://www.heartnn.com/2016/01/10/videos-lossless-convert/</link><pubDate>Sun, 10 Jan 2016 01:15:57 +0800</pubDate><guid>https://www.heartnn.com/2016/01/10/videos-lossless-convert/</guid><description>&lt;p>之前记录了&lt;a href="https://www.heartnn.com/2015/07/28/mp4-package/">关于Mp4box的一些用法&lt;/a>，但是mp4格式支持封装的音频和视频格式相对有限，另外还有外挂字幕等等，所以mp4并不是最好的选择。对于高清电影来说，网络上更多的是mkv。&lt;/p>
 &lt;p>mkv的工具主要是用&lt;a href="http://www.fosshub.com/MKVToolNix.html">MKVToolNix&lt;/a>和&lt;a href="http://sourceforge.net/projects/gmkvextractgui/">gMKVExtractGUI&lt;/a>(用来分离轨道)，都是GUI界面，像mp4之类的可以直接拖放到软件中进行处理，非常方便(mov格式也开始转向mpeg4，所以较新的mov格式也是可以直接编辑的)。&lt;/p>
 &lt;p>其它mkvtoolnix不支持的格式，可以利用&lt;a href="http://ffmpeg.zeranoe.com/builds/">ffmpeg&lt;/a>先转换为mkv，然后再交给mkvtoolnix处理：&lt;/p></description></item></channel></rss>

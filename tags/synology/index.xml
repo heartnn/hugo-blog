@@ -3,7 +3,7 @@
 &lt;p>涉及修改文件为&lt;code>/usr/lib/libsynocore.so.6&lt;/code>。&lt;/p>
 &lt;p>&lt;code>ucol_open&lt;/code>涉及到以下代码位置：&lt;/p>
 &lt;pre tabindex="0">&lt;code>LOAD:000000000001650F lea rsi, [rsp+28h+var_1C]
-LOAD:0000000000016514 lea rdi, aPStartAddress+12h ; &amp;quot;&amp;quot;
+LOAD:0000000000016514 lea rdi, aPStartAddress+12h ; &amp;#34;&amp;#34;
 LOAD:000000000001651B call _ucol_open
 &lt;/code>&lt;/pre>&lt;p>具体修改操作：&lt;/p>
 &lt;ol>
