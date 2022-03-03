@@ -4,7 +4,7 @@ title = "heartnn的自留地"
 subtitle = "生活中的记忆片段~"
 theme = "casper"
 paginate = 6
-copyright = "&copy;2008-2018 heartnn的自留地 &nbsp;&nbsp;&nbsp; <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/\">CC&nbsp;BY-NC-SA&nbsp;4.0</a>"
+copyright = "&copy;2008-2022 heartnn的自留地"
 
 [markup]
   [markup.highlight]
