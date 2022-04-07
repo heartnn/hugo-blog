@@ -10,3 +10,6 @@ tags: [python,nat]
 用起来还是相当稳定的，虽然似乎只能穿透http，但是能穿透一个群晖的DSM就足够了，建议应急的时候用一下。
 
 下载地址：<https://github.com/heartnn/dingtalk-ngrok/releases/latest>，包含Windows和Linux的版本。
+
+更新日志：
+20220407：修复在群晖下的依赖问题
