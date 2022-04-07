@@ -1,74 +1,5 @@
-<!doctype html><html lang=zh-cn>
-<head>
-<meta charset=utf-8>
-<meta http-equiv=x-ua-compatible content="IE=edge">
-<meta name=twitter:card content="summary">
-<meta name=twitter:image content="https://open.saintic.com/api/bingPic/?picSize=2">
-<meta name=twitter:title content="openshift">
-<meta name=twitter:description content="生活中的记忆片段~">
-<meta name=twitter:site content="@heartnn">
-<meta property="og:title" content="openshift &#183; heartnn的自留地">
-<meta property="og:site_name" content="heartnn的自留地">
-<meta property="og:url" content="https://www.heartnn.com/tags/openshift/">
-<meta property="og:image" content="https://open.saintic.com/api/bingPic/?picSize=2">
-<meta property="og:type" content="website">
-<meta property="og:description" content="生活中的记忆片段~">
-<title>openshift &#183; heartnn的自留地</title><meta name=description content="生活中的记忆片段~">
-<meta name=HandheldFriendly content="True">
-<meta name=viewport content="width=device-width,initial-scale=1">
-<link rel="shortcut icon" href=/images/favicon.ico>
-<link rel=apple-touch-icon href=/images/apple-touch-icon.png>
-<link rel=stylesheet href=/css/screen.min.css>
-<link rel=stylesheet href=/css/nav.min.css>
-<link rel=stylesheet href=//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.css integrity="sha256-oC/Q8nqWSlp1bki3Ht9gRCWaew5n6/HNk10HT4aEX4w=" crossorigin=anonymous>
-<link href=/index.xml rel=alternate type=application/rss+xml title=heartnn的自留地>
-<link href=/tags/openshift/index.xml rel=alternate type=application/rss+xml title="openshift &#183; heartnn的自留地">
-<meta name=generator content="Hugo 0.93.1">
-<link rel=canonical href=https://www.heartnn.com/tags/openshift/>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Website","publisher":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"https://www.heartnn.com/images/logo.png","width":250,"height":250},"url":"https://www.heartnn.com","sameAs":[]},"url":"https://www.heartnn.com/","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.heartnn.com/"},"description":"生活中的记忆片段~"}</script>
-</head><body class=nav-closed>
-<div class=nav>
-<h3 class=nav-title>Menu</h3><a href=# class=nav-close>
-<span class=hidden>Close</span>
-</a>
-<ul>
-<li class=nav-opened role=presentation>
-<a href=/>首页</a>
-</li><li class=nav-opened role=presentation>
-<a href=/aboutme/>关于我</a>
-</li><li class=nav-opened role=presentation>
-<a href=/archives/>归档</a>
-</li><li class=nav-opened role=presentation>
-<a href=/categories/>分类</a>
-</li><li class=nav-opened role=presentation>
-<a href=/tags/>标签</a>
-</li><h3 class=nav-link>Topics</h3><li class=nav-opened role=presentation>
-<a href=/hosts/ title="General Hosts">Hosts</a>
-</li><li class=nav-opened role=presentation>
-<a href=/twitter/ title="About Twitter">Twitter</a>
-</li><li class=nav-opened role=presentation>
-<a href=/playlist/ title=我经常听的歌>播放列表</a>
-</li><h3 class=nav-link>Links</h3><li class=nav-opened role=presentation>
-<a href=https://pan.qnas.cc/ title=我的网盘 onclick='target="_blank"'>我的网盘</a>
-</li></ul><a class="subscribe-button icon-feed" href=/tags/openshift/index.xml>Subscribe</a>
-</div><span class=nav-cover></span>
-<div class=site-wrapper>
-<header class="main-header tag-head" style="background-image:url(https://open.saintic.com/api/bingPic/?picSize=2)">
-<nav class="main-nav overlay clearfix">
-<a class=blog-logo href=https://www.heartnn.com/><img src=/images/logo.png alt=Home></a>
-<a class=menu-button href=#><span class=burger>&#9776;</span><span class=word>Menu</span></a>
-</nav><div class=vertical>
-<div class="main-header-content inner">
-<h1 class=page-title>openshift</h1><h2 class=page-description>
-</h2></div></div></header><main class=content role=main>
-<div class="extra-pagination inner">
-<nav class=pagination role=navigation>
-<span class=page-number>Page 1 of 1</span>
-</nav></div><article class="post post">
-<header class=post-header>
-<h2 class=post-title><a href=/2015/12/08/ghost-301-redirect/>关于Ghost下的301跳转</a></h2></header><section class=post-excerpt>
-<p><p>借着升级0.7.2，一起解决了non-www向www的域名跳转问题，本来是个很简单的问题，就因为Openshift的特殊性，变的复杂起来。</p><p>如果Google这个问题的话，会有<a href=http://codenimbus.com/2014/01/15/redirecting-www-domain-to-non-www-on-ghost/>www向non-www跳转的解决办法</a>，并且似乎需要修改<code>core/server/routes/frontend.js</code>，而且容易引起重定向循环。</p><p>如果用nginx反向代理的话应该会很简答，用Apache的话也可以用<code>.htaccess</code>解决，但是Openshift里的Nodejs自带的Apache似乎没有mod_rewrite。</p><p>所以结论是在Openshift新建一个php 5.4，利用一下.htaccess。</p><a class=read-more href=/2015/12/08/ghost-301-redirect/>&#187;</a></p></section><footer class=post-meta>
-<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=twitter:card content="summary"><meta name=twitter:image content="https://open.saintic.com/api/bingPic/?picSize=2"><meta name=twitter:title content="openshift"><meta name=twitter:description content="生活中的记忆片段~"><meta name=twitter:site content="@heartnn"><meta property="og:title" content="openshift &#183; heartnn的自留地"><meta property="og:site_name" content="heartnn的自留地"><meta property="og:url" content="https://www.heartnn.com/tags/openshift/"><meta property="og:image" content="https://open.saintic.com/api/bingPic/?picSize=2"><meta property="og:type" content="website"><meta property="og:description" content="生活中的记忆片段~"><title>openshift &#183; heartnn的自留地</title><meta name=description content="生活中的记忆片段~"><meta name=HandheldFriendly content="True"><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" href=/images/favicon.ico><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=stylesheet href=/css/screen.min.css><link rel=stylesheet href=/css/nav.min.css><link rel=stylesheet href=//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.css integrity="sha256-oC/Q8nqWSlp1bki3Ht9gRCWaew5n6/HNk10HT4aEX4w=" crossorigin=anonymous><link href=/index.xml rel=alternate type=application/rss+xml title=heartnn的自留地><link href=/tags/openshift/index.xml rel=alternate type=application/rss+xml title="openshift &#183; heartnn的自留地"><meta name=generator content="Hugo 0.96.0"><link rel=canonical href=https://www.heartnn.com/tags/openshift/><script type=application/ld+json>{"@context":"https://schema.org","@type":"Website","publisher":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"https://www.heartnn.com/images/logo.png","width":250,"height":250},"url":"https://www.heartnn.com","sameAs":[]},"url":"https://www.heartnn.com/","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.heartnn.com/"},"description":"生活中的记忆片段~"}</script></head><body class=nav-closed><div class=nav><h3 class=nav-title>Menu</h3><a href=# class=nav-close><span class=hidden>Close</span></a><ul><li class=nav-opened role=presentation><a href=/>首页</a></li><li class=nav-opened role=presentation><a href=/aboutme/>关于我</a></li><li class=nav-opened role=presentation><a href=/archives/>归档</a></li><li class=nav-opened role=presentation><a href=/categories/>分类</a></li><li class=nav-opened role=presentation><a href=/tags/>标签</a></li><h3 class=nav-link>Topics</h3><li class=nav-opened role=presentation><a href=/hosts/ title="General Hosts">Hosts</a></li><li class=nav-opened role=presentation><a href=/twitter/ title="About Twitter">Twitter</a></li><li class=nav-opened role=presentation><a href=/playlist/ title=我经常听的歌>播放列表</a></li><h3 class=nav-link>Links</h3><li class=nav-opened role=presentation><a href=https://pan.qnas.cc/ title=我的网盘 onclick='target="_blank"'>我的网盘</a></li></ul><a class="subscribe-button icon-feed" href=/tags/openshift/index.xml>Subscribe</a></div><span class=nav-cover></span><div class=site-wrapper><header class="main-header tag-head" style="background-image:url(https://open.saintic.com/api/bingPic/?picSize=2)"><nav class="main-nav overlay clearfix"><a class=blog-logo href=https://www.heartnn.com/><img src=/images/logo.png alt=Home></a>
+<a class=menu-button href=#><span class=burger>&#9776;</span><span class=word>Menu</span></a></nav><div class=vertical><div class="main-header-content inner"><h1 class=page-title>openshift</h1><h2 class=page-description></h2></div></div></header><main class=content role=main><div class="extra-pagination inner"><nav class=pagination role=navigation><span class=page-number>Page 1 of 1</span></nav></div><article class="post post"><header class=post-header><h2 class=post-title><a href=/2015/12/08/ghost-301-redirect/>关于Ghost下的301跳转</a></h2></header><section class=post-excerpt><p><p>借着升级0.7.2，一起解决了non-www向www的域名跳转问题，本来是个很简单的问题，就因为Openshift的特殊性，变的复杂起来。</p><p>如果Google这个问题的话，会有<a href=http://codenimbus.com/2014/01/15/redirecting-www-domain-to-non-www-on-ghost/>www向non-www跳转的解决办法</a>，并且似乎需要修改<code>core/server/routes/frontend.js</code>，而且容易引起重定向循环。</p><p>如果用nginx反向代理的话应该会很简答，用Apache的话也可以用<code>.htaccess</code>解决，但是Openshift里的Nodejs自带的Apache似乎没有mod_rewrite。</p><p>所以结论是在Openshift新建一个php 5.4，利用一下.htaccess。</p><a class=read-more href=/2015/12/08/ghost-301-redirect/>&#187;</a></p></section><footer class=post-meta><img class="author-thumb nopin" src=/images/logo.png alt="Author image">
 heartnn
 on
 <a href=https://www.heartnn.com/tags/openshift/>#openshift</a>
@@ -76,14 +7,7 @@ on
 <a href=https://www.heartnn.com/tags/ghost/>#ghost</a>
 ,
 <a href=https://www.heartnn.com/tags/301/>#301</a>
-<time class=post-date datetime=2015-12-08T02:51:05+08:00>
-2015-12-08
-</time>
-</footer></article><article class="post post">
-<header class=post-header>
-<h2 class=post-title><a href=/2015/06/11/install-ghost-on-openshift/>Openshift安装Ghost的注意事项</a></h2></header><section class=post-excerpt>
-<p><p>首先是Openshift的二级域名，一定要ping一下对应的IP，如果是通的，那么意味着绑定域名后是可以正常访问的，如果不通的话，则域名必须绑定到Cloudflare这样类似可以提供CDN的域名解析，或者用Cloudflare提供的SSL访问。</p><p>Openshift提供了<a href=https://github.com/openshift-quickstart/openshift-ghost-quickstart>快速部署</a>，建议使用，如果一定要自己搭建，需要Google补充许多知识，费力费时，得不偿失。Openshift快速部署目前提供的是0.5.10的版本，和目前的最新版没有太大的区别。</p><p>建议使用git方式部署Ghost，方便以后修改模板等。ssh上传速度可能不快，而且以后代码迁移也不如git方便。不过如果图片附件等不使用第三方存储时建议采用此方法。</p><a class=read-more href=/2015/06/11/install-ghost-on-openshift/>&#187;</a></p></section><footer class=post-meta>
-<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
+<time class=post-date datetime=2015-12-08T02:51:05+08:00>2015-12-08</time></footer></article><article class="post post"><header class=post-header><h2 class=post-title><a href=/2015/06/11/install-ghost-on-openshift/>Openshift安装Ghost的注意事项</a></h2></header><section class=post-excerpt><p><p>首先是Openshift的二级域名，一定要ping一下对应的IP，如果是通的，那么意味着绑定域名后是可以正常访问的，如果不通的话，则域名必须绑定到Cloudflare这样类似可以提供CDN的域名解析，或者用Cloudflare提供的SSL访问。</p><p>Openshift提供了<a href=https://github.com/openshift-quickstart/openshift-ghost-quickstart>快速部署</a>，建议使用，如果一定要自己搭建，需要Google补充许多知识，费力费时，得不偿失。Openshift快速部署目前提供的是0.5.10的版本，和目前的最新版没有太大的区别。</p><p>建议使用git方式部署Ghost，方便以后修改模板等。ssh上传速度可能不快，而且以后代码迁移也不如git方便。不过如果图片附件等不使用第三方存储时建议采用此方法。</p><a class=read-more href=/2015/06/11/install-ghost-on-openshift/>&#187;</a></p></section><footer class=post-meta><img class="author-thumb nopin" src=/images/logo.png alt="Author image">
 heartnn
 on
 <a href=https://www.heartnn.com/tags/openshift/>#openshift</a>
@@ -91,14 +15,7 @@ on
 <a href=https://www.heartnn.com/tags/ghost/>#ghost</a>
 ,
 <a href=https://www.heartnn.com/tags/cloudflare/>#cloudflare</a>
-<time class=post-date datetime=2015-06-11T22:12:28+08:00>
-2015-06-11
-</time>
-</footer></article><article class="post post">
-<header class=post-header>
-<h2 class=post-title><a href=/2015/04/21/tinytinyrss-on-openshift/>在OpenShift安装Tiny Tiny RSS的注意事项</a></h2></header><section class=post-excerpt>
-<p><p>上个月心血来潮在OpenShift上重新搭建了一个Tiny Tiny RSS，原来的用的是OpenShift提供的快速安装，数据库也是PostgreSQL，程序也比较旧了，干脆删掉重来。</p><p>先挂上一个运行了一个月的截图：</p><p><img src=/uploads/2015/04/tt-rss.png alt></p><p>简单叙述一下安装过程，此过程需要一定的git以及OpenShift使用经验。</p><a class=read-more href=/2015/04/21/tinytinyrss-on-openshift/>&#187;</a></p></section><footer class=post-meta>
-<img class="author-thumb nopin" src=/images/logo.png alt="Author image">
+<time class=post-date datetime=2015-06-11T22:12:28+08:00>2015-06-11</time></footer></article><article class="post post"><header class=post-header><h2 class=post-title><a href=/2015/04/21/tinytinyrss-on-openshift/>在OpenShift安装Tiny Tiny RSS的注意事项</a></h2></header><section class=post-excerpt><p><p>上个月心血来潮在OpenShift上重新搭建了一个Tiny Tiny RSS，原来的用的是OpenShift提供的快速安装，数据库也是PostgreSQL，程序也比较旧了，干脆删掉重来。</p><p>先挂上一个运行了一个月的截图：</p><p><img src=/uploads/2015/04/tt-rss.png alt></p><p>简单叙述一下安装过程，此过程需要一定的git以及OpenShift使用经验。</p><a class=read-more href=/2015/04/21/tinytinyrss-on-openshift/>&#187;</a></p></section><footer class=post-meta><img class="author-thumb nopin" src=/images/logo.png alt="Author image">
 heartnn
 on
 <a href=https://www.heartnn.com/tags/php/>#php</a>
@@ -106,17 +23,9 @@ on
 <a href=https://www.heartnn.com/tags/rss/>#rss</a>
 ,
 <a href=https://www.heartnn.com/tags/openshift/>#openshift</a>
-<time class=post-date datetime=2015-04-21T00:34:00+08:00>
-2015-04-21
-</time>
-</footer></article><nav class=pagination role=navigation>
-<span class=page-number>Page 1 of 1</span>
-</nav></main><footer class="site-footer clearfix">
-<section class=copyright>&copy;2008-2022 heartnn的自留地&nbsp;|&nbsp;<a href=https://valine.heartnn.com>管理入口</a>&nbsp;|&nbsp;<a rel=license href=https://creativecommons.org/licenses/by-nc-sa/4.0/>CC&nbsp;BY-NC-SA&nbsp;4.0</a></section><section class=poweredby>Proudly generated by <a class=icon-hugo href=https://gohugo.io>HUGO</a>, with <a class=icon-theme href=https://github.com/vjeantet/hugo-theme-casper>Casper</a> theme</section></footer></div><script src=https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin=anonymous></script>
+<time class=post-date datetime=2015-04-21T00:34:00+08:00>2015-04-21</time></footer></article><nav class=pagination role=navigation><span class=page-number>Page 1 of 1</span></nav></main><footer class="site-footer clearfix"><section class=copyright>&copy;2008-2022 heartnn的自留地&nbsp;|&nbsp;<a href=https://valine.heartnn.com>管理入口</a>&nbsp;|&nbsp;<a rel=license href=https://creativecommons.org/licenses/by-nc-sa/4.0/>CC&nbsp;BY-NC-SA&nbsp;4.0</a></section><section class=poweredby>Proudly generated by <a class=icon-hugo href=https://gohugo.io>HUGO</a>, with <a class=icon-theme href=https://github.com/vjeantet/hugo-theme-casper>Casper</a> theme</section></footer></div><script src=https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin=anonymous></script>
 <script src=//cdn.jsdelivr.net/gh/TryGhost/Casper@2.6.2/assets/js/jquery.fitvids.js integrity="sha256-bj/JlIND2F1ZRARRwS8t4d22whMq5QMxT2rGs/hyGKg=" crossorigin=anonymous></script>
 <script src=//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js></script>
-<script>new Valine({el:"#vcomments",avatar:"mp",serverURLs:"https://pzn1con7.api.lncldglobal.com",emojiCDN:"//i0.hdslb.com/bfs/emote/",emojiMaps:{doge:"6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png","亲亲":"a8111ad55953ef5e3be3327ef94eb4a39d535d06.png","偷笑":"bb690d4107620f1c15cff29509db529a73aee261.png","再见":"180129b8ea851044ce71caf55cc8ce44bd4a4fc8.png","冷漠":"b9cbc755c2b3ee43be07ca13de84e5b699a3f101.png","发怒":"34ba3cd204d5b05fec70ce08fa9fa0dd612409ff.png","发财":"34db290afd2963723c6eb3c4560667db7253a21a.png","可爱":"9e55fd9b500ac4b96613539f1ce2f9499e314ed9.png","吐血":"09dd16a7aa59b77baa1155d47484409624470c77.png","呆":"fe1179ebaa191569b0d31cecafe7a2cd1c951c9d.png","呕吐":"9f996894a39e282ccf5e66856af49483f81870f3.png","困":"241ee304e44c0af029adceb294399391e4737ef2.png","坏笑":"1f0b87f731a671079842116e0991c91c2c88645a.png","大佬":"093c1e2c490161aca397afc45573c877cdead616.png","大哭":"23269aeb35f99daee28dda129676f6e9ea87934f.png","委屈":"d04dba7b5465779e9755d2ab6f0a897b9b33bb77.png","害羞":"a37683fb5642fa3ddfc7f4e5525fd13e42a2bdb1.png","尴尬":"7cfa62dafc59798a3d3fb262d421eeeff166cfa4.png","微笑":"70dc5c7b56f93eb61bddba11e28fb1d18fddcd4c.png","思考":"90cf159733e558137ed20aa04d09964436f618a1.png","惊吓":"0d15c7e2ee58e935adc6a7193ee042388adc22af.png"},app_id:"PzN1Con7Ki7PVPthoE2pbrAn-MdYXbMMI",app_key:"s2v3nviwwwfblhiNmFPHtxXe",placeholder:"填写邮箱可以显示 Gravatar 头像",requiredFields:["nick","mail"]})</script>
-<script src=/js/index.js></script>
+<script>new Valine({el:"#vcomments",avatar:"mp",serverURLs:"https://pzn1con7.api.lncldglobal.com",emojiCDN:"//i0.hdslb.com/bfs/emote/",emojiMaps:{doge:"6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png","亲亲":"a8111ad55953ef5e3be3327ef94eb4a39d535d06.png","偷笑":"bb690d4107620f1c15cff29509db529a73aee261.png","再见":"180129b8ea851044ce71caf55cc8ce44bd4a4fc8.png","冷漠":"b9cbc755c2b3ee43be07ca13de84e5b699a3f101.png","发怒":"34ba3cd204d5b05fec70ce08fa9fa0dd612409ff.png","发财":"34db290afd2963723c6eb3c4560667db7253a21a.png","可爱":"9e55fd9b500ac4b96613539f1ce2f9499e314ed9.png","吐血":"09dd16a7aa59b77baa1155d47484409624470c77.png","呆":"fe1179ebaa191569b0d31cecafe7a2cd1c951c9d.png","呕吐":"9f996894a39e282ccf5e66856af49483f81870f3.png","困":"241ee304e44c0af029adceb294399391e4737ef2.png","坏笑":"1f0b87f731a671079842116e0991c91c2c88645a.png","大佬":"093c1e2c490161aca397afc45573c877cdead616.png","大哭":"23269aeb35f99daee28dda129676f6e9ea87934f.png","委屈":"d04dba7b5465779e9755d2ab6f0a897b9b33bb77.png","害羞":"a37683fb5642fa3ddfc7f4e5525fd13e42a2bdb1.png","尴尬":"7cfa62dafc59798a3d3fb262d421eeeff166cfa4.png","微笑":"70dc5c7b56f93eb61bddba11e28fb1d18fddcd4c.png","思考":"90cf159733e558137ed20aa04d09964436f618a1.png","惊吓":"0d15c7e2ee58e935adc6a7193ee042388adc22af.png"},app_id:"PzN1Con7Ki7PVPthoE2pbrAn-MdYXbMMI",app_key:"s2v3nviwwwfblhiNmFPHtxXe",placeholder:"填写邮箱可以显示 Gravatar 头像",requiredFields:["nick","mail"]})</script><script src=/js/index.js></script>
 <script src=//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.js integrity="sha256-iFCrYEMjebIvuiqOp61+L3FN2MH8rfqmzGQ0bN5YTWg=" crossorigin=anonymous></script>
-<script src=/js/fancybox.js></script>
-</body></html>
+<script src=/js/fancybox.js></script></body></html>
