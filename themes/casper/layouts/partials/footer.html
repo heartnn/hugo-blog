@@ -55,5 +55,13 @@
     {{ if .Site.Params.customFooterPartial }}
         {{ partial .Site.Params.customFooterPartial . }}
     {{ end }}
+
+<script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.min.js"></script>
+<script>
+window.addEventListener('load', () => {
+  quicklink.listen();
+});
+</script>
+
 </body>
 </html>
