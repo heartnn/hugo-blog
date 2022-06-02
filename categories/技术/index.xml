@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技术 on heartnn的自留地</title><link>https://www.heartnn.com/categories/%E6%8A%80%E6%9C%AF/</link><description>Recent content in 技术 on heartnn的自留地</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>&amp;copy;2008-2022 heartnn的自留地</copyright><lastBuildDate>Wed, 17 Nov 2021 12:18:42 +0800</lastBuildDate><atom:link href="https://www.heartnn.com/categories/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml"/><item><title>解决群晖File Station中文拼音排序问题</title><link>https://www.heartnn.com/2021/11/17/synology-file-station-sort-by-pinyin/</link><pubDate>Wed, 17 Nov 2021 12:18:42 +0800</pubDate><guid>https://www.heartnn.com/2021/11/17/synology-file-station-sort-by-pinyin/</guid><description>&lt;p>方法来自：&lt;a href="https://blog.icedream.xyz/2020/01/01/%E7%A0%B4%E8%A7%A3%E7%BE%A4%E6%99%96file-station%E4%B8%AD%E6%96%87%E6%9C%AA%E6%8C%89%E6%8B%BC%E9%9F%B3%E6%8E%92%E5%BA%8F%E9%97%AE%E9%A2%98/">https://blog.icedream.xyz/2020/01/01/破解群晖file-station中文未按拼音排序问题/&lt;/a>&lt;/p>
-&lt;p>以下基于DS3617xs DSM 6.23-25426 Update 3 (x64)&lt;/p>
+&lt;p>以下基于DSM 6.23-25426 Update 3 (x64)&lt;/p>
 &lt;p>涉及修改文件为&lt;code>/usr/lib/libsynocore.so.6&lt;/code>。&lt;/p>
 &lt;p>&lt;code>ucol_open&lt;/code>涉及到以下代码位置：&lt;/p>
 &lt;pre tabindex="0">&lt;code>LOAD:000000000001650F lea rsi, [rsp+28h+var_1C]
@@ -7,7 +7,7 @@ LOAD:0000000000016514 lea rdi, aPStartAddress+12h ; &amp;#34;&amp;#34;
 LOAD:000000000001651B call _ucol_open
 &lt;/code>&lt;/pre>&lt;p>具体修改操作：&lt;/p>
 &lt;ol>
-&lt;li>将&lt;code>48 8D 3D 8E A8 00 00&lt;/code>替换成&lt;code>48 8D 3D 7B AF 00 00&lt;/code>。&lt;/li>
+&lt;li>将&lt;code>48 8D 3D 78 A9 00 00&lt;/code>替换成&lt;code>48 8D 3D 7B AF 00 00&lt;/code>。&lt;/li>
 &lt;li>查找字符串&lt;code>string_join.c&lt;/code>，并替换成&lt;code>string_joinzh&lt;/code>。&lt;/li>
 &lt;/ol>
 &lt;p>结论：这样修改完成后，在File Station中按拼音排序时，中文目录会排列到所有英文目录前。&lt;/p></description></item><item><title>黑群晖在路由器重启后自动获取最新的IPv6并更新DDNS</title><link>https://www.heartnn.com/2021/03/24/synology-ipv6-ddns-autoupdate/</link><pubDate>Wed, 24 Mar 2021 09:59:12 +0800</pubDate><guid>https://www.heartnn.com/2021/03/24/synology-ipv6-ddns-autoupdate/</guid><description>&lt;p>首先说明，白群晖也可以这么折腾，但没必要。&lt;/p>
@@ -86,9 +86,9 @@ LOAD:000000000001651B call _ucol_open
 首先是原来的AI Loader(就是JQuery Lazy Load)不能用了，用YS images lazyload來代替了，並且Twenty Eleven默认没有引用JQuery，所以需要在header.php中添加。
 找到
 &amp;lt;!--[if lt IE 9]&amp;gt; &amp;lt;script src=&amp;#34;&amp;lt;?php echo get_template_directory_uri(); ?&amp;gt;/js/html5.js&amp;#34; type=&amp;#34;text/javascript&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;![endif]--&amp;gt; 在上面添加
-&amp;lt;?php wp_enqueue_script( &amp;#39;jquery&amp;#39; ); ?&amp;gt;Wordpress 3.2的后台要紧凑了一些，不过heartnn用的Admin Drop Down Menu，所以没感觉有太大变化。(Ozh&amp;rsquo; Admin Drop Down Menu更新很及时了，刚装上新版Wordpress就马上提示插件更新了～)
+&amp;lt;?php wp_enqueue_script( &amp;#39;jquery&amp;#39; ); ?&amp;gt; Wordpress 3.2的后台要紧凑了一些，不过heartnn用的Admin Drop Down Menu，所以没感觉有太大变化。(Ozh&amp;rsquo; Admin Drop Down Menu更新很及时了，刚装上新版Wordpress就马上提示插件更新了～)
 PageNavi的问题比较麻烦，原来的主题是自带的页面导航，比较方便，现在Twenty Eleven和以前的Twenty Ten一样麻烦，我是修改的functions.php。
-/** * Display navigation to next/previous pages when applicable */ function twentyeleven_content_nav( $nav_id ) { global $wp_query; if(function_exists(&amp;#39;wp_pagenavi&amp;#39;)) { wp_pagenavi();} else if ( $wp_query-&amp;gt;max_num_pages &amp;gt; 1 ) : ?&amp;gt;&amp;lt;nav id=&amp;#34;&amp;lt;?</description></item><item><title>自己打造Wordpress的侧边栏RSS订阅图标</title><link>https://www.heartnn.com/2010/12/05/diy-wordpress-rss-widget/</link><pubDate>Sun, 05 Dec 2010 01:02:00 +0800</pubDate><guid>https://www.heartnn.com/2010/12/05/diy-wordpress-rss-widget/</guid><description>&lt;p>&lt;img src="https://www.heartnn.com/uploads/2010/12/rss-sign.png" alt="">&lt;/p>
+/** * Display navigation to next/previous pages when applicable */ function twentyeleven_content_nav( $nav_id ) { global $wp_query; if(function_exists(&amp;#39;wp_pagenavi&amp;#39;)) { wp_pagenavi();} else if ( $wp_query-&amp;gt;max_num_pages &amp;gt; 1 ) : ?&amp;gt; &amp;lt;nav id=&amp;#34;&amp;lt;?</description></item><item><title>自己打造Wordpress的侧边栏RSS订阅图标</title><link>https://www.heartnn.com/2010/12/05/diy-wordpress-rss-widget/</link><pubDate>Sun, 05 Dec 2010 01:02:00 +0800</pubDate><guid>https://www.heartnn.com/2010/12/05/diy-wordpress-rss-widget/</guid><description>&lt;p>&lt;img src="https://www.heartnn.com/uploads/2010/12/rss-sign.png" alt="">&lt;/p>
 &lt;p>这两天换了主题，想顺便也加强一下RSS订阅吧，于是开始从网上搜索各种插件，结果没有让我感到满意的，不是链接第三方JS，就是自定义功能不强，心想还是自己手工制作吧。&lt;/p>
 &lt;p>懒了很久了，自己的制作水平也差了很多，本来很简单的东西折腾了很久。。。&lt;/p>
 &lt;p>首先找到一套订阅图标，尽量一致的风格(这个为了美观，你懂的)，然后对每个图像书写链接，这是最简单的办法，例子就不给了，仅使用html代码就能搞定，唯一的缺点是对每个图像都会有一次http请求，感谢速度会比较慢。&lt;/p></description></item><item><title>Fedora 14初级折腾——Flash篇</title><link>https://www.heartnn.com/2010/11/15/install-flash-on-fedora-14/</link><pubDate>Mon, 15 Nov 2010 08:32:00 +0800</pubDate><guid>https://www.heartnn.com/2010/11/15/install-flash-on-fedora-14/</guid><description>&lt;p>说实在的，&lt;a href="https://www.heartnn.com/2010/11/14/using-fedora-14/">上次&lt;/a>只是个安装过程，本来不想再继续折腾了的，但是为了折腾精神，还是打开虚拟机继续了。&lt;/p>
