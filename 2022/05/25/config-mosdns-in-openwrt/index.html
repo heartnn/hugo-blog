@@ -1,187 +1,143 @@
 <!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=twitter:card content="summary"><meta name=twitter:title content="OpenWrt中MosDNS配置"><meta name=twitter:description content><meta name=twitter:site content="@heartnn"><meta property="og:title" content="OpenWrt中MosDNS配置 &#183; heartnn的自留地"><meta property="og:site_name" content="heartnn的自留地"><meta property="og:url" content="https://www.heartnn.com/2022/05/25/config-mosdns-in-openwrt/"><meta property="og:image" content="https://open.saintic.com/api/bingPic/?picSize=2"><meta property="og:description" content><meta property="og:type" content="article"><meta property="article:published_time" content="2022-05-25T09:47:08+08:00"><meta property="article:tag" content="openwrt"><meta property="article:tag" content="dns"><title>OpenWrt中MosDNS配置 &#183; heartnn的自留地</title><meta name=description content="<p>请配合luci-app-mosdns包的自定义配置食用，本配置修改自官方配置luci-app-mosdns包的配置，兼顾了IPv6的功能，但不会碰到那种客户端解析IPv6优先导致超时连接的恶心情况。</p>
 <p>使用时注意一下几点，避免踩坑：</p>
 <ol>
-<li>端口号如果不是5335的需要自行修改。</"><meta name=HandheldFriendly content="True"><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" href=/images/favicon.ico><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=stylesheet href=/css/screen.min.css><link rel=stylesheet href=/css/nav.min.css><link rel=stylesheet href=//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.css integrity="sha256-oC/Q8nqWSlp1bki3Ht9gRCWaew5n6/HNk10HT4aEX4w=" crossorigin=anonymous><link href=/index.xml rel=alternate type=application/rss+xml title=heartnn的自留地><meta name=generator content="Hugo 0.100.1"><link rel=canonical href=https://www.heartnn.com/2022/05/25/config-mosdns-in-openwrt/><script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","publisher":{"@type":"Organization","name":null,"logo":"https://www.heartnn.com/images/logo.png"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"https://www.heartnn.com/images/logo.png","width":250,"height":250},"url":"https://www.heartnn.com","sameAs":[]},"headline":"OpenWrt中MosDNS配置","name":"OpenWrt中MosDNS配置","wordCount":382,"timeRequired":"PT2M","inLanguage":{"@type":"Language","alternateName":"en"},"url":"https://www.heartnn.com/2022/05/25/config-mosdns-in-openwrt/","datePublished":"2022-05-25T09:47Z+08:00","dateModified":"2022-05-25T09:47+08:00","keywords":"openwrt, dns","description":"","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.heartnn.com/2022/05/25/config-mosdns-in-openwrt/"}}</script></head><body class=nav-closed><div class=nav><h3 class=nav-title>Menu</h3><a href=# class=nav-close><span class=hidden>Close</span></a><ul><li class=nav-opened role=presentation><a href=/>首页</a></li><li class=nav-opened role=presentation><a href=/aboutme/>关于我</a></li><li class=nav-opened role=presentation><a href=/archives/>归档</a></li><li class=nav-opened role=presentation><a href=/categories/>分类</a></li><li class=nav-opened role=presentation><a href=/tags/>标签</a></li><h3 class=nav-link>Topics</h3><li class=nav-opened role=presentation><a href=/hosts/ title="General Hosts">Hosts</a></li><li class=nav-opened role=presentation><a href=/twitter/ title="About Twitter">Twitter</a></li><li class=nav-opened role=presentation><a href=/playlist/ title=我经常听的歌>播放列表</a></li><h3 class=nav-link>Links</h3><li class=nav-opened role=presentation><a href=https://pan.qnas.cc/ title=我的网盘 onclick="target='_blank'">我的网盘</a></li></ul><a class="subscribe-button icon-feed" href=/index.xml>Subscribe</a></div><span class=nav-cover></span><div class=site-wrapper><header class="main-header post-head no-cover"><nav class="main-nav clearfix"><a class=blog-logo href=https://www.heartnn.com/><img src=/images/logo.png alt=Home></a>
+<li>端口号如果不是5335的需要自行修改。</"><meta name=HandheldFriendly content="True"><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" href=/images/favicon.ico><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=stylesheet href=/css/screen.min.css><link rel=stylesheet href=/css/nav.min.css><link rel=stylesheet href=//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.css integrity="sha256-oC/Q8nqWSlp1bki3Ht9gRCWaew5n6/HNk10HT4aEX4w=" crossorigin=anonymous><link href=/index.xml rel=alternate type=application/rss+xml title=heartnn的自留地><meta name=generator content="Hugo 0.100.1"><link rel=canonical href=https://www.heartnn.com/2022/05/25/config-mosdns-in-openwrt/><script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","publisher":{"@type":"Organization","name":null,"logo":"https://www.heartnn.com/images/logo.png"},"author":{"@type":"Person","name":null,"image":{"@type":"ImageObject","url":"https://www.heartnn.com/images/logo.png","width":250,"height":250},"url":"https://www.heartnn.com","sameAs":[]},"headline":"OpenWrt中MosDNS配置","name":"OpenWrt中MosDNS配置","wordCount":233,"timeRequired":"PT2M","inLanguage":{"@type":"Language","alternateName":"en"},"url":"https://www.heartnn.com/2022/05/25/config-mosdns-in-openwrt/","datePublished":"2022-05-25T09:47Z+08:00","dateModified":"2022-05-25T09:47+08:00","keywords":"openwrt, dns","description":"","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.heartnn.com/2022/05/25/config-mosdns-in-openwrt/"}}</script></head><body class=nav-closed><div class=nav><h3 class=nav-title>Menu</h3><a href=# class=nav-close><span class=hidden>Close</span></a><ul><li class=nav-opened role=presentation><a href=/>首页</a></li><li class=nav-opened role=presentation><a href=/aboutme/>关于我</a></li><li class=nav-opened role=presentation><a href=/archives/>归档</a></li><li class=nav-opened role=presentation><a href=/categories/>分类</a></li><li class=nav-opened role=presentation><a href=/tags/>标签</a></li><h3 class=nav-link>Topics</h3><li class=nav-opened role=presentation><a href=/hosts/ title="General Hosts">Hosts</a></li><li class=nav-opened role=presentation><a href=/twitter/ title="About Twitter">Twitter</a></li><li class=nav-opened role=presentation><a href=/playlist/ title=我经常听的歌>播放列表</a></li><h3 class=nav-link>Links</h3><li class=nav-opened role=presentation><a href=https://pan.qnas.cc/ title=我的网盘 onclick="target='_blank'">我的网盘</a></li></ul><a class="subscribe-button icon-feed" href=/index.xml>Subscribe</a></div><span class=nav-cover></span><div class=site-wrapper><header class="main-header post-head no-cover"><nav class="main-nav clearfix"><a class=blog-logo href=https://www.heartnn.com/><img src=/images/logo.png alt=Home></a>
 <a class=menu-button href=#><span class=burger>&#9776;</span><span class=word>Menu</span></a></nav></header><main class=content role=main><article class="post post"><header class=post-header><h1 class=post-title>OpenWrt中MosDNS配置</h1><small></small><section class=post-meta><time class=post-date datetime=2022-05-25T09:47:08+08:00>2022-05-25</time>
 <span class="post-tag small"><a href=https://www.heartnn.com/tags/openwrt/>#openwrt</a></span>
 <span class="post-tag small"><a href=https://www.heartnn.com/tags/dns/>#dns</a></span></section></header><section class=post-content><p>请配合luci-app-mosdns包的自定义配置食用，本配置修改自官方配置luci-app-mosdns包的配置，兼顾了IPv6的功能，但不会碰到那种客户端解析IPv6优先导致超时连接的恶心情况。</p><p>使用时注意一下几点，避免踩坑：</p><ol><li>端口号如果不是5335的需要自行修改。</li><li>配置里的DNS可以使用UDP、DOH、DOT连接，使用DOH和DOT时第一个DNS尽量使用IP，如果一定要使用域名，请参考官方配置对应的IP地址，因为MosDNS可能不能直接解析域名。</li><li>与Passwall的配合使用，需要将Passwall的远程DNS设置为<code>127.0.0.1:5335</code>或者你的自定义端口号。</li><li>保证配置中提到的文件可用，除了luci-app-mosdns包，还需要安装v2ray，安装了Passwall的会自动安装v2ray依赖。</li></ol><p>以下是<code>/etc/mosdns/cus_config.yaml</code>的内容：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>log</span>:
 </span></span><span style=display:flex><span>  <span style=color:#f92672>level</span>: <span style=color:#ae81ff>error</span>
-</span></span><span style=display:flex><span>  <span style=color:#f92672>file</span>: <span style=color:#e6db74>&#39;/tmp/mosdns.txt&#39;</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>file</span>: <span style=color:#ae81ff>/tmp/mosdns.txt</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#f92672>plugin</span>:
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#75715e>################# 服务器插件 ################</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  - <span style=color:#f92672>tag</span>: <span style=color:#ae81ff>main_server   </span> <span style=color:#75715e># 服务器插件。接收客户端的请求。</span>
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>tag</span>: <span style=color:#ae81ff>main_server</span>
 </span></span><span style=display:flex><span>    <span style=color:#f92672>type</span>: <span style=color:#ae81ff>server</span>
 </span></span><span style=display:flex><span>    <span style=color:#f92672>args</span>:
-</span></span><span style=display:flex><span>      <span style=color:#f92672>entry</span>:            <span style=color:#75715e># 设定客户端的请求会经过哪些插件(被哪些插件处理)。</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>entry</span>:
 </span></span><span style=display:flex><span>        - <span style=color:#ae81ff>_no_ecs</span>
+</span></span><span style=display:flex><span>        - <span style=color:#ae81ff>lazy_cache</span>
+</span></span><span style=display:flex><span>        - <span style=color:#ae81ff>_prefer_ipv4</span>
 </span></span><span style=display:flex><span>        - <span style=color:#ae81ff>_single_flight</span>
-</span></span><span style=display:flex><span>        - <span style=color:#ae81ff>main_sequence   </span> <span style=color:#75715e># 运行主执行序列</span>
-</span></span><span style=display:flex><span>        - <span style=color:#ae81ff>modify_ttl      </span> <span style=color:#75715e># 修改应答的 ttl</span>
+</span></span><span style=display:flex><span>        - <span style=color:#ae81ff>main_sequence</span>
 </span></span><span style=display:flex><span>      <span style=color:#f92672>server</span>:
 </span></span><span style=display:flex><span>        - <span style=color:#f92672>protocol</span>: <span style=color:#ae81ff>udp</span>
-</span></span><span style=display:flex><span>          <span style=color:#f92672>addr</span>: <span style=color:#e6db74>&#39;127.0.0.1:5335&#39;</span>
+</span></span><span style=display:flex><span>          <span style=color:#f92672>addr</span>: <span style=color:#e6db74>&#34;127.0.0.1:5335&#34;</span>
 </span></span><span style=display:flex><span>        - <span style=color:#f92672>protocol</span>: <span style=color:#ae81ff>tcp</span>
-</span></span><span style=display:flex><span>          <span style=color:#f92672>addr</span>: <span style=color:#e6db74>&#39;127.0.0.1:5335&#39;</span>
-</span></span><span style=display:flex><span>        - <span style=color:#f92672>protocol</span>: <span style=color:#ae81ff>udp</span>
-</span></span><span style=display:flex><span>          <span style=color:#f92672>addr</span>: <span style=color:#e6db74>&#39;[::1]:5335&#39;</span>
-</span></span><span style=display:flex><span>        - <span style=color:#f92672>protocol</span>: <span style=color:#ae81ff>tcp</span>
-</span></span><span style=display:flex><span>          <span style=color:#f92672>addr</span>: <span style=color:#e6db74>&#39;[::1]:5335&#39;</span>
+</span></span><span style=display:flex><span>          <span style=color:#f92672>addr</span>: <span style=color:#e6db74>&#34;127.0.0.1:5335&#34;</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>  - <span style=color:#f92672>tag</span>: <span style=color:#ae81ff>main_sequence</span>
 </span></span><span style=display:flex><span>    <span style=color:#f92672>type</span>: <span style=color:#ae81ff>sequence</span>
 </span></span><span style=display:flex><span>    <span style=color:#f92672>args</span>:
 </span></span><span style=display:flex><span>      <span style=color:#f92672>exec</span>:
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        - <span style=color:#f92672>if</span>:
-</span></span><span style=display:flex><span>            - <span style=color:#ae81ff>query_is_blocklist_domain   </span> <span style=color:#75715e># 黑名单域名</span>
-</span></span><span style=display:flex><span>            - <span style=color:#ae81ff>query_is_ad_domain          </span> <span style=color:#75715e># 已知的广告域名</span>
-</span></span><span style=display:flex><span>          <span style=color:#f92672>exec</span>:
-</span></span><span style=display:flex><span>            - <span style=color:#ae81ff>_block_with_nxdomain        </span> <span style=color:#75715e># 生成 NXDOMAIN 应答</span>
-</span></span><span style=display:flex><span>            - <span style=color:#ae81ff>_return                     </span> <span style=color:#75715e># 返回。不再执行后续插件。</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        - <span style=color:#ae81ff>mem_cache   </span> <span style=color:#75715e># 运行缓存插件。放在这里就可以避免缓存到无用的广告域名。</span>
-</span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>        - <span style=color:#ae81ff>query_is_hosts_domain</span>
-</span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>        - <span style=color:#ae81ff>query_is_redirect_domain</span>
-</span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>        - <span style=color:#f92672>if</span>:
 </span></span><span style=display:flex><span>            - <span style=color:#ae81ff>query_is_whitelist_domain</span>
 </span></span><span style=display:flex><span>          <span style=color:#f92672>exec</span>:
-</span></span><span style=display:flex><span>            - <span style=color:#ae81ff>_prefer_ipv4              </span> <span style=color:#75715e># 优先 IPv4</span>
 </span></span><span style=display:flex><span>            - <span style=color:#ae81ff>forward_local</span>
 </span></span><span style=display:flex><span>            - <span style=color:#ae81ff>_return</span>
-</span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>        - <span style=color:#f92672>if</span>:
-</span></span><span style=display:flex><span>            - <span style=color:#ae81ff>query_is_local_domain   </span> <span style=color:#75715e># 已知的本地域名</span>
-</span></span><span style=display:flex><span>            - <span style=color:#e6db74>&#39;!_query_is_common&#39;</span>      <span style=color:#75715e># 和不常见的请求类型</span>
+</span></span><span style=display:flex><span>            - <span style=color:#ae81ff>query_is_blocklist_domain</span>
+</span></span><span style=display:flex><span>            - <span style=color:#ae81ff>query_is_ad_domain</span>
+</span></span><span style=display:flex><span>            - <span style=color:#ae81ff>qtype65</span>
 </span></span><span style=display:flex><span>          <span style=color:#f92672>exec</span>:
-</span></span><span style=display:flex><span>            - <span style=color:#ae81ff>_prefer_ipv4            </span> <span style=color:#75715e># 优先 IPv4</span>
-</span></span><span style=display:flex><span>            - <span style=color:#ae81ff>forward_local           </span> <span style=color:#75715e># 用本地服务器获取应答</span>
+</span></span><span style=display:flex><span>            - <span style=color:#ae81ff>_block_with_nxdomain</span>
 </span></span><span style=display:flex><span>            - <span style=color:#ae81ff>_return</span>
-</span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>        - <span style=color:#f92672>if</span>:
-</span></span><span style=display:flex><span>            - <span style=color:#ae81ff>query_is_non_local_domain   </span> <span style=color:#75715e># 已知的非本地域名</span>
+</span></span><span style=display:flex><span>            - <span style=color:#ae81ff>query_is_local_domain</span>
+</span></span><span style=display:flex><span>            - <span style=color:#e6db74>&#34;!_query_is_common&#34;</span>
 </span></span><span style=display:flex><span>          <span style=color:#f92672>exec</span>:
-</span></span><span style=display:flex><span>            - <span style=color:#ae81ff>_prefer_ipv4                </span> <span style=color:#75715e># 优先 IPv4</span>
-</span></span><span style=display:flex><span>            - <span style=color:#ae81ff>forward_remote              </span> <span style=color:#75715e># 用远程服务器获取应答</span>
+</span></span><span style=display:flex><span>            - <span style=color:#ae81ff>forward_local</span>
 </span></span><span style=display:flex><span>            - <span style=color:#ae81ff>_return</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        <span style=color:#75715e># 剩下的未知域名用 IP 分流。原理类似 ChinaDNS。</span>
-</span></span><span style=display:flex><span>        <span style=color:#75715e># 这里借助了 `fallback` 工作机制。分流原理请参考 `fallback` </span>
-</span></span><span style=display:flex><span>        <span style=color:#75715e># 的工作流程。</span>
+</span></span><span style=display:flex><span>        - <span style=color:#f92672>if</span>:
+</span></span><span style=display:flex><span>            - <span style=color:#ae81ff>query_is_non_local_domain</span>
+</span></span><span style=display:flex><span>          <span style=color:#f92672>exec</span>:
+</span></span><span style=display:flex><span>            - <span style=color:#ae81ff>forward_remote</span>
+</span></span><span style=display:flex><span>            - <span style=color:#ae81ff>_return</span>
 </span></span><span style=display:flex><span>        - <span style=color:#f92672>primary</span>:
-</span></span><span style=display:flex><span>            - <span style=color:#ae81ff>forward_local   </span> <span style=color:#75715e># 本地服务器获取应答。</span>
+</span></span><span style=display:flex><span>            - <span style=color:#ae81ff>forward_local</span>
 </span></span><span style=display:flex><span>            - <span style=color:#f92672>if</span>:
-</span></span><span style=display:flex><span>                - <span style=color:#e6db74>&#39;!response_has_local_ip&#39;</span>    <span style=color:#75715e># 应答包含非本地 IP。</span>
+</span></span><span style=display:flex><span>                - <span style=color:#e6db74>&#34;!response_has_local_ip&#34;</span>
 </span></span><span style=display:flex><span>              <span style=color:#f92672>exec</span>:
-</span></span><span style=display:flex><span>                - <span style=color:#ae81ff>_drop_response   </span> <span style=color:#75715e># 丢掉。</span>
+</span></span><span style=display:flex><span>                - <span style=color:#ae81ff>_drop_response</span>
 </span></span><span style=display:flex><span>          <span style=color:#f92672>secondary</span>:
-</span></span><span style=display:flex><span>            - <span style=color:#ae81ff>_prefer_ipv4       </span> <span style=color:#75715e># 优先 IPv4</span>
-</span></span><span style=display:flex><span>            - <span style=color:#ae81ff>forward_remote     </span> <span style=color:#75715e># 用远程服务器获取应答</span>
-</span></span><span style=display:flex><span>          <span style=color:#f92672>fast_fallback</span>: <span style=color:#ae81ff>150</span>      <span style=color:#75715e># 这里建议设置成 local 服务器正常延时的 2~5 倍。</span>
-</span></span><span style=display:flex><span>                                  <span style=color:#75715e># 这个延时保证了 local 延时偶尔变高时，其结果不会被 remote 抢答。</span>
-</span></span><span style=display:flex><span>                                  <span style=color:#75715e># 如果 local 超过这个延时还没响应，可以假设 local 出现了问题。</span>
-</span></span><span style=display:flex><span>                                  <span style=color:#75715e># 这时用就采用 remote 的应答。单位: 毫秒。</span>
+</span></span><span style=display:flex><span>            - <span style=color:#ae81ff>forward_remote</span>
+</span></span><span style=display:flex><span>          <span style=color:#f92672>fast_fallback</span>: <span style=color:#ae81ff>150</span>
 </span></span><span style=display:flex><span>          <span style=color:#f92672>always_standby</span>: <span style=color:#66d9ef>true</span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#75715e># 缓存</span>
-</span></span><span style=display:flex><span>  - <span style=color:#f92672>tag</span>: <span style=color:#e6db74>&#39;mem_cache&#39;</span>
-</span></span><span style=display:flex><span>    <span style=color:#f92672>type</span>: <span style=color:#e6db74>&#39;cache&#39;</span>
-</span></span><span style=display:flex><span>    <span style=color:#f92672>args</span>:
-</span></span><span style=display:flex><span>      <span style=color:#f92672>size</span>: <span style=color:#ae81ff>512000</span>
-</span></span><span style=display:flex><span>      <span style=color:#f92672>lazy_cache_ttl</span>: <span style=color:#ae81ff>86400</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#75715e># 修改应答 ttl</span>
-</span></span><span style=display:flex><span>  - <span style=color:#f92672>tag</span>: <span style=color:#e6db74>&#39;modify_ttl&#39;</span>
-</span></span><span style=display:flex><span>    <span style=color:#f92672>type</span>: <span style=color:#e6db74>&#39;ttl&#39;</span>
-</span></span><span style=display:flex><span>    <span style=color:#f92672>args</span>:
-</span></span><span style=display:flex><span>      <span style=color:#f92672>minimal_ttl</span>: <span style=color:#ae81ff>300</span>
-</span></span><span style=display:flex><span>      <span style=color:#f92672>maximum_ttl</span>: <span style=color:#ae81ff>3600</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#75715e># 转发请求至本地服务器的插件</span>
-</span></span><span style=display:flex><span>  - <span style=color:#f92672>tag</span>: <span style=color:#e6db74>&#39;forward_local&#39;</span>
-</span></span><span style=display:flex><span>    <span style=color:#f92672>type</span>: <span style=color:#e6db74>&#39;fast_forward&#39;</span>
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>tag</span>: <span style=color:#ae81ff>forward_local</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>type</span>: <span style=color:#ae81ff>fast_forward</span>
 </span></span><span style=display:flex><span>    <span style=color:#f92672>args</span>:
 </span></span><span style=display:flex><span>      <span style=color:#f92672>upstream</span>:
-</span></span><span style=display:flex><span>        - <span style=color:#f92672>addr</span>: <span style=color:#e6db74>&#39;https://doh.pub/dns-query&#39;</span>
-</span></span><span style=display:flex><span>          <span style=color:#f92672>dial_addr</span>: <span style=color:#e6db74>&#39;1.12.12.12:443&#39;</span>
-</span></span><span style=display:flex><span>        - <span style=color:#f92672>addr</span>: <span style=color:#e6db74>&#39;https://dns.alidns.com/dns-query&#39;</span>
-</span></span><span style=display:flex><span>          <span style=color:#f92672>dial_addr</span>: <span style=color:#e6db74>&#39;223.6.6.6:443&#39;</span>
-</span></span><span style=display:flex><span>          <span style=color:#f92672>trusted</span>: <span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span>        - <span style=color:#f92672>addr</span>: <span style=color:#ae81ff>https://1.12.12.12/dns-query</span>
+</span></span><span style=display:flex><span>        - <span style=color:#f92672>addr</span>: <span style=color:#ae81ff>https://223.5.5.5/dns-query</span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#75715e># 转发请求至远程服务器的插件</span>
-</span></span><span style=display:flex><span>  - <span style=color:#f92672>tag</span>: <span style=color:#ae81ff>forward_remote</span>
-</span></span><span style=display:flex><span>    <span style=color:#f92672>type</span>: <span style=color:#e6db74>&#39;fast_forward&#39;</span>
-</span></span><span style=display:flex><span>    <span style=color:#f92672>args</span>:
-</span></span><span style=display:flex><span>      <span style=color:#f92672>upstream</span>:
-</span></span><span style=display:flex><span>        - <span style=color:#f92672>addr</span>: <span style=color:#e6db74>&#39;https://dns.google/dns-query&#39;</span>
-</span></span><span style=display:flex><span>          <span style=color:#f92672>dial_addr</span>: <span style=color:#e6db74>&#39;8.8.4.4:443&#39;</span>
-</span></span><span style=display:flex><span>        - <span style=color:#f92672>addr</span>: <span style=color:#e6db74>&#39;https://208.67.222.2/dns-query&#39;</span>
-</span></span><span style=display:flex><span>          <span style=color:#f92672>dial_addr</span>: <span style=color:#e6db74>&#39;208.67.222.2:443&#39;</span>
-</span></span><span style=display:flex><span>          <span style=color:#f92672>trusted</span>: <span style=color:#66d9ef>true</span>
-</span></span><span style=display:flex><span>        - <span style=color:#f92672>addr</span>: <span style=color:#e6db74>&#39;https://doh.dns.sb/dns-query&#39;</span>
-</span></span><span style=display:flex><span>          <span style=color:#f92672>trusted</span>: <span style=color:#66d9ef>true</span>
-</span></span><span style=display:flex><span>        - <span style=color:#f92672>addr</span>: <span style=color:#e6db74>&#39;https://doh.cloudflare-dns.com/dns-query&#39;</span>
-</span></span><span style=display:flex><span>          <span style=color:#f92672>trusted</span>: <span style=color:#66d9ef>true</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#75715e>################ 匹配器插件 #################</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  - <span style=color:#f92672>tag</span>: <span style=color:#e6db74>&#39;query_is_whitelist_domain&#39;</span>
-</span></span><span style=display:flex><span>    <span style=color:#f92672>type</span>: <span style=color:#e6db74>&#39;query_matcher&#39;</span>
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>tag</span>: <span style=color:#ae81ff>query_is_whitelist_domain</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>type</span>: <span style=color:#ae81ff>query_matcher</span>
 </span></span><span style=display:flex><span>    <span style=color:#f92672>args</span>:
 </span></span><span style=display:flex><span>      <span style=color:#f92672>domain</span>:
-</span></span><span style=display:flex><span>        - <span style=color:#e6db74>&#39;ext:./whitelist.txt&#39;</span>
+</span></span><span style=display:flex><span>        - <span style=color:#e6db74>&#34;ext:./whitelist.txt&#34;</span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  - <span style=color:#f92672>tag</span>: <span style=color:#e6db74>&#39;query_is_blocklist_domain&#39;</span>
-</span></span><span style=display:flex><span>    <span style=color:#f92672>type</span>: <span style=color:#e6db74>&#39;query_matcher&#39;</span>
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>tag</span>: <span style=color:#ae81ff>query_is_blocklist_domain</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>type</span>: <span style=color:#ae81ff>query_matcher</span>
 </span></span><span style=display:flex><span>    <span style=color:#f92672>args</span>:
 </span></span><span style=display:flex><span>      <span style=color:#f92672>domain</span>:
-</span></span><span style=display:flex><span>        - <span style=color:#e6db74>&#39;ext:/etc/mosdns/rule/blocklist.txt&#39;</span>
+</span></span><span style=display:flex><span>        - <span style=color:#e6db74>&#34;ext:/etc/mosdns/rule/blocklist.txt&#34;</span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  - <span style=color:#f92672>tag</span>: <span style=color:#e6db74>&#39;query_is_hosts_domain&#39;</span>
-</span></span><span style=display:flex><span>    <span style=color:#f92672>type</span>: <span style=color:#e6db74>&#39;hosts&#39;</span>
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>tag</span>: <span style=color:#ae81ff>query_is_hosts_domain</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>type</span>: <span style=color:#ae81ff>hosts</span>
 </span></span><span style=display:flex><span>    <span style=color:#f92672>args</span>:
 </span></span><span style=display:flex><span>      <span style=color:#f92672>hosts</span>:
-</span></span><span style=display:flex><span>        - <span style=color:#e6db74>&#39;ext:/etc/mosdns/rule/hosts.txt&#39;</span>
+</span></span><span style=display:flex><span>        - <span style=color:#e6db74>&#34;ext:/etc/mosdns/rule/hosts.txt&#34;</span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  - <span style=color:#f92672>tag</span>: <span style=color:#e6db74>&#39;query_is_redirect_domain&#39;</span>
-</span></span><span style=display:flex><span>    <span style=color:#f92672>type</span>: <span style=color:#e6db74>&#39;redirect&#39;</span>
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>tag</span>: <span style=color:#ae81ff>query_is_redirect_domain</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>type</span>: <span style=color:#ae81ff>redirect</span>
 </span></span><span style=display:flex><span>    <span style=color:#f92672>args</span>:
 </span></span><span style=display:flex><span>      <span style=color:#f92672>rule</span>:
-</span></span><span style=display:flex><span>        - <span style=color:#e6db74>&#39;ext:/etc/mosdns/rule/redirect.txt&#39;</span>
+</span></span><span style=display:flex><span>        - <span style=color:#e6db74>&#34;ext:/etc/mosdns/rule/redirect.txt&#34;</span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#75715e># 匹配本地域名的插件</span>
-</span></span><span style=display:flex><span>  - <span style=color:#f92672>tag</span>: <span style=color:#e6db74>&#39;query_is_local_domain&#39;</span>
-</span></span><span style=display:flex><span>    <span style=color:#f92672>type</span>: <span style=color:#e6db74>&#39;query_matcher&#39;</span>
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>tag</span>: <span style=color:#ae81ff>forward_remote</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>type</span>: <span style=color:#ae81ff>fast_forward</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>args</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>upstream</span>:
+</span></span><span style=display:flex><span>        - <span style=color:#f92672>addr</span>: <span style=color:#ae81ff>https://8.8.8.8/dns-query</span>
+</span></span><span style=display:flex><span>        - <span style=color:#f92672>addr</span>: <span style=color:#ae81ff>https://208.67.222.2/dns-query</span>
+</span></span><span style=display:flex><span>        - <span style=color:#f92672>addr</span>: <span style=color:#ae81ff>https://doh.dns.sb/dns-query</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>tag</span>: <span style=color:#ae81ff>lazy_cache</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>type</span>: <span style=color:#ae81ff>cache</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>args</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>size</span>: <span style=color:#ae81ff>512000</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>lazy_cache_ttl</span>: <span style=color:#ae81ff>259200</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>tag</span>: <span style=color:#ae81ff>query_is_local_domain</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>type</span>: <span style=color:#ae81ff>query_matcher</span>
 </span></span><span style=display:flex><span>    <span style=color:#f92672>args</span>:
 </span></span><span style=display:flex><span>      <span style=color:#f92672>domain</span>:
-</span></span><span style=display:flex><span>        - <span style=color:#e6db74>&#39;ext:/usr/share/v2ray/geosite.dat:cn&#39;</span>
-</span></span><span style=display:flex><span>        - <span style=color:#e6db74>&#39;ext:/usr/share/v2ray/geosite.dat:apple-cn&#39;</span>
+</span></span><span style=display:flex><span>        - <span style=color:#e6db74>&#34;ext:/usr/share/v2ray/geosite.dat:cn&#34;</span>
+</span></span><span style=display:flex><span>        - <span style=color:#e6db74>&#34;ext:/usr/share/v2ray/geosite.dat:apple-cn&#34;</span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#75715e># 匹配非本地域名的插件</span>
-</span></span><span style=display:flex><span>  - <span style=color:#f92672>tag</span>: <span style=color:#e6db74>&#39;query_is_non_local_domain&#39;</span>
-</span></span><span style=display:flex><span>    <span style=color:#f92672>type</span>: <span style=color:#e6db74>&#39;query_matcher&#39;</span>
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>tag</span>: <span style=color:#ae81ff>query_is_non_local_domain</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>type</span>: <span style=color:#ae81ff>query_matcher</span>
 </span></span><span style=display:flex><span>    <span style=color:#f92672>args</span>:
 </span></span><span style=display:flex><span>      <span style=color:#f92672>domain</span>:
-</span></span><span style=display:flex><span>        - <span style=color:#e6db74>&#39;ext:/usr/share/v2ray/geosite.dat:geolocation-!cn&#39;</span>
+</span></span><span style=display:flex><span>        - <span style=color:#e6db74>&#34;ext:/usr/share/v2ray/geosite.dat:geolocation-!cn&#34;</span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#75715e># 匹配本地 IP 的插件</span>
-</span></span><span style=display:flex><span>  - <span style=color:#f92672>tag</span>: <span style=color:#e6db74>&#39;response_has_local_ip&#39;</span>
-</span></span><span style=display:flex><span>    <span style=color:#f92672>type</span>: <span style=color:#e6db74>&#39;response_matcher&#39;</span>
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>tag</span>: <span style=color:#ae81ff>response_has_local_ip</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>type</span>: <span style=color:#ae81ff>response_matcher</span>
 </span></span><span style=display:flex><span>    <span style=color:#f92672>args</span>:
 </span></span><span style=display:flex><span>      <span style=color:#f92672>ip</span>:
-</span></span><span style=display:flex><span>        - <span style=color:#e6db74>&#39;ext:/usr/share/v2ray/geoip.dat:cn&#39;</span>
+</span></span><span style=display:flex><span>        - <span style=color:#e6db74>&#34;ext:/usr/share/v2ray/geoip.dat:cn&#34;</span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#75715e># 匹配广告域名的插件</span>
-</span></span><span style=display:flex><span>  - <span style=color:#f92672>tag</span>: <span style=color:#e6db74>&#39;query_is_ad_domain&#39;</span>
-</span></span><span style=display:flex><span>    <span style=color:#f92672>type</span>: <span style=color:#e6db74>&#39;query_matcher&#39;</span>
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>tag</span>: <span style=color:#ae81ff>query_is_ad_domain</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>type</span>: <span style=color:#ae81ff>query_matcher</span>
 </span></span><span style=display:flex><span>    <span style=color:#f92672>args</span>:
 </span></span><span style=display:flex><span>      <span style=color:#f92672>domain</span>:
-</span></span><span style=display:flex><span>        - <span style=color:#e6db74>&#39;ext:./serverlist.txt&#39;</span>
+</span></span><span style=display:flex><span>        - <span style=color:#e6db74>&#34;ext:./serverlist.txt&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>tag</span>: <span style=color:#ae81ff>qtype65</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>type</span>: <span style=color:#ae81ff>query_matcher</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>args</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>qtype</span>: [<span style=color:#ae81ff>65</span>]
 </span></span></code></pre></div></section><footer class=post-footer><figure class=author-image><a class=img href=https://www.heartnn.com/ style=background-image:url(/images/logo.png)><span class=hidden>heartnn's Picture</span></a></figure><section class=author><h4><a href=https://www.heartnn.com/>heartnn</a></h4><p>Read <a href=https://www.heartnn.com/>more posts</a> by this author.</p><div class=author-meta><span class="author-location icon-location">河北, 石家庄</span>
 <span class="author-link icon-link"><a href=https://www.heartnn.com>https://www.heartnn.com</a></span></div></section><section class=share><h4>Share this post</h4><a class=icon-twitter style=font-size:1.4em href="https://twitter.com/share?text=OpenWrt%e4%b8%adMosDNS%e9%85%8d%e7%bd%ae&nbsp;-&nbsp;heartnn%e7%9a%84%e8%87%aa%e7%95%99%e5%9c%b0&url=https%3a%2f%2fwww.heartnn.com%2f2022%2f05%2f25%2fconfig-mosdns-in-openwrt%2f" onclick="return window.open(this.href,'twitter-share','width=550,height=235'),!1"><span class=hidden>Twitter</span></a>
 <a class=icon-facebook style=font-size:1.4em href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.heartnn.com%2f2022%2f05%2f25%2fconfig-mosdns-in-openwrt%2f" onclick="return window.open(this.href,'facebook-share','width=580,height=296'),!1"><span class=hidden>Facebook</span></a>
