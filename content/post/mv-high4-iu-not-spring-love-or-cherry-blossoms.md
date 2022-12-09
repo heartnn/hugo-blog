@@ -9,16 +9,7 @@ tags: [mv,iu,high4]
 
 我会说我是来看IU的吗，哈哈~~<!--more-->
 
-<div id="video_wrapper"></div>
-<script src="//g.alicdn.com/tb/videocenter/1.2.4/js/tbvideo.js"></script>
-<script type="text/javascript">
-    var id = 'K6KiXp';
-    tb_player_object.embedPlayer(
-        {vid:"37074158",uid:"1748679248",tid:"9", div:"video_wrapper",width:"600px",height:"360px"},
-        {autoplay:"false",show_share_button:"true"},
-        {wmode:"transparent",allowScriptAccess:"always",allowFullScreen:"true"}
-    );
-</script>
+<video controls="" src="//cloud.video.taobao.com/play/u/1748679248/p/2/e/6/t/1/37074158.mp4">您的浏览器不支持 HTML5 video 标签。</video>
 
 길었던 겨우내 줄곧 품이 좀 남는 밤색 코트  
 그 속에 나를 쏙 감추고 걸음을 재촉해 걸었어  

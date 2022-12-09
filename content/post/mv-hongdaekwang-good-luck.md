@@ -1,5 +1,5 @@
 ---
-title: "홍대광(洪大光) - 잘됐으면 좋겠다(Good Luck)"
+title: "[MV] 홍대광(洪大光) - 잘됐으면 좋겠다(Good Luck)"
 date: 2015-06-22T05:20:18+08:00
 categories: 音乐
 tags: [mv,홍대광]
@@ -9,16 +9,7 @@ tags: [mv,홍대광]
 
 一首《过得好就足够了》，化解生活中遇到的困难与挫折。<!--more-->
 
-<div id="video_wrapper"></div>
-<script src="//g.alicdn.com/tb/videocenter/1.2.4/js/tbvideo.js"></script>
-<script type="text/javascript">
-	var id = 'K66xJU';
-	tb_player_object.embedPlayer(
-            {vid:"25680283",uid:"1748679248",tid:"9", div:"video_wrapper",width:"600px",height:"360px"},
-            {autoplay:"false",show_share_button:"true"},
-            {wmode:"transparent",allowScriptAccess:"always",allowFullScreen:"true"}
-	);
-</script>
+<video controls="" src="//cloud.video.taobao.com/play/u/1748679248/p/2/e/6/t/1/25680283.mp4">您的浏览器不支持 HTML5 video 标签。</video>
 
 이 노랜 너에게만 부를 노래  
 너만 상상하며 만든 노래  

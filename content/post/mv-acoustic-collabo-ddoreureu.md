@@ -1,5 +1,5 @@
 ---
-title: "Acoustic Collabo - 또르르"
+title: "[MV] Acoustic Collabo - 또르르"
 date: 2015-09-08T09:30:21+08:00
 categories: 音乐
 tags: ["acoustic collabo"]
@@ -9,7 +9,7 @@ tags: ["acoustic collabo"]
 
 这是Acoustic Collabo在今年5月26日发布的歌曲，最近都没什么这类风格的歌曲了，这首真是越听越好听了，干脆做成铃声了。<!--more-->
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=32303133&auto=0&height=66"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9D16ndgb204" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 또르르 굴리고 눈치만 보다가  
 살며시 다가가 입술에 수줍게 키스해

@@ -9,7 +9,7 @@ tags: [mv,wings]
 
 新人组合WINGS的出道单曲，由安宰贤出演，以恐怖电影《[蔷花，红莲](http://movie.douban.com/subject/1308047/)》为主题。<!--more-->
 
-<embed width="600" height="360" bgcolor="#000000" wmode="transparent" allownetworking="all" allowFullScreen="true" allowscriptaccess="always" flashvars="hurl=https%3A%2F%2Fv4.music.126.net%2F20171008051131%2Feb520fc001123b6d663171c10a314053%2Fweb%2Fcloudmusic%2FICQiJGYyISQgICIiNDEgZA%3D%3D%2Fmv%2F235304%2F2286984285774533_1280x720.mp4&amp;murl=https%3A%2F%2Fv4.music.126.net%2F20171008051131%2F0b0533cb27944af83b37f8d9c2cc550b%2Fweb%2Fcloudmusic%2FICQiJGYyISQgICIiNDEgZA%3D%3D%2Fmv%2F235304%2F2286984285774533_852x480.mp4&amp;autoPlay=false&amp;trackName=Hair Short (헤어숏)&amp;artistName=WINGS&amp;resourceId=235304&amp;coverImg=https://p4.music.126.net/IK5-aNZpYBHnehUPK52n8w==/2523379285746427.jpg&amp;restrict=false" type="application/x-shockwave-flash" pluginspage="https://www.adobe.com/go/getflashplayer" name="flash-1365562188927" src="https://s1.music.126.net/style/swf/MVPlayer_fee.swf?v=20170527"></embed>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/X0_1odmqmCM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 당당하게 문을 나서서 twinkle bag을 bar에 놓고서  
 차례를 기다리는데 왜 네가 생각나 (No)

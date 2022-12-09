@@ -9,7 +9,7 @@ tags: [mv,1ps]
 
 新团，听起来不错的感觉~~<!--more-->
 
-<embed width="600" height="360" bgcolor="#000000" wmode="transparent" allownetworking="all" allowFullScreen="true" allowscriptaccess="always" flashvars="hurl=https%3A%2F%2Fv4.music.126.net%2F20171008050316%2Fcdcb9689e48a282c7def0fc6805fe79c%2Fweb%2Fcloudmusic%2FMTAhICAgIyAhNCEkITZhIg%3D%3D%2Fmv%2F235138%2F339749093016461_1280x720.mp4&amp;murl=https%3A%2F%2Fv4.music.126.net%2F20171008050316%2F9af3377de310dc10a16c5abf1c8684af%2Fweb%2Fcloudmusic%2FMTAhICAgIyAhNCEkITZhIg%3D%3D%2Fmv%2F235138%2Fbef61faa732ead8ed2d0a620aa7dc573.mp4&amp;autoPlay=false&amp;trackName=여자이니까&amp;artistName=1PS&amp;resourceId=235138&amp;coverImg=https://p4.music.126.net/dg95tapX9S8LMgJz9WosKw==/470590976721948.jpg&amp;restrict=false" type="application/x-shockwave-flash" pluginspage="https://www.adobe.com/go/getflashplayer" name="flash-1365562188927" src="https://s1.music.126.net/style/swf/MVPlayer_fee.swf?v=20170527"></embed>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/83k2wFGBcns" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 남몰래 니 볼에 키스하기 남몰래 문자로 토크하기  
 그게 뭐가 그리 중요해 아직 난 사랑을 말 못해

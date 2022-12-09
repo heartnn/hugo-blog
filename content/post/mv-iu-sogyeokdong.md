@@ -1,5 +1,5 @@
 ---
-title: "[音乐] IU(아이유) - 昭格洞(소격동)"
+title: "[MV] IU(아이유) - 昭格洞(소격동)"
 date: 2014-10-21T05:30:00+08:00
 categories: 音乐
 tags: [iu,"서태지"]
@@ -21,9 +21,17 @@ tags: [iu,"서태지"]
 > 
 > 猜想这里有两种可能：一是，灯火管制的那晚，所有人被要求必须呆在家里，城内要宵禁。所以收债的人料定女孩会在家里，所以提前来把女孩抓走...约定的地方地上那些小人的纸片有可能是女孩在被抓走前逃到那里想见男孩最后一面，却没有等到就被带走了。男孩来到女孩家里看到一片狼藉却找不到女孩，夜深了警报又突然想起，他害怕，所以赶快回家了....然后后来女孩长大了，回到了自己的家，把家里收拾干净，重新在这里生活，等待者男孩...二是灯火管制的那晚，因为全城都陷入了黑暗，女孩在家里遭遇了不测（抢劫或者政权），总之女孩死了，但她的灵魂却回到了这里，在这里慢慢长大，一直等待男孩.... *via [百度百科](http://baike.baidu.com/view/15136653.htm)*
 
-关于MV分别是[IU](https://y.qq.com/n/yqq/mv/v/r0015y308c3.html)和[徐太志](https://y.qq.com/n/yqq/mv/v/u00168guxd2.html)的两个部分，连起来才算是完整的。
+关于MV分别是[IU](https://y.qq.com/n/ryqq/mv/r0015y308c3)和[徐太志](https://y.qq.com/n/yqq/mv/v/u00168guxd2.html)的两个部分，连起来才算是完整的。
 
-<embed src="//img.xiami.net/res/player/widget/multiPlayer.swf?dataUrl=http://www.xiami.com/widget/xml-multi/uid/12747/sid/1773598250,1773610799,/width/235/height/346/mainColor/FF8719/backColor/494949/autoplay/0" type="application/x-shockwave-flash" pluginspage="https://www.adobe.com/go/getflashplayer"></embed>
+<details>
+<summary>IU版本</summary>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GHu39FEFIks" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</details>
+
+<details>
+<summary>徐太志版本</summary>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WH0iiU0cv00" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</details>
 
 나 그대와 둘이 걷던  
 그 좁은 골목계단을 홀로 걸어요  

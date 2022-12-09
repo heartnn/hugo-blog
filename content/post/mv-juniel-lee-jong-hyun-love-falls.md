@@ -5,11 +5,11 @@ categories: 音乐
 tags: [mv,juniel,cnblue]
 ---
 
-![](/uploads/2013/02/cnblue-juniel-romantic-j-20131209.jpg)
+![](/uploads/2013/12/cnblue-juniel-romantic-j-20131209.jpg)
 
 CNBLUE 宗泫和Juniel演唱的《爱情降临》完整MV出炉！歌曲由宗泫作曲，Juniel填词，是首共同完成的甜蜜合唱作品。<!--more-->
 
-<object type="application/x-shockwave-flash" data="//cloud.video.taobao.com/play/u/213388661/p/1/e/1/t/9/fv/102/16367488.swf" width="600px" height="360px" id="video_wrapper" style="visibility: visible;"><param name="wmode" value="transparent"><param name="allowScriptAccess" value="always"><param name="allowFullScreen" value="true"><param name="menu" value="false"><param name="quality" value="high"><param name="flashvars" value="autoplay=flase&amp;show_share_button=false"></object>
+<video controls="" src="//cloud.video.taobao.com/play/u/1748679248/p/2/e/6/t/1/16367488.mp4">您的浏览器不支持 HTML5 video 标签。</video>
 
 작사:주니엘/한승훈  
 작곡:이종현/제노  

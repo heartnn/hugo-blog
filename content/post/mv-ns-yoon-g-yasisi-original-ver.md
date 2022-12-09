@@ -9,7 +9,7 @@ tags: [mv,"NS윤지"]
 
 NS允智时隔一年回归，带来迷你专辑《The Way 2》，主打曲《Yasisi》由二段横踢和作曲家SEION共同创作，是一首复古探戈与Hip-hop节奏相调和的歌曲。这个MV貌似是未删除的版本。<!--more-->
 
-<embed width="600" height="360" bgcolor="#000000" wmode="transparent" allownetworking="all" allowFullScreen="true" allowscriptaccess="always" flashvars="hurl=https%3A%2F%2Fv4.music.126.net%2F20171008052800%2F8f292f91a558fc5b45c2ade90e9dffbe%2Fweb%2Fcloudmusic%2FISAwMDA0ICAkJDAwMThiMA%3D%3D%2Fmv%2F239059%2F380431023245016_1280x720.mp4&amp;murl=https%3A%2F%2Fv4.music.126.net%2F20171008052800%2F89040bc0b6579eb5d520cd4e0c4fcc67%2Fweb%2Fcloudmusic%2FISAwMDA0ICAkJDAwMThiMA%3D%3D%2Fmv%2F239059%2Ffc6882602ee0c8632f1e2443ced6ba4e.mp4&amp;autoPlay=false&amp;trackName=야시시&amp;artistName=金允智&amp;resourceId=239059&amp;coverImg=https://p3.music.126.net/qhlX2QIgfViGYwghSgIVcg==/379331511617249.jpg&amp;restrict=false" type="application/x-shockwave-flash" pluginspage="https://www.adobe.com/go/getflashplayer" name="flash-1365562188927" src="https://s1.music.126.net/style/swf/MVPlayer_fee.swf?v=20170527"></embed>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9k6KypCF6us" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 평소보다 짙은 빨간색 립스틱  
 과감하게 비치는  

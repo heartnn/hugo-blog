@@ -9,16 +9,7 @@ tags: [mv,"girl's day"]
 
 这次的妆太美，都有点认不出了，可惜编舞差一些，另外专辑中和Kanto合作的이상하다 참似乎更好听。<!--more-->
 
-<div id="video_wrapper"></div>
-<script src="//g.alicdn.com/tb/videocenter/1.2.4/js/tbvideo.js"></script>
-<script type="text/javascript">
-    var id = 'K66x9S';
-    tb_player_object.embedPlayer(
-        {vid:"22903361",uid:"1748679248",tid:"9", div:"video_wrapper",width:"600px",height:"360px"},
-        {autoplay:"false",show_share_button:"false"},
-        {wmode:"transparent",allowScriptAccess:"always",allowFullScreen:"true"}
-    );
-</script>
+<video controls="" src="//cloud.video.taobao.com/play/u/1748679248/p/2/e/6/t/1/15756223.mp4">您的浏览器不支持 HTML5 video 标签。</video>
 
 손가락을 짚어서 세어봐  
 울지 않았던 날을  
