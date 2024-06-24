@@ -7,7 +7,7 @@ tags: [mp4box]
 
 众所周知，[MKVToolNix](https://mkvtoolnix.download/)可以为mkv文件加入多种字幕，但到了mp4，内嵌字幕会变的比较麻烦。起因是从Youtube下载了一部MV，由于音视频和字幕是分开下载的，而且下载的是AV1编码，就想着不要重新打包mkv，而是直接在mp4中嵌入字幕。
 
-首先说原理，PotPlayer是可以识别到Codec ID为`tx3g`标签的字幕，`tx3g`是用于3GPP/MPEG时期的带有时间标记的文本，我们要利用这个特性，让字幕显示为`tx3g`，这样一般的播放器就都可以识别了。实现起来比较简单的方式就是使srt会通过MP4Box直接转换为`tx3g`。
+首先说原理，PotPlayer是可以识别到Codec ID为`tx3g`标签的字幕，`tx3g`是用于3GPP/MPEG时期的带有时间标记的文本，我们要利用这个特性，让字幕显示为`tx3g`，这样一般的播放器就都可以识别了。实现起来比较简单的方式就是使srt或者ttxt([GPAC Timed Text XML](https://wiki.gpac.io/xmlformats/TTXT-Format-Documentation/))会通过MP4Box直接显示为`tx3g`。
 
 先将下载的字幕（我下载到的是webvtt格式）转换为srt，webvtt转换为srt比较简单，没有工具的情况下，作为文本文件打开，把标记WEBVTT文件头删掉就可以了。
 
@@ -46,3 +46,7 @@ Format : Timed Text
 Muxing mode : sbtl
 Codec ID : tx3g
 ```
+
+### 参考文章
+
+- [GPAC wiki - DASH & HLS - Subtitles - Introduction](https://wiki.gpac.io/Howtos/subtitles/Subtitling-with-GPAC/)
