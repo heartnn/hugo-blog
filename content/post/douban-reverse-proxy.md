@@ -11,7 +11,7 @@ tags: [docker]
 
 <!--more-->与Qwen交流之后，得到了一下的代码，以下假设你准备的域名是img*.douban-proxy.com，然后你有一个BBS或者网站叫做bbs.site.com
 
-```
+```yaml
 # Global Options
 {
     # 设置用于 ACME 证书管理的邮箱地址
@@ -85,3 +85,5 @@ img9.douban-proxy.com {
 然后新建一个Caddy容器，用volume引用这个文件就可以了，既能反代，还可以防盗链。
 
 另外，如果你有别的容器需要代理，完全可以拿这个代替，Caddyfile再多写几个Site Block的事，总体学习起来比Nginx要简单，具体到资源占用和速度，其实不是强迫症的话可以接受，除非你的并发访问非常大。
+
+更多使用方法可以跳转到[Caddy v2 中文文档](https://caddy2.dengxiaolong.com/docs/)。
