@@ -1,6 +1,12 @@
 {{ if ne .Params.comments false}}
-<div id="waline"></div>
 <link rel="stylesheet" href="//unpkg.com/@waline/client@v3/dist/waline.css"/>
+<link rel="stylesheet" href="//unpkg.com/@waline/client@v3/dist/waline-meta.css"/>
+<style>
+  #waline {
+    --waline-font-size: 1.8rem;
+  }
+</style>
+<div id="waline"></div>
 <script type="module">
   import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
   init({
@@ -11,7 +17,11 @@
       '//unpkg.com/@waline/emojis@1.4.0/bilibili',
       '//unpkg.com/@waline/emojis@1.4.0/bmoji',
     ],
-    lang: 'zh-CN'
+    imageUploader: false,
+    search: false,
+    requiredMeta: ['nick', 'mail'],
+    lang: 'zh-CN',
+    wordLimit: 1024
   });
 </script>
 {{ end }}
